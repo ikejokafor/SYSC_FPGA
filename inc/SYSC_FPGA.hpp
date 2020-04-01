@@ -7,8 +7,7 @@
 #include "systemc"
 #include "CNN_Layer_Accel.hpp"
 #include "SYSC_FPGA_shim.hpp"
-#include "Network.hpp"
-#include "MyNetProto.hpp"
+#include "myNetProto.hpp"
 
 
 SC_MODULE(SYSC_FPGA)
