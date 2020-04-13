@@ -4,7 +4,7 @@ using namespace std;
 
 SYSC_FPGA::~SYSC_FPGA()
 {
-	
+
 }
 
 
@@ -63,5 +63,6 @@ void SYSC_FPGA::main()
 		cnn_layer_accel->waitComplete();
 		wait();
 		m_sysc_fpga_hndl->sendComplete();
+		wait();
 	}
 }
