@@ -165,29 +165,41 @@ vlib work
 # 	./Traffic_Gen.cpp
 # sccom -link
 
-sccom -DMODELSIM -std=c++11 \
+sccom -DMODELSIM -std=c++1y \
 	-I $env(WORKSPACE_PATH)/cnn_layer_accel/model/inc/ \
 	-I $env(WORKSPACE_PATH)/util/inc/ \
 	-I $env(WORKSPACE_PATH)/fixedPoint/inc/ \
 	-I $env(WORKSPACE_PATH)/FPGA_shim/inc/ \
 	-I $env(WORKSPACE_PATH)/espresso/inc/FPGA/ \
+	-I $env(WORKSPACE_PATH)/espresso/inc/FPGA/ \
+	-I $env(WORKSPACE_PATH)/SYSC_FPGA/inc/ \
+	-I $env(WORKSPACE_PATH)/SYSC_FPGA_shim/inc/ \
+	-I $env(WORKSPACE_PATH)/network/inc/ \
+	-I $env(WORKSPACE_PATH)/myNetProto/inc/ \
 	$env(WORKSPACE_PATH)/cnn_layer_accel/model/src/AWP.cpp \
 	$env(WORKSPACE_PATH)/cnn_layer_accel/model/src/AWPBus.cpp \
 	$env(WORKSPACE_PATH)/cnn_layer_accel/model/src/FAS.cpp \
 	$env(WORKSPACE_PATH)/cnn_layer_accel/model/src/Interconnect.cpp	\
 	$env(WORKSPACE_PATH)/cnn_layer_accel/model/src/QUAD.cpp \
-	$env(WORKSPACE_PATH)/cnn_layer_accel/model/src/CNN_Layer_accel.cpp
+	$env(WORKSPACE_PATH)/cnn_layer_accel/model/src/CNN_Layer_accel.cpp \
+	$env(WORKSPACE_PATH)/SYSC_FPGA/src/SYSC_FPGA.cpp
 sccom -link \
 	-L$env(WORKSPACE_PATH)/network/build/debug/ \
 	-L$env(WORKSPACE_PATH)/myNetProto/build/debug/ \
 	-L$env(WORKSPACE_PATH)/espresso/build/debug/ \
+	-L$env(WORKSPACE_PATH)/SYSC_FPGA_shim/build/debug/ \
 	-lnetwork \
 	-lmyNetProto \
+	-lSYSC_FPGA_shim \
 	-lespresso
 
 
 # compile glbl module
 # vlog -work work glbl.v
+
+vlog -64 -incr -sv -work work \
+	+incdir+./ \
+	./testbench.sv
 
 
 # vlog -64 -incr -sv -work work \
