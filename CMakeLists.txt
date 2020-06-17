@@ -63,12 +63,15 @@ PROJECT(${TARGET_NAME})
 
 
 # BEGIN Debug / Release Settings --------------------------------------------------------------------------------------------------------------------
-IF(NOT CMAKE_BUILD_TYPE)
+IF(EXISTS "${PROJECT_SOURCE_DIR}/DEBUG_BUILD")
     SET(CMAKE_BUILD_TYPE Debug)
-	SET(BUILD_DIR_SUFFIX "Debug")
-ELSE()
-    # SET(CMAKE_BUILD_TYPE Release)
-	SET(BUILD_DIR_SUFFIX "Release")
+	SET(BUILD_DIR_SUFFIX "debug")
+ELSEIF(EXISTS "${PROJECT_SOURCE_DIR}/RELEASE_BUILD")
+    SET(CMAKE_BUILD_TYPE Release)
+	SET(BUILD_DIR_SUFFIX "release")
+ELSEIF(NOT CMAKE_BUILD_TYPE)
+    SET(CMAKE_BUILD_TYPE Debug)
+	SET(BUILD_DIR_SUFFIX "debug")
 ENDIF()
 IF(WIN32)
 	SET(CMAKE_CXX_FLAGS_DEBUG "/ZI /Od")
@@ -76,6 +79,7 @@ ELSE()
 	SET(CMAKE_CXX_FLAGS_DEBUG "-g")
 ENDIF()
 SET(CMAKE_CXX_FLAGS_RELEASE "-O3")
+MESSAGE("[" ${TARGET_NAME} "] Build Type: " ${CMAKE_BUILD_TYPE})
 # END Debug / Release Settings ----------------------------------------------------------------------------------------------------------------------
 
 
@@ -216,11 +220,11 @@ ELSE()
         -L/usr/local/lib/
         -L/usr/lib/
         -L/home/ikenna/downloaded_repos/build/systemc-2.3.3/src/
-        -L${PROJECT_SOURCE_DIR}/../myNetProto/build/debug/
-        -L${PROJECT_SOURCE_DIR}/../network/build/debug/
-        -L${PROJECT_SOURCE_DIR}/../cnn_layer_accel/model/build/debug/
-        -L${PROJECT_SOURCE_DIR}/../SYSC_FPGA_shim//build/debug/
-        -L${PROJECT_SOURCE_DIR}/../espresso/build/debug/
+        -L${PROJECT_SOURCE_DIR}/../myNetProto/build/${BUILD_DIR_SUFFIX}/
+        -L${PROJECT_SOURCE_DIR}/../network/build/${BUILD_DIR_SUFFIX}/
+        -L${PROJECT_SOURCE_DIR}/../cnn_layer_accel/model/build/${BUILD_DIR_SUFFIX}/
+        -L${PROJECT_SOURCE_DIR}/../SYSC_FPGA_shim//build/${BUILD_DIR_SUFFIX}/
+        -L${PROJECT_SOURCE_DIR}/../espresso/build/${BUILD_DIR_SUFFIX}/
         -lsystemc
         -lespresso
         -lcnn_layer_accel_model
