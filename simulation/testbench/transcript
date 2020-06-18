@@ -12,1029 +12,9 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-do sim_compile.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# sccom -reportprogress -DMODELSIM -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp 
-# Start time: 13:21:12 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp:1:0:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/AWP.hpp: In constructor 'AWP::AWP(sc_core::sc_module_name)':
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/AWP.hpp:52:47: error: 'to_string' is not a member of 'std'
-#                  quad[i] = new QUAD(("QUAD_" + std::to_string(i)).c_str());
-#                                                ^
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/AWP.hpp:52:47: note: suggested alternative:
-# In file included from /home/software/mentor-2019/questasim/include/systemc/scfx_ieee.h:56:0,
-#                  from /home/software/mentor-2019/questasim/include/systemc/sc_time.h:33,
-#                  from /home/software/mentor-2019/questasim/include/systemc/sc_module.h:36,
-#                  from /home/software/mentor-2019/questasim/include/systemc/systemc:77,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/AWP.hpp:7,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp:1:
-# /home/software/mentor-2019/questasim/include/systemc/sc_fxdefs.h:174:26: note:   'sc_dt::to_string'
-#  SC_API const std::string to_string( sc_fmt );
-#                           ^
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp: In member function 'void AWP::send_complete()':
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp:105:17: error: 'nullptr' was not declared in this scope
-#                  nullptr,
-#                  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp:1:0:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/AWP.hpp: In constructor 'AWP::AWP(sc_core::sc_module_name)':
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/AWP.hpp:52:47: error: 'to_string' is not a member of 'std'
-#                  quad[i] = new QUAD(("QUAD_" + std::to_string(i)).c_str());
-#                                                ^
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/AWP.hpp:52:47: note: suggested alternative:
-# In file included from /home/software/mentor-2019/questasim/include/systemc/scfx_ieee.h:56:0,
-#                  from /home/software/mentor-2019/questasim/include/systemc/sc_time.h:33,
-#                  from /home/software/mentor-2019/questasim/include/systemc/sc_module.h:36,
-#                  from /home/software/mentor-2019/questasim/include/systemc/systemc:77,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/AWP.hpp:7,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp:1:
-# /home/software/mentor-2019/questasim/include/systemc/sc_fxdefs.h:174:26: note:   'sc_dt::to_string'
-#  SC_API const std::string to_string( sc_fmt );
-#                           ^
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp: In member function 'virtual void AWPBus::b_transaction(int, bool)':
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp:60:9: error: 'nullptr' was not declared in this scope
-#          nullptr,
-#          ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:0:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:16:26: fatal error: fixedPoint.hpp: No such file or directory
-# compilation terminated.
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp: In member function 'void QUAD::ctrl_process_1()':
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp:151:103: error: 'to_string' was not declared in this scope
-#                          "[" + string(name()) + "]:" + " finished output Row " + to_string(m_output_row) + " at time " + sc_time_stamp().to_string() + "\n";
-#                                                                                                        ^
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp:151:103: note: suggested alternative:
-# In file included from /home/software/mentor-2019/questasim/include/systemc/scfx_ieee.h:56:0,
-#                  from /home/software/mentor-2019/questasim/include/systemc/sc_time.h:33,
-#                  from /home/software/mentor-2019/questasim/include/systemc/sc_module.h:36,
-#                  from /home/software/mentor-2019/questasim/include/systemc/systemc:77,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/QUAD.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp:1:
-# /home/software/mentor-2019/questasim/include/systemc/sc_fxdefs.h:174:26: note:   'sc_dt::to_string'
-#  SC_API const std::string to_string( sc_fmt );
-#                           ^
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp: In member function 'void QUAD::print_cfg()':
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp:265:84: error: 'to_string' was not declared in this scope
-#          "\tNumber of Output Columns:            " + to_string(m_num_output_cols_cfg)   + "\n"
-#                                                                                     ^
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp:265:84: note: suggested alternative:
-# In file included from /home/software/mentor-2019/questasim/include/systemc/scfx_ieee.h:56:0,
-#                  from /home/software/mentor-2019/questasim/include/systemc/sc_time.h:33,
-#                  from /home/software/mentor-2019/questasim/include/systemc/sc_module.h:36,
-#                  from /home/software/mentor-2019/questasim/include/systemc/systemc:77,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/QUAD.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp:1:
-# /home/software/mentor-2019/questasim/include/systemc/sc_fxdefs.h:174:26: note:   'sc_dt::to_string'
-#  SC_API const std::string to_string( sc_fmt );
-#                           ^
-# In file included from /home/software/mentor-2019/questasim/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/random:35:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:49,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/software/mentor-2019/questasim/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h:32:2: error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
-#  #error This file requires compiler and library support for the \
-#   ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:16:26: fatal error: fixedPoint.hpp: No such file or directory
-# compilation terminated.
-# ** Error: (sccom-6142) Compilation failed.
-# End time: 13:21:26 on Jun 17,2020, Elapsed time: 0:00:14
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-# Error in macro ./sim_compile.do line 174
-# /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-#     while executing
-# "sccom -DMODELSIM -I $env(WORKSPACE_PATH)/cnn_layer_accel/model/inc/ -I $env(WORKSPACE_PATH)/util/inc/ \
-# 	$env(WORKSPACE_PATH)/cnn_layer_accel/model/sr..."
-
-
-
-do sim_compile.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# sccom -reportprogress -DMODELSIM -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp 
-# Start time: 13:23:46 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp:1:0:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/AWP.hpp: In constructor 'AWP::AWP(sc_core::sc_module_name)':
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/AWP.hpp:52:47: error: 'to_string' is not a member of 'std'
-#                  quad[i] = new QUAD(("QUAD_" + std::to_string(i)).c_str());
-#                                                ^
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/AWP.hpp:52:47: note: suggested alternative:
-# In file included from /home/software/mentor-2019/questasim/include/systemc/scfx_ieee.h:56:0,
-#                  from /home/software/mentor-2019/questasim/include/systemc/sc_time.h:33,
-#                  from /home/software/mentor-2019/questasim/include/systemc/sc_module.h:36,
-#                  from /home/software/mentor-2019/questasim/include/systemc/systemc:77,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/AWP.hpp:7,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp:1:
-# /home/software/mentor-2019/questasim/include/systemc/sc_fxdefs.h:174:26: note:   'sc_dt::to_string'
-#  SC_API const std::string to_string( sc_fmt );
-#                           ^
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp: In member function 'void AWP::send_complete()':
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp:105:17: error: 'nullptr' was not declared in this scope
-#                  nullptr,
-#                  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp:1:0:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/AWP.hpp: In constructor 'AWP::AWP(sc_core::sc_module_name)':
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/AWP.hpp:52:47: error: 'to_string' is not a member of 'std'
-#                  quad[i] = new QUAD(("QUAD_" + std::to_string(i)).c_str());
-#                                                ^
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/AWP.hpp:52:47: note: suggested alternative:
-# In file included from /home/software/mentor-2019/questasim/include/systemc/scfx_ieee.h:56:0,
-#                  from /home/software/mentor-2019/questasim/include/systemc/sc_time.h:33,
-#                  from /home/software/mentor-2019/questasim/include/systemc/sc_module.h:36,
-#                  from /home/software/mentor-2019/questasim/include/systemc/systemc:77,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/AWP.hpp:7,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp:1:
-# /home/software/mentor-2019/questasim/include/systemc/sc_fxdefs.h:174:26: note:   'sc_dt::to_string'
-#  SC_API const std::string to_string( sc_fmt );
-#                           ^
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp: In member function 'virtual void AWPBus::b_transaction(int, bool)':
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp:60:9: error: 'nullptr' was not declared in this scope
-#          nullptr,
-#          ^
-# In file included from /home/software/mentor-2019/questasim/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/fixedPoint.hpp:11,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:16,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/software/mentor-2019/questasim/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h:32:2: error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
-#  #error This file requires compiler and library support for the \
-#   ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:0:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:17:25: fatal error: FPGA_shim.hpp: No such file or directory
-# compilation terminated.
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp: In member function 'void QUAD::ctrl_process_1()':
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp:151:103: error: 'to_string' was not declared in this scope
-#                          "[" + string(name()) + "]:" + " finished output Row " + to_string(m_output_row) + " at time " + sc_time_stamp().to_string() + "\n";
-#                                                                                                        ^
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp:151:103: note: suggested alternative:
-# In file included from /home/software/mentor-2019/questasim/include/systemc/scfx_ieee.h:56:0,
-#                  from /home/software/mentor-2019/questasim/include/systemc/sc_time.h:33,
-#                  from /home/software/mentor-2019/questasim/include/systemc/sc_module.h:36,
-#                  from /home/software/mentor-2019/questasim/include/systemc/systemc:77,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/QUAD.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp:1:
-# /home/software/mentor-2019/questasim/include/systemc/sc_fxdefs.h:174:26: note:   'sc_dt::to_string'
-#  SC_API const std::string to_string( sc_fmt );
-#                           ^
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp: In member function 'void QUAD::print_cfg()':
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp:265:84: error: 'to_string' was not declared in this scope
-#          "\tNumber of Output Columns:            " + to_string(m_num_output_cols_cfg)   + "\n"
-#                                                                                     ^
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp:265:84: note: suggested alternative:
-# In file included from /home/software/mentor-2019/questasim/include/systemc/scfx_ieee.h:56:0,
-#                  from /home/software/mentor-2019/questasim/include/systemc/sc_time.h:33,
-#                  from /home/software/mentor-2019/questasim/include/systemc/sc_module.h:36,
-#                  from /home/software/mentor-2019/questasim/include/systemc/systemc:77,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/QUAD.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp:1:
-# /home/software/mentor-2019/questasim/include/systemc/sc_fxdefs.h:174:26: note:   'sc_dt::to_string'
-#  SC_API const std::string to_string( sc_fmt );
-#                           ^
-# In file included from /home/software/mentor-2019/questasim/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/random:35:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:49,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/software/mentor-2019/questasim/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h:32:2: error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
-#  #error This file requires compiler and library support for the \
-#   ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:17:25: fatal error: FPGA_shim.hpp: No such file or directory
-# compilation terminated.
-# ** Error: (sccom-6142) Compilation failed.
-# End time: 13:23:55 on Jun 17,2020, Elapsed time: 0:00:09
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-# Error in macro ./sim_compile.do line 174
-# /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-#     while executing
-# "sccom -DMODELSIM -I $env(WORKSPACE_PATH)/cnn_layer_accel/model/inc/ -I $env(WORKSPACE_PATH)/util/inc/ -I $env(WORKSPACE_PATH)/fixedPoint/inc/ \
-# 	$env(..."
-
-
-do sim_compile.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# sccom -reportprogress -DMODELSIM -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -std=c++11 /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp 
-# Start time: 13:24:24 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:0:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:17:25: fatal error: FPGA_shim.hpp: No such file or directory
-# compilation terminated.
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:17:25: fatal error: FPGA_shim.hpp: No such file or directory
-# compilation terminated.
-# ** Error: (sccom-6142) Compilation failed.
-# End time: 13:24:39 on Jun 17,2020, Elapsed time: 0:00:15
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-# Error in macro ./sim_compile.do line 174
-# /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-#     while executing
-# "sccom -DMODELSIM -I $env(WORKSPACE_PATH)/cnn_layer_accel/model/inc/ -I $env(WORKSPACE_PATH)/util/inc/ -I $env(WORKSPACE_PATH)/fixedPoint/inc/ -std=c++..."
-
-
-
-do sim_compile.do
-# sccom -reportprogress -DMODELSIM -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -std=c++11 /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp 
-# Start time: 13:25:21 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:0:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18:27: fatal error: AccelConfig.hpp: No such file or directory
-# compilation terminated.
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18:27: fatal error: AccelConfig.hpp: No such file or directory
-# compilation terminated.
-# ** Error: (sccom-6142) Compilation failed.
-# End time: 13:25:35 on Jun 17,2020, Elapsed time: 0:00:14
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-# Error in macro ./sim_compile.do line 174
-# /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-#     while executing
-# "sccom -DMODELSIM -I $env(WORKSPACE_PATH)/cnn_layer_accel/model/inc/ -I $env(WORKSPACE_PATH)/util/inc/ -I $env(WORKSPACE_PATH)/fixedPoint/inc/ -I $env(..."
-
-
-do sim_compile.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# sccom -reportprogress -DMODELSIM -std=c++11 -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp 
-# Start time: 13:32:43 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:0:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18:27: fatal error: AccelConfig.hpp: No such file or directory
-# compilation terminated.
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18:27: fatal error: AccelConfig.hpp: No such file or directory
-# compilation terminated.
-# ** Error: (sccom-6142) Compilation failed.
-# End time: 13:32:57 on Jun 17,2020, Elapsed time: 0:00:14
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-# Error in macro ./sim_compile.do line 179
-# /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-#     while executing
-# "sccom -DMODELSIM -std=c++11 \
-# 	-I $env(WORKSPACE_PATH)/cnn_layer_accel/model/inc/ \
-# 	-I $env(WORKSPACE_PATH)/util/inc/ \
-# 	-I $env(WORKSPACE_PATH)/fixe..."
-
-
-do sim_compile.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# sccom -reportprogress -DMODELSIM -std=c++11 -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp 
-# Start time: 13:33:37 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:15:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# End time: 13:33:58 on Jun 17,2020, Elapsed time: 0:00:21
-# Errors: 0, Warnings: 0
-# sccom -reportprogress -link -L /home/mdl/izo5011/IkennaWorkSpace/network/build/debug/ 
-# Start time: 13:33:59 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# End time: 13:34:01 on Jun 17,2020, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
-# ** Error: invalid command name "-L"
-# Error in macro ./sim_compile.do line 182
-# invalid command name "-L"
-#     while executing
-# "-L $env(WORKSPACE_PATH)/myNetProto/build/debug/"
-
-
-do sim_compile.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# sccom -reportprogress -DMODELSIM -std=c++11 -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp 
-# Start time: 13:35:02 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:15:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# End time: 13:35:23 on Jun 17,2020, Elapsed time: 0:00:21
-# Errors: 0, Warnings: 0
-# sccom -reportprogress -link -L/home/mdl/izo5011/IkennaWorkSpace/network/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/myNetProto/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug/ -lnetwork -lmyNetProto -lespresso 
-# Start time: 13:35:23 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# /home/software/mentor-2019/questasim/gcc-5.3.0-linux_x86_64/bin/../libexec/gcc/x86_64-unknown-linux-gnu/5.3.0/ld: cannot find -lespresso
-# collect2: error: ld returned 1 exit status
-# ** Error: (sccom-6126) Linking failed. Creation of work/systemc.so failed.
-# End time: 13:35:24 on Jun 17,2020, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-# Error in macro ./sim_compile.do line 186
-# /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-#     while executing
-# "sccom -link \
-# 	-L$env(WORKSPACE_PATH)/network/build/debug/ \
-# 	-L$env(WORKSPACE_PATH)/myNetProto/build/debug/ \
-# 	-L$env(WORKSPACE_PATH)/espresso/build/..."
-do sim_compile.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# sccom -reportprogress -DMODELSIM -std=c++11 -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp 
-# Start time: 14:03:25 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:15:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# End time: 14:03:47 on Jun 17,2020, Elapsed time: 0:00:22
-# Errors: 0, Warnings: 0
-# sccom -reportprogress -link -L/home/mdl/izo5011/IkennaWorkSpace/network/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/myNetProto/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug/ -lnetwork -lmyNetProto -lespresso 
-# Start time: 14:03:47 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# /home/software/mentor-2019/questasim/gcc-5.3.0-linux_x86_64/bin/../libexec/gcc/x86_64-unknown-linux-gnu/5.3.0/ld: /home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug//libespresso.a(AccelConfig.cpp.o): relocation R_X86_64_32S against `_ZTV11AccelConfig' can not be used when making a shared object; recompile with -fPIC
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug//libespresso.a: error adding symbols: Bad value
-# collect2: error: ld returned 1 exit status
-# ** Error: (sccom-6126) Linking failed. Creation of work/systemc.so failed.
-# End time: 14:03:47 on Jun 17,2020, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-# Error in macro ./sim_compile.do line 186
-# /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-#     while executing
-# "sccom -link \
-# 	-L$env(WORKSPACE_PATH)/network/build/debug/ \
-# 	-L$env(WORKSPACE_PATH)/myNetProto/build/debug/ \
-# 	-L$env(WORKSPACE_PATH)/espresso/build/..."
-do sim_compile.do
-# sccom -reportprogress -DMODELSIM -std=c++11 -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp 
-# Start time: 14:06:25 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:15:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# End time: 14:06:46 on Jun 17,2020, Elapsed time: 0:00:21
-# Errors: 0, Warnings: 0
-# sccom -reportprogress -link -L/home/mdl/izo5011/IkennaWorkSpace/network/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/myNetProto/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug/ -lnetwork -lmyNetProto -lespresso 
-# Start time: 14:06:47 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# /home/software/mentor-2019/questasim/gcc-5.3.0-linux_x86_64/bin/../libexec/gcc/x86_64-unknown-linux-gnu/5.3.0/ld: /home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug//libespresso.a(AccelConfig.cpp.o): relocation R_X86_64_32S against `_ZTV11AccelConfig' can not be used when making a shared object; recompile with -fPIC
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug//libespresso.a: error adding symbols: Bad value
-# collect2: error: ld returned 1 exit status
-# ** Error: (sccom-6126) Linking failed. Creation of work/systemc.so failed.
-# End time: 14:06:47 on Jun 17,2020, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-# Error in macro ./sim_compile.do line 186
-# /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-#     while executing
-# "sccom -link \
-# 	-L$env(WORKSPACE_PATH)/network/build/debug/ \
-# 	-L$env(WORKSPACE_PATH)/myNetProto/build/debug/ \
-# 	-L$env(WORKSPACE_PATH)/espresso/build/..."
-do sim_compile.do
-# sccom -reportprogress -DMODELSIM -std=c++1y -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp 
-# Start time: 14:07:21 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:15:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# End time: 14:07:42 on Jun 17,2020, Elapsed time: 0:00:21
-# Errors: 0, Warnings: 0
-# sccom -reportprogress -link -L/home/mdl/izo5011/IkennaWorkSpace/network/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/myNetProto/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug/ -lnetwork -lmyNetProto -lespresso 
-# Start time: 14:07:42 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# /home/software/mentor-2019/questasim/gcc-5.3.0-linux_x86_64/bin/../libexec/gcc/x86_64-unknown-linux-gnu/5.3.0/ld: /home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug//libespresso.a(AccelConfig.cpp.o): relocation R_X86_64_32S against `_ZTV11AccelConfig' can not be used when making a shared object; recompile with -fPIC
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug//libespresso.a: error adding symbols: Bad value
-# collect2: error: ld returned 1 exit status
-# ** Error: (sccom-6126) Linking failed. Creation of work/systemc.so failed.
-# End time: 14:07:43 on Jun 17,2020, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-# Error in macro ./sim_compile.do line 186
-# /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-#     while executing
-# "sccom -link \
-# 	-L$env(WORKSPACE_PATH)/network/build/debug/ \
-# 	-L$env(WORKSPACE_PATH)/myNetProto/build/debug/ \
-# 	-L$env(WORKSPACE_PATH)/espresso/build/..."
-do sim_compile.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# sccom -reportprogress -DMODELSIM -std=c++1y -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp 
-# Start time: 14:50:53 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:15:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# End time: 14:51:15 on Jun 17,2020, Elapsed time: 0:00:22
-# Errors: 0, Warnings: 0
-# sccom -reportprogress -link -L/home/mdl/izo5011/IkennaWorkSpace/network/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/myNetProto/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug/ -lnetwork -lmyNetProto -lespresso 
-# Start time: 14:51:15 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# End time: 14:51:17 on Jun 17,2020, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
 do startsim.do
 # QuestaSim-64 vopt 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 15:04:02 on Jun 17,2020
-# vopt -reportprogress 300 "+acc=npr" -L work -L microblaze_v11_0_0 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L lmb_v10_v3_0_9 -L lmb_bram_if_cntlr_v4_0_15 -L blk_mem_gen_v8_4_2 -L iomodule_v3_1_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm -work work work.testbench work.glbl -o testbench_opt 
-# 
-# Top level modules:
-# 	testbench
-# 	glbl
-# 
-# Analyzing design...
-# ** Error: (vopt-13130) Failed to find design unit testbench.
-#         Searched libraries:
-#             work
-#             microblaze_v11_0_0
-#             lib_cdc_v1_0_2
-#             proc_sys_reset_v5_0_13
-#             lmb_v10_v3_0_9
-#             lmb_bram_if_cntlr_v4_0_15
-#             blk_mem_gen_v8_4_2
-#             iomodule_v3_1_4
-#             unisims_ver
-#             unimacro_ver
-#             secureip
-#             xpm
-#             work
-# ** Error: (vopt-13130) Failed to find design unit glbl.
-#         Searched libraries:
-#             work
-#             microblaze_v11_0_0
-#             lib_cdc_v1_0_2
-#             proc_sys_reset_v5_0_13
-#             lmb_v10_v3_0_9
-#             lmb_bram_if_cntlr_v4_0_15
-#             blk_mem_gen_v8_4_2
-#             iomodule_v3_1_4
-#             unisims_ver
-#             unimacro_ver
-#             secureip
-#             xpm
-#             work
-# Optimization failed
-# End time: 15:04:04 on Jun 17,2020, Elapsed time: 0:00:02
-# Errors: 2, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/vopt failed.
-# Error in macro ./startsim.do line 14
-# Return status = 2
-#     (procedure "compile" line 1)
-#     invoked from within
-# "compile NoFilter vopt -64 +acc=npr -L work -L microblaze_v11_0_0 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L lmb_v10_v3_0_9 -L lmb_bram_if_cntlr_v4..."
-#     ("eval" body line 1)
-#     invoked from within
-# "eval compile NoFilter vopt $args"
-#     (procedure "vopt" line 9)
-#     invoked from within
-# "vopt -64 +acc=npr \
-# 	-L work \
-# 	-L microblaze_v11_0_0 \
-# 	-L lib_cdc_v1_0_2 \
-# 	-L proc_sys_reset_v5_0_13 \
-# 	-L lmb_v10_v3_0_9 \
-# 	-L lmb_bram_if_cntlr_v..."
-do startsim.do
-# QuestaSim-64 vopt 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 15:04:56 on Jun 17,2020
-# vopt -reportprogress 300 "+acc=npr" -L work #-L microblaze_v11_0_0 #-L lib_cdc_v1_0_2 #-L proc_sys_reset_v5_0_13 #-L lmb_v10_v3_0_9 #-L lmb_bram_if_cntlr_v4_0_15 #-L blk_mem_gen_v8_4_2 #-L iomodule_v3_1_4 #-L unisims_ver #-L unimacro_ver #-L secureip #-L xpm -work work work.testbench -o testbench_opt 
-# ** Fatal: (vopt-3369) Top-level design unit '#-L' specified more than once.
-# Vopt Compiler exiting
-# End time: 15:04:56 on Jun 17,2020, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/vopt failed.
-# Error in macro ./startsim.do line 14
-# Return status = 2
-#     (procedure "compile" line 1)
-#     invoked from within
-# "compile NoFilter vopt -64 +acc=npr -L work #-L microblaze_v11_0_0 #-L lib_cdc_v1_0_2 #-L proc_sys_reset_v5_0_13 #-L lmb_v10_v3_0_9 #-L lmb_bram_if_cnt..."
-#     ("eval" body line 1)
-#     invoked from within
-# "eval compile NoFilter vopt $args"
-#     (procedure "vopt" line 9)
-#     invoked from within
-# "vopt -64 +acc=npr \
-# 	-L work \
-# 	#-L microblaze_v11_0_0 \
-# 	#-L lib_cdc_v1_0_2 \
-# 	#-L proc_sys_reset_v5_0_13 \
-# 	#-L lmb_v10_v3_0_9 \
-# 	#-L lmb_bram_if_cn..."
-do startsim.do
-# QuestaSim-64 vopt 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 15:05:33 on Jun 17,2020
-# vopt -reportprogress 300 "+acc=npr" -L work -work work work.testbench -o testbench_opt 
-# 
-# Top level modules:
-# 	testbench
-# 
-# Analyzing design...
-# ** Error: (vopt-7028) Failed to find design unit '/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work.testbench'. If this is a SystemC design unit, please make sure that the source file for this module is compiled without the -nodebug sccom option.
-# Optimization failed
-# End time: 15:05:33 on Jun 17,2020, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/vopt failed.
-# Error in macro ./startsim.do line 22
-# Return status = 2
-#     (procedure "compile" line 1)
-#     invoked from within
-# "compile NoFilter vopt -64 +acc=npr -L work -work work work.testbench -o testbench_opt"
-#     ("eval" body line 1)
-#     invoked from within
-# "eval compile NoFilter vopt $args"
-#     (procedure "vopt" line 9)
-#     invoked from within
-# "vopt -64 +acc=npr \
-# 	-L work \
-# 	-work work work.testbench -o testbench_opt"
-do sim_compile.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# sccom -reportprogress -DMODELSIM -std=c++1y -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp 
-# Start time: 15:07:07 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:15:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# End time: 15:07:29 on Jun 17,2020, Elapsed time: 0:00:22
-# Errors: 0, Warnings: 0
-# sccom -reportprogress -link -L/home/mdl/izo5011/IkennaWorkSpace/network/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/myNetProto/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug/ -lnetwork -lmyNetProto -lespresso 
-# Start time: 15:07:29 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# End time: 15:07:30 on Jun 17,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 15:07:31 on Jun 17,2020
-# vlog -reportprogress 300 -64 -incr -sv -work work "+incdir+./" ./testbench.sv 
-# ** Error: ./testbench.sv(109): (vlog-13006) Could not find the package (arch_package).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-# ** Error: (vlog-13069) ./testbench.sv(110): near "CONFIGURED_DENSITY": syntax error, unexpected IDENTIFIER, expecting ';' or ','.
-# End time: 15:07:32 on Jun 17,2020, Elapsed time: 0:00:01
-# Errors: 2, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/vlog failed.
-# Error in macro ./sim_compile.do line 194
-# /home/software/mentor-2019/questasim/linux_x86_64/vlog failed.
-#     while executing
-# "vlog -64 -incr -sv -work work \
-# 	+incdir+./ \
-# 	./testbench.sv"
-
-
-do sim_compile.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# sccom -reportprogress -DMODELSIM -std=c++1y -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp 
-# Start time: 15:14:09 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:15:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# End time: 15:14:30 on Jun 17,2020, Elapsed time: 0:00:21
-# Errors: 0, Warnings: 0
-# sccom -reportprogress -link -L/home/mdl/izo5011/IkennaWorkSpace/network/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/myNetProto/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug/ -lnetwork -lmyNetProto -lespresso 
-# Start time: 15:14:30 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# End time: 15:14:32 on Jun 17,2020, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 15:14:32 on Jun 17,2020
-# vlog -reportprogress 300 -64 -incr -sv -work work "+incdir+./" ./example_top.sv 
-# -- Compiling interface DDR4_ctrl_intf
-# -- Compiling package example_top_sv_unit
-# -- Compiling module example_top
-# 
-# Top level modules:
-# 	example_top
-# End time: 15:14:32 on Jun 17,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-do startsim.do
-# QuestaSim-64 vopt 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 15:14:38 on Jun 17,2020
-# vopt -reportprogress 300 "+acc=npr" -L work -work work work.testbench -o testbench_opt 
-# 
-# Top level modules:
-# 	testbench
-# 
-# Analyzing design...
-# ** Error: (vopt-7028) Failed to find design unit '/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work.testbench'. If this is a SystemC design unit, please make sure that the source file for this module is compiled without the -nodebug sccom option.
-# Optimization failed
-# End time: 15:14:38 on Jun 17,2020, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/vopt failed.
-# Error in macro ./startsim.do line 22
-# Return status = 2
-#     (procedure "compile" line 1)
-#     invoked from within
-# "compile NoFilter vopt -64 +acc=npr -L work -work work work.testbench -o testbench_opt"
-#     ("eval" body line 1)
-#     invoked from within
-# "eval compile NoFilter vopt $args"
-#     (procedure "vopt" line 9)
-#     invoked from within
-# "vopt -64 +acc=npr \
-# 	-L work \
-# 	-work work work.testbench -o testbench_opt"
-do startsim.do
-# QuestaSim-64 vopt 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 15:15:09 on Jun 17,2020
-# vopt -reportprogress 300 "+acc=npr" -L work -work work work.example_top -o testbench_opt 
-# 
-# Top level modules:
-# 	example_top
-# 
-# Analyzing design...
-# -- Loading module example_top
-# ** Error: ./example_top.sv(270): Module 'ddr4_0' is not defined.
-# ** Error: ./example_top.sv(399): Module 'SYSC_FPGA' is not defined.
-# Optimization failed
-# End time: 15:15:10 on Jun 17,2020, Elapsed time: 0:00:01
-# Errors: 2, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/vopt failed.
-# Error in macro ./startsim.do line 22
-# Return status = 2
-#     (procedure "compile" line 1)
-#     invoked from within
-# "compile NoFilter vopt -64 +acc=npr -L work -work work work.example_top -o testbench_opt"
-#     ("eval" body line 1)
-#     invoked from within
-# "eval compile NoFilter vopt $args"
-#     (procedure "vopt" line 9)
-#     invoked from within
-# "vopt -64 +acc=npr \
-# 	-L work \
-# 	-work work work.example_top -o testbench_opt"
-do sim_compile.do
-# sccom -reportprogress -DMODELSIM -std=c++1y -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp 
-# Start time: 15:16:02 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:15:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# End time: 15:16:23 on Jun 17,2020, Elapsed time: 0:00:21
-# Errors: 0, Warnings: 0
-# sccom -reportprogress -link -L/home/mdl/izo5011/IkennaWorkSpace/network/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/myNetProto/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug/ -lnetwork -lmyNetProto -lespresso 
-# Start time: 15:16:24 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# End time: 15:16:25 on Jun 17,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 15:16:25 on Jun 17,2020
-# vlog -reportprogress 300 -64 -incr -sv -work work "+incdir+./" ./example_top.sv 
-# -- Compiling interface DDR4_ctrl_intf
-# -- Compiling package example_top_sv_unit
-# -- Compiling module example_top
-# 
-# Top level modules:
-# 	example_top
-# End time: 15:16:25 on Jun 17,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-do sim_compile.do
-# sccom -reportprogress -DMODELSIM -std=c++1y -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp 
-# Start time: 15:19:10 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:15:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# End time: 15:19:31 on Jun 17,2020, Elapsed time: 0:00:21
-# Errors: 0, Warnings: 0
-# sccom -reportprogress -link -L/home/mdl/izo5011/IkennaWorkSpace/network/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/myNetProto/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug/ -lnetwork -lmyNetProto -lespresso 
-# Start time: 15:19:31 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# End time: 15:19:33 on Jun 17,2020, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 15:19:33 on Jun 17,2020
-# vlog -reportprogress 300 -64 -incr -sv -work work "+incdir+./" ./example_top.sv 
-# -- Compiling interface DDR4_ctrl_intf
-# -- Compiling package example_top_sv_unit
-# -- Compiling module example_top
-# 
-# Top level modules:
-# 	example_top
-# End time: 15:19:33 on Jun 17,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-do sim_compile.do
-# sccom -reportprogress -DMODELSIM -std=c++1y -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp 
-# Start time: 15:19:42 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:15:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# End time: 15:20:03 on Jun 17,2020, Elapsed time: 0:00:21
-# Errors: 0, Warnings: 0
-# sccom -reportprogress -link -L/home/mdl/izo5011/IkennaWorkSpace/network/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/myNetProto/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug/ -lnetwork -lmyNetProto -lespresso 
-# Start time: 15:20:03 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# End time: 15:20:04 on Jun 17,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 15:20:05 on Jun 17,2020
-# vlog -reportprogress 300 -64 -incr -sv -work work "+incdir+./" ./testbench.sv 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 15:20:05 on Jun 17,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-do startsim.do
-# QuestaSim-64 vopt 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 15:20:29 on Jun 17,2020
+# Start time: 17:16:44 on Jun 17,2020
 # vopt -reportprogress 300 "+acc=npr" -L work -work work work.testbench -o testbench_opt 
 # 
 # Top level modules:
@@ -1042,30 +22,60 @@ do startsim.do
 # 
 # Analyzing design...
 # -- Loading module testbench
-# ** Error: ./testbench.sv(8): Module 'SYSC_FPGA' is not defined.
-# Optimization failed
-# End time: 15:20:29 on Jun 17,2020, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/vopt failed.
-# Error in macro ./startsim.do line 22
-# Return status = 2
-#     (procedure "compile" line 1)
-#     invoked from within
-# "compile NoFilter vopt -64 +acc=npr -L work -work work work.testbench -o testbench_opt"
-#     ("eval" body line 1)
-#     invoked from within
-# "eval compile NoFilter vopt $args"
-#     (procedure "vopt" line 9)
-#     invoked from within
-# "vopt -64 +acc=npr \
-# 	-L work \
-# 	-work work work.testbench -o testbench_opt"
-
-
-do sim_compile.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# sccom -reportprogress -DMODELSIM -std=c++1y -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ -I /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp 
-# Start time: 15:21:45 on Jun 17,2020
+# -- Loading shared library /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# -- Loading systemc module /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work.SYSC_FPGA
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# Incremental compilation check found no design-units have changed.
+# Optimized design name is testbench_opt
+# End time: 17:16:44 on Jun 17,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 8
+# vsim -lib work testbench_opt -t 1ns 
+# Start time: 17:16:44 on Jun 17,2020
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# Loading /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work.SYSC_FPGA
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_target_socket_1_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_target_socket_0_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_target_socket_0_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP2FAS_bus/target_socket_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS2AWP_bus/target_socket_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/simple_target_socket_0_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/bus/simple_initiator_socket_0_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_initiator_socket_0_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_initiator_socket_1_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_initiator_socket_0_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP2FAS_bus/init_socket_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS2AWP_bus/init_socket_export_0' is of an undebuggable type.
+# Client connected to server
+# Hardware sent CONNECT_HARDWARE
+do wave.do
+run -all
+# Hardware recvd ACCEL_SET_CONFIG
+# Hardware recvd ACCEL_CFG_PYLD
+# Hardware recvd ACCEL_CFG_PYLD
+# Hardware recvd ACCEL_END_CFG
+# Hardware recvd ACCEL_START
+# [/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0]: finished last Part Map Fetch at 61150 ns
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/wave.do
+quit -sim
+# End time: 17:39:59 on Jun 17,2020, Elapsed time: 0:23:15
+# Errors: 20, Warnings: 16
+vdel -all -lib work
+do sim_compile.do; do startsim.do
+# sccom -reportprogress -DMODEL_TECH -std=c++1y -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ -I /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/network/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/myNetProto/inc/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/cnn_layer_accel_common.cpp /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp 
+# Start time: 17:40:29 on Jun 17,2020
 # 
 # QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
 # 
@@ -1096,17 +106,104 @@ do sim_compile.do
 # /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
 #  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
 #  ^
-# End time: 15:22:06 on Jun 17,2020, Elapsed time: 0:00:21
+# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
+#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
+#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
+#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
+#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
+#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/SYSC_FPGA.hpp:8,
+#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp:1:
+# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
+#  #define WINDOW_3x3_NUM_CYCLES     5
+#  ^
+# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
+#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/SYSC_FPGA.hpp:8,
+#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp:1:
+# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
+#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
+#  ^
+# 
+# Exported modules:
+# 	SYSC_FPGA
+# End time: 17:40:59 on Jun 17,2020, Elapsed time: 0:00:30
 # Errors: 0, Warnings: 0
-# ** Error: invalid command name "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp"
-# Error in macro ./sim_compile.do line 182
-# invalid command name "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp"
-#     while executing
-# "$env(WORKSPACE_PATH)/SYSC_FPGA/src/SYSC_FPGA.cpp"
-do sim_compile.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# sccom -reportprogress -DMODELSIM -std=c++1y -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ -I /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp 
-# Start time: 15:24:06 on Jun 17,2020
+# sccom -reportprogress -link -L/home/mdl/izo5011/IkennaWorkSpace/network/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/myNetProto/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA_shim/build/debug/ -lsysc_fpga_shim -lmyNetProto -lnetwork -lespresso 
+# Start time: 17:40:59 on Jun 17,2020
+# 
+# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
+# End time: 17:41:01 on Jun 17,2020, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2019.4_2 Compiler 2019.12 Dec  7 2019
+# Start time: 17:41:01 on Jun 17,2020
+# vlog -reportprogress 300 -64 -incr -sv -work work "+incdir+./" ./testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 17:41:01 on Jun 17,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vopt 2019.4_2 Compiler 2019.12 Dec  7 2019
+# Start time: 17:41:01 on Jun 17,2020
+# vopt -reportprogress 300 "+acc=npr" -L work -work work work.testbench -o testbench_opt 
+# 
+# Top level modules:
+# 	testbench
+# 
+# Analyzing design...
+# -- Loading module testbench
+# -- Loading shared library /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# -- Loading systemc module /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work.SYSC_FPGA
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# Optimizing 1 design-unit (inlining 0/1 module instances, 0/25 systemc instances):
+# -- Optimizing module testbench(fast)
+# Optimized design name is testbench_opt
+# End time: 17:41:02 on Jun 17,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 8
+# vsim -lib work testbench_opt -t 1ns 
+# Start time: 17:41:02 on Jun 17,2020
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# Loading /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work.SYSC_FPGA
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_target_socket_1_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_target_socket_0_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_target_socket_0_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP2FAS_bus/target_socket_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS2AWP_bus/target_socket_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/simple_target_socket_0_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/bus/simple_initiator_socket_0_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_initiator_socket_0_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_initiator_socket_1_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_initiator_socket_0_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP2FAS_bus/init_socket_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS2AWP_bus/init_socket_export_0' is of an undebuggable type.
+# Client connected to server
+# Hardware sent CONNECT_HARDWARE
+do wave.do
+run -all
+# Hardware recvd ACCEL_SET_CONFIG
+# Hardware recvd ACCEL_CFG_PYLD
+# Hardware recvd ACCEL_CFG_PYLD
+# Hardware recvd ACCEL_END_CFG
+# Hardware recvd ACCEL_START
+quit -sim
+# End time: 17:47:09 on Jun 17,2020, Elapsed time: 0:06:07
+# Errors: 14, Warnings: 16
+vdel -all -lib work
+do sim_compile.do; do startsim.do
+# sccom -reportprogress -DMODEL_TECH -std=c++1y -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ -I /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/network/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/myNetProto/inc/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/cnn_layer_accel_common.cpp /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp 
+# Start time: 17:54:08 on Jun 17,2020
 # 
 # QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
 # 
@@ -1153,222 +250,83 @@ do sim_compile.do
 # /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
 #  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
 #  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp:1:0:
-# /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/SYSC_FPGA.hpp:9:30: fatal error: SYSC_FPGA_shim.hpp: No such file or directory
-# compilation terminated.
-# ** Error: (sccom-6142) Compilation failed.
-# End time: 15:24:28 on Jun 17,2020, Elapsed time: 0:00:22
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-# Error in macro ./sim_compile.do line 182
-# /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-#     while executing
-# "sccom -DMODELSIM -std=c++1y \
-# 	-I $env(WORKSPACE_PATH)/cnn_layer_accel/model/inc/ \
-# 	-I $env(WORKSPACE_PATH)/util/inc/ \
-# 	-I $env(WORKSPACE_PATH)/fixe..."
-do sim_compile.do
-# sccom -reportprogress -DMODELSIM -std=c++1y -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ -I /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA_shim/inc/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp 
-# Start time: 15:25:26 on Jun 17,2020
+# 
+# Exported modules:
+# 	SYSC_FPGA
+# End time: 17:54:39 on Jun 17,2020, Elapsed time: 0:00:31
+# Errors: 0, Warnings: 0
+# sccom -reportprogress -link -L/home/mdl/izo5011/IkennaWorkSpace/network/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/myNetProto/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA_shim/build/debug/ -lsysc_fpga_shim -lmyNetProto -lnetwork -lespresso 
+# Start time: 17:54:39 on Jun 17,2020
 # 
 # QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
+# End time: 17:54:41 on Jun 17,2020, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2019.4_2 Compiler 2019.12 Dec  7 2019
+# Start time: 17:54:41 on Jun 17,2020
+# vlog -reportprogress 300 -64 -incr -sv -work work "+incdir+./" ./testbench.sv 
+# -- Compiling module testbench
 # 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:15:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/SYSC_FPGA.hpp:8,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/SYSC_FPGA.hpp:8,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/SYSC_FPGA.hpp:9:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA_shim/inc/SYSC_FPGA_shim.hpp:5:26: fatal error: MyNetProto.hpp: No such file or directory
-# compilation terminated.
-# ** Error: (sccom-6142) Compilation failed.
-# End time: 15:25:48 on Jun 17,2020, Elapsed time: 0:00:22
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-# Error in macro ./sim_compile.do line 183
-# /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-#     while executing
-# "sccom -DMODELSIM -std=c++1y \
-# 	-I $env(WORKSPACE_PATH)/cnn_layer_accel/model/inc/ \
-# 	-I $env(WORKSPACE_PATH)/util/inc/ \
-# 	-I $env(WORKSPACE_PATH)/fixe..."
-do sim_compile.do
-# sccom -reportprogress -DMODELSIM -std=c++1y -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ -I /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/network/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/myNetProto/inc/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp 
-# Start time: 15:26:58 on Jun 17,2020
+# Top level modules:
+# 	testbench
+# End time: 17:54:41 on Jun 17,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vopt 2019.4_2 Compiler 2019.12 Dec  7 2019
+# Start time: 17:54:41 on Jun 17,2020
+# vopt -reportprogress 300 "+acc=npr" -L work -work work work.testbench -o testbench_opt 
 # 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
+# Top level modules:
+# 	testbench
 # 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:15:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/SYSC_FPGA.hpp:8,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/SYSC_FPGA.hpp:8,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp:1:0:
-# /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/SYSC_FPGA.hpp:10:26: fatal error: myNetProto.hpp: No such file or directory
-# compilation terminated.
-# ** Error: (sccom-6142) Compilation failed.
-# End time: 15:27:20 on Jun 17,2020, Elapsed time: 0:00:22
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-# Error in macro ./sim_compile.do line 185
-# /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-#     while executing
-# "sccom -DMODELSIM -std=c++1y \
-# 	-I $env(WORKSPACE_PATH)/cnn_layer_accel/model/inc/ \
-# 	-I $env(WORKSPACE_PATH)/util/inc/ \
-# 	-I $env(WORKSPACE_PATH)/fixe..."
-do sim_compile.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# sccom -reportprogress -DMODELSIM -std=c++1y -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ -I /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/network/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/myNetProto/inc/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp 
-# Start time: 15:28:18 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:15:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/SYSC_FPGA.hpp:8,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/SYSC_FPGA.hpp:8,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/myNetProto/inc/MyNetProto.hpp:4:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA_shim/inc/SYSC_FPGA_shim.hpp:5,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/SYSC_FPGA.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/network/inc/Network.hpp:51:69: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
-#  int client_connect(char* address = "127.0.0.1", uint16_t port = 8888);
-#                                                                      ^
-# /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp: In member function 'void SYSC_FPGA::main()':
-# /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp:63:33: error: no matching function for call to 'CNN_Layer_Accel::waitComplete()'
-#    cnn_layer_accel->waitComplete();
-#                                  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/SYSC_FPGA.hpp:8:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:153:14: note: candidate: void CNN_Layer_Accel::waitComplete(double&, double&)
-#          void waitComplete(double& elapsedTime, double& memPower);
-#               ^
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:153:14: note:   candidate expects 2 arguments, 0 provided
-# ** Error: (sccom-6142) Compilation failed.
-# End time: 15:28:43 on Jun 17,2020, Elapsed time: 0:00:25
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-# Error in macro ./sim_compile.do line 185
-# /home/software/mentor-2019/questasim/linux_x86_64/sccom failed.
-#     while executing
-# "sccom -DMODELSIM -std=c++1y \
-# 	-I $env(WORKSPACE_PATH)/cnn_layer_accel/model/inc/ \
-# 	-I $env(WORKSPACE_PATH)/util/inc/ \
-# 	-I $env(WORKSPACE_PATH)/fixe..."
+# Analyzing design...
+# -- Loading module testbench
+# -- Loading shared library /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# -- Loading systemc module /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work.SYSC_FPGA
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# Optimizing 1 design-unit (inlining 0/1 module instances, 0/25 systemc instances):
+# -- Optimizing module testbench(fast)
+# Optimized design name is testbench_opt
+# End time: 17:54:42 on Jun 17,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 8
+# vsim -lib work testbench_opt -t 1ns 
+# Start time: 17:54:42 on Jun 17,2020
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# Loading /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work.SYSC_FPGA
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_target_socket_1_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_target_socket_0_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_target_socket_0_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP2FAS_bus/target_socket_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS2AWP_bus/target_socket_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/simple_target_socket_0_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/bus/simple_initiator_socket_0_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_initiator_socket_0_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_initiator_socket_1_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_initiator_socket_0_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP2FAS_bus/init_socket_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS2AWP_bus/init_socket_export_0' is of an undebuggable type.
+# Client connected to server
+# Hardware sent CONNECT_HARDWARE
+do wave.do
+run -all
+# Hardware recvd ACCEL_SET_CONFIG
+# Hardware recvd ACCEL_CFG_PYLD
+# Hardware recvd ACCEL_CFG_PYLD
+# Hardware recvd ACCEL_END_CFG
+# Hardware recvd ACCEL_START
+run -all
+# [/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0]: finished 578 / 5776 store transactions at 8881570 ns
+run -all
+# [/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0]: finished 1156 / 5776 store transactions at 17759650 ns
+# [/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0]: finished 1733 / 5776 store transactions at 26622370 ns

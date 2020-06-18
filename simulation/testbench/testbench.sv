@@ -1,5 +1,5 @@
 
-`timescale 1ps/1ps
+`timescale 1ns/1ns
 
 
 module testbench;

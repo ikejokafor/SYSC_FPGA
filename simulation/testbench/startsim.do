@@ -21,5 +21,5 @@ vopt -64 +acc=npr \
 	-L work \
 	-work work work.testbench -o testbench_opt
 
-vsim -lib work testbench_opt
+vsim -lib work testbench_opt -t 1ns
 # do wave.do

@@ -165,7 +165,7 @@ vlib work
 # 	./Traffic_Gen.cpp
 # sccom -link
 
-sccom -DMODELSIM -std=c++1y \
+sccom -DMODEL_TECH -std=c++1y \
 	-I $env(WORKSPACE_PATH)/cnn_layer_accel/model/inc/ \
 	-I $env(WORKSPACE_PATH)/util/inc/ \
 	-I $env(WORKSPACE_PATH)/fixedPoint/inc/ \
@@ -182,15 +182,17 @@ sccom -DMODELSIM -std=c++1y \
 	$env(WORKSPACE_PATH)/cnn_layer_accel/model/src/Interconnect.cpp	\
 	$env(WORKSPACE_PATH)/cnn_layer_accel/model/src/QUAD.cpp \
 	$env(WORKSPACE_PATH)/cnn_layer_accel/model/src/CNN_Layer_accel.cpp \
+	$env(WORKSPACE_PATH)/cnn_layer_accel/model/src/cnn_layer_accel_common.cpp \
 	$env(WORKSPACE_PATH)/SYSC_FPGA/src/SYSC_FPGA.cpp
+	
 sccom -link \
 	-L$env(WORKSPACE_PATH)/network/build/debug/ \
 	-L$env(WORKSPACE_PATH)/myNetProto/build/debug/ \
 	-L$env(WORKSPACE_PATH)/espresso/build/debug/ \
 	-L$env(WORKSPACE_PATH)/SYSC_FPGA_shim/build/debug/ \
-	-lnetwork \
+	-lsysc_fpga_shim \
 	-lmyNetProto \
-	-lSYSC_FPGA_shim \
+	-lnetwork \
 	-lespresso
 
 
