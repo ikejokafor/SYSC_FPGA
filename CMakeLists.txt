@@ -164,9 +164,9 @@ ADD_DEPENDENCIES(${TARGET_NAME} cnn_layer_accel_model)
 
 # BEGIN Compiler Flags ------------------------------------------------------------------------------------------------------------------------------
 TARGET_COMPILE_OPTIONS(${TARGET_NAME} PUBLIC 
-    "-std=c++1y"
+    "-std=c++14" 
     "-Wall"
-    "-fPIC"
+	"-fPIC"
     "-fexceptions"
 )
 # END Compiler Flags --------------------------------------------------------------------------------------------------------------------------------
@@ -196,6 +196,7 @@ ELSE()
         ${PROJECT_SOURCE_DIR}/../espresso/inc/FPGA/
         ${PROJECT_SOURCE_DIR}/../fixedPoint/inc/
         $ENV{DOWNLOADED_REPOS}/systemc-2.3.3/src/
+		/home/mdl/izo5011/IkennaWorkSpace/izo5011_dev_tools/x86/include/
         #<include_path0>
         #<include_path1>
         #<include_pathN>
@@ -220,6 +221,7 @@ ELSE()
     TARGET_LINK_LIBRARIES(${TARGET_NAME} PUBLIC
         -L/usr/local/lib/
         -L/usr/lib/
+		-L/home/mdl/izo5011/IkennaWorkSpace/izo5011_dev_tools/lib/
         -L$ENV{DOWNLOADED_REPOS}/build/systemc-2.3.3/src/
         -L${PROJECT_SOURCE_DIR}/../myNetProto/build/${BUILD_DIR_SUFFIX}/
         -L${PROJECT_SOURCE_DIR}/../network/build/${BUILD_DIR_SUFFIX}/
