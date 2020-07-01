@@ -184,8 +184,9 @@ IF(WIN32)
     )
 ELSE()
     TARGET_INCLUDE_DIRECTORIES(${TARGET_NAME} PUBLIC
-        /usr/local/include/
         /usr/include/
+        /usr/local/include/
+        $ENV{IZO5011_X86_DEV_TOOLS}/include/
         ${PROJECT_SOURCE_DIR}/inc/
         ${PROJECT_SOURCE_DIR}/../util/inc/
         ${PROJECT_SOURCE_DIR}/../cnn_layer_accel/model/inc/
@@ -223,6 +224,7 @@ ELSE()
         -L/usr/lib/
 		-L/home/mdl/izo5011/IkennaWorkSpace/izo5011_dev_tools/lib/
         -L$ENV{DOWNLOADED_REPOS}/build/systemc-2.3.3/src/
+        -L$ENV{IZO5011_X86_DEV_TOOLS}/lib/
         -L${PROJECT_SOURCE_DIR}/../myNetProto/build/${BUILD_DIR_SUFFIX}/
         -L${PROJECT_SOURCE_DIR}/../network/build/${BUILD_DIR_SUFFIX}/
         -L${PROJECT_SOURCE_DIR}/../cnn_layer_accel/model/build/${BUILD_DIR_SUFFIX}/
