@@ -337,6 +337,7 @@ module testbench #
     SYSC_FPGA
     i0_SYSC_FPGA (
 		.clk                             ( c0_ddr4_clk				),
+		.rst							 ( c0_ddr4_rst				),
 		// Slave Interface Write Address Ports
 		.axi_awready                     ( c0_ddr4_s_axi_awready	),
 		.axi_awid                        ( c0_ddr4_s_axi_awid		),

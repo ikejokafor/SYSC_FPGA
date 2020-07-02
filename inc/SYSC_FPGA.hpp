@@ -27,6 +27,7 @@ SC_MODULE(SYSC_FPGA)
 	public:
 #ifdef SIMULATE_MEMORY
 		sc_core::sc_in<bool>						clk				;
+		sc_core::sc_in<bool>						rst				;
 		sc_core::sc_in<bool >  						axi_awready		;	// Indicates slave is ready to accept a 
 		sc_core::sc_out<sc_bv<32> >  				axi_awid		;	// Write ID
 		sc_core::sc_out<sc_bv<33> > 				axi_awaddr		;	// Write address
@@ -73,8 +74,10 @@ SC_MODULE(SYSC_FPGA)
 #endif
     {
         cnn_layer_accel = new CNN_Layer_Accel("CNN_Layer_Accel");
-        // cnn_layer_accel->clk(clk);
+        cnn_layer_accel->clk(clk);
+
 #ifdef SIMULATE_MEMORY
+		cnn_layer_accel->rst(rst);
 		cnn_layer_accel->axi_awready(axi_awready);
 		axi_awid(cnn_layer_accel->axi_awid);
 		axi_awaddr(cnn_layer_accel->axi_awaddr);
@@ -109,6 +112,7 @@ SC_MODULE(SYSC_FPGA)
 		cnn_layer_accel->axi_rlast(axi_rlast);   
 		axi_rready(cnn_layer_accel->axi_rready);   
 #endif
+
 	    SC_THREAD(main)
             sensitive << clk.posedge_event();
         m_pyld = new DummyPayload();

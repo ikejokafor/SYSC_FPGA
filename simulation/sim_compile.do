@@ -165,13 +165,23 @@ vlog -64 -incr -sv -work work \
 vlog -work work $env(GLBL_PATH)/glbl.v
 
 
+# Testbench
+vlog -64 -incr -sv -work work \
+	+incdir+./ \
+	+incdir+$env(WORKSPACE_PATH)/cnn_layer_accel/hardware/ip/xcvu37p-fsvh2892-2-e/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/rtl/ip_top \
+	+incdir+$env(WORKSPACE_PATH)/cnn_layer_accel/hardware/ip/xcvu37p-fsvh2892-2-e/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/rtl/cal \
+	+incdir+$env(WORKSPACE_PATH)/cnn_layer_accel/hardware/ip/xcvu37p-fsvh2892-2-e/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/ip_1/rtl/map \
+	+incdir+$env(WORKSPACE_PATH)/cnn_layer_accel/hardware/ip/xcvu37p-fsvh2892-2-e/ddr4_0_ex/imports \
+	./testbench_top.sv \
+	./testbench.sv
+
+
 # SYSC_FPGA
 sccom -DMODEL_TECH -DSIMULATE_MEMORY -std=c++1y \
 	-I $env(WORKSPACE_PATH)/cnn_layer_accel/model/inc/ \
 	-I $env(WORKSPACE_PATH)/util/inc/ \
 	-I $env(WORKSPACE_PATH)/fixedPoint/inc/ \
 	-I $env(WORKSPACE_PATH)/FPGA_shim/inc/ \
-	-I $env(WORKSPACE_PATH)/espresso/inc/FPGA/ \
 	-I $env(WORKSPACE_PATH)/espresso/inc/FPGA/ \
 	-I $env(WORKSPACE_PATH)/SYSC_FPGA/inc/ \
 	-I $env(WORKSPACE_PATH)/SYSC_FPGA_shim/inc/ \
@@ -196,11 +206,3 @@ sccom -link \
 	-lespresso
 
 
-vlog -64 -incr -sv -work work \
-	+incdir+./ \
-	+incdir+$env(WORKSPACE_PATH)/cnn_layer_accel/hardware/ip/xcvu37p-fsvh2892-2-e/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/rtl/ip_top \
-	+incdir+$env(WORKSPACE_PATH)/cnn_layer_accel/hardware/ip/xcvu37p-fsvh2892-2-e/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/rtl/cal \
-	+incdir+$env(WORKSPACE_PATH)/cnn_layer_accel/hardware/ip/xcvu37p-fsvh2892-2-e/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/ip_1/rtl/map \
-	+incdir+$env(WORKSPACE_PATH)/cnn_layer_accel/hardware/ip/xcvu37p-fsvh2892-2-e/ddr4_0_ex/imports \
-	./testbench_top.sv \
-	./testbench.sv
