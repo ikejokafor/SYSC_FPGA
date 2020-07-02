@@ -79,12 +79,12 @@ inout in1;
 endmodule
 `endif
 
-module testbench;
+module testbench_top;
 
   localparam ADDR_WIDTH                    = 17;
-  localparam DQ_WIDTH                      = 8;
-  localparam DQS_WIDTH                     = 1;
-  localparam DM_WIDTH                      = 1;
+  localparam DQ_WIDTH                      = 72;
+  localparam DQS_WIDTH                     = 9;
+  localparam DM_WIDTH                      = 9;
   localparam DRAM_WIDTH                    = 8;
   localparam tCK                           = 750 ; //DDR4 interface clock period in ps
   localparam real SYSCLK_PERIOD            = tCK; 
@@ -107,7 +107,7 @@ module testbench;
   localparam NOP                           = 3'b111;
 
   import arch_package::*;
-  parameter UTYPE_density CONFIGURED_DENSITY = _4G;
+  parameter UTYPE_density CONFIGURED_DENSITY = _8G;
 
   // Input clock is assumed to be equal to the memory clock frequency
   // User should change the parameter as necessary if a different input
@@ -146,10 +146,10 @@ module testbench;
 
   wire                 c0_ddr4_reset_n;
 
-  wire  [0:0]          c0_ddr4_dm_dbi_n;
-  wire  [7:0]          c0_ddr4_dq;
-  wire  [0:0]          c0_ddr4_dqs_c;
-  wire  [0:0]          c0_ddr4_dqs_t;
+  wire  [8:0]          c0_ddr4_dm_dbi_n;
+  wire  [71:0]          c0_ddr4_dq;
+  wire  [8:0]          c0_ddr4_dqs_c;
+  wire  [8:0]          c0_ddr4_dqs_t;
   wire                 c0_init_calib_complete;
   wire                 c0_data_compare_error;
 
@@ -217,8 +217,8 @@ module testbench;
   //                         FPGA Memory Controller instantiation
   //===========================================================================
 
-  example_top 
-    u_example_top
+    testbench 
+    i0_testbench
     (
      .sys_rst           (sys_rst),
 
