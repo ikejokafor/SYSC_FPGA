@@ -77,9 +77,13 @@ void SYSC_FPGA::main()
         double* ptr = (double*)m_pyld->m_address;
         double elapsedTime;
 		double memPower;
-		cnn_layer_accel->waitComplete(elapsedTime, memPower);
+        double QUAD_time;
+        double FAS_time;
+		cnn_layer_accel->waitComplete(elapsedTime, memPower, QUAD_time, FAS_time);
         ptr[0] = elapsedTime;
         ptr[1] = memPower;
+        ptr[2] = QUAD_time;
+        ptr[3] = FAS_time;
 		wait();
 		m_sysc_fpga_hndl->sendComplete();
 		wait();

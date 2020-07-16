@@ -75,7 +75,6 @@ SC_MODULE(SYSC_FPGA)
     {
         cnn_layer_accel = new CNN_Layer_Accel("CNN_Layer_Accel");
         cnn_layer_accel->clk(clk);
-
 #ifdef SIMULATE_MEMORY
 		cnn_layer_accel->rst(rst);
 		cnn_layer_accel->axi_awready(axi_awready);
