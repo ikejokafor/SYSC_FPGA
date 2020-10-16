@@ -7,7 +7,7 @@
 #include "systemc"
 #include "CNN_Layer_Accel.hpp"
 #include "SYSC_FPGA_shim.hpp"
-#include "MyNetProto.hpp"
+#include "myNetProto.hpp"
 
 
 class DummyPayload : public Accel_Payload
