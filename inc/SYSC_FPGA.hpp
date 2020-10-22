@@ -15,8 +15,6 @@ class DummyPayload : public Accel_Payload
     public:
         DummyPayload() { }
         ~DummyPayload() { }
-		uint64_t allocate(int size) { }
-		void deallocate() { }
 		void serialize() { }
         void deserialize() { }
 };
@@ -114,9 +112,11 @@ SC_MODULE(SYSC_FPGA)
 
 	    SC_THREAD(main)
             sensitive << clk.posedge_event();
-        m_pyld = new DummyPayload();
-        m_pyld->m_address = (uint64_t)malloc(ACCL_OUTPUT_SIZE);
-        m_pyld->m_size = ACCL_OUTPUT_SIZE;
+			
+		m_sysc_fpga_hndl    = reinterpret_cast<SYSC_FPGA_hndl*>(fpga_hndl);
+		m_pyld = new DummyPayload();
+		m_pyld->m_size = ACCL_OUTPUT_SIZE;
+		m_pyld->m_buffer = (void*)malloc(m_pyld->m_size);
     }
 
 	~SYSC_FPGA();
