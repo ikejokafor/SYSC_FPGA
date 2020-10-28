@@ -113,7 +113,7 @@ SC_MODULE(SYSC_FPGA)
 	    SC_THREAD(main)
             sensitive << clk.posedge_event();
 			
-		m_sysc_fpga_hndl    = reinterpret_cast<SYSC_FPGA_hndl*>(fpga_hndl);
+		m_sysc_fpga_hndl    = reinterpret_cast<SYSC_FPGA_hndl*>(NULL);
 		m_pyld = new DummyPayload();
 		m_pyld->m_size = ACCL_OUTPUT_SIZE;
 		m_pyld->m_buffer = (void*)malloc(m_pyld->m_size);

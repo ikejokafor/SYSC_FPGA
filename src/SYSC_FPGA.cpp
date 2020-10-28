@@ -74,7 +74,7 @@ void SYSC_FPGA::main()
 		wait();
 		cnn_layer_accel->start();
 		wait();
-        double* ptr = (double*)m_pyld->m_address;
+        double* ptr = (double*)m_pyld->m_buffer;
         double elapsedTime;
 		double memPower;
         double QUAD_time;
