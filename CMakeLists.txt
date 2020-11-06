@@ -230,6 +230,7 @@ ELSE()
         -L${PROJECT_SOURCE_DIR}/../cnn_layer_accel/model/build/${BUILD_DIR_SUFFIX}/
         -L${PROJECT_SOURCE_DIR}/../SYSC_FPGA_shim//build/${BUILD_DIR_SUFFIX}/
         -L${PROJECT_SOURCE_DIR}/../espresso/build/${BUILD_DIR_SUFFIX}/
+        -L${PROJECT_SOURCE_DIR}/../fixedPoint/build/${BUILD_DIR_SUFFIX}/
         -lsystemc
         -lespresso
         -lcnn_layer_accel_model
@@ -237,6 +238,8 @@ ELSE()
         # FIXME: create separate lib for espresso FPGA layer
         -lmyNetProto
         -lnetwork
+        -lpthread
+        -lfixedPoint
     )
 ENDIF()
 # END Library Settings ------------------------------------------------------------------------------------------------------------------------------
