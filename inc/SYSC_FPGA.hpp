@@ -10,16 +10,6 @@
 #include "myNetProto.hpp"
 
 
-class DummyPayload : public Accel_Payload
-{
-    public:
-        DummyPayload() { }
-        ~DummyPayload() { }
-		void serialize() { }
-        void deserialize() { }
-};
-
-
 SC_MODULE(SYSC_FPGA)
 {
 	public:
@@ -149,8 +139,8 @@ SC_MODULE(SYSC_FPGA)
             sensitive << clk.posedge_event();
 			
 		m_sysc_fpga_hndl    = reinterpret_cast<SYSC_FPGA_hndl*>(NULL);
-		m_pyld = new DummyPayload();
-		m_pyld->m_size = ACCL_OUTPUT_SIZE;
+		m_pyld = new SYSC_FPGA_shim_pyld();
+		m_pyld->m_size = ACCL_META_OUTPUT_SIZE;
 		m_pyld->m_buffer = (void*)malloc(m_pyld->m_size);
     }
 
@@ -159,5 +149,5 @@ SC_MODULE(SYSC_FPGA)
 	void main();
 
     SYSC_FPGA_hndl* m_sysc_fpga_hndl;
-    DummyPayload* m_pyld;
+    SYSC_FPGA_shim_pyld* m_pyld;
 };
