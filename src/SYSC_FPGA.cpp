@@ -24,7 +24,7 @@ void SYSC_FPGA::start_of_simulation()
 
 void SYSC_FPGA::main()
 {
-	int addr;
+	uint64_t addr;
 	int size;
 	double* ptr;
 	double elapsedTime;
@@ -87,11 +87,6 @@ void SYSC_FPGA::main()
 		wait();
 		cnn_layer_accel->setMemory(8, addr, size);    // FIXME: Hardcoding
 
-        // OutMaps Maps
-		wait();
-		m_sysc_fpga_hndl->waitParam(addr, size);
-		wait();
-		cnn_layer_accel->setMemory(9, addr, size);    // FIXME: Hardcoding
 
 		wait();
 		m_sysc_fpga_hndl->waitStart();
