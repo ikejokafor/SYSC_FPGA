@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="axi_interconnect_synth_1" LaunchPart="xcku115-flva1517-3-e" LaunchTime="1604005423">
-  <File Type="VDS-TIMING-PB" Name="axi_interconnect_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="axi_interconnect_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="axi_interconnect.dcp"/>
-  <File Type="REPORTS-TCL" Name="axi_interconnect_reports.tcl"/>
-  <File Type="PA-TCL" Name="axi_interconnect.tcl"/>
-  <File Type="RDS-RDS" Name="axi_interconnect.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="axi_interconnect_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="axi_interconnect_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="axi_interconnect_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="axi_interconnect_utilization_synth.rpt"/>
+  <File Type="RDS-RDS" Name="axi_interconnect.vds"/>
+  <File Type="PA-TCL" Name="axi_interconnect.tcl"/>
+  <File Type="REPORTS-TCL" Name="axi_interconnect_reports.tcl"/>
+  <File Type="RDS-DCP" Name="axi_interconnect.dcp"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/axi_interconnect">
     <File Path="$PPRDIR/../axi_interconnect/axi_interconnect.xci">
       <FileInfo>
@@ -42,9 +39,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

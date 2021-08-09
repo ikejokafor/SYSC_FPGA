@@ -157,7 +157,7 @@ SET_TARGET_PROPERTIES(${TARGET_NAME} PROPERTIES
 # ${TARGET_NAME} depends on [<target-dependency>]
 ADD_DEPENDENCIES(${TARGET_NAME} sysc_fpga_shim)
 ADD_DEPENDENCIES(${TARGET_NAME} network)
-ADD_DEPENDENCIES(${TARGET_NAME} myNetProto)
+ADD_DEPENDENCIES(${TARGET_NAME} syscNetProto)
 ADD_DEPENDENCIES(${TARGET_NAME} cnn_layer_accel_model)
 # END Build dependencies ----------------------------------------------------------------------------------------------------------------------------
 
@@ -193,7 +193,8 @@ ELSE()
         ${PROJECT_SOURCE_DIR}/../network/inc/
         ${PROJECT_SOURCE_DIR}/../FPGA_shim/inc/
         ${PROJECT_SOURCE_DIR}/../SYSC_FPGA_shim/inc/
-        ${PROJECT_SOURCE_DIR}/../myNetProto/inc/
+        ${PROJECT_SOURCE_DIR}/../syscNetProto/inc/
+        ${PROJECT_SOURCE_DIR}/../espresso/inc/
         ${PROJECT_SOURCE_DIR}/../espresso/inc/FPGA/
         ${PROJECT_SOURCE_DIR}/../fixedPoint/inc/
         $ENV{DOWNLOADED_REPOS}/systemc-2.3.3/src/
@@ -225,7 +226,7 @@ ELSE()
 		-L/home/mdl/izo5011/IkennaWorkSpace/izo5011_dev_tools/lib/
         -L$ENV{DOWNLOADED_REPOS}/build/systemc-2.3.3/src/
         -L$ENV{IZO5011_X86_DEV_TOOLS}/lib/
-        -L${PROJECT_SOURCE_DIR}/../myNetProto/build/${BUILD_DIR_SUFFIX}/
+        -L${PROJECT_SOURCE_DIR}/../syscNetProto/build/${BUILD_DIR_SUFFIX}/
         -L${PROJECT_SOURCE_DIR}/../network/build/${BUILD_DIR_SUFFIX}/
         -L${PROJECT_SOURCE_DIR}/../cnn_layer_accel/model/build/${BUILD_DIR_SUFFIX}/
         -L${PROJECT_SOURCE_DIR}/../SYSC_FPGA_shim//build/${BUILD_DIR_SUFFIX}/
@@ -236,7 +237,7 @@ ELSE()
         -lcnn_layer_accel_model
         -lsysc_fpga_shim
         # FIXME: create separate lib for espresso FPGA layer
-        -lmyNetProto
+        -lsyscNetProto
         -lnetwork
         -lpthread
         -lfixedPoint

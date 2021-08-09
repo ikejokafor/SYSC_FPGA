@@ -27,12 +27,19 @@ void SYSC_FPGA::main()
 	uint64_t addr;
 	int size;
 	double* ptr;
+    int max_sys_mem_trans;    
 	double elapsedTime;
 	double memPower;
 	double QUAD_time;
 	double FAS_time;
 	while(true)
 	{
+        // SystemC config
+        addr = m_sysc_fpga_hndl->wait_sysC_FPGAconfig();
+        max_sys_mem_trans = *((int*)addr);
+        cnn_layer_accel->m_max_sys_mem_trans = max_sys_mem_trans;
+
+       
 		// Config
 		wait();
 		addr = m_sysc_fpga_hndl->waitConfig();

@@ -1,1 +1,1 @@
-Modify shim so hardware sends acks to software for each message; software shim will wait until it gets acks before proceeding
+modify to have separate processes waiting for config, param and start, accel code will know which address to pick from config reg set

@@ -7,83 +7,39 @@
 #include "systemc"
 #include "CNN_Layer_Accel.hpp"
 #include "SYSC_FPGA_shim.hpp"
-#include "myNetProto.hpp"
+#include "syscNetProto.hpp"
 
 
 SC_MODULE(SYSC_FPGA)
 {
 	public:
-#ifdef SIMULATE_MEMORY
-		sc_core::sc_in<bool>						clk				;
-		sc_core::sc_in<bool>						rst				;
-
-		sc_core::sc_in<bool >  						a_axi_awready	;	// Indicates slave is ready to accept a 
-		sc_core::sc_out<sc_bv<32> >  				a_axi_awid		;	// Write ID
-		sc_core::sc_out<sc_bv<33> > 				a_axi_awaddr	;	// Write address
-		sc_core::sc_out<sc_bv<8> >  				a_axi_awlen		;	// Write Burst Length
-		sc_core::sc_out<sc_bv<3> >  				a_axi_awsize	;	// Write Burst size
-		sc_core::sc_out<sc_bv<2> >  				a_axi_awburst	;	// Write Burst type
-		sc_core::sc_out<bool >  					a_axi_awvalid	;	// Write address valid
-		// AXI write data channel signals
-		sc_core::sc_in<bool >  						a_axi_wready	;	// Write data ready
-		sc_core::sc_out<sc_bv<512> >  				a_axi_wdata		;	// Write data
-		sc_core::sc_out<sc_bv<64> >  				a_axi_wstrb		;	// Write strobes
-		sc_core::sc_out<bool >  					a_axi_wlast		;	// Last write transaction   
-		sc_core::sc_out<bool >  					a_axi_wvalid	;	// Write valid  
-		// AXI write response channel signals
-		sc_core::sc_in<sc_bv<32> >  				a_axi_bid		;	// Response ID
-		sc_core::sc_in<sc_bv<2> >  					a_axi_bresp		;	// Write response
-		sc_core::sc_in<bool >  						a_axi_bvalid	;	// Write reponse valid
-		sc_core::sc_out<bool>  						a_axi_bready	;	// Response ready
-		// AXI read address channel signals
-		sc_core::sc_in<bool >  						a_axi_arready	;   // Read address ready
-		sc_core::sc_out<sc_bv<32> > 				a_axi_arid		;	// Read ID
-		sc_core::sc_out<sc_bv<33> >					a_axi_araddr	;   // Read address
-		sc_core::sc_out<sc_bv<8> > 					a_axi_arlen		;   // Read Burst Length
-		sc_core::sc_out<sc_bv<3> > 					a_axi_arsize	;   // Read Burst size
-		sc_core::sc_out<sc_bv<2> > 					a_axi_arburst	;   // Read Burst type
-		sc_core::sc_out<bool >  					a_axi_arvalid	;   // Read address valid 
-		// AXI read data channel signals   
-		sc_core::sc_in<sc_bv<32> > 					a_axi_rid		;   // Response ID
-		sc_core::sc_in<sc_bv<2> > 					a_axi_rresp		;   // Read response
-		sc_core::sc_in<bool> 						a_axi_rvalid    ;   // Read reponse valid
-		sc_core::sc_in<sc_bv<512> > 				a_axi_rdata		;   // Read data
-		sc_core::sc_in<bool> 						a_axi_rlast		;   // Read last
-		sc_core::sc_out<bool> 						a_axi_rready	;   // Read Response ready
-        
-        sc_core::sc_in<bool >  						c_axi_awready	;	// Indicates slave is ready to accept a 
-		sc_core::sc_out<sc_bv<32> >  				c_axi_awid		;	// Write ID
-		sc_core::sc_out<sc_bv<33> > 				c_axi_awaddr	;	// Write address
-		sc_core::sc_out<sc_bv<8> >  				c_axi_awlen		;	// Write Burst Length
-		sc_core::sc_out<sc_bv<3> >  				c_axi_awsize	;	// Write Burst size
-		sc_core::sc_out<sc_bv<2> >  				c_axi_awburst	;	// Write Burst type
-		sc_core::sc_out<bool >  					c_axi_awvalid	;	// Write address valid
-		// AXI write data channel signals
-		sc_core::sc_in<bool >  						c_axi_wready	;	// Write data ready
-		sc_core::sc_out<sc_bv<512> >  				c_axi_wdata		;	// Write data
-		sc_core::sc_out<sc_bv<64> >  				c_axi_wstrb		;	// Write strobes
-		sc_core::sc_out<bool >  					c_axi_wlast		;	// Last write transaction   
-		sc_core::sc_out<bool >  					c_axi_wvalid	;	// Write valid  
-		// AXI write response channel signals
-		sc_core::sc_in<sc_bv<32> >  				c_axi_bid		;	// Response ID
-		sc_core::sc_in<sc_bv<2> >  					c_axi_bresp		;	// Write response
-		sc_core::sc_in<bool >  						c_axi_bvalid	;	// Write reponse valid
-		sc_core::sc_out<bool>  						c_axi_bready	;	// Response ready
-		// AXI read address channel signals
-		sc_core::sc_in<bool >  						c_axi_arready	;   // Read address ready
-		sc_core::sc_out<sc_bv<32> > 				c_axi_arid		;	// Read ID
-		sc_core::sc_out<sc_bv<33> >					c_axi_araddr	;   // Read address
-		sc_core::sc_out<sc_bv<8> > 					c_axi_arlen		;   // Read Burst Length
-		sc_core::sc_out<sc_bv<3> > 					c_axi_arsize	;   // Read Burst size
-		sc_core::sc_out<sc_bv<2> > 					c_axi_arburst	;   // Read Burst type
-		sc_core::sc_out<bool >  					c_axi_arvalid	;   // Read address valid 
-		// AXI read data channel signals   
-		sc_core::sc_in<sc_bv<32> > 					c_axi_rid		;   // Response ID
-		sc_core::sc_in<sc_bv<2> > 					c_axi_rresp		;   // Read response
-		sc_core::sc_in<bool> 						c_axi_rvalid    ;   // Read reponse valid
-		sc_core::sc_in<sc_bv<512> > 				c_axi_rdata		;   // Read data
-		sc_core::sc_in<bool> 						c_axi_rlast		;   // Read last
-		sc_core::sc_out<bool> 						c_axi_rready	;   // Read Response ready
+#ifdef DDR_AXI_MEMORY
+    sc_core::sc_in<bool>						      clk				                                        ;
+    sc_core::sc_in<bool>						      rst				                                        ;
+   // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
+    output logic [            `MAX_FAS_RD_ID - 1:0]   init_read_req              							    ;
+    output logic [         C_INIT_REQ_ID_WTH - 1:0]   init_read_req_id           							    ;
+    output logic [    C_INIT_MEM_RD_ADDR_WTH - 1:0]   init_read_addr             							    ;
+    output logic [     C_INIT_MEM_RD_LEN_WTH - 1:0]   init_read_len              							    ;
+    input  logic [            `MAX_FAS_RD_ID - 1:0]   init_read_req_ack          							    ;
+    input  logic [            `MAX_FAS_RD_ID - 1:0]   init_read_in_prog          							    ;
+    // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
+    input  logic [       `INIT_RD_DATA_WIDTH - 1:0]   init_read_data             							    ;
+    input  logic [            `MAX_FAS_RD_ID - 1:0]   init_read_data_vld         							    ;
+    output logic [            `MAX_FAS_RD_ID - 1:0]   init_read_data_rdy         							    ;
+    input  logic [            `MAX_FAS_RD_ID - 1:0]   init_read_cmpl             							    ;
+    // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
+    output logic                                      init_write_req             							    ;
+    output logic                                      init_write_req_id          							    ;
+    output logic [       `INIT_WR_ADDR_WIDTH - 1:0]   init_write_addr            							    ;
+    output logic [        `INIT_WR_LEN_WIDTH - 1:0]   init_write_len             							    ;
+    input  logic                                      init_write_req_ack         							    ;
+    input  logic                                      init_write_in_prog         							    ;
+    // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------   
+    output logic [       `INIT_RD_DATA_WIDTH - 1:0]   init_write_data            							    ;
+    output logic                                      init_write_data_vld        							    ;
+    input  logic                                      init_write_data_rdy        							    ;
+    input  logic                                      init_write_cmpl            							    ;
 #else
 		sc_core::sc_clock clk;
 #endif
