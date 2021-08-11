@@ -48,13 +48,13 @@ SC_MODULE(SYSC_FPGA)
     CNN_Layer_Accel* cnn_layer_accel;
 
     SC_CTOR(SYSC_FPGA)
-#ifndef SIMULATE_MEMORY
+#ifndef DDR_AXI_MEMORY
 		: 	clk("clk", CLK_PRD, sc_core::SC_NS)
 #endif
     {
         cnn_layer_accel = new CNN_Layer_Accel("CNN_Layer_Accel");
         cnn_layer_accel->clk(clk);
-#ifdef SIMULATE_MEMORY
+#ifdef DDR_AXI_MEMORY
 		cnn_layer_accel->rst(rst);
 		cnn_layer_accel->axi_awready(axi_awready);
 		axi_awid(cnn_layer_accel->axi_awid);
