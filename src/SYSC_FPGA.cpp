@@ -39,7 +39,7 @@ void SYSC_FPGA::main()
         addr = m_sysc_fpga_hndl->wait_sysC_FPGAconfig();
         max_sys_mem_trans = *((int*)addr);
         cnn_layer_accel->m_max_sys_mem_trans = max_sys_mem_trans;
-
+        
        
 		// Config
 		wait();
@@ -114,14 +114,13 @@ void SYSC_FPGA::main()
         // m_pyld->m_size = mem_ele->size;
         // m_sysc_fpga_hndl->sendOutput(m_pyld);
 
-        
+        // Stat output
 		ptr = (double*)m_pyld->m_buffer;
         ptr[0] = elapsedTime;
         ptr[1] = memPower;
         ptr[2] = QUAD_time;
         ptr[3] = FAS_time;
 		m_pyld->m_size = ACCL_META_OUTPUT_SIZE;
-
 		wait();
         m_sysc_fpga_hndl->sendOutput(m_pyld);
 		wait();
