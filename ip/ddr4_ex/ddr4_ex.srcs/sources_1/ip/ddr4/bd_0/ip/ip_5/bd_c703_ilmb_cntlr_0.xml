@@ -1891,11 +1891,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Oct 29 21:07:15 UTC 2020</spirit:value>
+            <spirit:value>Tue Sep 28 20:18:00 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f33e015e</spirit:value>
+            <spirit:value>9:e3c7cf15</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1906,7 +1906,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f33e015e</spirit:value>
+            <spirit:value>9:e3c7cf15</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1922,11 +1922,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Oct 29 21:07:15 UTC 2020</spirit:value>
+            <spirit:value>Tue Sep 28 20:18:00 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f33e015e</spirit:value>
+            <spirit:value>9:e3c7cf15</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1942,11 +1942,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Oct 29 21:07:15 UTC 2020</spirit:value>
+            <spirit:value>Tue Sep 28 20:18:00 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5d3b0b5c</spirit:value>
+            <spirit:value>9:f064760a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1962,11 +1962,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Oct 29 21:07:15 UTC 2020</spirit:value>
+            <spirit:value>Tue Sep 28 20:18:00 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5d3b0b5c</spirit:value>
+            <spirit:value>9:f064760a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3546,7 +3546,7 @@
     <spirit:modelParameters>
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="string">
         <spirit:name>C_FAMILY</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FAMILY">kintexu</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FAMILY">virtexuplusHBM</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>C_HIGHADDR</spirit:name>

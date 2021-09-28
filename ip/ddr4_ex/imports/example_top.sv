@@ -91,7 +91,7 @@ module example_top #
     parameter nCK_PER_CLK           = 4,   // This parameter is controllerwise
     parameter         APP_DATA_WIDTH          = 64, // This parameter is controllerwise
     parameter         APP_MASK_WIDTH          = 8,  // This parameter is controllerwise
-    parameter C_AXI_ID_WIDTH                = 32,
+    parameter C_AXI_ID_WIDTH                = 4,
                                               // Width of all master and slave ID signals.
                                               // # = >= 1.
     parameter C_AXI_ADDR_WIDTH              = 29,
@@ -174,7 +174,7 @@ module example_top #
   wire                             c0_ddr4_cmptd_one_wr_rd;
 
   // Slave Interface Write Address Ports
-  wire [31:0]      c0_ddr4_s_axi_awid;
+  wire [3:0]      c0_ddr4_s_axi_awid;
   wire [28:0]    c0_ddr4_s_axi_awaddr;
   wire [7:0]                       c0_ddr4_s_axi_awlen;
   wire [2:0]                       c0_ddr4_s_axi_awsize;
@@ -191,11 +191,11 @@ module example_top #
   wire                             c0_ddr4_s_axi_wready;
    // Slave Interface Write Response Ports
   wire                             c0_ddr4_s_axi_bready;
-  wire [31:0]      c0_ddr4_s_axi_bid;
+  wire [3:0]      c0_ddr4_s_axi_bid;
   wire [1:0]                       c0_ddr4_s_axi_bresp;
   wire                             c0_ddr4_s_axi_bvalid;
    // Slave Interface Read Address Ports
-  wire [31:0]      c0_ddr4_s_axi_arid;
+  wire [3:0]      c0_ddr4_s_axi_arid;
   wire [28:0]    c0_ddr4_s_axi_araddr;
   wire [7:0]                       c0_ddr4_s_axi_arlen;
   wire [2:0]                       c0_ddr4_s_axi_arsize;
@@ -205,7 +205,7 @@ module example_top #
   wire                             c0_ddr4_s_axi_arready;
    // Slave Interface Read Data Ports
   wire                             c0_ddr4_s_axi_rready;
-  wire [31:0]      c0_ddr4_s_axi_rid;
+  wire [3:0]      c0_ddr4_s_axi_rid;
   wire [63:0]    c0_ddr4_s_axi_rdata;
   wire [1:0]                       c0_ddr4_s_axi_rresp;
   wire                             c0_ddr4_s_axi_rlast;

@@ -12,321 +12,67 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-do startsim.do
-# QuestaSim-64 vopt 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 17:16:44 on Jun 17,2020
-# vopt -reportprogress 300 "+acc=npr" -L work -work work work.testbench -o testbench_opt 
-# 
-# Top level modules:
-# 	testbench
-# 
-# Analyzing design...
-# -- Loading module testbench
-# -- Loading shared library /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
-# -- Loading systemc module /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work.SYSC_FPGA
-# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
-# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
-# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
-# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
-# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# Incremental compilation check found no design-units have changed.
-# Optimized design name is testbench_opt
-# End time: 17:16:44 on Jun 17,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 8
-# vsim -lib work testbench_opt -t 1ns 
-# Start time: 17:16:44 on Jun 17,2020
-# Loading sv_std.std
-# Loading work.testbench(fast)
-# Loading /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
-# Loading /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work.SYSC_FPGA
-# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_target_socket_1_port_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_target_socket_0_port_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_target_socket_0_port_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP2FAS_bus/target_socket_port_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS2AWP_bus/target_socket_port_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/simple_target_socket_0_port_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/bus/simple_initiator_socket_0_export_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_initiator_socket_0_export_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_initiator_socket_1_export_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_initiator_socket_0_export_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP2FAS_bus/init_socket_export_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS2AWP_bus/init_socket_export_0' is of an undebuggable type.
-# Client connected to server
-# Hardware sent CONNECT_HARDWARE
-do wave.do
-run -all
-# Hardware recvd ACCEL_SET_CONFIG
-# Hardware recvd ACCEL_CFG_PYLD
-# Hardware recvd ACCEL_CFG_PYLD
-# Hardware recvd ACCEL_END_CFG
-# Hardware recvd ACCEL_START
-# [/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0]: finished last Part Map Fetch at 61150 ns
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/wave.do
-quit -sim
-# End time: 17:39:59 on Jun 17,2020, Elapsed time: 0:23:15
-# Errors: 20, Warnings: 16
-vdel -all -lib work
-do sim_compile.do; do startsim.do
-# sccom -reportprogress -DMODEL_TECH -std=c++1y -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ -I /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/network/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/myNetProto/inc/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/cnn_layer_accel_common.cpp /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp 
-# Start time: 17:40:29 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:15:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/SYSC_FPGA.hpp:8,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/SYSC_FPGA.hpp:8,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# 
-# Exported modules:
-# 	SYSC_FPGA
-# End time: 17:40:59 on Jun 17,2020, Elapsed time: 0:00:30
-# Errors: 0, Warnings: 0
-# sccom -reportprogress -link -L/home/mdl/izo5011/IkennaWorkSpace/network/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/myNetProto/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA_shim/build/debug/ -lsysc_fpga_shim -lmyNetProto -lnetwork -lespresso 
-# Start time: 17:40:59 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# End time: 17:41:01 on Jun 17,2020, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 17:41:01 on Jun 17,2020
-# vlog -reportprogress 300 -64 -incr -sv -work work "+incdir+./" ./testbench.sv 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 17:41:01 on Jun 17,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vopt 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 17:41:01 on Jun 17,2020
-# vopt -reportprogress 300 "+acc=npr" -L work -work work work.testbench -o testbench_opt 
-# 
-# Top level modules:
-# 	testbench
-# 
-# Analyzing design...
-# -- Loading module testbench
-# -- Loading shared library /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
-# -- Loading systemc module /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work.SYSC_FPGA
-# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
-# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
-# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
-# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
-# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# Optimizing 1 design-unit (inlining 0/1 module instances, 0/25 systemc instances):
-# -- Optimizing module testbench(fast)
-# Optimized design name is testbench_opt
-# End time: 17:41:02 on Jun 17,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 8
-# vsim -lib work testbench_opt -t 1ns 
-# Start time: 17:41:02 on Jun 17,2020
-# Loading sv_std.std
-# Loading work.testbench(fast)
-# Loading /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
-# Loading /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work.SYSC_FPGA
-# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_target_socket_1_port_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_target_socket_0_port_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_target_socket_0_port_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP2FAS_bus/target_socket_port_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS2AWP_bus/target_socket_port_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/simple_target_socket_0_port_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/bus/simple_initiator_socket_0_export_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_initiator_socket_0_export_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_initiator_socket_1_export_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_initiator_socket_0_export_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP2FAS_bus/init_socket_export_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS2AWP_bus/init_socket_export_0' is of an undebuggable type.
-# Client connected to server
-# Hardware sent CONNECT_HARDWARE
-do wave.do
-run -all
-# Hardware recvd ACCEL_SET_CONFIG
-# Hardware recvd ACCEL_CFG_PYLD
-# Hardware recvd ACCEL_CFG_PYLD
-# Hardware recvd ACCEL_END_CFG
-# Hardware recvd ACCEL_START
-quit -sim
-# End time: 17:47:09 on Jun 17,2020, Elapsed time: 0:06:07
-# Errors: 14, Warnings: 16
-vdel -all -lib work
-do sim_compile.do; do startsim.do
-# sccom -reportprogress -DMODEL_TECH -std=c++1y -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ -I /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/network/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/myNetProto/inc/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/cnn_layer_accel_common.cpp /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp 
-# Start time: 17:54:08 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# 
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:15:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AWP_cfg.hpp:6:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/FAS_cfg.hpp:6,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/AccelConfig.hpp:9,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/FAS.hpp:18,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:57,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/SYSC_FPGA.hpp:8,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/espresso_FPGA_common.hpp:3:0: warning: "WINDOW_3x3_NUM_CYCLES" redefined
-#  #define WINDOW_3x3_NUM_CYCLES     5
-#  ^
-# In file included from /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp:56:0,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/SYSC_FPGA.hpp:8,
-#                  from /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp:1:
-# /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/cnn_layer_accel_common.hpp:39:0: note: this is the location of the previous definition
-#  #define WINDOW_3x3_NUM_CYCLES               (uint64_t(5))
-#  ^
-# 
-# Exported modules:
-# 	SYSC_FPGA
-# End time: 17:54:39 on Jun 17,2020, Elapsed time: 0:00:31
-# Errors: 0, Warnings: 0
-# sccom -reportprogress -link -L/home/mdl/izo5011/IkennaWorkSpace/network/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/myNetProto/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA_shim/build/debug/ -lsysc_fpga_shim -lmyNetProto -lnetwork -lespresso 
-# Start time: 17:54:39 on Jun 17,2020
-# 
-# QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-# End time: 17:54:41 on Jun 17,2020, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 17:54:41 on Jun 17,2020
-# vlog -reportprogress 300 -64 -incr -sv -work work "+incdir+./" ./testbench.sv 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 17:54:41 on Jun 17,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vopt 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 17:54:41 on Jun 17,2020
-# vopt -reportprogress 300 "+acc=npr" -L work -work work work.testbench -o testbench_opt 
-# 
-# Top level modules:
-# 	testbench
-# 
-# Analyzing design...
-# -- Loading module testbench
-# -- Loading shared library /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
-# -- Loading systemc module /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work.SYSC_FPGA
-# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
-# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
-# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
-# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
-# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# Optimizing 1 design-unit (inlining 0/1 module instances, 0/25 systemc instances):
-# -- Optimizing module testbench(fast)
-# Optimized design name is testbench_opt
-# End time: 17:54:42 on Jun 17,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 8
-# vsim -lib work testbench_opt -t 1ns 
-# Start time: 17:54:42 on Jun 17,2020
-# Loading sv_std.std
-# Loading work.testbench(fast)
-# Loading /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
-# Loading /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/testbench/work.SYSC_FPGA
-# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_target_socket_1_port_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_target_socket_0_port_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_target_socket_0_port_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP2FAS_bus/target_socket_port_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS2AWP_bus/target_socket_port_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The port '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/simple_target_socket_0_port_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/bus/simple_initiator_socket_0_export_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_initiator_socket_0_export_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_initiator_socket_1_export_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_initiator_socket_0_export_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/AWP2FAS_bus/init_socket_export_0' is of an undebuggable type.
-# ** Warning: (vsim-4025) The export '/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS2AWP_bus/init_socket_export_0' is of an undebuggable type.
-# Client connected to server
-# Hardware sent CONNECT_HARDWARE
-do wave.do
-run -all
-# Hardware recvd ACCEL_SET_CONFIG
-# Hardware recvd ACCEL_CFG_PYLD
-# Hardware recvd ACCEL_CFG_PYLD
-# Hardware recvd ACCEL_END_CFG
-# Hardware recvd ACCEL_START
-run -all
-# [/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0]: finished 578 / 5776 store transactions at 8881570 ns
-run -all
-# [/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0]: finished 1156 / 5776 store transactions at 17759650 ns
-# [/testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0]: finished 1733 / 5776 store transactions at 26622370 ns
+do sim_compile.do
+# QuestaSim-64 vcom 2019.4_2 Compiler 2019.12 Dec  7 2019
+# Start time: 16:06:02 on Sep 27,2021
+# vcom -reportprogress 300 -64 -93 -work work /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_0/sim/bd_9054_microblaze_I_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_1/sim/bd_9054_rst_0_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_2/sim/bd_9054_ilmb_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_3/sim/bd_9054_dlmb_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_4/sim/bd_9054_dlmb_cntlr_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_5/sim/bd_9054_ilmb_cntlr_0.vhd 
+# ** Error: (vcom-7) Failed to open design unit file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_0/sim/bd_9054_microblaze_I_0.vhd" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 16:06:03 on Sep 27,2021, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/vcom failed.
+# Error in macro ./sim_compile.do line 13
+# /home/software/mentor-2019/questasim/linux_x86_64/vcom failed.
+#     while executing
+# "vcom -64 -93 -work work  \
+# 	$env(WORKSPACE_PATH)/SYSC_FPGA/ip/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_0/sim/bd_9054_microblaze_I_0.vhd..."
+do sim_compile.do
+# QuestaSim-64 vcom 2019.4_2 Compiler 2019.12 Dec  7 2019
+# Start time: 16:08:27 on Sep 27,2021
+# vcom -reportprogress 300 -64 -93 -work work /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_0/sim/bd_9054_microblaze_I_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_1/sim/bd_9054_rst_0_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_2/sim/bd_9054_ilmb_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_3/sim/bd_9054_dlmb_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_4/sim/bd_9054_dlmb_cntlr_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_5/sim/bd_9054_ilmb_cntlr_0.vhd 
+# ** Error: (vcom-7) Failed to open design unit file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_0/sim/bd_9054_microblaze_I_0.vhd" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 16:08:27 on Sep 27,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/vcom failed.
+# Error in macro ./sim_compile.do line 13
+# /home/software/mentor-2019/questasim/linux_x86_64/vcom failed.
+#     while executing
+# "vcom -64 -93 -work work  \
+# 	$env(WORKSPACE_PATH)/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_0/sim/bd_9054_microblaze_I_0.vhd \
+# 	..."
+do sim_compile.do
+# QuestaSim-64 vcom 2019.4_2 Compiler 2019.12 Dec  7 2019
+# Start time: 16:09:19 on Sep 27,2021
+# vcom -reportprogress 300 -64 -93 -work work /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_0/sim/bd_9054_microblaze_I_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_1/sim/bd_9054_rst_0_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_2/sim/bd_9054_ilmb_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_3/sim/bd_9054_dlmb_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_4/sim/bd_9054_dlmb_cntlr_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_5/sim/bd_9054_ilmb_cntlr_0.vhd 
+# ** Error: (vcom-7) Failed to open design unit file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_0/sim/bd_9054_microblaze_I_0.vhd" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 16:09:19 on Sep 27,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/vcom failed.
+# Error in macro ./sim_compile.do line 13
+# /home/software/mentor-2019/questasim/linux_x86_64/vcom failed.
+#     while executing
+# "vcom -64 -93 -work work  \
+# 	$env(WORKSPACE_PATH)/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_0/sim/bd_9054_microblaze_I_0.vhd \
+# 	$e..."
+do sim_compile.do
+# QuestaSim-64 vcom 2019.4_2 Compiler 2019.12 Dec  7 2019
+# Start time: 16:17:04 on Sep 27,2021
+# vcom -reportprogress 300 -64 -93 -work work /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_0/sim/bd_c703_microblaze_I_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_1/sim/bd_c703_rst_0_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_2/sim/bd_c703_ilmb_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_3/sim/bd_c703_dlmb_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_4/sim/bd_c703_dlmb_cntlr_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_5/sim/bd_c703_ilmb_cntlr_0.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_0/sim/bd_c703_microblaze_I_0.vhd(56): (vcom-1598) Library "microblaze_v11_0_1" not found.
+# ** Error: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_0/sim/bd_c703_microblaze_I_0.vhd(57): (vcom-1136) Unknown identifier "microblaze_v11_0_1".
+# ** Note: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_0/sim/bd_c703_microblaze_I_0.vhd(59): VHDL Compiler exiting
+# End time: 16:17:05 on Sep 27,2021, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/vcom failed.
+# Error in macro ./sim_compile.do line 13
+# /home/software/mentor-2019/questasim/linux_x86_64/vcom failed.
+#     while executing
+# "vcom -64 -93 -work work  \
+# 	$env(WORKSPACE_PATH)/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_0/sim/bd_c703_microblaze_I_0.vhd \
+# 	$e..."

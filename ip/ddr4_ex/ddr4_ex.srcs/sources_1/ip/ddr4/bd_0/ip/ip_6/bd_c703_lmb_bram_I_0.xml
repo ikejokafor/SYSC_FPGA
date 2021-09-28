@@ -1458,11 +1458,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Oct 29 21:07:16 UTC 2020</spirit:value>
+            <spirit:value>Tue Sep 28 20:18:02 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b9853ddb</spirit:value>
+            <spirit:value>9:95ebeaa1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1478,11 +1478,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Oct 29 21:07:17 UTC 2020</spirit:value>
+            <spirit:value>Tue Sep 28 20:18:02 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b9853ddb</spirit:value>
+            <spirit:value>9:95ebeaa1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1497,11 +1497,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Oct 29 21:07:17 UTC 2020</spirit:value>
+            <spirit:value>Tue Sep 28 20:18:02 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:0d19b9a8</spirit:value>
+            <spirit:value>9:c960176d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1517,11 +1517,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Oct 29 21:07:17 UTC 2020</spirit:value>
+            <spirit:value>Tue Sep 28 20:18:02 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:0d19b9a8</spirit:value>
+            <spirit:value>9:c960176d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3025,11 +3025,11 @@
     <spirit:modelParameters>
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="STRING">
         <spirit:name>C_FAMILY</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FAMILY">kintexu</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FAMILY">virtexuplusHBM</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>C_XDEVICEFAMILY</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_XDEVICEFAMILY">kintexu</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_XDEVICEFAMILY">virtexuplusHBM</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>C_ELABORATION_DIR</spirit:name>
@@ -3321,7 +3321,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>C_EST_POWER_SUMMARY</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_EST_POWER_SUMMARY">Estimated Power for IP     :     5.508682 mW</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_EST_POWER_SUMMARY">Estimated Power for IP     :     19.660986 mW</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -3358,12 +3358,6 @@
       <spirit:enumeration>9</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_bdf7387e</spirit:name>
-      <spirit:enumeration>BRAM</spirit:enumeration>
-      <spirit:enumeration>URAM</spirit:enumeration>
-      <spirit:enumeration>AUTO</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_c8df20f0</spirit:name>
       <spirit:enumeration>NONE</spirit:enumeration>
       <spirit:enumeration>ECCH32-7</spirit:enumeration>
@@ -3371,6 +3365,11 @@
       <spirit:enumeration>ECCHSIAO32-7</spirit:enumeration>
       <spirit:enumeration>ECCHSIAO64-8</spirit:enumeration>
       <spirit:enumeration>ECCHSIAO128-9</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_e9412e2c</spirit:name>
+      <spirit:enumeration>BRAM</spirit:enumeration>
+      <spirit:enumeration>URAM</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_f9a6a28b</spirit:name>
@@ -3573,7 +3572,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PRIM_type_to_Implement</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PRIM_type_to_Implement" spirit:choiceRef="choice_list_bdf7387e" spirit:order="8.001">BRAM</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PRIM_type_to_Implement" spirit:choiceRef="choice_list_e9412e2c" spirit:order="8.001">BRAM</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>

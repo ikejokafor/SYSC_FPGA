@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Oct 29 17:20:58 2020
-# Process ID: 19758
+# Start of session at: Tue Sep 28 16:34:16 2021
+# Process ID: 8368
 # Current directory: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex
 # Command line: vivado -notrace -source /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4/ddr4_ex.tcl
 # Log file: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/vivado.log
@@ -15,16 +15,16 @@ INFO: [open_example_project] Creating new example project...
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/software/vivado-2018.3/Vivado/2018.3/data/ip'.
-create_project: Time (s): cpu = 00:00:36 ; elapsed = 00:00:13 . Memory (MB): peak = 6498.613 ; gain = 147.410 ; free physical = 55270 ; free virtual = 110554
+create_project: Time (s): cpu = 00:00:36 ; elapsed = 00:00:15 . Memory (MB): peak = 6523.914 ; gain = 177.113 ; free physical = 50067 ; free virtual = 108999
 INFO: [open_example_project] Importing original IP ...
-import_ip: Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 6500.613 ; gain = 0.000 ; free physical = 55178 ; free virtual = 110534
+import_ip: Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 6525.914 ; gain = 0.000 ; free physical = 50027 ; free virtual = 109032
 INFO: [open_example_project] Generating the example project IP ...
 INFO: [open_example_project] Adding example synthesis HDL files ...
 INFO: [open_example_project] Adding example XDC files ...
 INFO: [open_example_project] Adding simulation HDL files ...
 INFO: [open_example_project] Sourcing example extension scripts ...
 Post processing the example_design
-update_compile_order: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 6620.672 ; gain = 112.043 ; free physical = 55199 ; free virtual = 110557
+update_compile_order: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 6645.973 ; gain = 112.043 ; free physical = 50041 ; free virtual = 109047
 INFO: [open_example_project] Rebuilding all the top level IPs ...
 INFO: [exportsim-Tcl-35] Exporting simulation files for "XSIM" (Xilinx Vivado Simulator)...
 INFO: [exportsim-Tcl-29] Script generated: '/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.ip_user_files/sim_scripts/ddr4/xsim/ddr4.sh'
@@ -44,8 +44,540 @@ INFO: [exportsim-Tcl-35] Exporting simulation files for "ACTIVEHDL" (Aldec Activ
 INFO: [exportsim-Tcl-29] Script generated: '/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.ip_user_files/sim_scripts/ddr4/activehdl/ddr4.sh'
 INFO: [exportsim-Tcl-35] Exporting simulation files for "XCELIUM" (Cadence Xcelium Parallel Simulator)...
 INFO: [exportsim-Tcl-29] Script generated: '/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.ip_user_files/sim_scripts/ddr4/xcelium/ddr4.sh'
-export_ip_user_files: Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 6620.672 ; gain = 0.000 ; free physical = 55179 ; free virtual = 110548
+export_ip_user_files: Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 6645.973 ; gain = 0.000 ; free physical = 50016 ; free virtual = 109033
 INFO: [open_example_project] Open Example Project completed
 update_compile_order -fileset sources_1
+export_ip_user_files -no_script -force
+export_simulation  -lib_map_path "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.cache/compile_simlib/questa" -directory "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex" -simulator questa  -ip_user_files_dir "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.ip_user_files" -ipstatic_source_dir "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.ip_user_files/ipstatic" -use_ip_compiled_libs
+INFO: [exportsim-Tcl-40] Using compiled simulation libraries for IPs
+INFO: [exportsim-Tcl-35] Exporting simulation files for "QUESTA" (Mentor Graphics Questa Advanced Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: '/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/questa/sim_tb_top.sh'
+INFO: [SIM-utils-43] Exported '/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/questa/temp_mem.txt'
+INFO: [SIM-utils-43] Exported '/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/questa/temp_second_mem.txt'
+Generating merged BMM file for the design top 'sim_tb_top'...
+Generating merged BMM file for the design top 'sim_tb_top'...
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+Generating merged BMM file for the design top 'sim_tb_top'...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/home/software/vivado-2018.3/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-50] Design contains embedded sources, generating MEM files for simulation...
+Generating merged BMM file for the design top 'sim_tb_top'...
+Generating merged BMM file for the design top 'sim_tb_top'...
+INFO: [SIM-utils-54] Inspecting design source files for 'sim_tb_top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.sim/sim_1/behav/xsim/temp_mem.txt'
+INFO: [SIM-utils-43] Exported '/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.sim/sim_1/behav/xsim/temp_second_mem.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj sim_tb_top_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_6/sim/bd_c703_lmb_bram_I_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_c703_lmb_bram_I_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_9/sim/bd_c703_second_lmb_bram_I_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_c703_second_lmb_bram_I_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/sim/bd_c703.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_c703
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/ip_0/sim/ddr4_microblaze_mcs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_microblaze_mcs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/ip_1/rtl/phy/ddr4_phy_v2_2_xiphy_behav.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy_behav
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_bitslice_behav
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_fifo_sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/ip_1/rtl/phy/ddr4_phy_v2_2_xiphy.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/ip_1/rtl/iob/ddr4_phy_v2_2_iob_byte.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_iob_byte
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/ip_1/rtl/iob/ddr4_phy_v2_2_iob.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_iob
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/ip_1/rtl/clocking/ddr4_phy_v2_2_pll.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_pll
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/ip_1/rtl/xiphy_files/ddr4_phy_v2_2_xiphy_tristate_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy_tristate_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/ip_1/rtl/xiphy_files/ddr4_phy_v2_2_xiphy_riuor_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy_riuor_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/ip_1/rtl/xiphy_files/ddr4_phy_v2_2_xiphy_control_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy_control_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/ip_1/rtl/xiphy_files/ddr4_phy_v2_2_xiphy_byte_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy_byte_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/ip_1/rtl/xiphy_files/ddr4_phy_v2_2_xiphy_bitslice_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy_bitslice_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/ip_1/rtl/phy/ddr4_phy_ddr4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_ddr4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/ip_1/rtl/ip_top/ddr4_phy.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_wtr.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_wtr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_ref.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_ref
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_rd_wr.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_rd_wr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_periodic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_periodic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_group.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_group
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_ecc_merge_enc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_ecc_merge_enc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_ecc_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_ecc_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_ecc_fi_xor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_ecc_fi_xor
+WARNING: [VRFC 10-2821] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_ecc_fi_xor.sv:125]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_ecc_dec_fix.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_ecc_dec_fix
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_ecc_buf.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_ecc_buf
+WARNING: [VRFC 10-2821] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_ecc_buf.sv:135]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_ecc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_ecc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_ctl.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_ctl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_cmd_mux_c.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_cmd_mux_c
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_cmd_mux_ap.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_cmd_mux_ap
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_arb_p.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_arb_p
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_arb_mux_p.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_arb_mux_p
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_arb_c.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_arb_c
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_arb_a.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_arb_a
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_act_timer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_act_timer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc_act_rank.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_act_rank
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/controller/ddr4_v2_2_mc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/ui/ddr4_v2_2_ui_wr_data.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_ui_wr_data
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/ui/ddr4_v2_2_ui_rd_data.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_ui_rd_data
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/ui/ddr4_v2_2_ui_cmd.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_ui_cmd
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/ui/ddr4_v2_2_ui.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_ui
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_axi_ar_channel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_ar_channel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_axi_aw_channel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_aw_channel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_axi_b_channel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_b_channel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_axi_cmd_arbiter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_cmd_arbiter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_axi_cmd_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_cmd_fsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_axi_cmd_translator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_cmd_translator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_axi_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_axi_incr_cmd.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_incr_cmd
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_axi_r_channel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_r_channel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_axi_w_channel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_w_channel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_axi_wr_cmd_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_wr_cmd_fsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_axi_wrap_cmd.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_wrap_cmd
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_a_upsizer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_a_upsizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_axi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_axi_register_slice.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_register_slice
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_axi_upsizer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_upsizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_axic_register_slice.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axic_register_slice
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_carry_and.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_carry_and
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_carry_latch_and.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_carry_latch_and
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_carry_latch_or.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_carry_latch_or
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_carry_or.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_carry_or
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_command_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_command_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_comparator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_comparator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_comparator_sel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_comparator_sel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_comparator_sel_static.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_comparator_sel_static
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_r_upsizer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_r_upsizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi/ddr4_v2_2_w_upsizer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_w_upsizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi_ctrl/ddr4_v2_2_axi_ctrl_addr_decode.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_ctrl_addr_decode
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi_ctrl/ddr4_v2_2_axi_ctrl_read.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_ctrl_read
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi_ctrl/ddr4_v2_2_axi_ctrl_reg_bank.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_ctrl_reg_bank
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi_ctrl/ddr4_v2_2_axi_ctrl_reg.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_ctrl_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi_ctrl/ddr4_v2_2_axi_ctrl_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_ctrl_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/axi_ctrl/ddr4_v2_2_axi_ctrl_write.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_ctrl_write
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/clocking/ddr4_v2_2_infrastructure.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_infrastructure
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_cal_xsdb_bram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_xsdb_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_cal_write.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_write
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_cal_wr_byte.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_wr_byte
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_cal_wr_bit.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_wr_bit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_cal_sync.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_sync
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_cal_read.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_read
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_cal_rd_en.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_rd_en
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_cal_pi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_pi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_cal_mc_odt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_mc_odt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_cal_debug_microblaze.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_debug_microblaze
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_cal_cplx_data.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_cplx_data
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_cal_cplx.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_cplx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_cal_config_rom.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_config_rom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_cal_addr_decode.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_addr_decode
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_cal_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_cal_xsdb_arbiter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_xsdb_arbiter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_cal.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_chipscope_xsdb_slave.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_chipscope_xsdb_slave
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_dp_AB9.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cfg_mem_mod
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_bram_tdp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/ip_top/ddr4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/ip_top/ddr4_ddr4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_ddr4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/ip_top/ddr4_ddr4_mem_intfc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_ddr4_mem_intfc
+WARNING: [VRFC 10-2155] parameter declared inside generate block shall be treated as localparam [../../../../ddr4_ex.srcs/sources_1/ip/ddr4/rtl/ip_top/ddr4_v2_2_6_ddr4_assert.vh:942]
+WARNING: [VRFC 10-2155] parameter declared inside generate block shall be treated as localparam [../../../../ddr4_ex.srcs/sources_1/ip/ddr4/rtl/ip_top/ddr4_v2_2_6_ddr4_assert.vh:943]
+WARNING: [VRFC 10-2155] parameter declared inside generate block shall be treated as localparam [../../../../ddr4_ex.srcs/sources_1/ip/ddr4/rtl/ip_top/ddr4_v2_2_6_ddr4_assert.vh:944]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_ddr4_cal_riu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_ddr4_cal_riu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/tb/microblaze_mcs_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_microblaze_mcs
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'ddr4_microblaze_mcs' [/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/tb/microblaze_mcs_0.sv:36]
+INFO: [VRFC 10-311] analyzing module microblaze_mcs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/arch_package.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/proj_package.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/ddr4_model.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module StateTable
+INFO: [VRFC 10-311] analyzing module ddr4_model
+WARNING: [VRFC 10-2821] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/ddr4_model.sv:340]
+WARNING: [VRFC 10-2821] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/ddr4_model.sv:1535]
+WARNING: [VRFC 10-2821] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/ddr4_model.sv:1582]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/ddr4_v2_2_axi_opcode_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_opcode_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/ddr4_v2_2_axi_tg_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_tg_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/ddr4_v2_2_axi_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/ddr4_v2_2_boot_mode_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_boot_mode_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/ddr4_v2_2_custom_mode_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_custom_mode_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/ddr4_v2_2_data_chk.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_data_chk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/ddr4_v2_2_data_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_data_gen
+INFO: [VRFC 10-311] analyzing module prbs_data_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/ddr4_v2_2_prbs_mode_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_prbs_mode_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/example_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/sim_tb_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module short
+INFO: [VRFC 10-311] analyzing module sim_tb_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl --incr --relax -prj sim_tb_top_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_0/sim/bd_c703_microblaze_I_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_c703_microblaze_I_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_1/sim/bd_c703_rst_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_c703_rst_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_2/sim/bd_c703_ilmb_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_c703_ilmb_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_3/sim/bd_c703_dlmb_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_c703_dlmb_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_4/sim/bd_c703_dlmb_cntlr_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_c703_dlmb_cntlr_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_5/sim/bd_c703_ilmb_cntlr_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_c703_ilmb_cntlr_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_7/sim/bd_c703_second_dlmb_cntlr_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_c703_second_dlmb_cntlr_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_8/sim/bd_c703_second_ilmb_cntlr_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_c703_second_ilmb_cntlr_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_10/sim/bd_c703_iomodule_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_c703_iomodule_0_0'
+run_program: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 6645.973 ; gain = 0.000 ; free physical = 49924 ; free virtual = 109013
+INFO: [USF-XSim-69] 'compile' step finished in '14' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /home/software/vivado-2018.3/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 166b2bcc1ef748068cd0b6b494e31408 --incr --debug typical --relax --mt 8 -L microblaze_v11_0_0 -L xil_defaultlib -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L lmb_v10_v3_0_9 -L lmb_bram_if_cntlr_v4_0_15 -L blk_mem_gen_v8_4_2 -L iomodule_v3_1_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot sim_tb_top_behav xil_defaultlib.sim_tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+could not find scope or owning scope
+WARNING: [XSIM 43-4398] File "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_cal_cplx.sv" Line 855 : The System Verilog Assertion  will be ignored as it appears inside another process. This assertion is not yet supported.
+WARNING: [XSIM 43-4398] File "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/cal/ddr4_v2_2_cal_top.sv" Line 1777 : The System Verilog Assertion  will be ignored as it appears inside another process. This assertion is not yet supported.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.arch_package
+Compiling package xil_defaultlib.MemArray
+Compiling package xil_defaultlib.proj_package
+Compiling module xil_defaultlib.DDR4_if_default
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.MMCME4_ADV(CLKFBOUT_MULT_F=18.0,...
+Compiling module xil_defaultlib.ddr4_v2_2_6_infrastructure(CLKIN...
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.IBUFDS(IBUF_LOW_PWR="FALSE")
+Compiling module unisims_ver.PLLE4_ADV(CLKFBOUT_MULT=4,CLKFBO...
+Compiling module xil_defaultlib.ddr4_phy_v2_2_0_pll(CLKIN_PERIOD...
+Compiling module unisims_ver.OBUFDS
+Compiling module xil_defaultlib.ddr4_phy_v2_2_0_iob_byte(IOBTYPE...
+Compiling module xil_defaultlib.ddr4_phy_v2_2_0_iob_byte(IOBTYPE...
+Compiling module xil_defaultlib.ddr4_phy_v2_2_0_iob_byte(IOBTYPE...
+Compiling module unisims_ver.HPIO_VREF(VREF_CNTR="FABRIC_RANG...
+Compiling module unisims_ver.IOBUFE3_default
+Compiling module unisims_ver.IOBUFDS
+Compiling module xil_defaultlib.ddr4_phy_v2_2_0_iob_byte(IOBTYPE...
+Compiling module xil_defaultlib.ddr4_phy_v2_2_0_iob(BYTES=4,IOBT...
+Compiling module xil_defaultlib.ddr4_phy_v2_2_0_fifo_sv(DEPTH=16...
+Compiling module xil_defaultlib.ddr4_phy_v2_2_0_bitslice_behav(T...
+Compiling module xil_defaultlib.ddr4_phy_v2_2_0_bitslice_behav(t...
+Compiling module xil_defaultlib.ddr4_phy_v2_2_0_xiphy_behav(tCK=...
+Compiling module xil_defaultlib.ddr4_phy_ddr4_default
+Compiling module xil_defaultlib.ddr4_phy
+Compiling module xil_defaultlib.ddr4_v2_2_6_mc_group(ABITS=17,AL...
+Compiling module xil_defaultlib.ddr4_v2_2_6_mc_act_rank(tFAW=28,...
+Compiling module xil_defaultlib.ddr4_v2_2_6_mc_act_timer(tFAW=28...
+Compiling module xil_defaultlib.ddr4_v2_2_6_mc_arb_a
+Compiling module xil_defaultlib.ddr4_v2_2_6_mc_wtr(tWTR_L=10,tWT...
+Compiling module xil_defaultlib.ddr4_v2_2_6_mc_rd_wr(tWTR_L=10,t...
+Compiling module xil_defaultlib.ddr4_v2_2_6_mc_arb_c_default
+Compiling module xil_defaultlib.ddr4_v2_2_6_mc_arb_p
+Compiling module xil_defaultlib.ddr4_v2_2_6_mc_cmd_mux_ap(ABITS=...
+Compiling module xil_defaultlib.ddr4_v2_2_6_mc_arb_mux_p(ABITS=1...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_mc_odt(ODTWR=16'...
+Compiling module xil_defaultlib.ddr4_v2_2_6_mc_ctl(ABITS=17,CKEB...
+Compiling module xil_defaultlib.ddr4_v2_2_6_mc_cmd_mux_c
+Compiling module xil_defaultlib.ddr4_v2_2_6_mc_ref(LR_WIDTH=1,S_...
+Compiling module xil_defaultlib.ddr4_v2_2_6_mc_periodic
+Compiling module xil_defaultlib.ddr4_v2_2_6_mc_ecc(TCQ=0.1,PAYLO...
+Compiling module xil_defaultlib.ddr4_v2_2_6_mc(ABITS=17,CKEBITS=...
+Compiling module xil_defaultlib.ddr4_v2_2_6_ui_cmd(TCQ=100.0,ADD...
+Compiling module unisims_ver.RAM32M
+Compiling module xil_defaultlib.ddr4_v2_2_6_ui_wr_data(TCQ=100.0...
+Compiling module xil_defaultlib.ddr4_v2_2_6_ui_rd_data(TCQ=100.0...
+Compiling module xil_defaultlib.ddr4_v2_2_6_ui(TCQ=100.0,ADDR_WI...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_debug_microblaze...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_cplx_data(DBYTES...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_cplx(DBYTES=1,AB...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_mc_odt(ODTWR=16'...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_addr_decode(DBYT...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_config_rom(MEM0=...
+Compiling module xil_defaultlib.ddr4_v2_2_6_chipscope_xsdb_slave...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_sync(WIDTH=1)
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_sync(WIDTH=16)
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_sync(WIDTH=9)
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_sync(WIDTH=1,MAX...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_sync(WIDTH=9,MAX...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_xsdb_arbiter
+Compiling module xil_defaultlib.ddr4_v2_2_6_bram_tdp(INIT=2304'b...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cfg_mem_mod(SIZE=368...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_xsdb_bram(DBYTES...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal(ABITS=17,CKEBITS...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_rd_en(RL=32'b010...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_read(DBYTES=1,RL...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_wr_bit
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_wr_byte_default
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_write(DBYTES=1,W...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_pi(DBYTES=1,DBYT...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_top(ABITS=17,COL...
+Compiling module unisims_ver.VCC
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.FDR
+Compiling module unisims_ver.FDSE_default
+Compiling module unisims_ver.FDS
+Compiling module unisims_ver.FD
+Compiling module unisims_ver.FDRE(INIT=1'b1)
+Compiling module unisims_ver.FD(INIT=1'b1)
+Compiling module unisims_ver.RAM32X1D
+Compiling module unisims_ver.FDE
+Compiling module unisims_ver.LUT6_2(INIT=64'b1111111100000000...
+Compiling module unisims_ver.LUT6_2(INIT=64'b0110000001111010...
+Compiling module unisims_ver.MUXCY
+Compiling module unisims_ver.MUXCY_L
+Compiling module unisims_ver.XORCY
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.MULT_AND
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.MUXF5
+Compiling module unisims_ver.SRL16E_default
+Compiling module unisims_ver.LUT6_2(INIT=64'b0111100010000111...
+Compiling module unisims_ver.LUT6_2(INIT=64'b1000011101111000...
+Compiling module unisims_ver.LUT6_2(INIT=64'b0110011000000000...
+Compiling module unisims_ver.LUT6_2(INIT=64'b1111111100000000...
+Compiling module unisims_ver.LUT6_2(INIT=64'b0100010001000100...
+Compiling module unisims_ver.LUT6_2(INIT=64'b0110011000000000...
+Compiling module unisims_ver.LUT6_2(INIT=64'b0101010001111100...
+Compiling module unisims_ver.LUT6_2(INIT=64'b0101010001011110...
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.FDSE(INIT=1'b0)
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.INV
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(READ_WIDTH_A=2,READ_WID...
+Compiling module unisims_ver.RAMB36(READ_WIDTH_A=2,READ_WIDTH...
+Compiling module xil_defaultlib.microblaze_mcs
+Compiling module xil_defaultlib.ddr4_microblaze_mcs
+Compiling module xil_defaultlib.ddr4_ddr4_cal_riu
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_sync(WIDTH=1,MAX...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_sync(WIDTH=32,MA...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_sync(WIDTH=1,MAX...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_sync(WIDTH=20,MA...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_sync(WIDTH=32,TC...
+Compiling module xil_defaultlib.ddr4_v2_2_6_cal_sync(WIDTH=1,TCQ...
+Compiling module xil_defaultlib.ddr4_ddr4_mem_intfc(ADDR_WIDTH=1...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axic_register_slice(...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axic_register_slice(...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axic_register_slice(...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axic_register_slice(...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_register_slice(C...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_incr_cmd(C_AXI_A...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_wrap_cmd(C_AXI_A...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_cmd_translator(C...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_wr_cmd_fsm
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_aw_channel(C_AXI...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_w_channel(C_DATA...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_fifo(C_WIDTH=4,C...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_b_channel_defaul...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_incr_cmd(C_AXI_A...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_wrap_cmd(C_AXI_A...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_cmd_translator(C...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_cmd_fsm(C_MC_RD_...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_ar_channel(C_AXI...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_fifo(C_WIDTH=65,...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_fifo(C_WIDTH=7,C...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_r_channel(C_DATA...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_cmd_arbiter(C_MC...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi(C_S_AXI_ADDR_WID...
+Compiling module xil_defaultlib.ddr4_ddr4_default
+Compiling module xil_defaultlib.ddr4
+Compiling module xil_defaultlib.ddr4_v2_2_6_boot_mode_gen(C_AXI_...
+Compiling module xil_defaultlib.ddr4_v2_2_6_prbs_mode_gen(C_AXI_...
+Compiling module xil_defaultlib.ddr4_v2_2_6_custom_mode_gen(C_AX...
+Compiling module xil_defaultlib.prbs_data_gen(C_AXI_ID_WIDTH=4,T...
+Compiling module xil_defaultlib.ddr4_v2_2_6_data_gen(C_AXI_ID_WI...
+Compiling module xil_defaultlib.ddr4_v2_2_6_data_chk(C_AXI_ID_WI...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_wrapper(C_AXI_ID...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_opcode_gen(C_AXI...
+Compiling module xil_defaultlib.ddr4_v2_2_6_axi_tg_top(C_AXI_ID_...
+Compiling module xil_defaultlib.example_top
+Compiling module xil_defaultlib.StateTable
+Compiling module xil_defaultlib.ddr4_model(CONFIGURED_DENSITY=_4...
+Compiling module xil_defaultlib.short
+Compiling module xil_defaultlib.sim_tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sim_tb_top_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.sim/sim_1/behav/xsim/xsim.dir/sim_tb_top_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Sep 28 16:46:13 2021...
+run_program: Time (s): cpu = 00:00:44 ; elapsed = 00:00:31 . Memory (MB): peak = 6645.973 ; gain = 0.000 ; free physical = 49829 ; free virtual = 109019
+INFO: [USF-XSim-69] 'elaborate' step finished in '30' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "sim_tb_top_behav -key {Behavioral:sim_1:Functional:sim_tb_top} -tclbatch {sim_tb_top.tcl} -protoinst "protoinst_files/bd_c703.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_c703.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_c703.protoinst for the following reason(s):
+There are no instances of module "bd_c703" in the design.
+
+Time resolution is 1 ps
+source sim_tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[0].ddr4_model.LoadTiming' @0
+	Loaded timeset:TS_1875
+	Loaded timeset:TS_1500
+	Loaded timeset:TS_1250
+	Loaded timeset:TS_1072
+	Loaded timeset:TS_938
+	Loaded timeset:TS_833
+	Loaded timeset:TS_750
+	Loaded timeset:TS_682
+	Loaded timeset:TS_625
+Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[0].ddr4_model:Configured as x8 4G stack:1
+DEBUG:::BOOT_MODE:::at time =              533329 executing instruction 0
+DEBUG:::CUSTOM_MODE:::at time =              533329 executing instruction 0
+Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: sim_tb_top.u_example_top.u_ddr4.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[3].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+xsim: Time (s): cpu = 00:00:19 ; elapsed = 00:00:07 . Memory (MB): peak = 6659.449 ; gain = 13.477 ; free physical = 49712 ; free virtual = 108914
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'sim_tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:01:18 ; elapsed = 00:00:55 . Memory (MB): peak = 6659.449 ; gain = 13.477 ; free physical = 49712 ; free virtual = 108914
+export_ip_user_files -no_script -force
+export_simulation  -lib_map_path "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.cache/compile_simlib/questa" -force -directory "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex" -simulator questa  -ip_user_files_dir "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.ip_user_files" -ipstatic_source_dir "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.ip_user_files/ipstatic" -use_ip_compiled_libs
+INFO: [exportsim-Tcl-40] Using compiled simulation libraries for IPs
+INFO: [exportsim-Tcl-35] Exporting simulation files for "QUESTA" (Mentor Graphics Questa Advanced Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: '/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/questa/sim_tb_top.sh'
+INFO: [SIM-utils-43] Exported '/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/questa/temp_mem.txt'
+INFO: [SIM-utils-43] Exported '/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/questa/temp_second_mem.txt'
+Generating merged BMM file for the design top 'sim_tb_top'...
+Generating merged BMM file for the design top 'sim_tb_top'...
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 6759.617 ; gain = 0.000 ; free physical = 49788 ; free virtual = 108992
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Nov  5 13:18:04 2020...
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 28 16:59:19 2021...

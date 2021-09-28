@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: xilinx.com:ip:ddr4:2.2
-// IP Revision: 7
+// IP Revision: 6
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections
@@ -77,7 +77,7 @@ ddr4 your_instance_name (
   .c0_ddr4_ui_clk(c0_ddr4_ui_clk),                    // output wire c0_ddr4_ui_clk
   .c0_ddr4_ui_clk_sync_rst(c0_ddr4_ui_clk_sync_rst),  // output wire c0_ddr4_ui_clk_sync_rst
   .c0_ddr4_aresetn(c0_ddr4_aresetn),                  // input wire c0_ddr4_aresetn
-  .c0_ddr4_s_axi_awid(c0_ddr4_s_axi_awid),            // input wire [31 : 0] c0_ddr4_s_axi_awid
+  .c0_ddr4_s_axi_awid(c0_ddr4_s_axi_awid),            // input wire [3 : 0] c0_ddr4_s_axi_awid
   .c0_ddr4_s_axi_awaddr(c0_ddr4_s_axi_awaddr),        // input wire [28 : 0] c0_ddr4_s_axi_awaddr
   .c0_ddr4_s_axi_awlen(c0_ddr4_s_axi_awlen),          // input wire [7 : 0] c0_ddr4_s_axi_awlen
   .c0_ddr4_s_axi_awsize(c0_ddr4_s_axi_awsize),        // input wire [2 : 0] c0_ddr4_s_axi_awsize
@@ -94,10 +94,10 @@ ddr4 your_instance_name (
   .c0_ddr4_s_axi_wvalid(c0_ddr4_s_axi_wvalid),        // input wire c0_ddr4_s_axi_wvalid
   .c0_ddr4_s_axi_wready(c0_ddr4_s_axi_wready),        // output wire c0_ddr4_s_axi_wready
   .c0_ddr4_s_axi_bready(c0_ddr4_s_axi_bready),        // input wire c0_ddr4_s_axi_bready
-  .c0_ddr4_s_axi_bid(c0_ddr4_s_axi_bid),              // output wire [31 : 0] c0_ddr4_s_axi_bid
+  .c0_ddr4_s_axi_bid(c0_ddr4_s_axi_bid),              // output wire [3 : 0] c0_ddr4_s_axi_bid
   .c0_ddr4_s_axi_bresp(c0_ddr4_s_axi_bresp),          // output wire [1 : 0] c0_ddr4_s_axi_bresp
   .c0_ddr4_s_axi_bvalid(c0_ddr4_s_axi_bvalid),        // output wire c0_ddr4_s_axi_bvalid
-  .c0_ddr4_s_axi_arid(c0_ddr4_s_axi_arid),            // input wire [31 : 0] c0_ddr4_s_axi_arid
+  .c0_ddr4_s_axi_arid(c0_ddr4_s_axi_arid),            // input wire [3 : 0] c0_ddr4_s_axi_arid
   .c0_ddr4_s_axi_araddr(c0_ddr4_s_axi_araddr),        // input wire [28 : 0] c0_ddr4_s_axi_araddr
   .c0_ddr4_s_axi_arlen(c0_ddr4_s_axi_arlen),          // input wire [7 : 0] c0_ddr4_s_axi_arlen
   .c0_ddr4_s_axi_arsize(c0_ddr4_s_axi_arsize),        // input wire [2 : 0] c0_ddr4_s_axi_arsize
@@ -112,7 +112,7 @@ ddr4 your_instance_name (
   .c0_ddr4_s_axi_rlast(c0_ddr4_s_axi_rlast),          // output wire c0_ddr4_s_axi_rlast
   .c0_ddr4_s_axi_rvalid(c0_ddr4_s_axi_rvalid),        // output wire c0_ddr4_s_axi_rvalid
   .c0_ddr4_s_axi_rresp(c0_ddr4_s_axi_rresp),          // output wire [1 : 0] c0_ddr4_s_axi_rresp
-  .c0_ddr4_s_axi_rid(c0_ddr4_s_axi_rid),              // output wire [31 : 0] c0_ddr4_s_axi_rid
+  .c0_ddr4_s_axi_rid(c0_ddr4_s_axi_rid),              // output wire [3 : 0] c0_ddr4_s_axi_rid
   .c0_ddr4_s_axi_rdata(c0_ddr4_s_axi_rdata),          // output wire [63 : 0] c0_ddr4_s_axi_rdata
   .sys_rst(sys_rst)                                  // input wire sys_rst
 );

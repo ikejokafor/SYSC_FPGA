@@ -1,0 +1,198 @@
+m255
+K4
+z2
+!s11e vcom 2019.4_2 2019.12, Dec  7 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/questa
+Elpf
+Z1 w1632861338
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 -1
+R0
+Z5 8../ddr4_ex.ip_user_files/ipstatic/hdl/proc_sys_reset_v5_0_vh_rfs.vhd
+Z6 F../ddr4_ex.ip_user_files/ipstatic/hdl/proc_sys_reset_v5_0_vh_rfs.vhd
+l0
+L797
+VSm_b0DdPCJ:Wb8Hm<iXS?3
+!s100 MgT??;YP<G1>13:koJDgb2
+Z7 OL;C;2019.4_2;69
+31
+Z8 !s110 1632862260
+!i10b 1
+Z9 !s108 1632862259.000000
+Z10 !s90 -reportprogress|300|-work|proc_sys_reset_v5_0_13|-64|-93|../ddr4_ex.ip_user_files/ipstatic/hdl/proc_sys_reset_v5_0_vh_rfs.vhd|
+!s107 ../ddr4_ex.ip_user_files/ipstatic/hdl/proc_sys_reset_v5_0_vh_rfs.vhd|
+!i113 0
+Z11 o-work proc_sys_reset_v5_0_13 -64 -93
+Z12 tExplicit 1 CvgOpt 0
+Aimp
+Z13 DPx6 unisim 11 vcomponents 0 22 i3d]Ea8FD?VA7G@iPBVHF2
+DPx8 synopsys 10 attributes 0 22 liCm]LV3<lX4Zl>o6^8IV1
+DPx4 ieee 14 std_logic_misc 0 22 BLzBaQbXS>Q1z>5YO]m[52
+Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+DEx14 lib_cdc_v1_0_2 8 cdc_sync 0 22 NUZWCEQbB=ZNc9m`0[AoA1
+R2
+R3
+R4
+DEx4 work 3 lpf 0 22 Sm_b0DdPCJ:Wb8Hm<iXS?3
+!i122 -1
+l859
+L816
+VjOj_;a<UGP4BW6Z8>Zomm3
+!s100 P1XI2_VfBM:O3T;X]84hR0
+R7
+31
+R8
+!i10b 1
+R9
+R10
+Z15 !s107 ../ddr4_ex.ip_user_files/ipstatic/hdl/proc_sys_reset_v5_0_vh_rfs.vhd|
+!i113 0
+R11
+R12
+Eproc_sys_reset
+R1
+R14
+R13
+R3
+R4
+!i122 -1
+R0
+R5
+R6
+l0
+L1264
+V]cG7FmKHi@d580`49C6g]3
+!s100 jihZ]z78R=P:1B:[`[7e92
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R15
+!i113 0
+R11
+R12
+Aimp
+DEx22 proc_sys_reset_v5_0_13 12 sequence_psr 0 22 _SPS`ZRNEQkn6ihgZVAST2
+R2
+DEx22 proc_sys_reset_v5_0_13 3 lpf 0 22 Sm_b0DdPCJ:Wb8Hm<iXS?3
+R14
+R13
+R3
+R4
+DEx4 work 14 proc_sys_reset 0 22 ]cG7FmKHi@d580`49C6g]3
+!i122 -1
+l1375
+L1323
+Vm3Xd0CeSNgV6;GWbgcTe_0
+!s100 ^FhER_m?=iI[QK``n_ORj0
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R15
+!i113 0
+R11
+R12
+Esequence_psr
+R1
+R14
+R13
+R2
+R3
+R4
+!i122 -1
+R0
+R5
+R6
+l0
+L286
+V_SPS`ZRNEQkn6ihgZVAST2
+!s100 N_7@ZB2Xk=^XE`TlPzNHZ3
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R15
+!i113 0
+R11
+R12
+Aimp
+DEx22 proc_sys_reset_v5_0_13 7 upcnt_n 0 22 zg5Lk9<X>=UU_XEfQ@Pn10
+R14
+R13
+R2
+R3
+R4
+DEx4 work 12 sequence_psr 0 22 _SPS`ZRNEQkn6ihgZVAST2
+!i122 -1
+l343
+L301
+V@k]YlDMC;kK5RNAERG2ME3
+!s100 nD0bA8z50WTk7`8zin4hH0
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R15
+!i113 0
+R11
+R12
+Eupcnt_n
+R1
+R2
+R3
+R4
+!i122 -1
+R0
+R5
+R6
+l0
+L109
+Vzg5Lk9<X>=UU_XEfQ@Pn10
+!s100 i:4`@idn74;HN=oQ[3c5A3
+R7
+31
+Z16 !s110 1632862259
+!i10b 1
+R9
+R10
+R15
+!i113 0
+R11
+R12
+Aimp
+R2
+R3
+R4
+DEx4 work 7 upcnt_n 0 22 zg5Lk9<X>=UU_XEfQ@Pn10
+!i122 -1
+l131
+L125
+VIoSh7m6z4B6OV3@1j2EVP0
+!s100 OE=Ia8j19YO:32=1gzGYd0
+R7
+31
+R16
+!i10b 1
+R9
+R10
+R15
+!i113 0
+R11
+R12

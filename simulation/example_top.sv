@@ -84,7 +84,6 @@
     `define SIMULATION_MODE
 `endif
 
-`include "DDR4_ctrl_bridge.sv"
 
 `timescale 1ps/1ps
 module example_top #
@@ -134,7 +133,8 @@ module example_top #
     inout  [7:0]            c0_ddr4_dq,
     inout  [0:0]            c0_ddr4_dqs_t,
     inout  [0:0]            c0_ddr4_dqs_c
-);
+    );
+
 
   localparam  APP_ADDR_WIDTH = 29;
   localparam  MEM_ADDR_ORDER = "ROW_COLUMN_BANK";
@@ -267,190 +267,220 @@ wire c0_ddr4_reset_n_int;
 //***************************************************************************
 
   // user design top is one instance for all controllers
-	ddr4_0 u_ddr4_0
-	(
-		.sys_rst           (sys_rst),
+ddr4 u_ddr4
+  (
+   .sys_rst           (sys_rst),
 
-		.c0_sys_clk_p                   (c0_sys_clk_p),
-		.c0_sys_clk_n                   (c0_sys_clk_n),
-		.c0_init_calib_complete (c0_init_calib_complete),
-		.c0_ddr4_act_n          (c0_ddr4_act_n),
-		.c0_ddr4_adr            (c0_ddr4_adr),
-		.c0_ddr4_ba             (c0_ddr4_ba),
-		.c0_ddr4_bg             (c0_ddr4_bg),
-		.c0_ddr4_cke            (c0_ddr4_cke),
-		.c0_ddr4_odt            (c0_ddr4_odt),
-		.c0_ddr4_cs_n           (c0_ddr4_cs_n),
-		.c0_ddr4_ck_t           (c0_ddr4_ck_t),
-		.c0_ddr4_ck_c           (c0_ddr4_ck_c),
-		.c0_ddr4_reset_n        (c0_ddr4_reset_n_int),
+   .c0_sys_clk_p                   (c0_sys_clk_p),
+   .c0_sys_clk_n                   (c0_sys_clk_n),
+   .c0_init_calib_complete (c0_init_calib_complete),
+   .c0_ddr4_act_n          (c0_ddr4_act_n),
+   .c0_ddr4_adr            (c0_ddr4_adr),
+   .c0_ddr4_ba             (c0_ddr4_ba),
+   .c0_ddr4_bg             (c0_ddr4_bg),
+   .c0_ddr4_cke            (c0_ddr4_cke),
+   .c0_ddr4_odt            (c0_ddr4_odt),
+   .c0_ddr4_cs_n           (c0_ddr4_cs_n),
+   .c0_ddr4_ck_t           (c0_ddr4_ck_t),
+   .c0_ddr4_ck_c           (c0_ddr4_ck_c),
+   .c0_ddr4_reset_n        (c0_ddr4_reset_n_int),
 
-		.c0_ddr4_dm_dbi_n       (c0_ddr4_dm_dbi_n),
-		.c0_ddr4_dq             (c0_ddr4_dq),
-		.c0_ddr4_dqs_c          (c0_ddr4_dqs_c),
-		.c0_ddr4_dqs_t          (c0_ddr4_dqs_t),
+   .c0_ddr4_dm_dbi_n       (c0_ddr4_dm_dbi_n),
+   .c0_ddr4_dq             (c0_ddr4_dq),
+   .c0_ddr4_dqs_c          (c0_ddr4_dqs_c),
+   .c0_ddr4_dqs_t          (c0_ddr4_dqs_t),
 
-		.c0_ddr4_ui_clk                (c0_ddr4_clk),
-		.c0_ddr4_ui_clk_sync_rst       (c0_ddr4_rst),
-		.dbg_clk                                    (dbg_clk),
-		// Slave Interface Write Address Ports
-		.c0_ddr4_aresetn                     (c0_ddr4_aresetn),
-		.c0_ddr4_s_axi_awid                  (c0_ddr4_s_axi_awid),
-		.c0_ddr4_s_axi_awaddr                (c0_ddr4_s_axi_awaddr),
-		.c0_ddr4_s_axi_awlen                 (c0_ddr4_s_axi_awlen),
-		.c0_ddr4_s_axi_awsize                (c0_ddr4_s_axi_awsize),
-		.c0_ddr4_s_axi_awburst               (c0_ddr4_s_axi_awburst),
-		.c0_ddr4_s_axi_awlock                (1'b0),
-		.c0_ddr4_s_axi_awcache               (c0_ddr4_s_axi_awcache),
-		.c0_ddr4_s_axi_awprot                (c0_ddr4_s_axi_awprot),
-		.c0_ddr4_s_axi_awqos                 (4'b0),
-		.c0_ddr4_s_axi_awvalid               (c0_ddr4_s_axi_awvalid),
-		.c0_ddr4_s_axi_awready               (c0_ddr4_s_axi_awready),
-		// Slave Interface Write Data Ports
-		.c0_ddr4_s_axi_wdata                 (c0_ddr4_s_axi_wdata),
-		.c0_ddr4_s_axi_wstrb                 (c0_ddr4_s_axi_wstrb),
-		.c0_ddr4_s_axi_wlast                 (c0_ddr4_s_axi_wlast),
-		.c0_ddr4_s_axi_wvalid                (c0_ddr4_s_axi_wvalid),
-		.c0_ddr4_s_axi_wready                (c0_ddr4_s_axi_wready),
-		// Slave Interface Write Response Ports
-		.c0_ddr4_s_axi_bid                   (c0_ddr4_s_axi_bid),
-		.c0_ddr4_s_axi_bresp                 (c0_ddr4_s_axi_bresp),
-		.c0_ddr4_s_axi_bvalid                (c0_ddr4_s_axi_bvalid),
-		.c0_ddr4_s_axi_bready                (c0_ddr4_s_axi_bready),
-		// Slave Interface Read Address Ports
-		.c0_ddr4_s_axi_arid                  (c0_ddr4_s_axi_arid),
-		.c0_ddr4_s_axi_araddr                (c0_ddr4_s_axi_araddr),
-		.c0_ddr4_s_axi_arlen                 (c0_ddr4_s_axi_arlen),
-		.c0_ddr4_s_axi_arsize                (c0_ddr4_s_axi_arsize),
-		.c0_ddr4_s_axi_arburst               (c0_ddr4_s_axi_arburst),
-		.c0_ddr4_s_axi_arlock                (1'b0),
-		.c0_ddr4_s_axi_arcache               (c0_ddr4_s_axi_arcache),
-		.c0_ddr4_s_axi_arprot                (3'b0),
-		.c0_ddr4_s_axi_arqos                 (4'b0),
-		.c0_ddr4_s_axi_arvalid               (c0_ddr4_s_axi_arvalid),
-		.c0_ddr4_s_axi_arready               (c0_ddr4_s_axi_arready),
-		// Slave Interface Read Data Ports
-		.c0_ddr4_s_axi_rid                   (c0_ddr4_s_axi_rid),
-		.c0_ddr4_s_axi_rdata                 (c0_ddr4_s_axi_rdata),
-		.c0_ddr4_s_axi_rresp                 (c0_ddr4_s_axi_rresp),
-		.c0_ddr4_s_axi_rlast                 (c0_ddr4_s_axi_rlast),
-		.c0_ddr4_s_axi_rvalid                (c0_ddr4_s_axi_rvalid),
-		.c0_ddr4_s_axi_rready                (c0_ddr4_s_axi_rready),
-	  
-		// Debug Port
-		.dbg_bus         (dbg_bus)             
-	);
-	always @(posedge c0_ddr4_clk) begin
-		c0_ddr4_aresetn <= ~c0_ddr4_rst;
-	end
-	
-	
-	// DDR4_ctrl_intf
-	// i0_DDR4_ctrl_intf
-	// (
-	// 	.clk			(c0_ddr4_clk			),
-	// 	// AXI write address channel signals
-	// 	.axi_awready	(c0_ddr4_s_axi_awready	), 	// Indicates slave is ready to accept a 
-	// 	.axi_awid		(c0_ddr4_s_axi_awid		),  // Write ID
-	// 	.axi_awaddr		(c0_ddr4_s_axi_awaddr	),  // Write address
-	// 	.axi_awlen		(c0_ddr4_s_axi_awlen	),  // Write Burst Length
-	// 	.axi_awsize		(c0_ddr4_s_axi_awsize	),  // Write Burst size
-	// 	.axi_awburst	(c0_ddr4_s_axi_awburst	), 	// Write Burst type
-	// 	.axi_awlock		(						),  // Write lock type
-	// 	.axi_awcache	(c0_ddr4_s_axi_awcache	), 	// Write Cache type
-	// 	.axi_awprot		(c0_ddr4_s_axi_awprot	),  // Write Protection type
-	// 	.axi_awvalid	(c0_ddr4_s_axi_awvalid	), 	// Write address valid
-	// 	// AXI write data channel signals
-	// 	.axi_wready		(c0_ddr4_s_axi_wready	),  // Write data ready
-	// 	.axi_wdata		(c0_ddr4_s_axi_wdata	),  // Write data
-	// 	.axi_wstrb		(c0_ddr4_s_axi_wstrb	),  // Write strobes
-	// 	.axi_wlast		(c0_ddr4_s_axi_wlast	),  // Last write transaction   
-	// 	.axi_wvalid		(c0_ddr4_s_axi_wvalid	),  // Write valid  
-	// 	// AXI write response channel signals
-	// 	.axi_bid		(c0_ddr4_s_axi_bid		),  // Response ID
-	// 	.axi_bresp		(c0_ddr4_s_axi_bresp	),  // Write response
-	// 	.axi_bvalid		(c0_ddr4_s_axi_bvalid	),  // Write reponse valid
-	// 	.axi_bready		(c0_ddr4_s_axi_bready	),	// Response ready
-	// 	// AXI read address channel signals
-	// 	.axi_arready	(c0_ddr4_s_axi_arready	),  // Read address ready
-	// 	.axi_arid		(c0_ddr4_s_axi_arid		),	// Read ID
-	// 	.axi_araddr		(c0_ddr4_s_axi_araddr	),  // Read address
-	// 	.axi_arlen		(c0_ddr4_s_axi_arlen	),  // Read Burst Length
-	// 	.axi_arsize		(c0_ddr4_s_axi_arsize	),  // Read Burst size
-	// 	.axi_arburst	(c0_ddr4_s_axi_arburst	),  // Read Burst type
-	// 	.axi_arlock		(						),  // Read lock type
-	// 	.axi_arcache	(c0_ddr4_s_axi_arcache	),  // Read Cache type
-	// 	.axi_arprot		(						),  // Read Protection type
-	// 	.axi_arvalid	(c0_ddr4_s_axi_arvalid	),   // Read address valid 
-	// 	// AXI read data channel signals   
-	// 	.axi_rid		(c0_ddr4_s_axi_rid		),   // Response ID
-	// 	.axi_rresp		(c0_ddr4_s_axi_rresp	),   // Read response
-	// 	.axi_rvalid		(c0_ddr4_s_axi_rvalid	),   // Read reponse valid
-	// 	.axi_rdata		(c0_ddr4_s_axi_rdata	),   // Read data
-	// 	.axi_rlast		(c0_ddr4_s_axi_rlast	),   // Read last
-	// 	.axi_rready		(c0_ddr4_s_axi_rready	)    // Read Response ready
-	// );
+   .c0_ddr4_ui_clk                (c0_ddr4_clk),
+   .c0_ddr4_ui_clk_sync_rst       (c0_ddr4_rst),
+   .dbg_clk                                    (dbg_clk),
+  // Slave Interface Write Address Ports
+  .c0_ddr4_aresetn                     (c0_ddr4_aresetn),
+  .c0_ddr4_s_axi_awid                  (c0_ddr4_s_axi_awid),
+  .c0_ddr4_s_axi_awaddr                (c0_ddr4_s_axi_awaddr),
+  .c0_ddr4_s_axi_awlen                 (c0_ddr4_s_axi_awlen),
+  .c0_ddr4_s_axi_awsize                (c0_ddr4_s_axi_awsize),
+  .c0_ddr4_s_axi_awburst               (c0_ddr4_s_axi_awburst),
+  .c0_ddr4_s_axi_awlock                (1'b0),
+  .c0_ddr4_s_axi_awcache               (c0_ddr4_s_axi_awcache),
+  .c0_ddr4_s_axi_awprot                (c0_ddr4_s_axi_awprot),
+  .c0_ddr4_s_axi_awqos                 (4'b0),
+  .c0_ddr4_s_axi_awvalid               (c0_ddr4_s_axi_awvalid),
+  .c0_ddr4_s_axi_awready               (c0_ddr4_s_axi_awready),
+  // Slave Interface Write Data Ports
+  .c0_ddr4_s_axi_wdata                 (c0_ddr4_s_axi_wdata),
+  .c0_ddr4_s_axi_wstrb                 (c0_ddr4_s_axi_wstrb),
+  .c0_ddr4_s_axi_wlast                 (c0_ddr4_s_axi_wlast),
+  .c0_ddr4_s_axi_wvalid                (c0_ddr4_s_axi_wvalid),
+  .c0_ddr4_s_axi_wready                (c0_ddr4_s_axi_wready),
+  // Slave Interface Write Response Ports
+  .c0_ddr4_s_axi_bid                   (c0_ddr4_s_axi_bid),
+  .c0_ddr4_s_axi_bresp                 (c0_ddr4_s_axi_bresp),
+  .c0_ddr4_s_axi_bvalid                (c0_ddr4_s_axi_bvalid),
+  .c0_ddr4_s_axi_bready                (c0_ddr4_s_axi_bready),
+  // Slave Interface Read Address Ports
+  .c0_ddr4_s_axi_arid                  (c0_ddr4_s_axi_arid),
+  .c0_ddr4_s_axi_araddr                (c0_ddr4_s_axi_araddr),
+  .c0_ddr4_s_axi_arlen                 (c0_ddr4_s_axi_arlen),
+  .c0_ddr4_s_axi_arsize                (c0_ddr4_s_axi_arsize),
+  .c0_ddr4_s_axi_arburst               (c0_ddr4_s_axi_arburst),
+  .c0_ddr4_s_axi_arlock                (1'b0),
+  .c0_ddr4_s_axi_arcache               (c0_ddr4_s_axi_arcache),
+  .c0_ddr4_s_axi_arprot                (3'b0),
+  .c0_ddr4_s_axi_arqos                 (4'b0),
+  .c0_ddr4_s_axi_arvalid               (c0_ddr4_s_axi_arvalid),
+  .c0_ddr4_s_axi_arready               (c0_ddr4_s_axi_arready),
+  // Slave Interface Read Data Ports
+  .c0_ddr4_s_axi_rid                   (c0_ddr4_s_axi_rid),
+  .c0_ddr4_s_axi_rdata                 (c0_ddr4_s_axi_rdata),
+  .c0_ddr4_s_axi_rresp                 (c0_ddr4_s_axi_rresp),
+  .c0_ddr4_s_axi_rlast                 (c0_ddr4_s_axi_rlast),
+  .c0_ddr4_s_axi_rvalid                (c0_ddr4_s_axi_rvalid),
+  .c0_ddr4_s_axi_rready                (c0_ddr4_s_axi_rready),
+  
+  // Debug Port
+  .dbg_bus         (dbg_bus)                                             
+
+  );
+   always @(posedge c0_ddr4_clk) begin
+     c0_ddr4_aresetn <= ~c0_ddr4_rst;
+   end
 
 
-    // DDR4_ctrl_bridge ddr4_ctrl_bridge;
+
+    cnn_layer_accel_axi_bridge (
+        .C_NUM_RD_CLIENTS( 4 ),
+        .C_NUM_WR_CLIENTS( 1 )
+    ) 
+    i0_cnn_layer_accel_axi_bridge (
+        .clk				     ( c0_ddr4_clk ),
+        .rst				     ( c0_ddr4_rst ),
+        // AXI Write Address Ports
+        .axi_awready		     ( c0_ddr4_s_axi_awready ),	// Indicates slave is ready to accept a 
+        .axi_awid		         ( c0_ddr4_s_axi_awid	 ),	// Write ID
+        .axi_awaddr		         ( c0_ddr4_s_axi_awaddr	 ),	// Write address
+        .axi_awlen		         ( c0_ddr4_s_axi_awlen	 ),	// Write Burst Length
+        .axi_awsize		         ( c0_ddr4_s_axi_awsize	 ),	// Write Burst size
+        .axi_awburst		     ( c0_ddr4_s_axi_awburst ),	// Write Burst type
+        .axi_awcache		     (                       ),	// Write Cache type
+        .axi_awvalid		     ( c0_ddr4_s_axi_awvalid ),	// Write address valid
+        // AXI write data channel signals
+        .axi_wready		         ( c0_ddr4_s_axi_wready	 ),	// Write data ready
+        .axi_wdata		         ( c0_ddr4_s_axi_wdata	 ),	// Write data
+        .axi_wstrb		         ( c0_ddr4_s_axi_wstrb	 ),	// Write strobes
+        .axi_wlast		         ( c0_ddr4_s_axi_wlast	 ),	// Last write transaction   
+        .axi_wvalid		         ( c0_ddr4_s_axi_wvalid	 ),	// Write valid  
+        // AXI write response channel signals
+        .axi_bid			     ( c0_ddr4_s_axi_bid	 ),	// Response ID
+        .axi_bresp		         ( c0_ddr4_s_axi_bresp	 ),	// Write response
+        .axi_bvalid		         ( c0_ddr4_s_axi_bvalid	 ),	// Write reponse valid
+        .axi_bready		         ( c0_ddr4_s_axi_bready	 ),	// Response ready
+        // AXI read address channel signals
+        .axi_arready		     ( c0_ddr4_s_axi_arready ),   // Read address ready
+        .axi_arid		         ( c0_ddr4_s_axi_arid	 ),	// Read ID
+        .axi_araddr		         ( c0_ddr4_s_axi_araddr	 ),   // Read address
+        .axi_arlen		         ( c0_ddr4_s_axi_arlen	 ),   // Read Burst Length
+        .axi_arsize		         ( c0_ddr4_s_axi_arsize	 ),   // Read Burst size
+        .axi_arburst		     ( c0_ddr4_s_axi_arburst ),   // Read Burst type
+        .axi_arcache		     (                       ),   // Read Cache type
+        .axi_arvalid		     ( c0_ddr4_s_axi_arvalid ),   // Read address valid 
+        // AXI read data channel signals   
+        .axi_rid			     ( c0_ddr4_s_axi_rid	 ),   // Response ID
+        .axi_rresp		         ( c0_ddr4_s_axi_rresp	 ),   // Read response
+        .axi_rvalid		         ( c0_ddr4_s_axi_rvalid	 ),   // Read reponse valid
+        .axi_rdata		         ( c0_ddr4_s_axi_rdata	 ),   // Read data
+        .axi_rlast		         ( c0_ddr4_s_axi_rlast	 ),   // Read last
+        .axi_rready		         ( c0_ddr4_s_axi_rready	 ),   // Read Response ready 
+        // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
+        .init_read_req           ( init_read_req        ),
+        .init_read_req_id        ( init_read_req_id     ),
+        .init_read_addr          ( init_read_addr       ),
+        .init_read_len           ( init_read_len        ),
+        .init_read_req_ack       ( init_read_req_ack    ),
+        .init_read_in_prog       ( init_read_in_prog    ),
+        // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
+        .init_read_data          ( init_read_data       ),
+        .init_read_data_vld      ( init_read_data_vld   ),
+        .init_read_data_rdy      ( init_read_data_rdy   ),
+        .init_read_cmpl          ( init_read_cmpl       ),
+        // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
+        .init_write_req          ( init_write_req       ),
+        .init_write_req_id       ( init_write_req_id    ),
+        .init_write_addr         ( init_write_addr      ),
+        .init_write_len          ( init_write_len       ),
+        .init_write_req_ack      ( init_write_req_ack   ),
+        .init_write_in_prog      ( init_write_in_prog   ),
+        // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------   
+        .init_write_data         ( init_write_data      ),
+        .init_write_data_vld     ( init_write_data_vld  ),
+        .init_write_data_rdy     ( init_write_data_rdy  ),
+        .init_write_cmpl         ( init_write_cmpl      )
+    );
 
 
     SYSC_FPGA
-    i0_SYSC_FPGA
-    (
-
+    i0_SYSC_FPGA (
+		.clk                     ( c0_ddr4_clk			),
+		.rst					 ( c0_ddr4_rst			),
+        // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
+        .init_read_req           ( init_read_req        ),
+        .init_read_req_id        ( init_read_req_id     ),
+        .init_read_addr          ( init_read_addr       ),
+        .init_read_len           ( init_read_len        ),
+        .init_read_req_ack       ( init_read_req_ack    ),
+        .init_read_in_prog       ( init_read_in_prog    ),
+        // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
+        .init_read_data          ( init_read_data       ),
+        .init_read_data_vld      ( init_read_data_vld   ),
+        .init_read_data_rdy      ( init_read_data_rdy   ),
+        .init_read_cmpl          ( init_read_cmpl       ),
+        // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
+        .init_write_req          ( init_write_req       ),
+        .init_write_req_id       ( init_write_req_id    ),
+        .init_write_addr         ( init_write_addr      ),
+        .init_write_len          ( init_write_len       ),
+        .init_write_req_ack      ( init_write_req_ack   ),
+        .init_write_in_prog      ( init_write_in_prog   ),
+        // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------   
+        .init_write_data         ( init_write_data      ),
+        .init_write_data_vld     ( init_write_data_vld  ),
+        .init_write_data_rdy     ( init_write_data_rdy  ),
+        .init_write_cmpl         ( init_write_cmpl      )
 	);
-
-	//Traffic_Gen
-	//i0_Traffic_Gen
-	//(
-	//	.clk			(c0_ddr4_clk			),
-	//	// AXI write address channel signals
-	//	.axi_awready	(c0_ddr4_s_axi_awready	), 	// Indicates slave is ready to accept a 
-	//	.axi_awid		(c0_ddr4_s_axi_awid		),  // Write ID
-	//	.axi_awaddr		(c0_ddr4_s_axi_awaddr	),  // Write address
-	//	.axi_awlen		(c0_ddr4_s_axi_awlen	),  // Write Burst Length
-	//	.axi_awsize		(c0_ddr4_s_axi_awsize	),  // Write Burst size
-	//	.axi_awburst	(c0_ddr4_s_axi_awburst	), 	// Write Burst type
-	//	//.axi_awlock		(						),  // Write lock type
-	//	.axi_awcache	(c0_ddr4_s_axi_awcache	), 	// Write Cache type
-	//	.axi_awprot		(c0_ddr4_s_axi_awprot	),  // Write Protection type
-	//	.axi_awvalid	(c0_ddr4_s_axi_awvalid	), 	// Write address valid
-	//	// AXI write data channel signals
-	//	.axi_wready		(c0_ddr4_s_axi_wready	),  // Write data ready
-	//	.axi_wdata		(c0_ddr4_s_axi_wdata	),  // Write data
-	//	.axi_wstrb		(c0_ddr4_s_axi_wstrb	),  // Write strobes
-	//	.axi_wlast		(c0_ddr4_s_axi_wlast	),  // Last write transaction   
-	//	.axi_wvalid		(c0_ddr4_s_axi_wvalid	),  // Write valid  
-	//	// AXI write response channel signals
-	//	.axi_bid		(c0_ddr4_s_axi_bid		),  // Response ID
-	//	.axi_bresp		(c0_ddr4_s_axi_bresp	),  // Write response
-	//	.axi_bvalid		(c0_ddr4_s_axi_bvalid	),  // Write reponse valid
-	//	.axi_bready		(c0_ddr4_s_axi_bready	),	// Response ready
-	//	// AXI read address channel signals
-	//	.axi_arready	(c0_ddr4_s_axi_arready	),  // Read address ready
-	//	.axi_arid		(c0_ddr4_s_axi_arid		),	// Read ID
-	//	.axi_araddr		(c0_ddr4_s_axi_araddr	),  // Read address
-	//	.axi_arlen		(c0_ddr4_s_axi_arlen	),  // Read Burst Length
-	//	.axi_arsize		(c0_ddr4_s_axi_arsize	),  // Read Burst size
-	//	.axi_arburst	(c0_ddr4_s_axi_arburst	),  // Read Burst type
-	//	//.axi_arlock		(						),  // Read lock type
-	//	.axi_arcache	(c0_ddr4_s_axi_arcache	),  // Read Cache type
-	//	//.axi_arprot		(						),  // Read Protection type
-	//	.axi_arvalid	(c0_ddr4_s_axi_arvalid	),   // Read address valid 
-	//	// AXI read data channel signals   
-	//	.axi_rid		(c0_ddr4_s_axi_rid		),   // Response ID
-	//	.axi_rresp		(c0_ddr4_s_axi_rresp	),   // Read response
-	//	.axi_rvalid		(c0_ddr4_s_axi_rvalid	),   // Read reponse valid
-	//	.axi_rdata		(c0_ddr4_s_axi_rdata	),   // Read data
-	//	.axi_rlast		(c0_ddr4_s_axi_rlast	),   // Read last
-	//	.axi_rready		(c0_ddr4_s_axi_rready	)    // Read Response ready
-	//);
-    
-	// initial begin
-	// 	ddr4_ctrl_bridge = new(i0_DDR4_ctrl_intf);
-	// 	fork
-	// 		ddr4_ctrl_bridge.run();
-	// 	join_none
-	// end
 endmodule
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

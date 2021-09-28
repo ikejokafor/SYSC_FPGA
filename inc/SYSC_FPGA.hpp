@@ -75,7 +75,7 @@ SC_MODULE(SYSC_FPGA)
         cnn_layer_accel->init_write_req_ack(init_write_req_ack);
         cnn_layer_accel->init_write_in_prog(init_write_in_prog);
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
-        init_write_data(cnn_layer_accel->init_write_data      
+        init_write_data(cnn_layer_accel->init_write_data);  
         init_write_data_vld(cnn_layer_accel->init_write_data_vld)  
         cnn_layer_accel->init_write_data_rdy(init_write_data_rdy);
         cnn_layer_accel->init_write_cmpl(init_write_cmpl)      

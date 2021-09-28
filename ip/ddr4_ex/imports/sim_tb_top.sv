@@ -86,7 +86,7 @@ module sim_tb_top;
   localparam DQS_WIDTH                     = 1;
   localparam DM_WIDTH                      = 1;
   localparam DRAM_WIDTH                    = 8;
-  localparam tCK                           = 1200 ; //DDR4 interface clock period in ps
+  localparam tCK                           = 750 ; //DDR4 interface clock period in ps
   localparam real SYSCLK_PERIOD            = tCK; 
   localparam NUM_PHYSICAL_PARTS = (DQ_WIDTH/DRAM_WIDTH) ;
   localparam           CLAMSHELL_PARTS = (NUM_PHYSICAL_PARTS/2);
@@ -112,7 +112,7 @@ module sim_tb_top;
   // Input clock is assumed to be equal to the memory clock frequency
   // User should change the parameter as necessary if a different input
   // clock frequency is used
-  localparam real CLKIN_PERIOD_NS = 12800 / 1000.0;
+  localparam real CLKIN_PERIOD_NS = 13501 / 1000.0;
 
   //initial begin
   //   $shm_open("waves.shm");
@@ -181,7 +181,7 @@ module sim_tb_top;
   initial
     sys_clk_i = 1'b0;
   always
-    sys_clk_i = #(12800/2.0) ~sys_clk_i;
+    sys_clk_i = #(13501/2.0) ~sys_clk_i;
 
   assign c0_sys_clk_p = sys_clk_i;
   assign c0_sys_clk_n = ~sys_clk_i;
