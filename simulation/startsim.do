@@ -10,8 +10,8 @@ vopt -64 +acc=npr \
 	-L unisims_ver \
 	-L unimacro_ver \
 	-L secureip \
-    -L accel_infst_common
+    -L accel_infst_common \
 	-L xpm \
-	-work work work.testbench_top work.testbench work.glbl -o testbench_opt
+	-work work work.sim_tb_top work.example_top work.glbl -o testbench_opt
 
 vsim -lib work testbench_opt

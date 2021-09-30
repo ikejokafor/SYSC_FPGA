@@ -84,8 +84,7 @@
 
 
 `timescale 1ps/1ps
-module example_top #
-  (
+module example_top #(
     parameter nCK_PER_CLK           = 4,   // This parameter is controllerwise
     parameter         APP_DATA_WIDTH          = 64, // This parameter is controllerwise
     parameter         APP_MASK_WIDTH          = 8,  // This parameter is controllerwise
@@ -107,12 +106,8 @@ module example_top #
   `else
     parameter SIMULATION            = "FALSE"
   `endif
-
-  )
-   (
+) ( 
     input                 sys_rst, //Common port for all controllers
-
-
     output                  c0_init_calib_complete,
     output                  c0_data_compare_error,
     input                   c0_sys_clk_p,
@@ -131,14 +126,69 @@ module example_top #
     inout  [7:0]            c0_ddr4_dq,
     inout  [0:0]            c0_ddr4_dqs_t,
     inout  [0:0]            c0_ddr4_dqs_c
-    );
+);  
+    //-----------------------------------------------------------------------------------------------------------------------------------------------
+    //  Includes
+    //-----------------------------------------------------------------------------------------------------------------------------------------------
+    `include "math.svh"
+    `include "cnn_layer_accel_FAS.svh"
+    
+    //-----------------------------------------------------------------------------------------------------------------------------------------------
+    //  Local Parameters
+    //-----------------------------------------------------------------------------------------------------------------------------------------------  
+    localparam  APP_ADDR_WIDTH = 29;
+    localparam  MEM_ADDR_ORDER = "ROW_COLUMN_BANK";
+    localparam DBG_WR_STS_WIDTH      = 32;
+    localparam DBG_RD_STS_WIDTH      = 32;
+    localparam ECC                   = "OFF";
+  
+    localparam C_NUM_RD_CLIENTS = 4;
+    localparam C_NUM_WR_CLIENTS = 1;
 
+    localparam C_NUM_RD_CLIENTS_FIXED       = C_NUM_RD_CLIENTS;
+    localparam C_NUM_WR_CLIENTS_FIXED       = C_NUM_WR_CLIENTS;   
+    localparam C_LOG2_NUM_RD_CLIENTS        = clog2(C_NUM_RD_CLIENTS);
+    localparam C_LOG2_NUM_WR_CLIENTS        = clog2(C_NUM_WR_CLIENTS);
+    localparam C_MAX_N_TAGS                 = 16;
+    
+    localparam C_INIT_RD_REQ_ID_WTH         = C_NUM_RD_CLIENTS * `MAX_FAS_RD_ID;
+    localparam C_INIT_MEM_RD_ADDR_WTH       = C_NUM_RD_CLIENTS * `INIT_RD_ADDR_WIDTH;
+    localparam C_INIT_MEM_RD_LEN_WTH        = C_NUM_RD_CLIENTS * `INIT_RD_LEN_WIDTH;  
+    localparam C_INIT_MEM_RD_DATA_WTH       = C_NUM_RD_CLIENTS * `INIT_RD_DATA_WIDTH;
 
-  localparam  APP_ADDR_WIDTH = 29;
-  localparam  MEM_ADDR_ORDER = "ROW_COLUMN_BANK";
-  localparam DBG_WR_STS_WIDTH      = 32;
-  localparam DBG_RD_STS_WIDTH      = 32;
-  localparam ECC                   = "OFF";
+    localparam C_INIT_WR_REQ_ID_WTH         = C_NUM_WR_CLIENTS;
+    localparam C_INIT_MEM_WR_ADDR_WTH       = C_NUM_WR_CLIENTS * `INIT_RD_ADDR_WIDTH;
+    localparam C_INIT_MEM_WR_LEN_WTH        = C_NUM_WR_CLIENTS * `INIT_RD_LEN_WIDTH;  
+    localparam C_INIT_MEM_WR_DATA_WTH       = C_NUM_WR_CLIENTS * `INIT_RD_DATA_WIDTH;
+
+    //-----------------------------------------------------------------------------------------------------------------------------------------------
+    //  Module Ports
+    //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+    // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
+    logic [          C_NUM_RD_CLIENTS - 1:0]   init_read_req          ;
+    logic [      C_INIT_RD_REQ_ID_WTH - 1:0]   init_read_req_id       ;
+    logic [    C_INIT_MEM_RD_ADDR_WTH - 1:0]   init_read_addr         ;
+    logic [     C_INIT_MEM_RD_LEN_WTH - 1:0]   init_read_len          ;
+    logic [          C_NUM_RD_CLIENTS - 1:0]   init_read_req_ack      ;
+    logic [          C_NUM_RD_CLIENTS - 1:0]   init_read_in_prog      ;
+    // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
+    logic [    C_INIT_MEM_RD_DATA_WTH - 1:0]   init_read_data         ;
+    logic [          C_NUM_RD_CLIENTS - 1:0]   init_read_data_vld     ;
+    logic [          C_NUM_RD_CLIENTS - 1:0]   init_read_data_rdy     ;
+    logic [          C_NUM_RD_CLIENTS - 1:0]   init_read_cmpl         ;
+    // BEGIN -------------------------------------------------------------------------------------------------------------------------------------------    
+    logic [          C_NUM_WR_CLIENTS - 1:0]   init_write_req         ;
+    logic [      C_INIT_WR_REQ_ID_WTH - 1:0]   init_write_req_id      ;
+    logic [    C_INIT_MEM_WR_ADDR_WTH - 1:0]   init_write_addr        ;
+    logic [     C_INIT_MEM_WR_LEN_WTH - 1:0]   init_write_len         ;
+    logic [          C_NUM_WR_CLIENTS - 1:0]   init_write_req_ack     ;
+    logic [          C_NUM_WR_CLIENTS - 1:0]   init_write_in_prog     ;
+    // BEGIN -------------------------------------------------------------------------------------------------------------------------------------------   
+    logic [    C_INIT_MEM_WR_DATA_WTH - 1:0]   init_write_data        ;
+    logic [          C_NUM_WR_CLIENTS - 1:0]   init_write_data_vld    ;
+    logic [          C_NUM_WR_CLIENTS - 1:0]   init_write_data_rdy    ;
+    logic [          C_NUM_WR_CLIENTS - 1:0]   init_write_cmpl  	  ;
 
 
 
@@ -350,68 +400,68 @@ ddr4 u_ddr4
         .C_NUM_WR_CLIENTS( 1 )
     ) 
     i0_cnn_layer_accel_axi_bridge (
-        .clk				     ( c0_ddr4_clk ),
-        .rst				     ( c0_ddr4_rst ),
+        .clk				        ( c0_ddr4_clk               ),
+        .rst				        ( c0_ddr4_rst               ),
         // AXI Write Address Ports
-        .axi_awready		     ( c0_ddr4_s_axi_awready ),	// Indicates slave is ready to accept a 
-        .axi_awid		         ( c0_ddr4_s_axi_awid	 ),	// Write ID
-        .axi_awaddr		         ( c0_ddr4_s_axi_awaddr	 ),	// Write address
-        .axi_awlen		         ( c0_ddr4_s_axi_awlen	 ),	// Write Burst Length
-        .axi_awsize		         ( c0_ddr4_s_axi_awsize	 ),	// Write Burst size
-        .axi_awburst		     ( c0_ddr4_s_axi_awburst ),	// Write Burst type
-        .axi_awcache		     (                       ),	// Write Cache type
-        .axi_awvalid		     ( c0_ddr4_s_axi_awvalid ),	// Write address valid
+        .axi_awready		        ( c0_ddr4_s_axi_awready     ),	// Indicates slave is ready to accept a 
+        .axi_awid		            ( c0_ddr4_s_axi_awid	    ),	// Write ID
+        .axi_awaddr		            ( c0_ddr4_s_axi_awaddr	    ),	// Write address
+        .axi_awlen		            ( c0_ddr4_s_axi_awlen	    ),	// Write Burst Length
+        .axi_awsize		            ( c0_ddr4_s_axi_awsize	    ),	// Write Burst size
+        .axi_awburst		        ( c0_ddr4_s_axi_awburst     ),	// Write Burst type
+        .axi_awcache		        (                           ),	// Write Cache type
+        .axi_awvalid		        ( c0_ddr4_s_axi_awvalid     ),	// Write address valid
         // AXI write data channel signals
-        .axi_wready		         ( c0_ddr4_s_axi_wready	 ),	// Write data ready
-        .axi_wdata		         ( c0_ddr4_s_axi_wdata	 ),	// Write data
-        .axi_wstrb		         ( c0_ddr4_s_axi_wstrb	 ),	// Write strobes
-        .axi_wlast		         ( c0_ddr4_s_axi_wlast	 ),	// Last write transaction   
-        .axi_wvalid		         ( c0_ddr4_s_axi_wvalid	 ),	// Write valid  
+        .axi_wready		            ( c0_ddr4_s_axi_wready	    ),	// Write data ready
+        .axi_wdata		            ( c0_ddr4_s_axi_wdata	    ),	// Write data
+        .axi_wstrb		            ( c0_ddr4_s_axi_wstrb	    ),	// Write strobes
+        .axi_wlast		            ( c0_ddr4_s_axi_wlast	    ),	// Last write transaction   
+        .axi_wvalid		            ( c0_ddr4_s_axi_wvalid	    ),	// Write valid  
         // AXI write response channel signals
-        .axi_bid			     ( c0_ddr4_s_axi_bid	 ),	// Response ID
-        .axi_bresp		         ( c0_ddr4_s_axi_bresp	 ),	// Write response
-        .axi_bvalid		         ( c0_ddr4_s_axi_bvalid	 ),	// Write reponse valid
-        .axi_bready		         ( c0_ddr4_s_axi_bready	 ),	// Response ready
+        .axi_bid			        ( c0_ddr4_s_axi_bid	        ),	// Response ID
+        .axi_bresp		            ( c0_ddr4_s_axi_bresp	    ),	// Write response
+        .axi_bvalid		            ( c0_ddr4_s_axi_bvalid	    ),	// Write reponse valid
+        .axi_bready		            ( c0_ddr4_s_axi_bready	    ),	// Response ready
         // AXI read address channel signals
-        .axi_arready		     ( c0_ddr4_s_axi_arready ),   // Read address ready
-        .axi_arid		         ( c0_ddr4_s_axi_arid	 ),	// Read ID
-        .axi_araddr		         ( c0_ddr4_s_axi_araddr	 ),   // Read address
-        .axi_arlen		         ( c0_ddr4_s_axi_arlen	 ),   // Read Burst Length
-        .axi_arsize		         ( c0_ddr4_s_axi_arsize	 ),   // Read Burst size
-        .axi_arburst		     ( c0_ddr4_s_axi_arburst ),   // Read Burst type
-        .axi_arcache		     (                       ),   // Read Cache type
-        .axi_arvalid		     ( c0_ddr4_s_axi_arvalid ),   // Read address valid 
+        .axi_arready		        ( c0_ddr4_s_axi_arready     ),   // Read address ready
+        .axi_arid		            ( c0_ddr4_s_axi_arid	    ),	// Read ID
+        .axi_araddr		            ( c0_ddr4_s_axi_araddr	    ),   // Read address
+        .axi_arlen		            ( c0_ddr4_s_axi_arlen	    ),   // Read Burst Length
+        .axi_arsize		            ( c0_ddr4_s_axi_arsize	    ),   // Read Burst size
+        .axi_arburst		        ( c0_ddr4_s_axi_arburst     ),   // Read Burst type
+        .axi_arcache		        (                           ),   // Read Cache type
+        .axi_arvalid		        ( c0_ddr4_s_axi_arvalid     ),   // Read address valid 
         // AXI read data channel signals   
-        .axi_rid			     ( c0_ddr4_s_axi_rid	 ),   // Response ID
-        .axi_rresp		         ( c0_ddr4_s_axi_rresp	 ),   // Read response
-        .axi_rvalid		         ( c0_ddr4_s_axi_rvalid	 ),   // Read reponse valid
-        .axi_rdata		         ( c0_ddr4_s_axi_rdata	 ),   // Read data
-        .axi_rlast		         ( c0_ddr4_s_axi_rlast	 ),   // Read last
-        .axi_rready		         ( c0_ddr4_s_axi_rready	 ),   // Read Response ready 
+        .axi_rid			        ( c0_ddr4_s_axi_rid	        ),   // Response ID
+        .axi_rresp		            ( c0_ddr4_s_axi_rresp	    ),   // Read response
+        .axi_rvalid		            ( c0_ddr4_s_axi_rvalid	    ),   // Read reponse valid
+        .axi_rdata		            ( c0_ddr4_s_axi_rdata	    ),   // Read data
+        .axi_rlast		            ( c0_ddr4_s_axi_rlast	    ),   // Read last
+        .axi_rready		            ( c0_ddr4_s_axi_rready      ),   // Read Response ready 
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
-        .init_read_req           ( init_read_req        ),
-        .init_read_req_id        ( init_read_req_id     ),
-        .init_read_addr          ( init_read_addr       ),
-        .init_read_len           ( init_read_len        ),
-        .init_read_req_ack       ( init_read_req_ack    ),
-        .init_read_in_prog       ( init_read_in_prog    ),
+        .cX_init_read_req           ( init_read_req             ),
+        .cX_init_read_req_id        ( init_read_req_id          ),
+        .cX_init_read_addr          ( init_read_addr            ),
+        .cX_init_read_len           ( init_read_len             ),
+        .cX_init_read_req_ack       ( init_read_req_ack         ),
+        .cX_init_read_in_prog       ( init_read_in_prog         ),
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
-        .init_read_data          ( init_read_data       ),
-        .init_read_data_vld      ( init_read_data_vld   ),
-        .init_read_data_rdy      ( init_read_data_rdy   ),
-        .init_read_cmpl          ( init_read_cmpl       ),
+        .cX_init_read_data          ( init_read_data            ),
+        .cX_init_read_data_vld      ( init_read_data_vld        ),
+        .cX_init_read_data_rdy      ( init_read_data_rdy        ),
+        .cX_init_read_cmpl          ( init_read_cmpl            ),
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
-        .init_write_req          ( init_write_req       ),
-        .init_write_req_id       ( init_write_req_id    ),
-        .init_write_addr         ( init_write_addr      ),
-        .init_write_len          ( init_write_len       ),
-        .init_write_req_ack      ( init_write_req_ack   ),
-        .init_write_in_prog      ( init_write_in_prog   ),
+        .cX_init_write_req          ( init_write_req            ),
+        .cX_init_write_req_id       ( init_write_req_id         ),
+        .cX_init_write_addr         ( init_write_addr           ),
+        .cX_init_write_len          ( init_write_len            ),
+        .cX_init_write_req_ack      ( init_write_req_ack        ),
+        .cX_init_write_in_prog      ( init_write_in_prog        ),
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------   
-        .init_write_data         ( init_write_data      ),
-        .init_write_data_vld     ( init_write_data_vld  ),
-        .init_write_data_rdy     ( init_write_data_rdy  ),
-        .init_write_cmpl         ( init_write_cmpl      )
+        .cX_init_write_data         ( init_write_data           ),
+        .cX_init_write_data_vld     ( init_write_data_vld       ),
+        .cX_init_write_data_rdy     ( init_write_data_rdy       ),
+        .cX_init_write_cmpl         ( init_write_cmpl           )
     );
 
 
