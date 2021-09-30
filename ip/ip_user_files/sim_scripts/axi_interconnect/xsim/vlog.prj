@@ -1,6 +1,0 @@
-verilog xil_defaultlib  \
-"../../../../axi_interconnect/sim/axi_interconnect.v" \
-
-verilog xil_defaultlib "glbl.v"
-
-nosort

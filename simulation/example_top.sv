@@ -1,5 +1,3 @@
-
-
 /******************************************************************************
 // (c) Copyright 2013 - 2014 Xilinx, Inc. All rights reserved.
 //
@@ -347,7 +345,7 @@ ddr4 u_ddr4
 
 
 
-    cnn_layer_accel_axi_bridge (
+    cnn_layer_accel_axi_bridge #(
         .C_NUM_RD_CLIENTS( 4 ),
         .C_NUM_WR_CLIENTS( 1 )
     ) 

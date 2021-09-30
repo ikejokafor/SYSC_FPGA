@@ -189,7 +189,7 @@ vlog -64 -incr -sv -work work \
     +incdir+$env(WORKSPACE_PATH)/cnn_layer_accel/hardware/verilog/defs \
     +incdir+$env(WORKSPACE_PATH)/cnn_layer_accel/hardware/verilog/rtl \
     +incdir+$env(WORKSPACE_PATH)/accel_infst_common/hardware/verilog \
-    $env(WORKSPACE_PATH)/cnn_layer_accel/hardware/verilog/rtl/cnn_layer_accel_axi_bridge.v
+    $env(WORKSPACE_PATH)/cnn_layer_accel/hardware/verilog/rtl/cnn_layer_accel_axi_bridge.v \
 	./example_top.sv
 
 
@@ -200,11 +200,12 @@ sccom -DMODEL_TECH -DDDR_AXI_MEMORY -std=c++1y \
 	-I $env(WORKSPACE_PATH)/util/inc/ \
 	-I $env(WORKSPACE_PATH)/fixedPoint/inc/ \
 	-I $env(WORKSPACE_PATH)/FPGA_shim/inc/ \
+    -I $env(WORKSPACE_PATH)/espresso/inc/ \
 	-I $env(WORKSPACE_PATH)/espresso/inc/FPGA/ \
 	-I $env(WORKSPACE_PATH)/SYSC_FPGA/inc/ \
 	-I $env(WORKSPACE_PATH)/SYSC_FPGA_shim/inc/ \
 	-I $env(WORKSPACE_PATH)/network/inc/ \
-	-I $env(WORKSPACE_PATH)/myNetProto/inc/ \
+	-I $env(WORKSPACE_PATH)/syscNetProto/inc/ \
 	$env(WORKSPACE_PATH)/cnn_layer_accel/model/src/AWP.cpp \
 	$env(WORKSPACE_PATH)/cnn_layer_accel/model/src/AWPBus.cpp \
 	$env(WORKSPACE_PATH)/cnn_layer_accel/model/src/FAS.cpp \
@@ -215,10 +216,10 @@ sccom -DMODEL_TECH -DDDR_AXI_MEMORY -std=c++1y \
 	$env(WORKSPACE_PATH)/SYSC_FPGA/src/SYSC_FPGA.cpp
 sccom -link \
 	-L$env(WORKSPACE_PATH)/network/build/debug/ \
-	-L$env(WORKSPACE_PATH)/myNetProto/build/debug/ \
+	-L$env(WORKSPACE_PATH)/syscNetProto/build/debug/ \
 	-L$env(WORKSPACE_PATH)/espresso/build/debug/ \
 	-L$env(WORKSPACE_PATH)/SYSC_FPGA_shim/build/debug/ \
-	-lsysc_fpga_shim \
-	-lmyNetProto \
+	-lSYSC_FPGA_shim \
+	-lsyscNetProto \
 	-lnetwork \
 	-lespresso
