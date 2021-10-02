@@ -171,7 +171,6 @@ module example_top #(
     logic [    C_INIT_MEM_RD_ADDR_WTH - 1:0]   init_read_addr         ;
     logic [     C_INIT_MEM_RD_LEN_WTH - 1:0]   init_read_len          ;
     logic [          C_NUM_RD_CLIENTS - 1:0]   init_read_req_ack      ;
-    logic [          C_NUM_RD_CLIENTS - 1:0]   init_read_in_prog      ;
     // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
     logic [    C_INIT_MEM_RD_DATA_WTH - 1:0]   init_read_data         ;
     logic [          C_NUM_RD_CLIENTS - 1:0]   init_read_data_vld     ;
@@ -183,7 +182,6 @@ module example_top #(
     logic [    C_INIT_MEM_WR_ADDR_WTH - 1:0]   init_write_addr        ;
     logic [     C_INIT_MEM_WR_LEN_WTH - 1:0]   init_write_len         ;
     logic [          C_NUM_WR_CLIENTS - 1:0]   init_write_req_ack     ;
-    logic [          C_NUM_WR_CLIENTS - 1:0]   init_write_in_prog     ;
     // BEGIN -------------------------------------------------------------------------------------------------------------------------------------------   
     logic [    C_INIT_MEM_WR_DATA_WTH - 1:0]   init_write_data        ;
     logic [          C_NUM_WR_CLIENTS - 1:0]   init_write_data_vld    ;
@@ -444,7 +442,6 @@ ddr4 u_ddr4
         .cX_init_read_addr          ( init_read_addr            ),
         .cX_init_read_len           ( init_read_len             ),
         .cX_init_read_req_ack       ( init_read_req_ack         ),
-        .cX_init_read_in_prog       ( init_read_in_prog         ),
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
         .cX_init_read_data          ( init_read_data            ),
         .cX_init_read_data_vld      ( init_read_data_vld        ),
@@ -456,7 +453,6 @@ ddr4 u_ddr4
         .cX_init_write_addr         ( init_write_addr           ),
         .cX_init_write_len          ( init_write_len            ),
         .cX_init_write_req_ack      ( init_write_req_ack        ),
-        .cX_init_write_in_prog      ( init_write_in_prog        ),
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------   
         .cX_init_write_data         ( init_write_data           ),
         .cX_init_write_data_vld     ( init_write_data_vld       ),
@@ -475,7 +471,6 @@ ddr4 u_ddr4
         .init_read_addr          ( init_read_addr       ),
         .init_read_len           ( init_read_len        ),
         .init_read_req_ack       ( init_read_req_ack    ),
-        .init_read_in_prog       ( init_read_in_prog    ),
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
         .init_read_data          ( init_read_data       ),
         .init_read_data_vld      ( init_read_data_vld   ),
@@ -487,7 +482,6 @@ ddr4 u_ddr4
         .init_write_addr         ( init_write_addr      ),
         .init_write_len          ( init_write_len       ),
         .init_write_req_ack      ( init_write_req_ack   ),
-        .init_write_in_prog      ( init_write_in_prog   ),
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------   
         .init_write_data         ( init_write_data      ),
         .init_write_data_vld     ( init_write_data_vld  ),

@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Sep 28 16:18:16 2021
-# Process ID: 2551
+# Start of session at: Fri Oct  1 12:30:23 2021
+# Process ID: 7965
 # Current directory: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/managed_ip_project/managed_ip_project.runs/ddr4_synth_1
 # Command line: vivado -log ddr4.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ddr4.tcl
 # Log file: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/managed_ip_project/managed_ip_project.runs/ddr4_synth_1/ddr4.vds
