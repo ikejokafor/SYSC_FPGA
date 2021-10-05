@@ -131,8 +131,10 @@ module example_top #(
     //  Includes
     //-----------------------------------------------------------------------------------------------------------------------------------------------
     `include "math.svh"
+    `include "axi_defs.svh"
     `include "cnn_layer_accel_FAS.svh"
-    
+
+  
     //-----------------------------------------------------------------------------------------------------------------------------------------------
     //  Local Parameters
     //-----------------------------------------------------------------------------------------------------------------------------------------------  
@@ -176,7 +178,7 @@ module example_top #(
     logic [          C_NUM_RD_CLIENTS - 1:0]   init_read_data_vld     ;
     logic [          C_NUM_RD_CLIENTS - 1:0]   init_read_data_rdy     ;
     logic [          C_NUM_RD_CLIENTS - 1:0]   init_read_cmpl         ;
-    // BEGIN -------------------------------------------------------------------------------------------------------------------------------------------    
+    // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------------    
     logic [          C_NUM_WR_CLIENTS - 1:0]   init_write_req         ;
     logic [      C_INIT_WR_REQ_ID_WTH - 1:0]   init_write_req_id      ;
     logic [    C_INIT_MEM_WR_ADDR_WTH - 1:0]   init_write_addr        ;
@@ -242,7 +244,7 @@ module example_top #(
   wire                             c0_ddr4_s_axi_bvalid;
    // Slave Interface Read Address Ports
   wire [3:0]      c0_ddr4_s_axi_arid;
-  wire [28:0]    c0_ddr4_s_axi_araddr;
+  wire [28:0]     c0_ddr4_s_axi_araddr;
   wire [7:0]                       c0_ddr4_s_axi_arlen;
   wire [2:0]                       c0_ddr4_s_axi_arsize;
   wire [1:0]                       c0_ddr4_s_axi_arburst;
@@ -267,33 +269,6 @@ module example_top #(
   wire [DBG_RD_STS_WIDTH-1:0]      c0_ddr4_dbg_rd_sts;
   assign c0_data_compare_error = c0_ddr4_data_msmatch_err | c0_ddr4_write_err | c0_ddr4_read_err;
 
-  //HW TG VIO signals
-  wire [3:0]                           vio_tg_status_state;
-  wire                                 vio_tg_status_err_bit_valid;
-  wire [APP_DATA_WIDTH-1:0]            vio_tg_status_err_bit;
-  wire [31:0]                          vio_tg_status_err_cnt;
-  wire [APP_ADDR_WIDTH-1:0]            vio_tg_status_err_addr;
-  wire                                 vio_tg_status_exp_bit_valid;
-  wire [APP_DATA_WIDTH-1:0]            vio_tg_status_exp_bit;
-  wire                                 vio_tg_status_read_bit_valid;
-  wire [APP_DATA_WIDTH-1:0]            vio_tg_status_read_bit;
-  wire                                 vio_tg_status_first_err_bit_valid;
-
-  wire [APP_DATA_WIDTH-1:0]            vio_tg_status_first_err_bit;
-  wire [APP_ADDR_WIDTH-1:0]            vio_tg_status_first_err_addr;
-  wire                                 vio_tg_status_first_exp_bit_valid;
-  wire [APP_DATA_WIDTH-1:0]            vio_tg_status_first_exp_bit;
-  wire                                 vio_tg_status_first_read_bit_valid;
-  wire [APP_DATA_WIDTH-1:0]            vio_tg_status_first_read_bit;
-  wire                                 vio_tg_status_err_bit_sticky_valid;
-  wire [APP_DATA_WIDTH-1:0]            vio_tg_status_err_bit_sticky;
-  wire [31:0]                          vio_tg_status_err_cnt_sticky;
-  wire                                 vio_tg_status_err_type_valid;
-  wire                                 vio_tg_status_err_type;
-  wire                                 vio_tg_status_wr_done;
-  wire                                 vio_tg_status_done;
-  wire                                 vio_tg_status_watch_dog_hang;
-  wire                                 tg_ila_debug;
 
   // Debug Bus
   wire [511:0]                         dbg_bus;        
@@ -390,7 +365,304 @@ ddr4 u_ddr4
    always @(posedge c0_ddr4_clk) begin
      c0_ddr4_aresetn <= ~c0_ddr4_rst;
    end
-
+   
+   
+   axi_interconnect 
+   i0_axi_interconnect (
+        .INTERCONNECT_ACLK      ( c0_ddr4_clk    ),  
+        .INTERCONNECT_ARESETN   ( c0_ddr4_rst    ),  
+        // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
+        .axi_awready		        ( axi_awready            ),	// Indicates slave is ready to accept a 
+        .axi_awid		        ( axi_awid	            ),	// Write ID
+        .axi_awaddr		        ( axi_awaddr	            ),	// Write address
+        .axi_awlen		        ( axi_awlen	            ),	// Write Burst Length
+        .axi_awsize		        ( axi_awsize	            ),	// Write Burst size
+        .axi_awburst		        ( axi_awburst            ),	// Write Burst type
+        .axi_awcache		        (                           ),	// Write Cache type
+        .axi_awvalid		        ( axi_awvalid            ),	// Write address valid
+        // AXI write data channel signals
+        .axi_wready		        ( axi_wready	            ),	// Write data ready
+        .axi_wdata		        ( axi_wdata	            ),	// Write data
+        .axi_wstrb		        (        .S00_AXI_ARESET_OUT_N   (                                                       ),  
+        .S00_AXI_ACLK           ( c0_ddr4_clk                                           ),  
+        .S00_AXI_AWID           ( axi_awid[(0 * `AXI_ID_WTH) +: `AXI_ID_WTH]         ),  
+        .S00_AXI_AWADDR         ( axi_awaddr[(0 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),  
+        .S00_AXI_AWLEN          ( axi_awlen[(0 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),  
+        .S00_AXI_AWSIZE         ( 3'b3                                                  ),  
+        .S00_AXI_AWBURST        ( 2'b1                                                  ),  
+        .S00_AXI_AWLOCK         (                                                       ),  
+        .S00_AXI_AWCACHE        (                                                       ),  
+        .S00_AXI_AWPROT         (                                                       ),  
+        .S00_AXI_AWQOS          (                                                       ),  
+        .S00_AXI_AWVALID        ( axi_awvalid[0]                                     ),  
+        .S00_AXI_AWREADY        ( axi_awready[0]                                     ),  
+        .S00_AXI_WDATA          ( axi_wdata[(0 * `AXI_DATA_WTH) +: `AXI_DATA_WTH]    ),  
+        .S00_AXI_WSTRB          ( 64'hFFFFFFFFFFFFFFFF                                  ),  
+        .S00_AXI_WLAST          ( axi_wlast[0]                                       ),  
+        .S00_AXI_WVALID         ( axi_wvalid[0]                                      ),  
+        .S00_AXI_WREADY         ( axi_wready[0]                                      ),  
+        .S00_AXI_BID            ( axi_bid[(0 * `AXI_ID_WTH) +: `AXI_ID_WTH]          ),  
+        .S00_AXI_BRESP          ( axi_bresp[(0 * `AXI_RESP_WTH) +: `AXI_RESP_WTH]    ),  
+        .S00_AXI_BVALID         ( axi_bvalid[0]                                      ),  
+        .S00_AXI_BREADY         ( axi_bready[0]                                      ),  
+        .S00_AXI_ARID           ( axi_arid                                           ),  
+        .S00_AXI_ARADDR         ( axi_araddr[(0 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),  
+        .S00_AXI_ARLEN          ( axi_arlen[(0 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),  
+        .S00_AXI_ARSIZE         ( 3'b3                                                  ),  
+        .S00_AXI_ARBURST        ( 2'b1                                                  ),  
+        .S00_AXI_ARLOCK         (                                                       ),  
+        .S00_AXI_ARCACHE        (                                                       ),  
+        .S00_AXI_ARPROT         (                                                       ),  
+        .S00_AXI_ARQOS          (                                                       ),  
+        .S00_AXI_ARVALID        ( axi_arvalid[0]                                     ),  
+        .S00_AXI_ARREADY        ( axi_arready[0]                                     ),  
+        .S00_AXI_RID            ( axi_rid[(0 * `AXI_ID_WTH) +: `AXI_ID_WTH]          ),  
+        .S00_AXI_RDATA          ( axi_rdata[(0 * `AXI_DATA_WTH) +: `AXI_DATA_WTH]    ),  
+        .S00_AXI_RRESP          ( axi_rresp[(0 * `AXI_RESP_WTH) +: `AXI_RESP_WTH]    ),  
+        .S00_AXI_RLAST          ( axi_rlast[0]                                       ),  
+        .S00_AXI_RVALID         ( axi_rvalid[0]                                      ),  
+        .S00_AXI_RREADY         ( axi_rready[0]                                      ), 
+        // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
+        .S01_AXI_ARESET_OUT_N   (                                                       ),  
+        .S01_AXI_ACLK           ( c0_ddr4_clk                                           ),  
+        .S01_AXI_AWID           ( axi_awid[(1 * `AXI_ID_WTH) +: `AXI_ID_WTH]         ),  
+        .S01_AXI_AWADDR         ( axi_awaddr[(1 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),  
+        .S01_AXI_AWLEN          ( axi_awlen[(1 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),  
+        .S01_AXI_AWSIZE         ( 3'b3                                                  ),  
+        .S01_AXI_AWBURST        ( 2'b1                                                  ),  
+        .S01_AXI_AWLOCK         (                                                       ),  
+        .S01_AXI_AWCACHE        (                                                       ),  
+        .S01_AXI_AWPROT         (                                                       ),  
+        .S01_AXI_AWQOS          (                                                       ),  
+        .S01_AXI_AWVALID        ( axi_awvalid[1]                                     ),  
+        .S01_AXI_AWREADY        ( axi_awready[1]                                     ),  
+        .S01_AXI_WDATA          ( axi_wdata[(1 * `AXI_DATA_WTH) +: `AXI_DATA_WTH]    ),  
+        .S01_AXI_WSTRB          ( 64'hFFFFFFFFFFFFFFFF                                  ),  
+        .S01_AXI_WLAST          ( axi_wlast[1]                                       ),  
+        .S01_AXI_WVALID         ( axi_wvalid[1]                                      ),  
+        .S01_AXI_WREADY         ( axi_wready[1]                                      ),  
+        .S01_AXI_BID            ( axi_bid[(1 * `AXI_ID_WTH) +: `AXI_ID_WTH]          ),  
+        .S01_AXI_BRESP          ( axi_bresp[(1 * `AXI_RESP_WTH) +: `AXI_RESP_WTH]    ),  
+        .S01_AXI_BVALID         ( axi_bvalid[1]                                      ),  
+        .S01_AXI_BREADY         ( axi_bready[1]                                      ),  
+        .S01_AXI_ARID           ( axi_arid                                           ),  
+        .S01_AXI_ARADDR         ( axi_araddr[(1 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),  
+        .S01_AXI_ARLEN          ( axi_arlen[(1 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),  
+        .S01_AXI_ARSIZE         ( 3'b3                                                  ),  
+        .S01_AXI_ARBURST        ( 2'b1                                                  ),  
+        .S01_AXI_ARLOCK         (                                                       ),  
+        .S01_AXI_ARCACHE        (                                                       ),  
+        .S01_AXI_ARPROT         (                                                       ),  
+        .S01_AXI_ARQOS          (                                                       ),  
+        .S01_AXI_ARVALID        ( axi_arvalid[1]                                     ),  
+        .S01_AXI_ARREADY        ( axi_arready[1]                                     ),  
+        .S01_AXI_RID            ( axi_rid[(1 * `AXI_ID_WTH) +: `AXI_ID_WTH]          ),  
+        .S01_AXI_RDATA          ( axi_rdata[(1 * `AXI_DATA_WTH) +: `AXI_DATA_WTH]    ),  
+        .S01_AXI_RRESP          ( axi_rresp[(1 * `AXI_RESP_WTH) +: `AXI_RESP_WTH]    ),  
+        .S01_AXI_RLAST          ( axi_rlast[1]                                       ),  
+        .S01_AXI_RVALID         ( axi_rvalid[1]                                      ),  
+        .S01_AXI_RREADY         ( axi_rready[1]                                      ),      
+        // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
+        .S02_AXI_ARESET_OUT_N   (                                                       ),  
+        .S02_AXI_ACLK           ( c0_ddr4_clk                                           ),  
+        .S02_AXI_AWID           ( axi_awid[(2 * `AXI_ID_WTH) +: `AXI_ID_WTH]         ),  
+        .S02_AXI_AWADDR         ( axi_awaddr[(2 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),  
+        .S02_AXI_AWLEN          ( axi_awlen[(2 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),  
+        .S02_AXI_AWSIZE         ( 3'b3                                                  ),  
+        .S02_AXI_AWBURST        ( 2'b1                                                  ),  
+        .S02_AXI_AWLOCK         (                                                       ),  
+        .S02_AXI_AWCACHE        (                                                       ),  
+        .S02_AXI_AWPROT         (                                                       ),  
+        .S02_AXI_AWQOS          (                                                       ),  
+        .S02_AXI_AWVALID        ( axi_awvalid[2]                                     ),  
+        .S02_AXI_AWREADY        ( axi_awready[2]                                     ),  
+        .S02_AXI_WDATA          ( axi_wdata[(2 * `AXI_DATA_WTH) +: `AXI_DATA_WTH]    ),  
+        .S02_AXI_WSTRB          ( 64'hFFFFFFFFFFFFFFFF                                  ),  
+        .S02_AXI_WLAST          ( axi_wlast[2]                                       ),  
+        .S02_AXI_WVALID         ( axi_wvalid[2]                                      ),  
+        .S02_AXI_WREADY         ( axi_wready[2]                                      ),  
+        .S02_AXI_BID            ( axi_bid[(2 * `AXI_ID_WTH) +: `AXI_ID_WTH]          ),  
+        .S02_AXI_BRESP          ( axi_bresp[(2 * `AXI_RESP_WTH) +: `AXI_RESP_WTH]    ),  
+        .S02_AXI_BVALID         ( axi_bvalid[2]                                      ),  
+        .S02_AXI_BREADY         ( axi_bready[2]                                      ),  
+        .S02_AXI_ARID           ( axi_arid                                           ),  
+        .S02_AXI_ARADDR         ( axi_araddr[(2 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),  
+        .S02_AXI_ARLEN          ( axi_arlen[(2 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),  
+        .S02_AXI_ARSIZE         ( 3'b3                                                  ),  
+        .S02_AXI_ARBURST        ( 2'b1                                                  ),  
+        .S02_AXI_ARLOCK         (                                                       ),  
+        .S02_AXI_ARCACHE        (                                                       ),  
+        .S02_AXI_ARPROT         (                                                       ),  
+        .S02_AXI_ARQOS          (                                                       ),  
+        .S02_AXI_ARVALID        ( axi_arvalid[2]                                     ),  
+        .S02_AXI_ARREADY        ( axi_arready[2]                                     ),  
+        .S02_AXI_RID            ( axi_rid[(2 * `AXI_ID_WTH) +: `AXI_ID_WTH]          ),  
+        .S02_AXI_RDATA          ( axi_rdata[(2 * `AXI_DATA_WTH) +: `AXI_DATA_WTH]    ),  
+        .S02_AXI_RRESP          ( axi_rresp[(2 * `AXI_RESP_WTH) +: `AXI_RESP_WTH]    ),  
+        .S02_AXI_RLAST          ( axi_rlast[2]                                       ),  
+        .S02_AXI_RVALID         ( axi_rvalid[2]                                      ),  
+        .S02_AXI_RREADY         ( axi_rready[2]                                      ),
+        // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
+        .S03_AXI_ARESET_OUT_N   (                                                       ),  
+        .S03_AXI_ACLK           ( c0_ddr4_clk                                           ),  
+        .S03_AXI_AWID           ( axi_awid[(3 * `AXI_ID_WTH) +: `AXI_ID_WTH]         ),  
+        .S03_AXI_AWADDR         ( axi_awaddr[(3 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),  
+        .S03_AXI_AWLEN          ( axi_awlen[(3 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),  
+        .S03_AXI_AWSIZE         ( 3'b3                                                  ),  
+        .S03_AXI_AWBURST        ( 2'b1                                                  ),  
+        .S03_AXI_AWLOCK         (                                                       ),  
+        .S03_AXI_AWCACHE        (                                                       ),  
+        .S03_AXI_AWPROT         (                                                       ),  
+        .S03_AXI_AWQOS          (                                                       ),  
+        .S03_AXI_AWVALID        ( axi_awvalid[3]                                     ),  
+        .S03_AXI_AWREADY        ( axi_awready[3]                                     ),  
+        .S03_AXI_WDATA          ( axi_wdata[(3 * `AXI_DATA_WTH) +: `AXI_DATA_WTH]    ),  
+        .S03_AXI_WSTRB          ( 64'hFFFFFFFFFFFFFFFF                                  ),  
+        .S03_AXI_WLAST          ( axi_wlast[3]                                       ),  
+        .S03_AXI_WVALID         ( axi_wvalid[3]                                      ),  
+        .S03_AXI_WREADY         ( axi_wready[3]                                      ),  
+        .S03_AXI_BID            ( axi_bid[(3 * `AXI_ID_WTH) +: `AXI_ID_WTH]          ),  
+        .S03_AXI_BRESP          ( axi_bresp[(3 * `AXI_RESP_WTH) +: `AXI_RESP_WTH]    ),  
+        .S03_AXI_BVALID         ( axi_bvalid[3]                                      ),  
+        .S03_AXI_BREADY         ( axi_bready[3]                                      ),  
+        .S03_AXI_ARID           ( axi_arid                                           ),  
+        .S03_AXI_ARADDR         ( axi_araddr[(3 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),  
+        .S03_AXI_ARLEN          ( axi_arlen[(3 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),  
+        .S03_AXI_ARSIZE         ( 3'b3                                                  ),  
+        .S03_AXI_ARBURST        ( 2'b1                                                  ),  
+        .S03_AXI_ARLOCK         (                                                       ),  
+        .S03_AXI_ARCACHE        (                                                       ),  
+        .S03_AXI_ARPROT         (                                                       ),  
+        .S03_AXI_ARQOS          (                                                       ),  
+        .S03_AXI_ARVALID        ( axi_arvalid[3]                                     ),  
+        .S03_AXI_ARREADY        ( axi_arready[3]                                     ),  
+        .S03_AXI_RID            ( axi_rid[(3 * `AXI_ID_WTH) +: `AXI_ID_WTH]          ),  
+        .S03_AXI_RDATA          ( axi_rdata[(3 * `AXI_DATA_WTH) +: `AXI_DATA_WTH]    ),  
+        .S03_AXI_RRESP          ( axi_rresp[(3 * `AXI_RESP_WTH) +: `AXI_RESP_WTH]    ),  
+        .S03_AXI_RLAST          ( axi_rlast[3]                                       ),  
+        .S03_AXI_RVALID         ( axi_rvalid[3]                                      ),  
+        .S03_AXI_RREADY         ( axi_rready[3]                                      ),    
+        // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
+        .S04_AXI_ARESET_OUT_N   (                                                       ),  
+        .S04_AXI_ACLK           ( c0_ddr4_clk                                           ),  
+        .S04_AXI_AWID           ( axi_awid[(4 * `AXI_ID_WTH) +: `AXI_ID_WTH]         ),  
+        .S04_AXI_AWADDR         ( axi_awaddr[(4 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),  
+        .S04_AXI_AWLEN          ( axi_awlen[(4 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),  
+        .S04_AXI_AWSIZE         ( 3'b3                                                  ),  
+        .S04_AXI_AWBURST        ( 2'b1                                                  ),  
+        .S04_AXI_AWLOCK         (                                                       ),  
+        .S04_AXI_AWCACHE        (                                                       ),  
+        .S04_AXI_AWPROT         (                                                       ),  
+        .S04_AXI_AWQOS          (                                                       ),  
+        .S04_AXI_AWVALID        ( axi_awvalid[4]                                     ),  
+        .S04_AXI_AWREADY        ( axi_awready[4]                                     ),  
+        .S04_AXI_WDATA          ( axi_wdata[(4 * `AXI_DATA_WTH) +: `AXI_DATA_WTH]    ),  
+        .S04_AXI_WSTRB          ( 64'hFFFFFFFFFFFFFFFF                                  ),  
+        .S04_AXI_WLAST          ( axi_wlast[4]                                       ),  
+        .S04_AXI_WVALID         ( axi_wvalid[4]                                      ),  
+        .S04_AXI_WREADY         ( axi_wready[4]                                      ),  
+        .S04_AXI_BID            ( axi_bid[(4 * `AXI_ID_WTH) +: `AXI_ID_WTH]          ),  
+        .S04_AXI_BRESP          ( axi_bresp[(4 * `AXI_RESP_WTH) +: `AXI_RESP_WTH]    ),  
+        .S04_AXI_BVALID         ( axi_bvalid[4]                                      ),  
+        .S04_AXI_BREADY         ( axi_bready[4]                                      ),  
+        .S04_AXI_ARID           ( axi_arid                                           ),  
+        .S04_AXI_ARADDR         ( axi_araddr[(4 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),  
+        .S04_AXI_ARLEN          ( axi_arlen[(4 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),  
+        .S04_AXI_ARSIZE         ( 3'b3                                                  ),  
+        .S04_AXI_ARBURST        ( 2'b1                                                  ),  
+        .S04_AXI_ARLOCK         (                                                       ),  
+        .S04_AXI_ARCACHE        (                                                       ),  
+        .S04_AXI_ARPROT         (                                                       ),  
+        .S04_AXI_ARQOS          (                                                       ),  
+        .S04_AXI_ARVALID        ( axi_arvalid[4]                                     ),  
+        .S04_AXI_ARREADY        ( axi_arready[4]                                     ),  
+        .S04_AXI_RID            ( axi_rid[(4 * `AXI_ID_WTH) +: `AXI_ID_WTH]          ),  
+        .S04_AXI_RDATA          ( axi_rdata[(4 * `AXI_DATA_WTH) +: `AXI_DATA_WTH]    ),  
+        .S04_AXI_RRESP          ( axi_rresp[(4 * `AXI_RESP_WTH) +: `AXI_RESP_WTH]    ),  
+        .S04_AXI_RLAST          ( axi_rlast[4]                                       ),  
+        .S04_AXI_RVALID         ( axi_rvalid[4]                                      ),  
+        .S04_AXI_RREADY         ( axi_rready[4]  
+        // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
+        .S05_AXI_ARESET_OUT_N   (                                                       ),  
+        .S05_AXI_ACLK           ( c0_ddr4_clk                                           ),  
+        .S05_AXI_AWID           ( axi_awid[(5 * `AXI_ID_WTH) +: `AXI_ID_WTH]         ),  
+        .S05_AXI_AWADDR         ( axi_awaddr[(5 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),  
+        .S05_AXI_AWLEN          ( axi_awlen[(5 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),  
+        .S05_AXI_AWSIZE         ( 3'b3                                                  ),  
+        .S05_AXI_AWBURST        ( 2'b1                                                  ),  
+        .S05_AXI_AWLOCK         (                                                       ),  
+        .S05_AXI_AWCACHE        (                                                       ),  
+        .S05_AXI_AWPROT         (                                                       ),  
+        .S05_AXI_AWQOS          (                                                       ),  
+        .S05_AXI_AWVALID        ( axi_awvalid[5]                                     ),  
+        .S05_AXI_AWREADY        ( axi_awready[5]                                     ),  
+        .S05_AXI_WDATA          ( axi_wdata[(5 * `AXI_DATA_WTH) +: `AXI_DATA_WTH]    ),  
+        .S05_AXI_WSTRB          ( 64'hFFFFFFFFFFFFFFFF                                  ),  
+        .S05_AXI_WLAST          ( axi_wlast[5]                                       ),  
+        .S05_AXI_WVALID         ( axi_wvalid[5]                                      ),  
+        .S05_AXI_WREADY         ( axi_wready[5]                                      ),  
+        .S05_AXI_BID            ( axi_bid[(5 * `AXI_ID_WTH) +: `AXI_ID_WTH]          ),  
+        .S05_AXI_BRESP          ( axi_bresp[(5 * `AXI_RESP_WTH) +: `AXI_RESP_WTH]    ),  
+        .S05_AXI_BVALID         ( axi_bvalid[5]                                      ),  
+        .S05_AXI_BREADY         ( axi_bready[5]                                      ),  
+        .S05_AXI_ARID           ( axi_arid                                           ),  
+        .S05_AXI_ARADDR         ( axi_araddr[(5 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),  
+        .S05_AXI_ARLEN          ( axi_arlen[(5 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),  
+        .S05_AXI_ARSIZE         ( 3'b3                                                  ),  
+        .S05_AXI_ARBURST        ( 2'b1                                                  ),  
+        .S05_AXI_ARLOCK         (                                                       ),  
+        .S05_AXI_ARCACHE        (                                                       ),  
+        .S05_AXI_ARPROT         (                                                       ),  
+        .S05_AXI_ARQOS          (                                                       ),  
+        .S05_AXI_ARVALID        ( axi_arvalid[5]                                     ),  
+        .S05_AXI_ARREADY        ( axi_arready[5]                                     ),  
+        .S05_AXI_RID            ( axi_rid[(5 * `AXI_ID_WTH) +: `AXI_ID_WTH]          ),  
+        .S05_AXI_RDATA          ( axi_rdata[(5 * `AXI_DATA_WTH) +: `AXI_DATA_WTH]    ),  
+        .S05_AXI_RRESP          ( axi_rresp[(5 * `AXI_RESP_WTH) +: `AXI_RESP_WTH]    ),  
+        .S05_AXI_RLAST          ( axi_rlast[5]                                       ),  
+        .S05_AXI_RVALID         ( axi_rvalid[5]                                      ),  
+        .S05_AXI_RREADY         ( axi_rready[5]                                      ),
+        // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
+        .M00_AXI_ARESET_OUT_N   (                                                       ),
+        .M00_AXI_ACLK           ( c0_ddr4_clk                                           ),        
+        .M00_AXI_AWID           ( c0_ddr4_s_axi_awid                                    ),     
+        .M00_AXI_AWADDR         ( c0_ddr4_s_axi_awaddr                                  ),      
+        .M00_AXI_AWLEN          ( c0_ddr4_s_axi_awlen                                   ),      
+        .M00_AXI_AWSIZE         ( c0_ddr4_s_axi_awsize                                  ),      
+        .M00_AXI_AWBURST        ( c0_ddr4_s_axi_awburst                                 ),      
+        .M00_AXI_AWLOCK         (                                                       ),      
+        .M00_AXI_AWCACHE        (                                                       ),      
+        .M00_AXI_AWPROT         (                                                       ),      
+        .M00_AXI_AWQOS          (                                                       ),      
+        .M00_AXI_AWVALID        ( c0_ddr4_s_axi_awvalid                                 ),      
+        .M00_AXI_AWREADY        ( c0_ddr4_s_axi_awready                                 ),      
+        .M00_AXI_WDATA          ( c0_ddr4_s_axi_wdata                                   ),      
+        .M00_AXI_WSTRB          ( c0_ddr4_s_axi_wstrb                                   ),      
+        .M00_AXI_WLAST          ( c0_ddr4_s_axi_wlast                                   ),      
+        .M00_AXI_WVALID         ( c0_ddr4_s_axi_wvalid                                  ),      
+        .M00_AXI_WREADY         ( c0_ddr4_s_axi_wready                                  ),      
+        .M00_AXI_BID            ( c0_ddr4_s_axi_bid                                     ),      
+        .M00_AXI_BRESP          ( c0_ddr4_s_axi_bresp                                   ),      
+        .M00_AXI_BVALID         ( c0_ddr4_s_axi_bvalid                                  ),      
+        .M00_AXI_BREADY         ( c0_ddr4_s_axi_bready                                  ),      
+        .M00_AXI_ARID           ( c0_ddr4_s_axi_arid                                    ),      
+        .M00_AXI_ARADDR         ( c0_ddr4_s_axi_araddr                                  ),      
+        .M00_AXI_ARLEN          ( c0_ddr4_s_axi_arlen                                   ),      
+        .M00_AXI_ARSIZE         ( c0_ddr4_s_axi_arsize                                  ),      
+        .M00_AXI_ARBURST        ( c0_ddr4_s_axi_arburst                                 ),      
+        .M00_AXI_ARLOCK         (                                                       ),
+        .M00_AXI_ARCACHE        (                                                       ),
+        .M00_AXI_ARPROT         (                                                       ),
+        .M00_AXI_ARQOS          (                                                       ),
+        .M00_AXI_ARVALID        ( c0_ddr4_s_axi_arvalid                                 ),
+        .M00_AXI_ARREADY        ( c0_ddr4_s_axi_arready                                 ),
+        .M00_AXI_RID            ( c0_ddr4_s_axi_rid                                     ),
+        .M00_AXI_RDATA          ( c0_ddr4_s_axi_rdata                                   ),
+        .M00_AXI_RRESP          ( c0_ddr4_s_axi_rresp                                   ),
+        .M00_AXI_RLAST          ( c0_ddr4_s_axi_rlast                                   ),
+        .M00_AXI_RVALID         ( c0_ddr4_s_axi_rvalid                                  ),
+        .M00_AXI_RREADY         ( c0_ddr4_s_axi_rready                                  ) 
+    );
 
 
     cnn_layer_accel_axi_bridge #(
@@ -400,64 +672,57 @@ ddr4 u_ddr4
     i0_cnn_layer_accel_axi_bridge (
         .clk				        ( c0_ddr4_clk               ),
         .rst				        ( c0_ddr4_rst               ),
-        // AXI Write Address Ports
-        .axi_awready		        ( c0_ddr4_s_axi_awready     ),	// Indicates slave is ready to accept a 
-        .axi_awid		            ( c0_ddr4_s_axi_awid	    ),	// Write ID
-        .axi_awaddr		            ( c0_ddr4_s_axi_awaddr	    ),	// Write address
-        .axi_awlen		            ( c0_ddr4_s_axi_awlen	    ),	// Write Burst Length
-        .axi_awsize		            ( c0_ddr4_s_axi_awsize	    ),	// Write Burst size
-        .axi_awburst		        ( c0_ddr4_s_axi_awburst     ),	// Write Burst type
+        // AXI Write Address Ports      
+        .axi_awready		        ( axi_awready            ),	// Indicates slave is ready to accept a 
+        .axi_awid		        ( axi_awid	            ),	// Write ID
+        .axi_awaddr		        ( axi_awaddr	            ),	// Write address
+        .axi_awlen		        ( axi_awlen	            ),	// Write Burst Length
+        .axi_awsize		        ( axi_awsize	            ),	// Write Burst size
+        .axi_awburst		        ( axi_awburst            ),	// Write Burst type
         .axi_awcache		        (                           ),	// Write Cache type
-        .axi_awvalid		        ( c0_ddr4_s_axi_awvalid     ),	// Write address valid
+        .axi_awvalid		        ( axi_awvalid            ),	// Write address valid
         // AXI write data channel signals
-        .axi_wready		            ( c0_ddr4_s_axi_wready	    ),	// Write data ready
-        .axi_wdata		            ( c0_ddr4_s_axi_wdata	    ),	// Write data
-        .axi_wstrb		            ( c0_ddr4_s_axi_wstrb	    ),	// Write strobes
-        .axi_wlast		            ( c0_ddr4_s_axi_wlast	    ),	// Last write transaction   
-        .axi_wvalid		            ( c0_ddr4_s_axi_wvalid	    ),	// Write valid  
+        .axi_wready		        ( axi_wready	            ),	// Write data ready
+        .axi_wdata		        ( axi_wdata	            ),	// Write data
+        .axi_wstrb		        ( axi_wstrb	            ),	// Write strobes
+        .axi_wlast		        ( axi_wlast	            ),	// Last write transaction   
+        .axi_wvalid		        ( axi_wvalid	            ),	// Write valid  
         // AXI write response channel signals
-        .axi_bid			        ( c0_ddr4_s_axi_bid	        ),	// Response ID
-        .axi_bresp		            ( c0_ddr4_s_axi_bresp	    ),	// Write response
-        .axi_bvalid		            ( c0_ddr4_s_axi_bvalid	    ),	// Write reponse valid
-        .axi_bready		            ( c0_ddr4_s_axi_bready	    ),	// Response ready
+        .axi_bid			        ( axi_bid	            ),	// Response ID
+        .axi_bresp		        ( axi_bresp	            ),	// Write response
+        .axi_bvalid		        ( axi_bvalid	            ),	// Write reponse valid
+        .axi_bready		        ( axi_bready	            ),	// Response ready
         // AXI read address channel signals
-        .axi_arready		        ( c0_ddr4_s_axi_arready     ),   // Read address ready
-        .axi_arid		            ( c0_ddr4_s_axi_arid	    ),	// Read ID
-        .axi_araddr		            ( c0_ddr4_s_axi_araddr	    ),   // Read address
-        .axi_arlen		            ( c0_ddr4_s_axi_arlen	    ),   // Read Burst Length
-        .axi_arsize		            ( c0_ddr4_s_axi_arsize	    ),   // Read Burst size
-        .axi_arburst		        ( c0_ddr4_s_axi_arburst     ),   // Read Burst type
+        .axi_arready		        ( axi_arready            ),   // Read address ready
+        .axi_arid		            ( axi_arid	            ),	// Read ID
+        .axi_araddr		            ( axi_araddr	            ),   // Read address
+        .axi_arlen		            ( axi_arlen	            ),   // Read Burst Length
+        .axi_arsize		            ( axi_arsize	            ),   // Read Burst size
+        .axi_arburst		        ( axi_arburst            ),   // Read Burst type
         .axi_arcache		        (                           ),   // Read Cache type
-        .axi_arvalid		        ( c0_ddr4_s_axi_arvalid     ),   // Read address valid 
-        // AXI read data channel signals   
-        .axi_rid			        ( c0_ddr4_s_axi_rid	        ),   // Response ID
-        .axi_rresp		            ( c0_ddr4_s_axi_rresp	    ),   // Read response
-        .axi_rvalid		            ( c0_ddr4_s_axi_rvalid	    ),   // Read reponse valid
-        .axi_rdata		            ( c0_ddr4_s_axi_rdata	    ),   // Read data
-        .axi_rlast		            ( c0_ddr4_s_axi_rlast	    ),   // Read last
-        .axi_rready		            ( c0_ddr4_s_axi_rready      ),   // Read Response ready 
+        .axi_arvalid		        ( axi_arvalid            ),   // Read address valid 
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
-        .cX_init_read_req           ( init_read_req             ),
-        .cX_init_read_req_id        ( init_read_req_id          ),
-        .cX_init_read_addr          ( init_read_addr            ),
-        .cX_init_read_len           ( init_read_len             ),
-        .cX_init_read_req_ack       ( init_read_req_ack         ),
+        .init_read_req              ( init_read_req          ),
+        .init_read_req_id           ( init_read_req_id       ),
+        .init_read_addr             ( init_read_addr         ),
+        .init_read_len              ( init_read_len          ),
+        .init_read_req_ack          ( init_read_req_ack      ),
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
-        .cX_init_read_data          ( init_read_data            ),
-        .cX_init_read_data_vld      ( init_read_data_vld        ),
-        .cX_init_read_data_rdy      ( init_read_data_rdy        ),
-        .cX_init_read_cmpl          ( init_read_cmpl            ),
+        .init_read_data             ( init_read_data         ),
+        .init_read_data_vld         ( init_read_data_vld     ),
+        .init_read_data_rdy         ( init_read_data_rdy     ),
+        .init_read_cmpl             ( init_read_cmpl         ),
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
-        .cX_init_write_req          ( init_write_req            ),
-        .cX_init_write_req_id       ( init_write_req_id         ),
-        .cX_init_write_addr         ( init_write_addr           ),
-        .cX_init_write_len          ( init_write_len            ),
-        .cX_init_write_req_ack      ( init_write_req_ack        ),
+        .init_write_req             ( init_write_req         ),
+        .init_write_req_id          ( init_write_req_id      ),
+        .init_write_addr            ( init_write_addr        ),
+        .init_write_len             ( init_write_len         ),
+        .init_write_req_ack         ( init_write_req_ack     ),
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------   
-        .cX_init_write_data         ( init_write_data           ),
-        .cX_init_write_data_vld     ( init_write_data_vld       ),
-        .cX_init_write_data_rdy     ( init_write_data_rdy       ),
-        .cX_init_write_cmpl         ( init_write_cmpl           )
+        .init_write_data            ( init_write_data        ),
+        .init_write_data_vld        ( init_write_data_vld    ),
+        .init_write_data_rdy        ( init_write_data_rdy    ),
+        .init_write_cmpl            ( init_write_cmpl        )
     );
 
 
