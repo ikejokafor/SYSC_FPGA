@@ -14,32 +14,30 @@ SC_MODULE(SYSC_FPGA)
 {
 	public:
 #ifdef DDR_AXI_MEMORY
-    sc_core::sc_in<bool>						        clk				        ;
-    sc_core::sc_in<bool>						        rst				        ;
+    sc_core::sc_in<bool>						 clk				    ;
+    sc_core::sc_in<bool>						 rst				    ;
     // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
-    sc_core::sc_out<sc_bv<MAX_FAS_RD_REQ> >             init_read_req           ;
-    sc_core::sc_out<sc_bv<INIT_REQ_ID_WTH> >            init_read_req_id        ;
-    sc_core::sc_out<sc_bv<INIT_MEM_RD_ADDR_WTH> >       init_read_addr          ;
-    sc_core::sc_out<sc_bv<INIT_MEM_RD_LEN_WTH> >        init_read_len           ;
-    sc_core:: sc_in<sc_bv<MAX_FAS_RD_REQ> >             init_read_req_ack       ;
-    sc_core:: sc_in<sc_bv<MAX_FAS_RD_REQ> >             init_read_in_prog       ;
+    sc_core::sc_out<sc_bv<MAX_FAS_RD_REQ> >      init_rd_req            ;
+    sc_core::sc_out<sc_bv<N_INIT_ID_WTH> >       init_rd_req_id         ;
+    sc_core::sc_out<sc_bv<N_INIT_ADDR_WTH> >     init_rd_addr           ;
+    sc_core::sc_out<sc_bv<N_INIT_LEN_WTH> >      init_rd_len            ;
+    sc_core:: sc_in<sc_bv<MAX_FAS_RD_REQ> >      init_rd_req_ack        ;
     // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
-    sc_core:: sc_in<sc_bv<INIT_MEM_RD_DATA_WIDTH> >     init_read_data          ;
-    sc_core:: sc_in<sc_bv<MAX_FAS_RD_REQ> >             init_read_data_vld      ;
-    sc_core::sc_out<sc_bv<MAX_FAS_RD_REQ> >             init_read_data_rdy      ;
-    sc_core:: sc_in<sc_bv<MAX_FAS_RD_REQ> >             init_read_cmpl          ;
+    sc_core:: sc_in<sc_bv<N_INIT_DATA_WTH> >     init_rd_data           ;
+    sc_core:: sc_in<sc_bv<MAX_FAS_RD_REQ> >      init_rd_data_vld       ;
+    sc_core::sc_out<sc_bv<MAX_FAS_RD_REQ> >      init_rd_data_rdy       ;
+    sc_core:: sc_in<sc_bv<MAX_FAS_RD_REQ> >      init_rd_cmpl           ;
     // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
-    sc_core::sc_out<bool>                               init_write_req          ;
-    sc_core::sc_out<bool>                               init_write_req_id       ;
-    sc_core::sc_out<sc_bv<32> >                         init_write_addr         ;
-    sc_core::sc_out<sc_bv<32> >                         init_write_len          ;
-    sc_core:: sc_in<bool>                               init_write_req_ack      ;
-    sc_core:: sc_in<bool>                               init_write_in_prog      ;
+    sc_core::sc_out<bool>                        init_wr_req            ;
+    sc_core::sc_out<sc_bv<INIT_ID_WTH> >         init_wr_req_id         ;
+    sc_core::sc_out<sc_bv<INIT_ADDR_WTH> >       init_wr_addr           ;
+    sc_core::sc_out<sc_bv<INIT_LEN_WTH> >        init_wr_len            ;
+    sc_core:: sc_in<bool>                        init_wr_req_ack        ;
     // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
-    sc_core::sc_out<sc_bv<64> >                         init_write_data         ;
-    sc_core::sc_out<bool>                               init_write_data_vld     ;
-    sc_core:: sc_in<bool>                               init_write_data_rdy     ;
-    sc_core:: sc_in<bool>                               init_write_cmpl         ;
+    sc_core::sc_out<sc_bv<INIT_DATA_WTH> >       init_wr_data           ;
+    sc_core::sc_out<bool>                        init_wr_data_vld       ;
+    sc_core:: sc_in<bool>                        init_wr_data_rdy       ;
+    sc_core:: sc_in<bool>                        init_wr_cmpl           ;
 #else
     sc_core::sc_clock clk;
 #endif
@@ -56,29 +54,27 @@ SC_MODULE(SYSC_FPGA)
         cnn_layer_accel->clk(clk);
 #ifdef DDR_AXI_MEMORY
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
-        init_read_req(cnn_layer_accel->init_read_req);
-        init_read_req_id(cnn_layer_accel->init_read_req_id);
-        init_read_addr(cnn_layer_accel->init_read_addr);
-        init_read_len(cnn_layer_accel->init_read_len);
-        cnn_layer_accel->init_read_req_ack(init_read_req_ack);
-        cnn_layer_accel->init_read_in_prog(init_read_in_prog);
+        init_rd_req(cnn_layer_accel->init_rd_req);
+        init_rd_req_id(cnn_layer_accel->init_rd_req_id);
+        init_rd_addr(cnn_layer_accel->init_rd_addr);
+        init_rd_len(cnn_layer_accel->init_rd_len);
+        cnn_layer_accel->init_rd_req_ack(init_rd_req_ack);
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
-        cnn_layer_accel->init_read_data(init_read_data);
-        cnn_layer_accel->init_read_data_vld(init_read_data_vld);
-        init_read_data_rdy(cnn_layer_accel->init_read_data_rdy);
-        cnn_layer_accel->init_read_cmpl(init_read_cmpl);
+        cnn_layer_accel->init_rd_data(init_rd_data);
+        cnn_layer_accel->init_rd_data_vld(init_rd_data_vld);
+        init_rd_data_rdy(cnn_layer_accel->init_rd_data_rdy);
+        cnn_layer_accel->init_rd_cmpl(init_rd_cmpl);
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
-        init_write_req(cnn_layer_accel->init_write_req);
-        init_write_req_id(cnn_layer_accel->init_write_req_id);
-        init_write_addr(cnn_layer_accel->init_write_addr);
-        init_write_len(cnn_layer_accel->init_write_len);
-        cnn_layer_accel->init_write_req_ack(init_write_req_ack);
-        cnn_layer_accel->init_write_in_prog(init_write_in_prog);
+        init_wr_req(cnn_layer_accel->init_wr_req);
+        init_wr_req_id(cnn_layer_accel->init_wr_req_id);
+        init_wr_addr(cnn_layer_accel->init_wr_addr);
+        init_wr_len(cnn_layer_accel->init_wr_len);
+        cnn_layer_accel->init_wr_req_ack(init_wr_req_ack);
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
-        init_write_data(cnn_layer_accel->init_write_data);
-        init_write_data_vld(cnn_layer_accel->init_write_data_vld);
-        cnn_layer_accel->init_write_data_rdy(init_write_data_rdy);
-        cnn_layer_accel->init_write_cmpl(init_write_cmpl);
+        init_wr_data(cnn_layer_accel->init_wr_data);
+        init_wr_data_vld(cnn_layer_accel->init_wr_data_vld);
+        cnn_layer_accel->init_wr_data_rdy(init_wr_data_rdy);
+        cnn_layer_accel->init_wr_cmpl(init_wr_cmpl);
 #endif
 
 	    SC_THREAD(main)

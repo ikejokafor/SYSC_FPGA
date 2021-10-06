@@ -89,16 +89,16 @@
 module example_top #
   (
     parameter nCK_PER_CLK           = 4,   // This parameter is controllerwise
-    parameter         APP_DATA_WIDTH          = 64, // This parameter is controllerwise
-    parameter         APP_MASK_WIDTH          = 8,  // This parameter is controllerwise
+    parameter         APP_DATA_WIDTH          = 512, // This parameter is controllerwise
+    parameter         APP_MASK_WIDTH          = 64,  // This parameter is controllerwise
     parameter C_AXI_ID_WIDTH                = 4,
                                               // Width of all master and slave ID signals.
                                               // # = >= 1.
-    parameter C_AXI_ADDR_WIDTH              = 29,
+    parameter C_AXI_ADDR_WIDTH              = 32,
                                               // Width of S_AXI_AWADDR, S_AXI_ARADDR, M_AXI_AWADDR and
                                               // M_AXI_ARADDR for all SI/MI slots.
                                               // # = 32.
-    parameter C_AXI_DATA_WIDTH              = 64,
+    parameter C_AXI_DATA_WIDTH              = 512,
                                               // Width of WDATA and RDATA on SI slot.
                                               // Must be <= APP_DATA_WIDTH.
                                               // # = 32, 64, 128, 256.
@@ -129,10 +129,10 @@ module example_top #
     output [0:0]                 c0_ddr4_ck_t,
     output [0:0]                c0_ddr4_ck_c,
     output                  c0_ddr4_reset_n,
-    inout  [0:0]            c0_ddr4_dm_dbi_n,
-    inout  [7:0]            c0_ddr4_dq,
-    inout  [0:0]            c0_ddr4_dqs_t,
-    inout  [0:0]            c0_ddr4_dqs_c
+    inout  [8:0]            c0_ddr4_dm_dbi_n,
+    inout  [71:0]            c0_ddr4_dq,
+    inout  [8:0]            c0_ddr4_dqs_t,
+    inout  [8:0]            c0_ddr4_dqs_c
     );
 
 
@@ -140,7 +140,7 @@ module example_top #
   localparam  MEM_ADDR_ORDER = "ROW_COLUMN_BANK";
   localparam DBG_WR_STS_WIDTH      = 32;
   localparam DBG_RD_STS_WIDTH      = 32;
-  localparam ECC                   = "OFF";
+  localparam ECC                   = "ON";
 
 
 
@@ -175,7 +175,7 @@ module example_top #
 
   // Slave Interface Write Address Ports
   wire [3:0]      c0_ddr4_s_axi_awid;
-  wire [28:0]    c0_ddr4_s_axi_awaddr;
+  wire [31:0]    c0_ddr4_s_axi_awaddr;
   wire [7:0]                       c0_ddr4_s_axi_awlen;
   wire [2:0]                       c0_ddr4_s_axi_awsize;
   wire [1:0]                       c0_ddr4_s_axi_awburst;
@@ -184,8 +184,8 @@ module example_top #
   wire                             c0_ddr4_s_axi_awvalid;
   wire                             c0_ddr4_s_axi_awready;
    // Slave Interface Write Data Ports
-  wire [63:0]    c0_ddr4_s_axi_wdata;
-  wire [7:0]  c0_ddr4_s_axi_wstrb;
+  wire [511:0]    c0_ddr4_s_axi_wdata;
+  wire [63:0]  c0_ddr4_s_axi_wstrb;
   wire                             c0_ddr4_s_axi_wlast;
   wire                             c0_ddr4_s_axi_wvalid;
   wire                             c0_ddr4_s_axi_wready;
@@ -196,7 +196,7 @@ module example_top #
   wire                             c0_ddr4_s_axi_bvalid;
    // Slave Interface Read Address Ports
   wire [3:0]      c0_ddr4_s_axi_arid;
-  wire [28:0]    c0_ddr4_s_axi_araddr;
+  wire [31:0]    c0_ddr4_s_axi_araddr;
   wire [7:0]                       c0_ddr4_s_axi_arlen;
   wire [2:0]                       c0_ddr4_s_axi_arsize;
   wire [1:0]                       c0_ddr4_s_axi_arburst;
@@ -206,14 +206,14 @@ module example_top #
    // Slave Interface Read Data Ports
   wire                             c0_ddr4_s_axi_rready;
   wire [3:0]      c0_ddr4_s_axi_rid;
-  wire [63:0]    c0_ddr4_s_axi_rdata;
+  wire [511:0]    c0_ddr4_s_axi_rdata;
   wire [1:0]                       c0_ddr4_s_axi_rresp;
   wire                             c0_ddr4_s_axi_rlast;
   wire                             c0_ddr4_s_axi_rvalid;
 
   wire                             c0_ddr4_cmp_data_valid;
-  wire [63:0]    c0_ddr4_cmp_data;     // Compare data
-  wire [63:0]    c0_ddr4_rdata_cmp;      // Read data
+  wire [511:0]    c0_ddr4_cmp_data;     // Compare data
+  wire [511:0]    c0_ddr4_rdata_cmp;      // Read data
 
   wire                             c0_ddr4_dbg_wr_sts_vld;
   wire [DBG_WR_STS_WIDTH-1:0]      c0_ddr4_dbg_wr_sts;
@@ -293,6 +293,29 @@ ddr4 u_ddr4
    .c0_ddr4_ui_clk                (c0_ddr4_clk),
    .c0_ddr4_ui_clk_sync_rst       (c0_ddr4_rst),
    .dbg_clk                                    (dbg_clk),
+     // AXI CTRL port
+     .c0_ddr4_s_axi_ctrl_awvalid       (1'b0),
+     .c0_ddr4_s_axi_ctrl_awready       (),
+     .c0_ddr4_s_axi_ctrl_awaddr        (32'b0),
+     // Slave Interface Write Data Ports
+     .c0_ddr4_s_axi_ctrl_wvalid        (1'b0),
+     .c0_ddr4_s_axi_ctrl_wready        (),
+     .c0_ddr4_s_axi_ctrl_wdata         (32'b0),
+     // Slave Interface Write Response Ports
+     .c0_ddr4_s_axi_ctrl_bvalid        (),
+     .c0_ddr4_s_axi_ctrl_bready        (1'b1),
+     .c0_ddr4_s_axi_ctrl_bresp         (),
+     // Slave Interface Read Address Ports
+     .c0_ddr4_s_axi_ctrl_arvalid       (1'b0),
+     .c0_ddr4_s_axi_ctrl_arready       (),
+     .c0_ddr4_s_axi_ctrl_araddr        (32'b0),
+     // Slave Interface Read Data Ports
+     .c0_ddr4_s_axi_ctrl_rvalid        (),
+     .c0_ddr4_s_axi_ctrl_rready        (1'b1),
+     .c0_ddr4_s_axi_ctrl_rdata         (),
+     .c0_ddr4_s_axi_ctrl_rresp         (),
+     // Interrupt output
+     .c0_ddr4_interrupt                (),
   // Slave Interface Write Address Ports
   .c0_ddr4_aresetn                     (c0_ddr4_aresetn),
   .c0_ddr4_s_axi_awid                  (c0_ddr4_s_axi_awid),

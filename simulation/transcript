@@ -12,67 +12,807 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-do sim_compile.do
-# QuestaSim-64 vcom 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 16:06:02 on Sep 27,2021
-# vcom -reportprogress 300 -64 -93 -work work /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_0/sim/bd_9054_microblaze_I_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_1/sim/bd_9054_rst_0_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_2/sim/bd_9054_ilmb_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_3/sim/bd_9054_dlmb_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_4/sim/bd_9054_dlmb_cntlr_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_5/sim/bd_9054_ilmb_cntlr_0.vhd 
-# ** Error: (vcom-7) Failed to open design unit file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_0/sim/bd_9054_microblaze_I_0.vhd" in read mode.
-# No such file or directory. (errno = ENOENT)
-# End time: 16:06:03 on Sep 27,2021, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/vcom failed.
-# Error in macro ./sim_compile.do line 13
-# /home/software/mentor-2019/questasim/linux_x86_64/vcom failed.
-#     while executing
-# "vcom -64 -93 -work work  \
-# 	$env(WORKSPACE_PATH)/SYSC_FPGA/ip/ddr4_0_ex/ddr4_0_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_0/sim/bd_9054_microblaze_I_0.vhd..."
-do sim_compile.do
-# QuestaSim-64 vcom 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 16:08:27 on Sep 27,2021
-# vcom -reportprogress 300 -64 -93 -work work /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_0/sim/bd_9054_microblaze_I_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_1/sim/bd_9054_rst_0_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_2/sim/bd_9054_ilmb_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_3/sim/bd_9054_dlmb_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_4/sim/bd_9054_dlmb_cntlr_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_5/sim/bd_9054_ilmb_cntlr_0.vhd 
-# ** Error: (vcom-7) Failed to open design unit file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_0/sim/bd_9054_microblaze_I_0.vhd" in read mode.
-# No such file or directory. (errno = ENOENT)
-# End time: 16:08:27 on Sep 27,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/vcom failed.
-# Error in macro ./sim_compile.do line 13
-# /home/software/mentor-2019/questasim/linux_x86_64/vcom failed.
-#     while executing
-# "vcom -64 -93 -work work  \
-# 	$env(WORKSPACE_PATH)/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4_0/bd_0/ip/ip_0/sim/bd_9054_microblaze_I_0.vhd \
-# 	..."
-do sim_compile.do
-# QuestaSim-64 vcom 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 16:09:19 on Sep 27,2021
-# vcom -reportprogress 300 -64 -93 -work work /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_0/sim/bd_9054_microblaze_I_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_1/sim/bd_9054_rst_0_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_2/sim/bd_9054_ilmb_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_3/sim/bd_9054_dlmb_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_4/sim/bd_9054_dlmb_cntlr_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_5/sim/bd_9054_ilmb_cntlr_0.vhd 
-# ** Error: (vcom-7) Failed to open design unit file "/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_0/sim/bd_9054_microblaze_I_0.vhd" in read mode.
-# No such file or directory. (errno = ENOENT)
-# End time: 16:09:19 on Sep 27,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/vcom failed.
-# Error in macro ./sim_compile.do line 13
-# /home/software/mentor-2019/questasim/linux_x86_64/vcom failed.
-#     while executing
-# "vcom -64 -93 -work work  \
-# 	$env(WORKSPACE_PATH)/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_0/sim/bd_9054_microblaze_I_0.vhd \
-# 	$e..."
-do sim_compile.do
-# QuestaSim-64 vcom 2019.4_2 Compiler 2019.12 Dec  7 2019
-# Start time: 16:17:04 on Sep 27,2021
-# vcom -reportprogress 300 -64 -93 -work work /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_0/sim/bd_c703_microblaze_I_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_1/sim/bd_c703_rst_0_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_2/sim/bd_c703_ilmb_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_3/sim/bd_c703_dlmb_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_4/sim/bd_c703_dlmb_cntlr_0.vhd /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_5/sim/bd_c703_ilmb_cntlr_0.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# ** Error: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_0/sim/bd_c703_microblaze_I_0.vhd(56): (vcom-1598) Library "microblaze_v11_0_1" not found.
-# ** Error: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_0/sim/bd_c703_microblaze_I_0.vhd(57): (vcom-1136) Unknown identifier "microblaze_v11_0_1".
-# ** Note: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_0/sim/bd_c703_microblaze_I_0.vhd(59): VHDL Compiler exiting
-# End time: 16:17:05 on Sep 27,2021, Elapsed time: 0:00:01
-# Errors: 2, Warnings: 0
-# ** Error: /home/software/mentor-2019/questasim/linux_x86_64/vcom failed.
-# Error in macro ./sim_compile.do line 13
-# /home/software/mentor-2019/questasim/linux_x86_64/vcom failed.
-#     while executing
-# "vcom -64 -93 -work work  \
-# 	$env(WORKSPACE_PATH)/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/bd_0/ip/ip_0/sim/bd_c703_microblaze_I_0.vhd \
-# 	$e..."
+do startsim.do
+# QuestaSim-64 vopt 2019.4_2 Compiler 2019.12 Dec  7 2019
+# Start time: 19:50:19 on Oct 06,2021
+# vopt -reportprogress 300 "+acc=npr" -L work -L microblaze_v11_0_0 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L lmb_v10_v3_0_9 -L lmb_bram_if_cntlr_v4_0_15 -L blk_mem_gen_v8_4_2 -L iomodule_v3_1_4 -L unisims_ver -L unimacro_ver -L secureip -L accel_infst_common -L xpm -L axi_interconnect_v1_7_15 -work work work.sim_tb_top work.example_top work.glbl -o testbench_opt 
+# 
+# Top level modules:
+# 	sim_tb_top
+# 	example_top
+# 	glbl
+# 
+# Analyzing design...
+# -- Loading module sim_tb_top
+# -- Importing package arch_package
+# -- Loading module example_top
+# -- Loading module ddr4
+# -- Loading module ddr4_ddr4
+# -- Loading module ddr4_v2_2_6_infrastructure
+# -- Loading module unisims_ver.BUFG
+# -- Loading module ddr4_ddr4_mem_intfc
+# -- Loading module ddr4_phy
+# -- Loading module ddr4_phy_ddr4
+# -- Loading module unisims_ver.OBUF
+# -- Loading module ddr4_phy_v2_2_0_pll
+# -- Loading module ddr4_phy_v2_2_0_iob
+# -- Loading module ddr4_v2_2_6_mc
+# -- Loading module ddr4_v2_2_6_mc_act_timer
+# -- Loading module ddr4_v2_2_6_mc_arb_a
+# -- Loading module ddr4_v2_2_6_mc_rd_wr
+# -- Loading module ddr4_v2_2_6_mc_arb_c
+# -- Loading module ddr4_v2_2_6_mc_arb_mux_p
+# -- Loading module ddr4_v2_2_6_mc_arb_p
+# -- Loading module ddr4_v2_2_6_mc_cmd_mux_ap
+# -- Loading module ddr4_v2_2_6_mc_ctl
+# -- Loading module ddr4_v2_2_6_cal_mc_odt
+# -- Loading module ddr4_v2_2_6_mc_cmd_mux_c
+# -- Loading module ddr4_v2_2_6_mc_ref
+# -- Loading module ddr4_v2_2_6_mc_periodic
+# -- Loading module ddr4_v2_2_6_mc_ecc
+# -- Loading module ddr4_v2_2_6_ui
+# -- Loading module ddr4_v2_2_6_ui_cmd
+# -- Loading module ddr4_v2_2_6_ui_wr_data
+# -- Loading module ddr4_v2_2_6_ui_rd_data
+# -- Loading module ddr4_v2_2_6_cal_top
+# -- Loading module ddr4_v2_2_6_cal
+# -- Loading module ddr4_v2_2_6_cal_debug_microblaze
+# -- Loading module ddr4_v2_2_6_cal_addr_decode
+# -- Loading module ddr4_v2_2_6_cal_cplx
+# -- Loading module ddr4_v2_2_6_cal_cplx_data
+# -- Loading module ddr4_v2_2_6_cal_config_rom
+# -- Loading module ddr4_v2_2_6_chipscope_xsdb_slave
+# -- Loading module ddr4_v2_2_6_cal_xsdb_arbiter
+# -- Loading module ddr4_v2_2_6_cal_sync
+# -- Loading module ddr4_v2_2_6_cal_xsdb_bram
+# -- Loading module ddr4_v2_2_6_cfg_mem_mod
+# -- Loading module ddr4_v2_2_6_cal_pi
+# -- Loading module ddr4_v2_2_6_cal_read
+# -- Loading module ddr4_v2_2_6_cal_write
+# -- Loading module ddr4_ddr4_cal_riu
+# -- Loading module ddr4_microblaze_mcs
+# -- Loading module microblaze_mcs
+# -- Loading module unisims_ver.VCC
+# -- Loading module unisims_ver.GND
+# -- Loading module unisims_ver.FDR
+# -- Loading module unisims_ver.FDRE
+# -- Loading module unisims_ver.FDS
+# -- Loading module unisims_ver.FDSE
+# -- Loading module unisims_ver.FD
+# -- Loading module unisims_ver.RAM32X1D
+# -- Loading module unisims_ver.FDE
+# -- Loading module unisims_ver.LUT6_2
+# -- Loading module unisims_ver.MUXCY_L
+# -- Loading module unisims_ver.MUXCY
+# -- Loading module unisims_ver.XORCY
+# -- Loading module unisims_ver.MULT_AND
+# -- Loading module unisims_ver.LUT2
+# -- Loading UDP unisims_ver.x_lut2_mux4
+# -- Loading module unisims_ver.LUT3
+# -- Loading UDP unisims_ver.x_lut3_mux8
+# -- Loading module unisims_ver.LUT4
+# -- Loading module unisims_ver.LUT6
+# -- Loading module unisims_ver.MUXF5
+# -- Loading module unisims_ver.SRL16E
+# -- Loading module unisims_ver.LUT5
+# -- Loading module unisims_ver.LUT1
+# -- Loading UDP unisims_ver.x_lut1_mux2
+# -- Loading module unisims_ver.MUXF7
+# -- Loading module unisims_ver.INV
+# -- Loading module unisims_ver.RAMB36
+# -- Loading module unisims_ver.RAMB36E1
+# -- Loading module ddr4_v2_2_6_axi
+# -- Loading module ddr4_v2_2_6_axi_register_slice
+# -- Loading module ddr4_v2_2_6_axic_register_slice
+# -- Loading module ddr4_v2_2_6_axi_aw_channel
+# -- Loading module ddr4_v2_2_6_axi_cmd_translator
+# -- Loading module ddr4_v2_2_6_axi_incr_cmd
+# -- Loading module ddr4_v2_2_6_axi_wrap_cmd
+# -- Loading module ddr4_v2_2_6_axi_wr_cmd_fsm
+# -- Loading module ddr4_v2_2_6_axi_w_channel
+# -- Loading module ddr4_v2_2_6_axi_b_channel
+# -- Loading module ddr4_v2_2_6_axi_fifo
+# -- Loading module ddr4_v2_2_6_axi_ar_channel
+# -- Loading module ddr4_v2_2_6_axi_cmd_fsm
+# -- Loading module ddr4_v2_2_6_axi_r_channel
+# -- Loading module ddr4_v2_2_6_axi_cmd_arbiter
+# -- Loading module ddr4_v2_2_6_axi_ctrl_top
+# -- Loading module ddr4_v2_2_6_axi_ctrl_write
+# -- Loading module ddr4_v2_2_6_axi_ctrl_addr_decode
+# -- Loading module ddr4_v2_2_6_axi_ctrl_read
+# -- Loading module ddr4_v2_2_6_axi_ctrl_reg_bank
+# -- Loading module axi_interconnect
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_top
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axi_interconnect
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_register_slice_bank
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_protocol_conv_bank
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_converter_bank
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_data_fifo_bank
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axi_crossbar
+# -- Loading module cnn_layer_accel_axi_bridge
+# -- Loading shared library /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# -- Loading systemc module /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/work.SYSC_FPGA
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# -- Loading module glbl
+# -- Loading module unisims_ver.MMCME4_ADV
+# -- Loading module unisims_ver.IBUFDS
+# -- Loading module unisims_ver.PLLE4_ADV
+# -- Loading module ddr4_phy_v2_2_0_iob_byte
+# -- Loading module ddr4_phy_v2_2_0_xiphy_behav
+# -- Loading module ddr4_v2_2_6_mc_act_rank
+# -- Loading module ddr4_v2_2_6_mc_wtr
+# -- Loading module ddr4_v2_2_6_mc_ecc_dec_fix
+# -- Loading module ddr4_v2_2_6_mc_ecc_buf
+# -- Loading module ddr4_v2_2_6_mc_ecc_merge_enc
+# -- Loading module ddr4_v2_2_6_mc_ecc_fi_xor
+# -- Loading module ddr4_v2_2_6_mc_ecc_gen
+# -- Loading module ddr4_v2_2_6_mc_group
+# -- Loading module unisims_ver.RAM32M
+# -- Loading module ddr4_v2_2_6_bram_tdp
+# -- Loading module ddr4_v2_2_6_cal_wr_byte
+# -- Loading module ddr4_v2_2_6_cal_wr_bit
+# -- Loading module ddr4_v2_2_6_cal_rd_en
+# -- Loading module unisims_ver.RB36_INTERNAL_VLOG
+# -- Loading module ddr4_v2_2_6_axi_ctrl_reg
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axi_register_slice
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axic_register_slice
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axi_clock_converter
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axi_data_fifo
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_crossbar
+# -- Loading interface DDR4_if
+# -- Importing package proj_package
+# -- Loading module unisims_ver.OBUFDS
+# -- Loading module unisims_ver.HPIO_VREF
+# -- Loading module unisims_ver.IOBUFE3
+# -- Loading module unisims_ver.IOBUFDS
+# -- Loading module ddr4_phy_v2_2_0_bitslice_behav
+# -- Loading module ddr4_phy_v2_2_0_fifo_sv
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_addr_arbiter
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_splitter
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_si_transactor
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_wdata_router
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axic_reg_srl_fifo
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_addr_decoder
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_wdata_mux
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_mux_enc
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_ndeep_srl
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_comparator_static
+# -- Loading module unisims_ver.SRLC32E
+# -- Loading module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_carry_and
+# ** Warning: (vopt-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_data_vld is not bound to any channel.
+# ** Warning: (vopt-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_data is not bound to any channel.
+# ** Warning: (vopt-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_len is not bound to any channel.
+# ** Warning: (vopt-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_addr is not bound to any channel.
+# ** Warning: (vopt-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_req_id is not bound to any channel.
+# ** Warning: (vopt-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_req is not bound to any channel.
+# ** Warning: (vopt-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_data_rdy is not bound to any channel.
+# ** Warning: (vopt-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_len is not bound to any channel.
+# ** Warning: (vopt-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_addr is not bound to any channel.
+# ** Warning: (vopt-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_req_id is not bound to any channel.
+# ** Warning: (vopt-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_req is not bound to any channel.
+# ** Warning: (vopt-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_data_vld is not bound to any channel.
+# ** Warning: (vopt-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_data is not bound to any channel.
+# ** Warning: (vopt-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_len is not bound to any channel.
+# ** Warning: (vopt-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_addr is not bound to any channel.
+# ** Warning: (vopt-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_req_id is not bound to any channel.
+# ** Warning: (vopt-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_req is not bound to any channel.
+# ** Warning: (vopt-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_data_rdy is not bound to any channel.
+# ** Warning: (vopt-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_len is not bound to any channel.
+# ** Warning: (vopt-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_addr is not bound to any channel.
+# ** Warning: (vopt-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_req_id is not bound to any channel.
+# ** Warning: (vopt-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_req is not bound to any channel.
+# Incremental compilation check found no design-units have changed.
+# Optimized design name is testbench_opt
+# End time: 19:50:24 on Oct 06,2021, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 52
+# vsim -lib work testbench_opt 
+# Start time: 19:50:24 on Oct 06,2021
+# Loading sv_std.std
+# Loading work.arch_package(fast)
+# Loading work.sim_tb_top(fast)
+# Loading work.example_top(fast__1)
+# Loading work.ddr4(fast)
+# Loading work.ddr4_ddr4(fast)
+# Loading work.ddr4_v2_2_6_infrastructure(fast)
+# Loading unisims_ver.BUFG(fast)
+# Loading unisims_ver.MMCME4_ADV(fast)
+# Loading work.ddr4_ddr4_mem_intfc(fast)
+# Loading work.ddr4_phy(fast)
+# Loading work.ddr4_phy_ddr4(fast)
+# Loading unisims_ver.OBUF(fast)
+# Loading work.ddr4_phy_v2_2_0_pll(fast)
+# Loading unisims_ver.IBUFDS(fast)
+# Loading unisims_ver.PLLE4_ADV(fast)
+# Loading work.ddr4_phy_v2_2_0_iob(fast)
+# Loading work.ddr4_phy_v2_2_0_iob_byte(fast)
+# Loading unisims_ver.OBUFDS(fast)
+# Loading work.ddr4_phy_v2_2_0_iob_byte(fast__1)
+# Loading work.ddr4_phy_v2_2_0_iob_byte(fast__2)
+# Loading work.ddr4_phy_v2_2_0_iob_byte(fast__3)
+# Loading unisims_ver.HPIO_VREF(fast)
+# Loading unisims_ver.IOBUFE3(fast)
+# Loading unisims_ver.IOBUFDS(fast)
+# Loading work.ddr4_phy_v2_2_0_xiphy_behav(fast)
+# Loading work.ddr4_phy_v2_2_0_bitslice_behav(fast)
+# Loading work.ddr4_phy_v2_2_0_fifo_sv(fast)
+# Loading work.ddr4_phy_v2_2_0_bitslice_behav(fast__1)
+# Loading work.ddr4_v2_2_6_mc(fast)
+# Loading work.ddr4_v2_2_6_mc_group(fast)
+# Loading work.ddr4_v2_2_6_mc_act_timer(fast)
+# Loading work.ddr4_v2_2_6_mc_act_rank(fast)
+# Loading work.ddr4_v2_2_6_mc_arb_a(fast)
+# Loading work.ddr4_v2_2_6_mc_rd_wr(fast)
+# Loading work.ddr4_v2_2_6_mc_wtr(fast)
+# Loading work.ddr4_v2_2_6_mc_arb_c(fast)
+# Loading work.ddr4_v2_2_6_mc_arb_mux_p(fast)
+# Loading work.ddr4_v2_2_6_mc_arb_p(fast)
+# Loading work.ddr4_v2_2_6_mc_cmd_mux_ap(fast)
+# Loading work.ddr4_v2_2_6_mc_ctl(fast)
+# Loading work.ddr4_v2_2_6_cal_mc_odt(fast)
+# Loading work.ddr4_v2_2_6_mc_cmd_mux_c(fast)
+# Loading work.ddr4_v2_2_6_mc_ref(fast)
+# Loading work.ddr4_v2_2_6_mc_periodic(fast)
+# Loading work.ddr4_v2_2_6_mc_ecc(fast)
+# Loading work.ddr4_v2_2_6_mc_ecc_dec_fix(fast)
+# Loading work.ddr4_v2_2_6_mc_ecc_buf(fast)
+# Loading unisims_ver.RAM32M(fast)
+# Loading work.ddr4_v2_2_6_mc_ecc_merge_enc(fast)
+# Loading work.ddr4_v2_2_6_mc_ecc_fi_xor(fast)
+# Loading work.ddr4_v2_2_6_mc_ecc_gen(fast)
+# Loading work.ddr4_v2_2_6_ui(fast)
+# Loading work.ddr4_v2_2_6_ui_cmd(fast)
+# Loading work.ddr4_v2_2_6_ui_wr_data(fast)
+# Loading work.ddr4_v2_2_6_ui_rd_data(fast)
+# Loading work.ddr4_v2_2_6_cal_top(fast)
+# Loading work.ddr4_v2_2_6_cal(fast)
+# Loading work.ddr4_v2_2_6_cal_debug_microblaze(fast)
+# Loading work.ddr4_v2_2_6_cal_addr_decode(fast)
+# Loading work.ddr4_v2_2_6_cal_cplx(fast)
+# Loading work.ddr4_v2_2_6_cal_cplx_data(fast)
+# Loading work.ddr4_v2_2_6_cal_mc_odt(fast__1)
+# Loading work.ddr4_v2_2_6_cal_config_rom(fast)
+# Loading work.ddr4_v2_2_6_chipscope_xsdb_slave(fast)
+# Loading work.ddr4_v2_2_6_cal_xsdb_arbiter(fast)
+# Loading work.ddr4_v2_2_6_cal_sync(fast)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__1)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__2)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__3)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__4)
+# Loading work.ddr4_v2_2_6_cal_xsdb_bram(fast)
+# Loading work.ddr4_v2_2_6_cfg_mem_mod(fast)
+# Loading work.ddr4_v2_2_6_bram_tdp(fast)
+# Loading work.ddr4_v2_2_6_cal_pi(fast)
+# Loading work.ddr4_v2_2_6_cal_rd_en(fast)
+# Loading work.ddr4_v2_2_6_cal_read(fast)
+# Loading work.ddr4_v2_2_6_cal_write(fast)
+# Loading work.ddr4_v2_2_6_cal_wr_byte(fast)
+# Loading work.ddr4_v2_2_6_cal_wr_bit(fast)
+# Loading work.ddr4_ddr4_cal_riu(fast)
+# Loading work.ddr4_microblaze_mcs(fast)
+# Loading work.microblaze_mcs(fast)
+# Loading unisims_ver.VCC(fast)
+# Loading unisims_ver.GND(fast)
+# Loading unisims_ver.FDR(fast)
+# Loading unisims_ver.FDRE(fast)
+# Loading unisims_ver.FDS(fast)
+# Loading unisims_ver.FDSE(fast)
+# Loading unisims_ver.FD(fast)
+# Loading unisims_ver.FD(fast__1)
+# Loading unisims_ver.FDRE(fast__1)
+# Loading unisims_ver.RAM32X1D(fast)
+# Loading unisims_ver.FDE(fast)
+# Loading unisims_ver.LUT6_2(fast)
+# Loading unisims_ver.LUT6_2(fast__1)
+# Loading unisims_ver.MUXCY_L(fast)
+# Loading unisims_ver.MUXCY(fast)
+# Loading unisims_ver.XORCY(fast)
+# Loading unisims_ver.MULT_AND(fast)
+# Loading unisims_ver.LUT2(fast)
+# Loading unisims_ver.LUT3(fast)
+# Loading unisims_ver.LUT4(fast)
+# Loading unisims_ver.LUT6(fast)
+# Loading unisims_ver.LUT4(fast__1)
+# Loading unisims_ver.LUT4(fast__2)
+# Loading unisims_ver.MUXF5(fast)
+# Loading unisims_ver.LUT3(fast__1)
+# Loading unisims_ver.LUT4(fast__3)
+# Loading unisims_ver.LUT4(fast__4)
+# Loading unisims_ver.SRL16E(fast)
+# Loading unisims_ver.LUT4(fast__5)
+# Loading unisims_ver.LUT4(fast__6)
+# Loading unisims_ver.LUT4(fast__7)
+# Loading unisims_ver.LUT3(fast__2)
+# Loading unisims_ver.LUT4(fast__8)
+# Loading unisims_ver.LUT4(fast__9)
+# Loading unisims_ver.LUT4(fast__10)
+# Loading unisims_ver.LUT3(fast__3)
+# Loading unisims_ver.LUT4(fast__11)
+# Loading unisims_ver.LUT3(fast__4)
+# Loading unisims_ver.LUT4(fast__12)
+# Loading unisims_ver.LUT4(fast__13)
+# Loading unisims_ver.LUT4(fast__14)
+# Loading unisims_ver.LUT3(fast__5)
+# Loading unisims_ver.LUT4(fast__15)
+# Loading unisims_ver.LUT6_2(fast__2)
+# Loading unisims_ver.LUT6_2(fast__3)
+# Loading unisims_ver.LUT6_2(fast__4)
+# Loading unisims_ver.LUT6_2(fast__5)
+# Loading unisims_ver.LUT6_2(fast__6)
+# Loading unisims_ver.LUT6_2(fast__7)
+# Loading unisims_ver.LUT6_2(fast__8)
+# Loading unisims_ver.LUT6_2(fast__9)
+# Loading unisims_ver.LUT3(fast__6)
+# Loading unisims_ver.LUT5(fast)
+# Loading unisims_ver.LUT3(fast__7)
+# Loading unisims_ver.LUT2(fast__1)
+# Loading unisims_ver.LUT3(fast__8)
+# Loading unisims_ver.LUT6(fast__1)
+# Loading unisims_ver.LUT5(fast__1)
+# Loading unisims_ver.LUT3(fast__9)
+# Loading unisims_ver.LUT2(fast__2)
+# Loading unisims_ver.LUT3(fast__10)
+# Loading unisims_ver.LUT4(fast__16)
+# Loading unisims_ver.LUT4(fast__17)
+# Loading unisims_ver.LUT5(fast__2)
+# Loading unisims_ver.LUT3(fast__11)
+# Loading unisims_ver.LUT3(fast__12)
+# Loading unisims_ver.LUT2(fast__3)
+# Loading unisims_ver.LUT6(fast__2)
+# Loading unisims_ver.LUT2(fast__4)
+# Loading unisims_ver.LUT6(fast__3)
+# Loading unisims_ver.LUT6(fast__4)
+# Loading unisims_ver.LUT6(fast__5)
+# Loading unisims_ver.LUT5(fast__3)
+# Loading unisims_ver.LUT5(fast__4)
+# Loading unisims_ver.LUT4(fast__18)
+# Loading unisims_ver.LUT5(fast__5)
+# Loading unisims_ver.LUT5(fast__6)
+# Loading unisims_ver.LUT5(fast__7)
+# Loading unisims_ver.LUT5(fast__8)
+# Loading unisims_ver.LUT6(fast__6)
+# Loading unisims_ver.LUT5(fast__9)
+# Loading unisims_ver.LUT4(fast__19)
+# Loading unisims_ver.LUT6(fast__7)
+# Loading unisims_ver.LUT5(fast__10)
+# Loading unisims_ver.LUT2(fast__5)
+# Loading unisims_ver.LUT4(fast__20)
+# Loading unisims_ver.LUT5(fast__11)
+# Loading unisims_ver.LUT2(fast__6)
+# Loading unisims_ver.LUT3(fast__13)
+# Loading unisims_ver.LUT2(fast__7)
+# Loading unisims_ver.LUT3(fast__14)
+# Loading unisims_ver.LUT6(fast__8)
+# Loading unisims_ver.LUT6(fast__9)
+# Loading unisims_ver.LUT6(fast__10)
+# Loading unisims_ver.LUT5(fast__12)
+# Loading unisims_ver.LUT6(fast__11)
+# Loading unisims_ver.LUT6(fast__12)
+# Loading unisims_ver.LUT4(fast__21)
+# Loading unisims_ver.LUT6(fast__13)
+# Loading unisims_ver.FDSE(fast__1)
+# Loading unisims_ver.LUT1(fast)
+# Loading unisims_ver.LUT5(fast__13)
+# Loading unisims_ver.LUT6(fast__14)
+# Loading unisims_ver.LUT5(fast__14)
+# Loading unisims_ver.LUT6(fast__15)
+# Loading unisims_ver.LUT6(fast__16)
+# Loading unisims_ver.LUT5(fast__15)
+# Loading unisims_ver.LUT5(fast__16)
+# Loading unisims_ver.LUT5(fast__17)
+# Loading unisims_ver.LUT5(fast__18)
+# Loading unisims_ver.LUT5(fast__19)
+# Loading unisims_ver.LUT6(fast__17)
+# Loading unisims_ver.LUT5(fast__20)
+# Loading unisims_ver.LUT3(fast__15)
+# Loading unisims_ver.LUT6(fast__18)
+# Loading unisims_ver.LUT5(fast__21)
+# Loading unisims_ver.LUT5(fast__22)
+# Loading unisims_ver.LUT5(fast__23)
+# Loading unisims_ver.LUT4(fast__22)
+# Loading unisims_ver.LUT4(fast__23)
+# Loading unisims_ver.LUT6(fast__19)
+# Loading unisims_ver.LUT6(fast__20)
+# Loading unisims_ver.LUT4(fast__24)
+# Loading unisims_ver.LUT6(fast__21)
+# Loading unisims_ver.LUT4(fast__25)
+# Loading unisims_ver.LUT6(fast__22)
+# Loading unisims_ver.LUT6(fast__23)
+# Loading unisims_ver.LUT6(fast__24)
+# Loading unisims_ver.LUT3(fast__16)
+# Loading unisims_ver.LUT5(fast__24)
+# Loading unisims_ver.LUT6(fast__25)
+# Loading unisims_ver.LUT6(fast__26)
+# Loading unisims_ver.LUT5(fast__25)
+# Loading unisims_ver.LUT6(fast__27)
+# Loading unisims_ver.LUT5(fast__26)
+# Loading unisims_ver.LUT6(fast__28)
+# Loading unisims_ver.LUT5(fast__27)
+# Loading unisims_ver.LUT4(fast__26)
+# Loading unisims_ver.LUT5(fast__28)
+# Loading unisims_ver.LUT4(fast__27)
+# Loading unisims_ver.MUXF7(fast)
+# Loading unisims_ver.LUT6(fast__29)
+# Loading unisims_ver.LUT6(fast__30)
+# Loading unisims_ver.LUT6(fast__31)
+# Loading unisims_ver.INV(fast)
+# Loading unisims_ver.RAMB36(fast)
+# Loading unisims_ver.RAMB36E1(fast)
+# Loading unisims_ver.RB36_INTERNAL_VLOG(fast)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__5)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__6)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__7)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__8)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__9)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__10)
+# Loading work.ddr4_v2_2_6_axi(fast)
+# Loading work.ddr4_v2_2_6_axi_register_slice(fast)
+# Loading work.ddr4_v2_2_6_axic_register_slice(fast)
+# Loading work.ddr4_v2_2_6_axic_register_slice(fast__1)
+# Loading work.ddr4_v2_2_6_axic_register_slice(fast__2)
+# Loading work.ddr4_v2_2_6_axic_register_slice(fast__3)
+# Loading work.ddr4_v2_2_6_axi_aw_channel(fast)
+# Loading work.ddr4_v2_2_6_axi_cmd_translator(fast)
+# Loading work.ddr4_v2_2_6_axi_incr_cmd(fast)
+# Loading work.ddr4_v2_2_6_axi_wrap_cmd(fast)
+# Loading work.ddr4_v2_2_6_axi_wr_cmd_fsm(fast)
+# Loading work.ddr4_v2_2_6_axi_w_channel(fast)
+# Loading work.ddr4_v2_2_6_axi_b_channel(fast)
+# Loading work.ddr4_v2_2_6_axi_fifo(fast)
+# Loading work.ddr4_v2_2_6_axi_ar_channel(fast)
+# Loading work.ddr4_v2_2_6_axi_cmd_translator(fast__1)
+# Loading work.ddr4_v2_2_6_axi_incr_cmd(fast__1)
+# Loading work.ddr4_v2_2_6_axi_wrap_cmd(fast__1)
+# Loading work.ddr4_v2_2_6_axi_cmd_fsm(fast)
+# Loading work.ddr4_v2_2_6_axi_r_channel(fast)
+# Loading work.ddr4_v2_2_6_axi_fifo(fast__1)
+# Loading work.ddr4_v2_2_6_axi_fifo(fast__2)
+# Loading work.ddr4_v2_2_6_axi_cmd_arbiter(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_top(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_write(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_addr_decode(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_read(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_addr_decode(fast__1)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg_bank(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg(fast__1)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg(fast__2)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg(fast__3)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg(fast__4)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg(fast__5)
+# Loading work.axi_interconnect(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_top(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axi_interconnect(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_register_slice_bank(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axi_register_slice(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axic_register_slice(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axic_register_slice(fast__1)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axic_register_slice(fast__2)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axic_register_slice(fast__3)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_register_slice_bank(fast__1)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axi_register_slice(fast__1)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axic_register_slice(fast__4)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axic_register_slice(fast__5)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axic_register_slice(fast__6)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axic_register_slice(fast__7)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_protocol_conv_bank(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_converter_bank(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axi_clock_converter(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_converter_bank(fast__1)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axi_clock_converter(fast__1)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_data_fifo_bank(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axi_data_fifo(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_data_fifo_bank(fast__1)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axi_data_fifo(fast__1)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axi_crossbar(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_crossbar(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_si_transactor(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_mux_enc(fast__2)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_si_transactor(fast__1)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_mux_enc(fast__3)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_splitter(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_wdata_router(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axic_reg_srl_fifo(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_ndeep_srl(fast)
+# Loading unisims_ver.SRLC32E(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_si_transactor(fast__2)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_si_transactor(fast__3)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_si_transactor(fast__4)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_si_transactor(fast__5)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_si_transactor(fast__6)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_si_transactor(fast__7)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_si_transactor(fast__8)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_si_transactor(fast__9)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_addr_decoder(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_comparator_static(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_carry_and(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_comparator_static(fast__1)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_comparator_static(fast__2)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_comparator_static(fast__3)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_comparator_static(fast__4)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_wdata_mux(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axic_reg_srl_fifo(fast__1)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_mux_enc(fast__4)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axi_register_slice(fast__2)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axic_register_slice(fast__8)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axic_register_slice(fast__9)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axic_register_slice(fast__10)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axi_register_slice(fast__3)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axic_register_slice(fast__11)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_addr_arbiter(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_mux_enc(fast)
+# Loading axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_mux_enc(fast__1)
+# Loading work.cnn_layer_accel_axi_bridge(fast)
+# Loading work.proj_package(fast)
+# Loading work.example_top(fast)
+# Loading work.glbl(fast)
+# Loading work.DDR4_if(fast)
+# Loading /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# Loading /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/simulation/work.SYSC_FPGA
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-6610) The variable m_QUAD_start referring to object /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (9) for port 'c0_ddr4_dm_dbi_n'. The port definition is at: ./example_top.sv(125).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_tb_top/u_example_top File: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/sim_tb_top.sv Line: 221
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (72) for port 'c0_ddr4_dq'. The port definition is at: ./example_top.sv(126).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_tb_top/u_example_top File: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/sim_tb_top.sv Line: 221
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (9) for port 'c0_ddr4_dqs_t'. The port definition is at: ./example_top.sv(127).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_tb_top/u_example_top File: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/sim_tb_top.sv Line: 221
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (9) for port 'c0_ddr4_dqs_c'. The port definition is at: ./example_top.sv(128).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_tb_top/u_example_top File: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/sim_tb_top.sv Line: 221
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (1) for port 'c0_ddr4_dm_dbi_n'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/ip_top/ddr4.sv(91).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_tb_top/u_example_top/u_ddr4 File: ./example_top.sv Line: 324
+# ** Warning: (vsim-3015) [PCDPC] - Port size (72) does not match connection size (8) for port 'c0_ddr4_dq'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/ip_top/ddr4.sv(92).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_tb_top/u_example_top/u_ddr4 File: ./example_top.sv Line: 324
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (1) for port 'c0_ddr4_dqs_c'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/ip_top/ddr4.sv(93).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_tb_top/u_example_top/u_ddr4 File: ./example_top.sv Line: 324
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (1) for port 'c0_ddr4_dqs_t'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/ip_top/ddr4.sv(94).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_tb_top/u_example_top/u_ddr4 File: ./example_top.sv Line: 324
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'S00_AXI_ARID'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/axi_interconnect/sim/axi_interconnect.v(81).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_tb_top/u_example_top/i0_axi_interconnect File: ./example_top.sv Line: 404
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'S01_AXI_ARID'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/axi_interconnect/sim/axi_interconnect.v(120).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_tb_top/u_example_top/i0_axi_interconnect File: ./example_top.sv Line: 404
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'S02_AXI_ARID'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/axi_interconnect/sim/axi_interconnect.v(159).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_tb_top/u_example_top/i0_axi_interconnect File: ./example_top.sv Line: 404
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'S03_AXI_ARID'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/axi_interconnect/sim/axi_interconnect.v(198).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_tb_top/u_example_top/i0_axi_interconnect File: ./example_top.sv Line: 404
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'S04_AXI_ARID'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/axi_interconnect/sim/axi_interconnect.v(237).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_tb_top/u_example_top/i0_axi_interconnect File: ./example_top.sv Line: 404
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (4) for port 'M00_AXI_AWID'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/axi_interconnect/sim/axi_interconnect.v(256).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_tb_top/u_example_top/i0_axi_interconnect File: ./example_top.sv Line: 404
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (4) for port 'M00_AXI_BID'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/axi_interconnect/sim/axi_interconnect.v(272).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_tb_top/u_example_top/i0_axi_interconnect File: ./example_top.sv Line: 404
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (4) for port 'M00_AXI_ARID'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/axi_interconnect/sim/axi_interconnect.v(276).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_tb_top/u_example_top/i0_axi_interconnect File: ./example_top.sv Line: 404
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (4) for port 'M00_AXI_RID'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/axi_interconnect/sim/axi_interconnect.v(287).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_tb_top/u_example_top/i0_axi_interconnect File: ./example_top.sv Line: 404
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (1) for port 'c0_ddr4_dm_dbi_n'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/ip_top/ddr4.sv(91).
+#    Time: 0 ps  Iteration: 0  Instance: /example_top/u_ddr4 File: ./example_top.sv Line: 324
+# ** Warning: (vsim-3015) [PCDPC] - Port size (72) does not match connection size (8) for port 'c0_ddr4_dq'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/ip_top/ddr4.sv(92).
+#    Time: 0 ps  Iteration: 0  Instance: /example_top/u_ddr4 File: ./example_top.sv Line: 324
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (1) for port 'c0_ddr4_dqs_c'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/ip_top/ddr4.sv(93).
+#    Time: 0 ps  Iteration: 0  Instance: /example_top/u_ddr4 File: ./example_top.sv Line: 324
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (1) for port 'c0_ddr4_dqs_t'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/rtl/ip_top/ddr4.sv(94).
+#    Time: 0 ps  Iteration: 0  Instance: /example_top/u_ddr4 File: ./example_top.sv Line: 324
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'S00_AXI_ARID'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/axi_interconnect/sim/axi_interconnect.v(81).
+#    Time: 0 ps  Iteration: 0  Instance: /example_top/i0_axi_interconnect File: ./example_top.sv Line: 404
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'S01_AXI_ARID'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/axi_interconnect/sim/axi_interconnect.v(120).
+#    Time: 0 ps  Iteration: 0  Instance: /example_top/i0_axi_interconnect File: ./example_top.sv Line: 404
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'S02_AXI_ARID'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/axi_interconnect/sim/axi_interconnect.v(159).
+#    Time: 0 ps  Iteration: 0  Instance: /example_top/i0_axi_interconnect File: ./example_top.sv Line: 404
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'S03_AXI_ARID'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/axi_interconnect/sim/axi_interconnect.v(198).
+#    Time: 0 ps  Iteration: 0  Instance: /example_top/i0_axi_interconnect File: ./example_top.sv Line: 404
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'S04_AXI_ARID'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/axi_interconnect/sim/axi_interconnect.v(237).
+#    Time: 0 ps  Iteration: 0  Instance: /example_top/i0_axi_interconnect File: ./example_top.sv Line: 404
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (4) for port 'M00_AXI_AWID'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/axi_interconnect/sim/axi_interconnect.v(256).
+#    Time: 0 ps  Iteration: 0  Instance: /example_top/i0_axi_interconnect File: ./example_top.sv Line: 404
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (4) for port 'M00_AXI_BID'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/axi_interconnect/sim/axi_interconnect.v(272).
+#    Time: 0 ps  Iteration: 0  Instance: /example_top/i0_axi_interconnect File: ./example_top.sv Line: 404
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (4) for port 'M00_AXI_ARID'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/axi_interconnect/sim/axi_interconnect.v(276).
+#    Time: 0 ps  Iteration: 0  Instance: /example_top/i0_axi_interconnect File: ./example_top.sv Line: 404
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (4) for port 'M00_AXI_RID'. The port definition is at: /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/axi_interconnect/sim/axi_interconnect.v(287).
+#    Time: 0 ps  Iteration: 0  Instance: /example_top/i0_axi_interconnect File: ./example_top.sv Line: 404
+# ** Warning: (vsim-4025) The port '/example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_target_socket_1_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_target_socket_0_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/example_top/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_target_socket_0_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP2FAS_bus/target_socket_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/example_top/i0_SYSC_FPGA/CNN_Layer_Accel/FAS2AWP_bus/target_socket_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/example_top/i0_SYSC_FPGA/CNN_Layer_Accel/simple_target_socket_0_port_0' is of an undebuggable type.
+# ** Warning: (vsim-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_data_vld is not bound to any channel.
+# ** Warning: (vsim-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_data is not bound to any channel.
+# ** Warning: (vsim-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_len is not bound to any channel.
+# ** Warning: (vsim-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_addr is not bound to any channel.
+# ** Warning: (vsim-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_req_id is not bound to any channel.
+# ** Warning: (vsim-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_req is not bound to any channel.
+# ** Warning: (vsim-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_data_rdy is not bound to any channel.
+# ** Warning: (vsim-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_len is not bound to any channel.
+# ** Warning: (vsim-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_addr is not bound to any channel.
+# ** Warning: (vsim-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_req_id is not bound to any channel.
+# ** Warning: (vsim-6627) Port /example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_req is not bound to any channel.
+# ** Warning: (vsim-4025) The port '/sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_target_socket_1_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_target_socket_0_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_target_socket_0_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP2FAS_bus/target_socket_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/FAS2AWP_bus/target_socket_port_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The port '/sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/simple_target_socket_0_port_0' is of an undebuggable type.
+# ** Warning: (vsim-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_data_vld is not bound to any channel.
+# ** Warning: (vsim-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_data is not bound to any channel.
+# ** Warning: (vsim-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_len is not bound to any channel.
+# ** Warning: (vsim-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_addr is not bound to any channel.
+# ** Warning: (vsim-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_req_id is not bound to any channel.
+# ** Warning: (vsim-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_wr_req is not bound to any channel.
+# ** Warning: (vsim-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_data_rdy is not bound to any channel.
+# ** Warning: (vsim-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_len is not bound to any channel.
+# ** Warning: (vsim-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_addr is not bound to any channel.
+# ** Warning: (vsim-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_req_id is not bound to any channel.
+# ** Warning: (vsim-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_req is not bound to any channel.
+# ** Warning: (vsim-4025) The export '/example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/bus/simple_initiator_socket_0_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_initiator_socket_0_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/example_top/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_initiator_socket_1_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/example_top/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_initiator_socket_0_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP2FAS_bus/init_socket_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/example_top/i0_SYSC_FPGA/CNN_Layer_Accel/FAS2AWP_bus/init_socket_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/bus/simple_initiator_socket_0_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/simple_initiator_socket_0_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_initiator_socket_1_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/simple_initiator_socket_0_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP2FAS_bus/init_socket_export_0' is of an undebuggable type.
+# ** Warning: (vsim-4025) The export '/sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/FAS2AWP_bus/init_socket_export_0' is of an undebuggable type.
+# Client connected to server
+# [SYSC_FPGA_SHIM]: Hardware sent CONNECT_HARDWARE
+# Client connected to server
+# [SYSC_FPGA_SHIM]: Hardware sent CONNECT_HARDWARE
+run -all
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[0].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[0].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[1].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[1].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[2].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[2].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[3].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[3].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[4].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[4].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[5].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[5].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[6].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[6].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[7].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[7].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[8].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[8].ddr4_model:Configured as x8 4G stack:1
+# ** Error: (vsim-6513) Get interface failed: port is not bound: port '/sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_req_id' (sc_out)
+# In process: /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/main_process @ 0 s
+# ** Fatal: Fatal SystemC error detected, exiting...
+#    Time: 0 ps  Iteration: 1  Process: /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/main_process File: /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/CNN_Layer_Accel.hpp

@@ -12,6 +12,7 @@ vopt -64 +acc=npr \
 	-L secureip \
     -L accel_infst_common \
 	-L xpm \
+    -L axi_interconnect_v1_7_15 \
 	-work work work.sim_tb_top work.example_top work.glbl -o testbench_opt
 
 vsim -lib work testbench_opt

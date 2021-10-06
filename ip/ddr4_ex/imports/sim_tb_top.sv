@@ -82,9 +82,9 @@ endmodule
 module sim_tb_top;
 
   localparam ADDR_WIDTH                    = 17;
-  localparam DQ_WIDTH                      = 8;
-  localparam DQS_WIDTH                     = 1;
-  localparam DM_WIDTH                      = 1;
+  localparam DQ_WIDTH                      = 72;
+  localparam DQS_WIDTH                     = 9;
+  localparam DM_WIDTH                      = 9;
   localparam DRAM_WIDTH                    = 8;
   localparam tCK                           = 750 ; //DDR4 interface clock period in ps
   localparam real SYSCLK_PERIOD            = tCK; 
@@ -146,10 +146,10 @@ module sim_tb_top;
 
   wire                 c0_ddr4_reset_n;
 
-  wire  [0:0]          c0_ddr4_dm_dbi_n;
-  wire  [7:0]          c0_ddr4_dq;
-  wire  [0:0]          c0_ddr4_dqs_c;
-  wire  [0:0]          c0_ddr4_dqs_t;
+  wire  [8:0]          c0_ddr4_dm_dbi_n;
+  wire  [71:0]          c0_ddr4_dq;
+  wire  [8:0]          c0_ddr4_dqs_c;
+  wire  [8:0]          c0_ddr4_dqs_t;
   wire                 c0_init_calib_complete;
   wire                 c0_data_compare_error;
 
