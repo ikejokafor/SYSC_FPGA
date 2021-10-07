@@ -83,19 +83,18 @@
 `endif
 
 
-`timescale 1ps/1ps
-module example_top #(
+module example_top # (
     parameter nCK_PER_CLK           = 4,   // This parameter is controllerwise
-    parameter         APP_DATA_WIDTH          = 64, // This parameter is controllerwise
-    parameter         APP_MASK_WIDTH          = 8,  // This parameter is controllerwise
+    parameter         APP_DATA_WIDTH          = 512, // This parameter is controllerwise
+    parameter         APP_MASK_WIDTH          = 64,  // This parameter is controllerwise
     parameter C_AXI_ID_WIDTH                = 4,
                                               // Width of all master and slave ID signals.
                                               // # = >= 1.
-    parameter C_AXI_ADDR_WIDTH              = 29,
+    parameter C_AXI_ADDR_WIDTH              = 32,
                                               // Width of S_AXI_AWADDR, S_AXI_ARADDR, M_AXI_AWADDR and
                                               // M_AXI_ARADDR for all SI/MI slots.
                                               // # = 32.
-    parameter C_AXI_DATA_WIDTH              = 64,
+    parameter C_AXI_DATA_WIDTH              = 512,
                                               // Width of WDATA and RDATA on SI slot.
                                               // Must be <= APP_DATA_WIDTH.
                                               // # = 32, 64, 128, 256.
@@ -106,27 +105,29 @@ module example_top #(
   `else
     parameter SIMULATION            = "FALSE"
   `endif
-) ( 
-    input                 sys_rst, //Common port for all controllers
+
+  )
+   (
+    input                   sys_rst, //Common port for all controllers
     output                  c0_init_calib_complete,
     output                  c0_data_compare_error,
     input                   c0_sys_clk_p,
     input                   c0_sys_clk_n,
     output                  c0_ddr4_act_n,
-    output [16:0]            c0_ddr4_adr,
+    output [16:0]           c0_ddr4_adr,
     output [1:0]            c0_ddr4_ba,
     output [1:0]            c0_ddr4_bg,
     output [0:0]            c0_ddr4_cke,
     output [0:0]            c0_ddr4_odt,
     output [0:0]            c0_ddr4_cs_n,
-    output [0:0]                 c0_ddr4_ck_t,
-    output [0:0]                c0_ddr4_ck_c,
+    output [0:0]            c0_ddr4_ck_t,
+    output [0:0]            c0_ddr4_ck_c,
     output                  c0_ddr4_reset_n,
-    inout  [0:0]            c0_ddr4_dm_dbi_n,
-    inout  [7:0]            c0_ddr4_dq,
-    inout  [0:0]            c0_ddr4_dqs_t,
-    inout  [0:0]            c0_ddr4_dqs_c
-);  
+    inout  [8:0]            c0_ddr4_dm_dbi_n,
+    inout  [71:0]           c0_ddr4_dq,
+    inout  [8:0]            c0_ddr4_dqs_t,
+    inout  [8:0]            c0_ddr4_dqs_c
+    ); 
     //-----------------------------------------------------------------------------------------------------------------------------------------------
     //  Includes
     //-----------------------------------------------------------------------------------------------------------------------------------------------
@@ -426,7 +427,7 @@ ddr4 u_ddr4
         .S00_AXI_BRESP          ( axi_bresp[(0 * `AXI_RESP_WTH) +: `AXI_RESP_WTH]    ),  
         .S00_AXI_BVALID         ( axi_bvalid[0]                                      ),  
         .S00_AXI_BREADY         ( axi_bready[0]                                      ),  
-        .S00_AXI_ARID           ( axi_arid[0]                                        ),  
+        .S00_AXI_ARID           ( axi_arid[(0 * `AXI_ID_WTH) +: `AXI_ID_WTH]         ),  
         .S00_AXI_ARADDR         ( axi_araddr[(0 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),  
         .S00_AXI_ARLEN          ( axi_arlen[(0 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),  
         .S00_AXI_ARSIZE         ( 3'b011                                             ),  
@@ -466,7 +467,7 @@ ddr4 u_ddr4
         .S01_AXI_BRESP          ( axi_bresp[(1 * `AXI_RESP_WTH) +: `AXI_RESP_WTH]    ),  
         .S01_AXI_BVALID         ( axi_bvalid[1]                                      ),  
         .S01_AXI_BREADY         ( axi_bready[1]                                      ),  
-        .S01_AXI_ARID           ( axi_arid[1]                                        ),  
+        .S01_AXI_ARID           ( axi_arid[(1 * `AXI_ID_WTH) +: `AXI_ID_WTH]         ),  
         .S01_AXI_ARADDR         ( axi_araddr[(1 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),  
         .S01_AXI_ARLEN          ( axi_arlen[(1 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),  
         .S01_AXI_ARSIZE         ( 3'b011                                             ),  
@@ -506,7 +507,7 @@ ddr4 u_ddr4
         .S02_AXI_BRESP          ( axi_bresp[(2 * `AXI_RESP_WTH) +: `AXI_RESP_WTH]    ),  
         .S02_AXI_BVALID         ( axi_bvalid[2]                                      ),  
         .S02_AXI_BREADY         ( axi_bready[2]                                      ),  
-        .S02_AXI_ARID           ( axi_arid[2]                                        ),  
+        .S02_AXI_ARID           ( axi_arid[(2 * `AXI_ID_WTH) +: `AXI_ID_WTH]         ),  
         .S02_AXI_ARADDR         ( axi_araddr[(2 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),  
         .S02_AXI_ARLEN          ( axi_arlen[(2 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),  
         .S02_AXI_ARSIZE         ( 3'b011                                             ),  
@@ -546,7 +547,7 @@ ddr4 u_ddr4
         .S03_AXI_BRESP          ( axi_bresp[(3 * `AXI_RESP_WTH) +: `AXI_RESP_WTH]    ),  
         .S03_AXI_BVALID         ( axi_bvalid[3]                                      ),  
         .S03_AXI_BREADY         ( axi_bready[3]                                      ),  
-        .S03_AXI_ARID           ( axi_arid[3]                                        ),  
+        .S03_AXI_ARID           ( axi_arid[(3 * `AXI_ID_WTH) +: `AXI_ID_WTH]         ),  
         .S03_AXI_ARADDR         ( axi_araddr[(3 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),  
         .S03_AXI_ARLEN          ( axi_arlen[(3 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),  
         .S03_AXI_ARSIZE         ( 3'b011                                             ),  
@@ -586,7 +587,7 @@ ddr4 u_ddr4
         .S04_AXI_BRESP          ( axi_bresp[(4 * `AXI_RESP_WTH) +: `AXI_RESP_WTH]    ),  
         .S04_AXI_BVALID         ( axi_bvalid[4]                                      ),  
         .S04_AXI_BREADY         ( axi_bready[4]                                      ),  
-        .S04_AXI_ARID           ( axi_arid[4]                                        ),  
+        .S04_AXI_ARID           ( axi_arid[(4 * `AXI_ID_WTH) +: `AXI_ID_WTH]         ),  
         .S04_AXI_ARADDR         ( axi_araddr[(4 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),  
         .S04_AXI_ARLEN          ( axi_arlen[(4 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),  
         .S04_AXI_ARSIZE         ( 3'b011                                             ),  

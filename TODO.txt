@@ -1,1 +1,3 @@
 modify to have separate processes waiting for config, param and start, accel code will know which address to pick from config reg set
+
+fix bug which connects to modelSim server twice.
