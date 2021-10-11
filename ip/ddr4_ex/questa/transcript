@@ -1,0 +1,955 @@
+# //  Questa Sim-64
+# //  Version 2019.4_2 linux_x86_64 Dec  7 2019
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+do simulate.do
+# vsim -t 1ps -lib xil_defaultlib sim_tb_top_opt 
+# Start time: 15:33:48 on Oct 11,2021
+# Loading sv_std.std
+# Loading work.arch_package(fast)
+# Loading work.sim_tb_top(fast)
+# Loading work.example_top(fast)
+# Loading work.ddr4(fast)
+# Loading work.ddr4_ddr4(fast)
+# Loading work.ddr4_v2_2_6_infrastructure(fast)
+# Loading unisims_ver.BUFG(fast)
+# Loading unisims_ver.MMCME4_ADV(fast)
+# Loading work.ddr4_ddr4_mem_intfc(fast)
+# Loading work.ddr4_phy(fast)
+# Loading work.ddr4_phy_ddr4(fast)
+# Loading unisims_ver.OBUF(fast)
+# Loading work.ddr4_phy_v2_2_0_pll(fast)
+# Loading unisims_ver.IBUFDS(fast)
+# Loading unisims_ver.PLLE4_ADV(fast)
+# Loading work.ddr4_phy_v2_2_0_iob(fast)
+# Loading work.ddr4_phy_v2_2_0_iob_byte(fast)
+# Loading unisims_ver.OBUFDS(fast)
+# Loading work.ddr4_phy_v2_2_0_iob_byte(fast__1)
+# Loading work.ddr4_phy_v2_2_0_iob_byte(fast__2)
+# Loading work.ddr4_phy_v2_2_0_iob_byte(fast__3)
+# Loading unisims_ver.HPIO_VREF(fast)
+# Loading unisims_ver.IOBUFE3(fast)
+# Loading unisims_ver.IOBUFDS(fast)
+# Loading work.ddr4_phy_v2_2_0_xiphy_behav(fast)
+# Loading work.ddr4_phy_v2_2_0_bitslice_behav(fast)
+# Loading work.ddr4_phy_v2_2_0_fifo_sv(fast)
+# Loading work.ddr4_phy_v2_2_0_bitslice_behav(fast__1)
+# Loading work.ddr4_v2_2_6_mc(fast)
+# Loading work.ddr4_v2_2_6_mc_group(fast)
+# Loading work.ddr4_v2_2_6_mc_act_timer(fast)
+# Loading work.ddr4_v2_2_6_mc_act_rank(fast)
+# Loading work.ddr4_v2_2_6_mc_arb_a(fast)
+# Loading work.ddr4_v2_2_6_mc_rd_wr(fast)
+# Loading work.ddr4_v2_2_6_mc_wtr(fast)
+# Loading work.ddr4_v2_2_6_mc_arb_c(fast)
+# Loading work.ddr4_v2_2_6_mc_arb_mux_p(fast)
+# Loading work.ddr4_v2_2_6_mc_arb_p(fast)
+# Loading work.ddr4_v2_2_6_mc_cmd_mux_ap(fast)
+# Loading work.ddr4_v2_2_6_mc_ctl(fast)
+# Loading work.ddr4_v2_2_6_cal_mc_odt(fast)
+# Loading work.ddr4_v2_2_6_mc_cmd_mux_c(fast)
+# Loading work.ddr4_v2_2_6_mc_ref(fast)
+# Loading work.ddr4_v2_2_6_mc_periodic(fast)
+# Loading work.ddr4_v2_2_6_mc_ecc(fast)
+# Loading work.ddr4_v2_2_6_mc_ecc_dec_fix(fast)
+# Loading work.ddr4_v2_2_6_mc_ecc_buf(fast)
+# Loading unisims_ver.RAM32M(fast)
+# Loading work.ddr4_v2_2_6_mc_ecc_merge_enc(fast)
+# Loading work.ddr4_v2_2_6_mc_ecc_fi_xor(fast)
+# Loading work.ddr4_v2_2_6_mc_ecc_gen(fast)
+# Loading work.ddr4_v2_2_6_ui(fast)
+# Loading work.ddr4_v2_2_6_ui_cmd(fast)
+# Loading work.ddr4_v2_2_6_ui_wr_data(fast)
+# Loading work.ddr4_v2_2_6_ui_rd_data(fast)
+# Loading work.ddr4_v2_2_6_cal_top(fast)
+# Loading work.ddr4_v2_2_6_cal(fast)
+# Loading work.ddr4_v2_2_6_cal_debug_microblaze(fast)
+# Loading work.ddr4_v2_2_6_cal_addr_decode(fast)
+# Loading work.ddr4_v2_2_6_cal_cplx(fast)
+# Loading work.ddr4_v2_2_6_cal_cplx_data(fast)
+# Loading work.ddr4_v2_2_6_cal_mc_odt(fast__1)
+# Loading work.ddr4_v2_2_6_cal_config_rom(fast)
+# Loading work.ddr4_v2_2_6_chipscope_xsdb_slave(fast)
+# Loading work.ddr4_v2_2_6_cal_xsdb_arbiter(fast)
+# Loading work.ddr4_v2_2_6_cal_sync(fast)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__1)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__2)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__3)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__4)
+# Loading work.ddr4_v2_2_6_cal_xsdb_bram(fast)
+# Loading work.ddr4_v2_2_6_cfg_mem_mod(fast)
+# Loading work.ddr4_v2_2_6_bram_tdp(fast)
+# Loading work.ddr4_v2_2_6_cal_pi(fast)
+# Loading work.ddr4_v2_2_6_cal_rd_en(fast)
+# Loading work.ddr4_v2_2_6_cal_read(fast)
+# Loading work.ddr4_v2_2_6_cal_write(fast)
+# Loading work.ddr4_v2_2_6_cal_wr_byte(fast)
+# Loading work.ddr4_v2_2_6_cal_wr_bit(fast)
+# Loading work.ddr4_ddr4_cal_riu(fast)
+# Loading work.ddr4_microblaze_mcs(fast)
+# Loading work.microblaze_mcs(fast)
+# Loading unisims_ver.VCC(fast)
+# Loading unisims_ver.GND(fast)
+# Loading unisims_ver.FDR(fast)
+# Loading unisims_ver.FDRE(fast)
+# Loading unisims_ver.FDS(fast)
+# Loading unisims_ver.FDSE(fast)
+# Loading unisims_ver.FD(fast)
+# Loading unisims_ver.FD(fast__1)
+# Loading unisims_ver.FDRE(fast__1)
+# Loading unisims_ver.RAM32X1D(fast)
+# Loading unisims_ver.FDE(fast)
+# Loading unisims_ver.LUT6_2(fast)
+# Loading unisims_ver.LUT6_2(fast__1)
+# Loading unisims_ver.MUXCY_L(fast)
+# Loading unisims_ver.MUXCY(fast)
+# Loading unisims_ver.XORCY(fast)
+# Loading unisims_ver.MULT_AND(fast)
+# Loading unisims_ver.LUT2(fast)
+# Loading unisims_ver.LUT3(fast)
+# Loading unisims_ver.LUT4(fast)
+# Loading unisims_ver.LUT6(fast)
+# Loading unisims_ver.LUT4(fast__1)
+# Loading unisims_ver.LUT4(fast__2)
+# Loading unisims_ver.MUXF5(fast)
+# Loading unisims_ver.LUT3(fast__1)
+# Loading unisims_ver.LUT4(fast__3)
+# Loading unisims_ver.LUT4(fast__4)
+# Loading unisims_ver.SRL16E(fast)
+# Loading unisims_ver.LUT4(fast__5)
+# Loading unisims_ver.LUT4(fast__6)
+# Loading unisims_ver.LUT4(fast__7)
+# Loading unisims_ver.LUT3(fast__2)
+# Loading unisims_ver.LUT4(fast__8)
+# Loading unisims_ver.LUT4(fast__9)
+# Loading unisims_ver.LUT4(fast__10)
+# Loading unisims_ver.LUT3(fast__3)
+# Loading unisims_ver.LUT4(fast__11)
+# Loading unisims_ver.LUT3(fast__4)
+# Loading unisims_ver.LUT4(fast__12)
+# Loading unisims_ver.LUT4(fast__13)
+# Loading unisims_ver.LUT4(fast__14)
+# Loading unisims_ver.LUT3(fast__5)
+# Loading unisims_ver.LUT4(fast__15)
+# Loading unisims_ver.LUT6_2(fast__2)
+# Loading unisims_ver.LUT6_2(fast__3)
+# Loading unisims_ver.LUT6_2(fast__4)
+# Loading unisims_ver.LUT6_2(fast__5)
+# Loading unisims_ver.LUT6_2(fast__6)
+# Loading unisims_ver.LUT6_2(fast__7)
+# Loading unisims_ver.LUT6_2(fast__8)
+# Loading unisims_ver.LUT6_2(fast__9)
+# Loading unisims_ver.LUT3(fast__6)
+# Loading unisims_ver.LUT5(fast)
+# Loading unisims_ver.LUT3(fast__7)
+# Loading unisims_ver.LUT2(fast__1)
+# Loading unisims_ver.LUT3(fast__8)
+# Loading unisims_ver.LUT6(fast__1)
+# Loading unisims_ver.LUT5(fast__1)
+# Loading unisims_ver.LUT3(fast__9)
+# Loading unisims_ver.LUT2(fast__2)
+# Loading unisims_ver.LUT3(fast__10)
+# Loading unisims_ver.LUT4(fast__16)
+# Loading unisims_ver.LUT4(fast__17)
+# Loading unisims_ver.LUT5(fast__2)
+# Loading unisims_ver.LUT3(fast__11)
+# Loading unisims_ver.LUT3(fast__12)
+# Loading unisims_ver.LUT2(fast__3)
+# Loading unisims_ver.LUT6(fast__2)
+# Loading unisims_ver.LUT2(fast__4)
+# Loading unisims_ver.LUT6(fast__3)
+# Loading unisims_ver.LUT6(fast__4)
+# Loading unisims_ver.LUT6(fast__5)
+# Loading unisims_ver.LUT5(fast__3)
+# Loading unisims_ver.LUT5(fast__4)
+# Loading unisims_ver.LUT4(fast__18)
+# Loading unisims_ver.LUT5(fast__5)
+# Loading unisims_ver.LUT5(fast__6)
+# Loading unisims_ver.LUT5(fast__7)
+# Loading unisims_ver.LUT5(fast__8)
+# Loading unisims_ver.LUT6(fast__6)
+# Loading unisims_ver.LUT5(fast__9)
+# Loading unisims_ver.LUT4(fast__19)
+# Loading unisims_ver.LUT6(fast__7)
+# Loading unisims_ver.LUT5(fast__10)
+# Loading unisims_ver.LUT2(fast__5)
+# Loading unisims_ver.LUT4(fast__20)
+# Loading unisims_ver.LUT5(fast__11)
+# Loading unisims_ver.LUT2(fast__6)
+# Loading unisims_ver.LUT3(fast__13)
+# Loading unisims_ver.LUT2(fast__7)
+# Loading unisims_ver.LUT3(fast__14)
+# Loading unisims_ver.LUT6(fast__8)
+# Loading unisims_ver.LUT6(fast__9)
+# Loading unisims_ver.LUT6(fast__10)
+# Loading unisims_ver.LUT5(fast__12)
+# Loading unisims_ver.LUT6(fast__11)
+# Loading unisims_ver.LUT6(fast__12)
+# Loading unisims_ver.LUT4(fast__21)
+# Loading unisims_ver.LUT6(fast__13)
+# Loading unisims_ver.FDSE(fast__1)
+# Loading unisims_ver.LUT1(fast)
+# Loading unisims_ver.LUT5(fast__13)
+# Loading unisims_ver.LUT6(fast__14)
+# Loading unisims_ver.LUT5(fast__14)
+# Loading unisims_ver.LUT6(fast__15)
+# Loading unisims_ver.LUT6(fast__16)
+# Loading unisims_ver.LUT5(fast__15)
+# Loading unisims_ver.LUT5(fast__16)
+# Loading unisims_ver.LUT5(fast__17)
+# Loading unisims_ver.LUT5(fast__18)
+# Loading unisims_ver.LUT5(fast__19)
+# Loading unisims_ver.LUT6(fast__17)
+# Loading unisims_ver.LUT5(fast__20)
+# Loading unisims_ver.LUT3(fast__15)
+# Loading unisims_ver.LUT6(fast__18)
+# Loading unisims_ver.LUT5(fast__21)
+# Loading unisims_ver.LUT5(fast__22)
+# Loading unisims_ver.LUT5(fast__23)
+# Loading unisims_ver.LUT4(fast__22)
+# Loading unisims_ver.LUT4(fast__23)
+# Loading unisims_ver.LUT6(fast__19)
+# Loading unisims_ver.LUT6(fast__20)
+# Loading unisims_ver.LUT4(fast__24)
+# Loading unisims_ver.LUT6(fast__21)
+# Loading unisims_ver.LUT4(fast__25)
+# Loading unisims_ver.LUT6(fast__22)
+# Loading unisims_ver.LUT6(fast__23)
+# Loading unisims_ver.LUT6(fast__24)
+# Loading unisims_ver.LUT3(fast__16)
+# Loading unisims_ver.LUT5(fast__24)
+# Loading unisims_ver.LUT6(fast__25)
+# Loading unisims_ver.LUT6(fast__26)
+# Loading unisims_ver.LUT5(fast__25)
+# Loading unisims_ver.LUT6(fast__27)
+# Loading unisims_ver.LUT5(fast__26)
+# Loading unisims_ver.LUT6(fast__28)
+# Loading unisims_ver.LUT5(fast__27)
+# Loading unisims_ver.LUT4(fast__26)
+# Loading unisims_ver.LUT5(fast__28)
+# Loading unisims_ver.LUT4(fast__27)
+# Loading unisims_ver.MUXF7(fast)
+# Loading unisims_ver.LUT6(fast__29)
+# Loading unisims_ver.LUT6(fast__30)
+# Loading unisims_ver.LUT6(fast__31)
+# Loading unisims_ver.INV(fast)
+# Loading unisims_ver.RAMB36(fast)
+# Loading unisims_ver.RAMB36E1(fast)
+# Loading unisims_ver.RB36_INTERNAL_VLOG(fast)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__5)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__6)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__7)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__8)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__9)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__10)
+# Loading work.ddr4_v2_2_6_axi(fast)
+# Loading work.ddr4_v2_2_6_axi_register_slice(fast)
+# Loading work.ddr4_v2_2_6_axic_register_slice(fast)
+# Loading work.ddr4_v2_2_6_axic_register_slice(fast__1)
+# Loading work.ddr4_v2_2_6_axic_register_slice(fast__2)
+# Loading work.ddr4_v2_2_6_axic_register_slice(fast__3)
+# Loading work.ddr4_v2_2_6_axi_aw_channel(fast)
+# Loading work.ddr4_v2_2_6_axi_cmd_translator(fast)
+# Loading work.ddr4_v2_2_6_axi_incr_cmd(fast)
+# Loading work.ddr4_v2_2_6_axi_wrap_cmd(fast)
+# Loading work.ddr4_v2_2_6_axi_wr_cmd_fsm(fast)
+# Loading work.ddr4_v2_2_6_axi_w_channel(fast)
+# Loading work.ddr4_v2_2_6_axi_b_channel(fast)
+# Loading work.ddr4_v2_2_6_axi_fifo(fast)
+# Loading work.ddr4_v2_2_6_axi_ar_channel(fast)
+# Loading work.ddr4_v2_2_6_axi_cmd_translator(fast__1)
+# Loading work.ddr4_v2_2_6_axi_incr_cmd(fast__1)
+# Loading work.ddr4_v2_2_6_axi_wrap_cmd(fast__1)
+# Loading work.ddr4_v2_2_6_axi_cmd_fsm(fast)
+# Loading work.ddr4_v2_2_6_axi_r_channel(fast)
+# Loading work.ddr4_v2_2_6_axi_fifo(fast__1)
+# Loading work.ddr4_v2_2_6_axi_fifo(fast__2)
+# Loading work.ddr4_v2_2_6_axi_cmd_arbiter(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_top(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_write(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_addr_decode(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_read(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_addr_decode(fast__1)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg_bank(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg(fast__1)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg(fast__2)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg(fast__3)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg(fast__4)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg(fast__5)
+# Loading work.ddr4_v2_2_6_axi_tg_top(fast)
+# Loading work.ddr4_v2_2_6_boot_mode_gen(fast)
+# Loading work.ddr4_v2_2_6_prbs_mode_gen(fast)
+# Loading work.ddr4_v2_2_6_custom_mode_gen(fast)
+# Loading work.ddr4_v2_2_6_axi_opcode_gen(fast)
+# Loading work.ddr4_v2_2_6_axi_wrapper(fast)
+# Loading work.ddr4_v2_2_6_data_gen(fast)
+# Loading work.prbs_data_gen(fast)
+# Loading work.ddr4_v2_2_6_data_chk(fast)
+# Loading work.proj_package(fast)
+# Loading work.glbl(fast)
+# Loading work.DDR4_if(fast)
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+add wave -position end sim:/sim_tb_top/u_example_top/*
+run
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[0].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[0].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[1].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[1].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[2].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[2].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[3].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[3].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[4].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[4].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[5].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[5].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[6].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[6].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[7].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[7].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[8].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[8].ddr4_model:Configured as x8 4G stack:1
+run
+run
+run
+run
+run
+run
+run -all
+# DEBUG:::CUSTOM_MODE:::at time =              533329 executing instruction 0
+# DEBUG:::BOOT_MODE:::at time =              533329 executing instruction 0
+# Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: sim_tb_top.u_example_top.u_ddr4.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[11].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+# Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: sim_tb_top.u_example_top.u_ddr4.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[10].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+# Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: sim_tb_top.u_example_top.u_ddr4.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[9].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+# Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: sim_tb_top.u_example_top.u_ddr4.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[8].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+# Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: sim_tb_top.u_example_top.u_ddr4.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[7].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+# Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: sim_tb_top.u_example_top.u_ddr4.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[6].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+# Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: sim_tb_top.u_example_top.u_ddr4.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[5].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+# Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: sim_tb_top.u_example_top.u_ddr4.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[4].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+# Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: sim_tb_top.u_example_top.u_ddr4.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[3].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+# Break key hit
+run
+run -all
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[8].ddr4_model.<protected>.<protected>:Initialization complete @3327304
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[7].ddr4_model.<protected>.<protected>:Initialization complete @3327304
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[6].ddr4_model.<protected>.<protected>:Initialization complete @3327304
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[5].ddr4_model.<protected>.<protected>:Initialization complete @3327304
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[4].ddr4_model.<protected>.<protected>:Initialization complete @3327304
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[3].ddr4_model.<protected>.<protected>:Initialization complete @3327304
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[2].ddr4_model.<protected>.<protected>:Initialization complete @3327304
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[1].ddr4_model.<protected>.<protected>:Initialization complete @3327304
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[0].ddr4_model.<protected>.<protected>:Initialization complete @3327304
+# Break key hit
+run -all
+# DEBUG:::BOOT_MODE::::at time =             4135362 instruction =00 axi_size_count =6 axi_length_count=63
+# Break key hit
+# Break in Module ddr4_phy_v2_2_0_bitslice_behav at /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/ip_1/rtl/phy/ddr4_phy_v2_2_xiphy_behav.sv line 562
+run -all
+# DEBUG:::BOOT_MODE::::at time =             4663440 instruction =00 axi_size_count =6 axi_length_count=31
+# DEBUG:::BOOT_MODE::::at time =             4957484 instruction =00 axi_size_count =6 axi_length_count=15
+# DEBUG:::BOOT_MODE::::at time =             5155513 instruction =00 axi_size_count =6 axi_length_count=7
+# DEBUG:::BOOT_MODE::::at time =             5305535 instruction =00 axi_size_count =6 axi_length_count=3
+# DEBUG:::BOOT_MODE::::at time =             5428554 instruction =00 axi_size_count =6 axi_length_count=1
+# DEBUG:::BOOT_MODE::::at time =             5536570 instruction =00 axi_size_count =6 axi_length_count=0
+# Break key hit
+# Break at /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/timing_tasks.sv line 144
+add wave -position end  sim:/sim_tb_top/ACT
+add wave -position end  sim:/sim_tb_top/ADDR_WIDTH
+add wave -position end  sim:/sim_tb_top/c0_data_compare_error
+add wave -position end  sim:/sim_tb_top/c0_ddr4_act_n
+add wave -position end  sim:/sim_tb_top/c0_ddr4_adr
+add wave -position end  sim:/sim_tb_top/c0_ddr4_adr_sdram
+add wave -position end  sim:/sim_tb_top/c0_ddr4_ba
+add wave -position end  sim:/sim_tb_top/c0_ddr4_ba_sdram
+add wave -position end  sim:/sim_tb_top/c0_ddr4_bg
+add wave -position end  sim:/sim_tb_top/c0_ddr4_bg_sdram
+add wave -position end  sim:/sim_tb_top/c0_ddr4_ck_c
+add wave -position end  sim:/sim_tb_top/c0_ddr4_ck_c_int
+add wave -position end  sim:/sim_tb_top/c0_ddr4_ck_t
+add wave -position end  sim:/sim_tb_top/c0_ddr4_ck_t_int
+add wave -position end  sim:/sim_tb_top/c0_ddr4_cke
+add wave -position end  sim:/sim_tb_top/c0_ddr4_cs_n
+add wave -position end  sim:/sim_tb_top/c0_ddr4_dm_dbi_n
+add wave -position end  sim:/sim_tb_top/c0_ddr4_dq
+add wave -position end  sim:/sim_tb_top/c0_ddr4_dqs_c
+add wave -position end  sim:/sim_tb_top/c0_ddr4_dqs_t
+add wave -position end  sim:/sim_tb_top/c0_ddr4_odt
+add wave -position end  sim:/sim_tb_top/c0_ddr4_reset_n
+add wave -position end  sim:/sim_tb_top/c0_init_calib_complete
+add wave -position end  sim:/sim_tb_top/c0_sys_clk_n
+add wave -position end  sim:/sim_tb_top/c0_sys_clk_p
+add wave -position end  sim:/sim_tb_top/CA_MIRROR
+add wave -position end  sim:/sim_tb_top/CLAMSHELL_PARTS
+add wave -position end  sim:/sim_tb_top/CLKIN_PERIOD_NS
+add wave -position end  sim:/sim_tb_top/cmdName
+add wave -position end  sim:/sim_tb_top/CONFIGURED_DENSITY
+add wave -position end  sim:/sim_tb_top/CS_WIDTH
+add wave -position end  sim:/sim_tb_top/DDR4_ADRMOD
+add wave -position end  sim:/sim_tb_top/DM_WIDTH
+add wave -position end  sim:/sim_tb_top/DQ_WIDTH
+add wave -position end  sim:/sim_tb_top/DQS_WIDTH
+add wave -position end  sim:/sim_tb_top/DRAM_WIDTH
+add wave -position end  sim:/sim_tb_top/en_model
+add wave -position end  sim:/sim_tb_top/model_enable
+add wave -position end  sim:/sim_tb_top/MRS
+add wave -position end  sim:/sim_tb_top/NOP
+add wave -position end  sim:/sim_tb_top/NUM_PHYSICAL_PARTS
+add wave -position end  sim:/sim_tb_top/ODD_PARTS
+add wave -position end  sim:/sim_tb_top/ODT_WIDTH
+add wave -position end  sim:/sim_tb_top/PRE
+add wave -position end  sim:/sim_tb_top/RANK_WIDTH
+add wave -position end  sim:/sim_tb_top/RD
+add wave -position end  sim:/sim_tb_top/REF
+add wave -position end  sim:/sim_tb_top/sys_clk_i
+add wave -position end  sim:/sim_tb_top/sys_rst
+add wave -position end  sim:/sim_tb_top/SYSCLK_PERIOD
+add wave -position end  sim:/sim_tb_top/tCK
+add wave -position end  sim:/sim_tb_top/WR
+add wave -position end  sim:/sim_tb_top/wr_en
+add wave -position end  sim:/sim_tb_top/ZQC
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.arch_package(fast)
+# Loading work.sim_tb_top(fast)
+# Loading work.example_top(fast)
+# Loading work.ddr4(fast)
+# Loading work.ddr4_ddr4(fast)
+# Loading work.ddr4_v2_2_6_infrastructure(fast)
+# Loading unisims_ver.BUFG(fast)
+# Loading unisims_ver.MMCME4_ADV(fast)
+# Loading work.ddr4_ddr4_mem_intfc(fast)
+# Loading work.ddr4_phy(fast)
+# Loading work.ddr4_phy_ddr4(fast)
+# Loading unisims_ver.OBUF(fast)
+# Loading work.ddr4_phy_v2_2_0_pll(fast)
+# Loading unisims_ver.IBUFDS(fast)
+# Loading unisims_ver.PLLE4_ADV(fast)
+# Loading work.ddr4_phy_v2_2_0_iob(fast)
+# Loading work.ddr4_phy_v2_2_0_iob_byte(fast)
+# Loading unisims_ver.OBUFDS(fast)
+# Loading work.ddr4_phy_v2_2_0_iob_byte(fast__1)
+# Loading work.ddr4_phy_v2_2_0_iob_byte(fast__2)
+# Loading work.ddr4_phy_v2_2_0_iob_byte(fast__3)
+# Loading unisims_ver.HPIO_VREF(fast)
+# Loading unisims_ver.IOBUFE3(fast)
+# Loading unisims_ver.IOBUFDS(fast)
+# Loading work.ddr4_phy_v2_2_0_xiphy_behav(fast)
+# Loading work.ddr4_phy_v2_2_0_bitslice_behav(fast)
+# Loading work.ddr4_phy_v2_2_0_fifo_sv(fast)
+# Loading work.ddr4_phy_v2_2_0_bitslice_behav(fast__1)
+# Loading work.ddr4_v2_2_6_mc(fast)
+# Loading work.ddr4_v2_2_6_mc_group(fast)
+# Loading work.ddr4_v2_2_6_mc_act_timer(fast)
+# Loading work.ddr4_v2_2_6_mc_act_rank(fast)
+# Loading work.ddr4_v2_2_6_mc_arb_a(fast)
+# Loading work.ddr4_v2_2_6_mc_rd_wr(fast)
+# Loading work.ddr4_v2_2_6_mc_wtr(fast)
+# Loading work.ddr4_v2_2_6_mc_arb_c(fast)
+# Loading work.ddr4_v2_2_6_mc_arb_mux_p(fast)
+# Loading work.ddr4_v2_2_6_mc_arb_p(fast)
+# Loading work.ddr4_v2_2_6_mc_cmd_mux_ap(fast)
+# Loading work.ddr4_v2_2_6_mc_ctl(fast)
+# Loading work.ddr4_v2_2_6_cal_mc_odt(fast)
+# Loading work.ddr4_v2_2_6_mc_cmd_mux_c(fast)
+# Loading work.ddr4_v2_2_6_mc_ref(fast)
+# Loading work.ddr4_v2_2_6_mc_periodic(fast)
+# Loading work.ddr4_v2_2_6_mc_ecc(fast)
+# Loading work.ddr4_v2_2_6_mc_ecc_dec_fix(fast)
+# Loading work.ddr4_v2_2_6_mc_ecc_buf(fast)
+# Loading unisims_ver.RAM32M(fast)
+# Loading work.ddr4_v2_2_6_mc_ecc_merge_enc(fast)
+# Loading work.ddr4_v2_2_6_mc_ecc_fi_xor(fast)
+# Loading work.ddr4_v2_2_6_mc_ecc_gen(fast)
+# Loading work.ddr4_v2_2_6_ui(fast)
+# Loading work.ddr4_v2_2_6_ui_cmd(fast)
+# Loading work.ddr4_v2_2_6_ui_wr_data(fast)
+# Loading work.ddr4_v2_2_6_ui_rd_data(fast)
+# Loading work.ddr4_v2_2_6_cal_top(fast)
+# Loading work.ddr4_v2_2_6_cal(fast)
+# Loading work.ddr4_v2_2_6_cal_debug_microblaze(fast)
+# Loading work.ddr4_v2_2_6_cal_addr_decode(fast)
+# Loading work.ddr4_v2_2_6_cal_cplx(fast)
+# Loading work.ddr4_v2_2_6_cal_cplx_data(fast)
+# Loading work.ddr4_v2_2_6_cal_mc_odt(fast__1)
+# Loading work.ddr4_v2_2_6_cal_config_rom(fast)
+# Loading work.ddr4_v2_2_6_chipscope_xsdb_slave(fast)
+# Loading work.ddr4_v2_2_6_cal_xsdb_arbiter(fast)
+# Loading work.ddr4_v2_2_6_cal_sync(fast)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__1)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__2)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__3)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__4)
+# Loading work.ddr4_v2_2_6_cal_xsdb_bram(fast)
+# Loading work.ddr4_v2_2_6_cfg_mem_mod(fast)
+# Loading work.ddr4_v2_2_6_bram_tdp(fast)
+# Loading work.ddr4_v2_2_6_cal_pi(fast)
+# Loading work.ddr4_v2_2_6_cal_rd_en(fast)
+# Loading work.ddr4_v2_2_6_cal_read(fast)
+# Loading work.ddr4_v2_2_6_cal_write(fast)
+# Loading work.ddr4_v2_2_6_cal_wr_byte(fast)
+# Loading work.ddr4_v2_2_6_cal_wr_bit(fast)
+# Loading work.ddr4_ddr4_cal_riu(fast)
+# Loading work.ddr4_microblaze_mcs(fast)
+# Loading work.microblaze_mcs(fast)
+# Loading unisims_ver.VCC(fast)
+# Loading unisims_ver.GND(fast)
+# Loading unisims_ver.FDR(fast)
+# Loading unisims_ver.FDRE(fast)
+# Loading unisims_ver.FDS(fast)
+# Loading unisims_ver.FDSE(fast)
+# Loading unisims_ver.FD(fast)
+# Loading unisims_ver.FD(fast__1)
+# Loading unisims_ver.FDRE(fast__1)
+# Loading unisims_ver.RAM32X1D(fast)
+# Loading unisims_ver.FDE(fast)
+# Loading unisims_ver.LUT6_2(fast)
+# Loading unisims_ver.LUT6_2(fast__1)
+# Loading unisims_ver.MUXCY_L(fast)
+# Loading unisims_ver.MUXCY(fast)
+# Loading unisims_ver.XORCY(fast)
+# Loading unisims_ver.MULT_AND(fast)
+# Loading unisims_ver.LUT2(fast)
+# Loading unisims_ver.LUT3(fast)
+# Loading unisims_ver.LUT4(fast)
+# Loading unisims_ver.LUT6(fast)
+# Loading unisims_ver.LUT4(fast__1)
+# Loading unisims_ver.LUT4(fast__2)
+# Loading unisims_ver.MUXF5(fast)
+# Loading unisims_ver.LUT3(fast__1)
+# Loading unisims_ver.LUT4(fast__3)
+# Loading unisims_ver.LUT4(fast__4)
+# Loading unisims_ver.SRL16E(fast)
+# Loading unisims_ver.LUT4(fast__5)
+# Loading unisims_ver.LUT4(fast__6)
+# Loading unisims_ver.LUT4(fast__7)
+# Loading unisims_ver.LUT3(fast__2)
+# Loading unisims_ver.LUT4(fast__8)
+# Loading unisims_ver.LUT4(fast__9)
+# Loading unisims_ver.LUT4(fast__10)
+# Loading unisims_ver.LUT3(fast__3)
+# Loading unisims_ver.LUT4(fast__11)
+# Loading unisims_ver.LUT3(fast__4)
+# Loading unisims_ver.LUT4(fast__12)
+# Loading unisims_ver.LUT4(fast__13)
+# Loading unisims_ver.LUT4(fast__14)
+# Loading unisims_ver.LUT3(fast__5)
+# Loading unisims_ver.LUT4(fast__15)
+# Loading unisims_ver.LUT6_2(fast__2)
+# Loading unisims_ver.LUT6_2(fast__3)
+# Loading unisims_ver.LUT6_2(fast__4)
+# Loading unisims_ver.LUT6_2(fast__5)
+# Loading unisims_ver.LUT6_2(fast__6)
+# Loading unisims_ver.LUT6_2(fast__7)
+# Loading unisims_ver.LUT6_2(fast__8)
+# Loading unisims_ver.LUT6_2(fast__9)
+# Loading unisims_ver.LUT3(fast__6)
+# Loading unisims_ver.LUT5(fast)
+# Loading unisims_ver.LUT3(fast__7)
+# Loading unisims_ver.LUT2(fast__1)
+# Loading unisims_ver.LUT3(fast__8)
+# Loading unisims_ver.LUT6(fast__1)
+# Loading unisims_ver.LUT5(fast__1)
+# Loading unisims_ver.LUT3(fast__9)
+# Loading unisims_ver.LUT2(fast__2)
+# Loading unisims_ver.LUT3(fast__10)
+# Loading unisims_ver.LUT4(fast__16)
+# Loading unisims_ver.LUT4(fast__17)
+# Loading unisims_ver.LUT5(fast__2)
+# Loading unisims_ver.LUT3(fast__11)
+# Loading unisims_ver.LUT3(fast__12)
+# Loading unisims_ver.LUT2(fast__3)
+# Loading unisims_ver.LUT6(fast__2)
+# Loading unisims_ver.LUT2(fast__4)
+# Loading unisims_ver.LUT6(fast__3)
+# Loading unisims_ver.LUT6(fast__4)
+# Loading unisims_ver.LUT6(fast__5)
+# Loading unisims_ver.LUT5(fast__3)
+# Loading unisims_ver.LUT5(fast__4)
+# Loading unisims_ver.LUT4(fast__18)
+# Loading unisims_ver.LUT5(fast__5)
+# Loading unisims_ver.LUT5(fast__6)
+# Loading unisims_ver.LUT5(fast__7)
+# Loading unisims_ver.LUT5(fast__8)
+# Loading unisims_ver.LUT6(fast__6)
+# Loading unisims_ver.LUT5(fast__9)
+# Loading unisims_ver.LUT4(fast__19)
+# Loading unisims_ver.LUT6(fast__7)
+# Loading unisims_ver.LUT5(fast__10)
+# Loading unisims_ver.LUT2(fast__5)
+# Loading unisims_ver.LUT4(fast__20)
+# Loading unisims_ver.LUT5(fast__11)
+# Loading unisims_ver.LUT2(fast__6)
+# Loading unisims_ver.LUT3(fast__13)
+# Loading unisims_ver.LUT2(fast__7)
+# Loading unisims_ver.LUT3(fast__14)
+# Loading unisims_ver.LUT6(fast__8)
+# Loading unisims_ver.LUT6(fast__9)
+# Loading unisims_ver.LUT6(fast__10)
+# Loading unisims_ver.LUT5(fast__12)
+# Loading unisims_ver.LUT6(fast__11)
+# Loading unisims_ver.LUT6(fast__12)
+# Loading unisims_ver.LUT4(fast__21)
+# Loading unisims_ver.LUT6(fast__13)
+# Loading unisims_ver.FDSE(fast__1)
+# Loading unisims_ver.LUT1(fast)
+# Loading unisims_ver.LUT5(fast__13)
+# Loading unisims_ver.LUT6(fast__14)
+# Loading unisims_ver.LUT5(fast__14)
+# Loading unisims_ver.LUT6(fast__15)
+# Loading unisims_ver.LUT6(fast__16)
+# Loading unisims_ver.LUT5(fast__15)
+# Loading unisims_ver.LUT5(fast__16)
+# Loading unisims_ver.LUT5(fast__17)
+# Loading unisims_ver.LUT5(fast__18)
+# Loading unisims_ver.LUT5(fast__19)
+# Loading unisims_ver.LUT6(fast__17)
+# Loading unisims_ver.LUT5(fast__20)
+# Loading unisims_ver.LUT3(fast__15)
+# Loading unisims_ver.LUT6(fast__18)
+# Loading unisims_ver.LUT5(fast__21)
+# Loading unisims_ver.LUT5(fast__22)
+# Loading unisims_ver.LUT5(fast__23)
+# Loading unisims_ver.LUT4(fast__22)
+# Loading unisims_ver.LUT4(fast__23)
+# Loading unisims_ver.LUT6(fast__19)
+# Loading unisims_ver.LUT6(fast__20)
+# Loading unisims_ver.LUT4(fast__24)
+# Loading unisims_ver.LUT6(fast__21)
+# Loading unisims_ver.LUT4(fast__25)
+# Loading unisims_ver.LUT6(fast__22)
+# Loading unisims_ver.LUT6(fast__23)
+# Loading unisims_ver.LUT6(fast__24)
+# Loading unisims_ver.LUT3(fast__16)
+# Loading unisims_ver.LUT5(fast__24)
+# Loading unisims_ver.LUT6(fast__25)
+# Loading unisims_ver.LUT6(fast__26)
+# Loading unisims_ver.LUT5(fast__25)
+# Loading unisims_ver.LUT6(fast__27)
+# Loading unisims_ver.LUT5(fast__26)
+# Loading unisims_ver.LUT6(fast__28)
+# Loading unisims_ver.LUT5(fast__27)
+# Loading unisims_ver.LUT4(fast__26)
+# Loading unisims_ver.LUT5(fast__28)
+# Loading unisims_ver.LUT4(fast__27)
+# Loading unisims_ver.MUXF7(fast)
+# Loading unisims_ver.LUT6(fast__29)
+# Loading unisims_ver.LUT6(fast__30)
+# Loading unisims_ver.LUT6(fast__31)
+# Loading unisims_ver.INV(fast)
+# Loading unisims_ver.RAMB36(fast)
+# Loading unisims_ver.RAMB36E1(fast)
+# Loading unisims_ver.RB36_INTERNAL_VLOG(fast)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__5)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__6)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__7)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__8)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__9)
+# Loading work.ddr4_v2_2_6_cal_sync(fast__10)
+# Loading work.ddr4_v2_2_6_axi(fast)
+# Loading work.ddr4_v2_2_6_axi_register_slice(fast)
+# Loading work.ddr4_v2_2_6_axic_register_slice(fast)
+# Loading work.ddr4_v2_2_6_axic_register_slice(fast__1)
+# Loading work.ddr4_v2_2_6_axic_register_slice(fast__2)
+# Loading work.ddr4_v2_2_6_axic_register_slice(fast__3)
+# Loading work.ddr4_v2_2_6_axi_aw_channel(fast)
+# Loading work.ddr4_v2_2_6_axi_cmd_translator(fast)
+# Loading work.ddr4_v2_2_6_axi_incr_cmd(fast)
+# Loading work.ddr4_v2_2_6_axi_wrap_cmd(fast)
+# Loading work.ddr4_v2_2_6_axi_wr_cmd_fsm(fast)
+# Loading work.ddr4_v2_2_6_axi_w_channel(fast)
+# Loading work.ddr4_v2_2_6_axi_b_channel(fast)
+# Loading work.ddr4_v2_2_6_axi_fifo(fast)
+# Loading work.ddr4_v2_2_6_axi_ar_channel(fast)
+# Loading work.ddr4_v2_2_6_axi_cmd_translator(fast__1)
+# Loading work.ddr4_v2_2_6_axi_incr_cmd(fast__1)
+# Loading work.ddr4_v2_2_6_axi_wrap_cmd(fast__1)
+# Loading work.ddr4_v2_2_6_axi_cmd_fsm(fast)
+# Loading work.ddr4_v2_2_6_axi_r_channel(fast)
+# Loading work.ddr4_v2_2_6_axi_fifo(fast__1)
+# Loading work.ddr4_v2_2_6_axi_fifo(fast__2)
+# Loading work.ddr4_v2_2_6_axi_cmd_arbiter(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_top(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_write(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_addr_decode(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_read(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_addr_decode(fast__1)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg_bank(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg(fast)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg(fast__1)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg(fast__2)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg(fast__3)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg(fast__4)
+# Loading work.ddr4_v2_2_6_axi_ctrl_reg(fast__5)
+# Loading work.ddr4_v2_2_6_axi_tg_top(fast)
+# Loading work.ddr4_v2_2_6_boot_mode_gen(fast)
+# Loading work.ddr4_v2_2_6_prbs_mode_gen(fast)
+# Loading work.ddr4_v2_2_6_custom_mode_gen(fast)
+# Loading work.ddr4_v2_2_6_axi_opcode_gen(fast)
+# Loading work.ddr4_v2_2_6_axi_wrapper(fast)
+# Loading work.ddr4_v2_2_6_data_gen(fast)
+# Loading work.prbs_data_gen(fast)
+# Loading work.ddr4_v2_2_6_data_chk(fast)
+# Loading work.proj_package(fast)
+# Loading work.glbl(fast)
+# Loading work.DDR4_if(fast)
+run -all
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[0].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[0].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[1].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[1].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[2].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[2].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[3].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[3].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[4].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[4].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[5].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[5].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[6].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[6].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[7].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[7].ddr4_model:Configured as x8 4G stack:1
+# Loading timesets for 'sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[8].ddr4_model.LoadTiming' @0
+# 	Loaded timeset:TS_1875
+# 	Loaded timeset:TS_1500
+# 	Loaded timeset:TS_1250
+# 	Loaded timeset:TS_1072
+# 	Loaded timeset:TS_938
+# 	Loaded timeset:TS_833
+# 	Loaded timeset:TS_750
+# 	Loaded timeset:TS_682
+# 	Loaded timeset:TS_625
+# Model based on DDR4 DDS version 0.999 6/06/2014 (build data 5/06/2016)
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[8].ddr4_model:Configured as x8 4G stack:1
+# DEBUG:::CUSTOM_MODE:::at time =              533329 executing instruction 0
+# DEBUG:::BOOT_MODE:::at time =              533329 executing instruction 0
+# Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: sim_tb_top.u_example_top.u_ddr4.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[11].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+# Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: sim_tb_top.u_example_top.u_ddr4.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[10].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+# Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: sim_tb_top.u_example_top.u_ddr4.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[9].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+# Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: sim_tb_top.u_example_top.u_ddr4.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[8].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+# Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: sim_tb_top.u_example_top.u_ddr4.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[7].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+# Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: sim_tb_top.u_example_top.u_ddr4.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[6].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+# Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: sim_tb_top.u_example_top.u_ddr4.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[5].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+# Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: sim_tb_top.u_example_top.u_ddr4.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[4].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+# Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: sim_tb_top.u_example_top.u_ddr4.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[3].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[8].ddr4_model.<protected>.<protected>:Initialization complete @3327304
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[7].ddr4_model.<protected>.<protected>:Initialization complete @3327304
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[6].ddr4_model.<protected>.<protected>:Initialization complete @3327304
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[5].ddr4_model.<protected>.<protected>:Initialization complete @3327304
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[4].ddr4_model.<protected>.<protected>:Initialization complete @3327304
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[3].ddr4_model.<protected>.<protected>:Initialization complete @3327304
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[2].ddr4_model.<protected>.<protected>:Initialization complete @3327304
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[1].ddr4_model.<protected>.<protected>:Initialization complete @3327304
+# sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[0].ddr4_model.<protected>.<protected>:Initialization complete @3327304
+# DEBUG:::BOOT_MODE::::at time =             4135362 instruction =00 axi_size_count =6 axi_length_count=63
+# DEBUG:::BOOT_MODE::::at time =             4663440 instruction =00 axi_size_count =6 axi_length_count=31
+# DEBUG:::BOOT_MODE::::at time =             4957484 instruction =00 axi_size_count =6 axi_length_count=15
+# DEBUG:::BOOT_MODE::::at time =             5155513 instruction =00 axi_size_count =6 axi_length_count=7
+# DEBUG:::BOOT_MODE::::at time =             5305535 instruction =00 axi_size_count =6 axi_length_count=3
+# DEBUG:::BOOT_MODE::::at time =             5428554 instruction =00 axi_size_count =6 axi_length_count=1
+# DEBUG:::BOOT_MODE::::at time =             5536570 instruction =00 axi_size_count =6 axi_length_count=0
+# DEBUG:::BOOT_MODE:::at time =             5644586 executing instruction 1
+# DEBUG:::BOOT_MODE::::at time =             5647586 instruction =01 axi_size_count =6 axi_length_count=15
+# Break key hit
+# Simulation stop requested.
+find drivers -source -time {335264 ps} -cause sim:/sim_tb_top/u_example_top/c0_ddr4_clk
+find drivers -source -time {335264 ps} -root sim:/sim_tb_top/u_example_top/c0_ddr4_clk
+add wave -position end  sim:/sim_tb_top/u_example_top/SIMULATION
+run -all
+# DEBUG:::BOOT_MODE::::at time =             5845615 instruction =01 axi_size_count =6 axi_length_count=7
+# Break key hit
+# Break at /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/imports/timing_tasks.sv line 64
+run -all
+# DEBUG:::BOOT_MODE::::at time =             5995638 instruction =01 axi_size_count =6 axi_length_count=3
+# DEBUG:::BOOT_MODE::::at time =             6118656 instruction =01 axi_size_count =6 axi_length_count=1
+# DEBUG:::BOOT_MODE:::at time =             6229672 executing instruction 2
+# DEBUG:::BOOT_MODE::::at time =             6232673 instruction =02 axi_size_count =6 axi_length_count=1
+# DEBUG:::BOOT_MODE:::at time =             6412699 executing instruction 3
+# DEBUG:::BOOT_MODE:::at time =             6418700 executing instruction 0
+# DEBUG:::PRBS_MODE::::at time =             6418700 instruction =0 axi_addr = xxxxxxxx length =x size =6 burst =x strb_pattern =X)
+# DEBUG:::PRBS_MODE::::at time =             6565722 instruction =1 axi_addr = abcd1200 length =1 size =6 burst =2 strb_pattern =2)
+# Break key hit
+# Break in Module ddr4_phy_v2_2_0_bitslice_behav at /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.srcs/sources_1/ip/ddr4/ip_1/rtl/phy/ddr4_phy_v2_2_xiphy_behav.sv line 610

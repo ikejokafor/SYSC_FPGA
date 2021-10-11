@@ -164,7 +164,7 @@ ADD_DEPENDENCIES(${TARGET_NAME} cnn_layer_accel_model)
 
 # BEGIN Compiler Flags ------------------------------------------------------------------------------------------------------------------------------
 TARGET_COMPILE_OPTIONS(${TARGET_NAME} PUBLIC 
-    "-std=c++14" 
+    "-std=c++1y" 
     "-Wall"
 	"-fPIC"
     "-fexceptions"
@@ -223,9 +223,9 @@ ELSE()
     TARGET_LINK_LIBRARIES(${TARGET_NAME} PUBLIC
         -L/usr/local/lib/
         -L/usr/lib/
-		-L/home/mdl/izo5011/IkennaWorkSpace/izo5011_dev_tools/lib/
         -L$ENV{DOWNLOADED_REPOS}/build/systemc-2.3.3/src/
         -L$ENV{IZO5011_X86_DEV_TOOLS}/lib/
+        #-L/home/mdl/izo5011/IkennaWorkSpace/izo5011_dev_tools_redhat/x86/lib64/
         -L${PROJECT_SOURCE_DIR}/../syscNetProto/build/${BUILD_DIR_SUFFIX}/
         -L${PROJECT_SOURCE_DIR}/../network/build/${BUILD_DIR_SUFFIX}/
         -L${PROJECT_SOURCE_DIR}/../cnn_layer_accel/model/build/${BUILD_DIR_SUFFIX}/

@@ -33,81 +33,92 @@ void SYSC_FPGA::main()
 	double memPower;
 	double QUAD_time;
 	double FAS_time;
+
 	while(true)
 	{
+        wait();
+
         // SystemC config
+        wait();
         addr = m_sysc_fpga_hndl->wait_sysC_FPGAconfig();
         max_sys_mem_trans = *((int*)addr);
         cnn_layer_accel->m_max_sys_mem_trans = max_sys_mem_trans;
-        
-       
+        wait();
+
 		// Config
 		wait();
 		addr = m_sysc_fpga_hndl->waitConfig();
 		wait();
 		cnn_layer_accel->setMemory(0, addr, -1);    // FIXME: Hardcoding
+        wait();
 
 		// // Input Map
 		// wait();
 		// m_sysc_fpga_hndl->waitParam(addr, size);
 		// wait();
 		// cnn_layer_accel->setMemory(1, addr, size);    // FIXME: Hardcoding
-		// 
+        // wait();
+        //
 		// // Kernels 3x3
 		// wait();
 		// m_sysc_fpga_hndl->waitParam(addr, size);
 		// wait();
 		// cnn_layer_accel->setMemory(2, addr, size);    // FIXME: Hardcoding
-        // 
+        // wait();
+        //
         // // Kernels 3x3 Bias
 		// wait();
 		// m_sysc_fpga_hndl->waitParam(addr, size);
 		// wait();
 		// cnn_layer_accel->setMemory(3, addr, size);    // FIXME: Hardcoding
-        // 
+        // wait();
+        //
 		// // Kernels 1x1
 		// wait();
 		// m_sysc_fpga_hndl->waitParam(addr, size);
 		// wait();
 		// cnn_layer_accel->setMemory(4, addr, size);    // FIXME: Hardcoding
-        // 
+        // wait();
+        //
         // // Kernels 1x1 Bias
 		// wait();
 		// m_sysc_fpga_hndl->waitParam(addr, size);
 		// wait();
 		// cnn_layer_accel->setMemory(5, addr, size);    // FIXME: Hardcoding
-        // 
+        // wait();
+        //
 		// // Partial Maps
 		// wait();
 		// m_sysc_fpga_hndl->waitParam(addr, size);
 		// wait();
 		// cnn_layer_accel->setMemory(6, addr, size);    // FIXME: Hardcoding
-        // 
+        // wait();
+        //
 		// // ResidualMaps
 		// wait();
 		// m_sysc_fpga_hndl->waitParam(addr, size);
 		// wait();
 		// cnn_layer_accel->setMemory(7, addr, size);    // FIXME: Hardcoding
-        // 
+        // wait();
+        //
         // // Prev1x1Maps Maps
 		// wait();
 		// m_sysc_fpga_hndl->waitParam(addr, size);
 		// wait();
 		// cnn_layer_accel->setMemory(8, addr, size);    // FIXME: Hardcoding
-
-
+        // wait();
+        
+        // Start and Wait
 		wait();
 		m_sysc_fpga_hndl->waitStart();
 		wait();
 		cnn_layer_accel->start();
 		wait();
-
-        // Start and Wait
 		cnn_layer_accel->waitComplete(elapsedTime, memPower, QUAD_time, FAS_time);
 		wait();
 		m_sysc_fpga_hndl->sendComplete();
         wait();
-
+        
         // // Output Maps
         // mem_ele_t* mem_ele = cnn_layer_accel->getMemory(9);    // FIXME: Hardcoding
         // m_pyld->m_buffer = (void*)mem_ele->addr;
@@ -115,17 +126,16 @@ void SYSC_FPGA::main()
         // m_sysc_fpga_hndl->sendOutput(m_pyld);
 
         // Stat output
+        wait();
 		ptr = (double*)m_pyld->m_buffer;
         ptr[0] = elapsedTime;
         ptr[1] = memPower;
         ptr[2] = QUAD_time;
         ptr[3] = FAS_time;
-		m_pyld->m_size = ACCL_META_OUTPUT_SIZE;
-		wait();
-        
+		m_pyld->m_size = ACCL_META_OUTPUT_SIZE;        
         m_sysc_fpga_hndl->sendOutput(m_pyld);
-		wait();
 	}
+    
 }
 
 #ifdef MODEL_TECH

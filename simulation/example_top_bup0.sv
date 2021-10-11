@@ -1,5 +1,3 @@
-
-
 /******************************************************************************
 // (c) Copyright 2013 - 2014 Xilinx, Inc. All rights reserved.
 //
@@ -85,9 +83,7 @@
 `endif
 
 
-`timescale 1ps/1ps
-module example_top #
-  (
+module example_top # (
     parameter nCK_PER_CLK           = 4,   // This parameter is controllerwise
     parameter         APP_DATA_WIDTH          = 512, // This parameter is controllerwise
     parameter         APP_MASK_WIDTH          = 64,  // This parameter is controllerwise
@@ -112,29 +108,26 @@ module example_top #
 
   )
    (
-    input                 sys_rst, //Common port for all controllers
-
-
+    input                   sys_rst, //Common port for all controllers
     output                  c0_init_calib_complete,
     output                  c0_data_compare_error,
     input                   c0_sys_clk_p,
     input                   c0_sys_clk_n,
     output                  c0_ddr4_act_n,
-    output [16:0]            c0_ddr4_adr,
+    output [16:0]           c0_ddr4_adr,
     output [1:0]            c0_ddr4_ba,
     output [1:0]            c0_ddr4_bg,
     output [0:0]            c0_ddr4_cke,
     output [0:0]            c0_ddr4_odt,
     output [0:0]            c0_ddr4_cs_n,
-    output [0:0]                 c0_ddr4_ck_t,
-    output [0:0]                c0_ddr4_ck_c,
+    output [0:0]            c0_ddr4_ck_t,
+    output [0:0]            c0_ddr4_ck_c,
     output                  c0_ddr4_reset_n,
     inout  [8:0]            c0_ddr4_dm_dbi_n,
-    inout  [71:0]            c0_ddr4_dq,
+    inout  [71:0]           c0_ddr4_dq,
     inout  [8:0]            c0_ddr4_dqs_t,
     inout  [8:0]            c0_ddr4_dqs_c
-    );
-
+    ); 
     //-----------------------------------------------------------------------------------------------------------------------------------------------
     //  Includes
     //-----------------------------------------------------------------------------------------------------------------------------------------------
@@ -142,12 +135,16 @@ module example_top #
     `include "axi_defs.svh"
     `include "cnn_layer_accel_FAS.svh"
 
-  localparam  APP_ADDR_WIDTH = 29;
-  localparam  MEM_ADDR_ORDER = "ROW_COLUMN_BANK";
-  localparam DBG_WR_STS_WIDTH      = 32;
-  localparam DBG_RD_STS_WIDTH      = 32;
-  localparam ECC                   = "ON";
-
+  
+    //-----------------------------------------------------------------------------------------------------------------------------------------------
+    //  Local Parameters
+    //-----------------------------------------------------------------------------------------------------------------------------------------------  
+    localparam  APP_ADDR_WIDTH = 29;
+    localparam  MEM_ADDR_ORDER = "ROW_COLUMN_BANK";
+    localparam DBG_WR_STS_WIDTH      = 32;
+    localparam DBG_RD_STS_WIDTH      = 32;
+    localparam ECC                   = "OFF";
+  
     localparam C_NUM_RD_CLIENTS         = 4;
     localparam C_NUM_WR_CLIENTS         = 1;
     localparam C_NUM_TOTAL_CLIENTS      = C_NUM_RD_CLIENTS + C_NUM_WR_CLIENTS;
@@ -165,7 +162,7 @@ module example_top #
     localparam C_INIT_ADDR_WTH          = C_NUM_RD_CLIENTS * `AXI_ADDR_WTH;
     localparam C_INIT_LEN_WTH           = C_NUM_RD_CLIENTS * `AXI_LEN_WTH;  
     localparam C_INIT_DATA_WTH          = C_NUM_RD_CLIENTS * `AXI_DATA_WTH;
-
+    
 
     //-----------------------------------------------------------------------------------------------------------------------------------------------
     // Local Variables
@@ -226,6 +223,9 @@ module example_top #
     logic                                init_wr_data_vld    ;
     logic                                init_wr_data_rdy    ;
     logic                                init_wr_cmpl  	     ;
+
+
+
 
 
   wire [APP_ADDR_WIDTH-1:0]            c0_ddr4_app_addr;
@@ -304,6 +304,12 @@ module example_top #
   assign c0_data_compare_error = c0_ddr4_data_msmatch_err | c0_ddr4_write_err | c0_ddr4_read_err;
 
 
+  // Debug Bus
+  wire [511:0]                         dbg_bus;        
+
+
+
+
 
 wire c0_ddr4_reset_n_int;
   assign c0_ddr4_reset_n = c0_ddr4_reset_n_int;
@@ -342,29 +348,6 @@ ddr4 u_ddr4
    .c0_ddr4_ui_clk                (c0_ddr4_clk),
    .c0_ddr4_ui_clk_sync_rst       (c0_ddr4_rst),
    .dbg_clk                                    (dbg_clk),
-     // AXI CTRL port
-     .c0_ddr4_s_axi_ctrl_awvalid       (1'b0),
-     .c0_ddr4_s_axi_ctrl_awready       (),
-     .c0_ddr4_s_axi_ctrl_awaddr        (32'b0),
-     // Slave Interface Write Data Ports
-     .c0_ddr4_s_axi_ctrl_wvalid        (1'b0),
-     .c0_ddr4_s_axi_ctrl_wready        (),
-     .c0_ddr4_s_axi_ctrl_wdata         (32'b0),
-     // Slave Interface Write Response Ports
-     .c0_ddr4_s_axi_ctrl_bvalid        (),
-     .c0_ddr4_s_axi_ctrl_bready        (1'b1),
-     .c0_ddr4_s_axi_ctrl_bresp         (),
-     // Slave Interface Read Address Ports
-     .c0_ddr4_s_axi_ctrl_arvalid       (1'b0),
-     .c0_ddr4_s_axi_ctrl_arready       (),
-     .c0_ddr4_s_axi_ctrl_araddr        (32'b0),
-     // Slave Interface Read Data Ports
-     .c0_ddr4_s_axi_ctrl_rvalid        (),
-     .c0_ddr4_s_axi_ctrl_rready        (1'b1),
-     .c0_ddr4_s_axi_ctrl_rdata         (),
-     .c0_ddr4_s_axi_ctrl_rresp         (),
-     // Interrupt output
-     .c0_ddr4_interrupt                (),
   // Slave Interface Write Address Ports
   .c0_ddr4_aresetn                     (c0_ddr4_aresetn),
   .c0_ddr4_s_axi_awid                  (c0_ddr4_s_axi_awid),
@@ -416,11 +399,10 @@ ddr4 u_ddr4
    always @(posedge c0_ddr4_clk) begin
      c0_ddr4_aresetn <= ~c0_ddr4_rst;
    end
-
-
-
-    axi_interconnect 
-    i0_axi_interconnect (
+   
+   
+   axi_interconnect 
+   i0_axi_interconnect (
         .INTERCONNECT_ACLK      ( c0_ddr4_clk                                        ),  
         .INTERCONNECT_ARESETN   ( c0_ddr4_rst                                        ),  
         .S00_AXI_ARESET_OUT_N   (                                                    ),  
@@ -758,7 +740,4 @@ ddr4 u_ddr4
         .init_wr_data_rdy     ( init_wr_data_rdy  ),
         .init_wr_cmpl         ( init_wr_cmpl      )
 	);
-
-
 endmodule
-
