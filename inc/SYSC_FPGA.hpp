@@ -58,23 +58,23 @@ SC_MODULE(SYSC_FPGA)
         cnn_layer_accel->init_rd_req_id(init_rd_req_id);
         cnn_layer_accel->init_rd_addr(init_rd_addr);
         cnn_layer_accel->init_rd_len(init_rd_len);
-        init_rd_req_ack(cnn_layer_accel->init_rd_req_ack);
+        cnn_layer_accel->init_rd_req_ack(init_rd_req_ack);
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
-        init_rd_data(cnn_layer_accel->init_rd_data);
-        init_rd_data_vld(cnn_layer_accel->init_rd_data_vld);
+        cnn_layer_accel->init_rd_data(init_rd_data);
+        cnn_layer_accel->init_rd_data_vld(init_rd_data_vld);
         cnn_layer_accel->init_rd_data_rdy(init_rd_data_rdy);
-        init_rd_cmpl(cnn_layer_accel->init_rd_cmpl);
+        cnn_layer_accel->init_rd_cmpl(init_rd_cmpl);
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
         cnn_layer_accel->init_wr_req(init_wr_req);
         cnn_layer_accel->init_wr_req_id(init_wr_req_id);
         cnn_layer_accel->init_wr_addr(init_wr_addr);
         cnn_layer_accel->init_wr_len(init_wr_len);
-        init_wr_req_ack(cnn_layer_accel->init_wr_req_ack);
+        cnn_layer_accel->init_wr_req_ack(init_wr_req_ack);
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
         cnn_layer_accel->init_wr_data(init_wr_data);
         cnn_layer_accel->init_wr_data_vld(init_wr_data_vld);
-        init_wr_data_rdy(cnn_layer_accel->init_wr_data_rdy);
-        init_wr_cmpl(cnn_layer_accel->init_wr_cmpl);
+        cnn_layer_accel->init_wr_data_rdy(init_wr_data_rdy);
+        cnn_layer_accel->init_wr_cmpl(init_wr_cmpl);
 #endif
 
 	    SC_THREAD(main)

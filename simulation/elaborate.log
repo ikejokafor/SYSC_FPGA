@@ -1,5 +1,5 @@
 QuestaSim-64 vopt 2019.4_2 Compiler 2019.12 Dec  7 2019
-Start time: 18:30:31 on Oct 11,2021
+Start time: 18:53:38 on Oct 11,2021
 vopt -reportprogress 300 "+acc" -l elaborate.log -L xil_defaultlib -L xpm -L microblaze_v11_0_0 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L lmb_v10_v3_0_9 -L lmb_bram_if_cntlr_v4_0_15 -L blk_mem_gen_v8_4_2 -L iomodule_v3_1_4 -L unisims_ver -L unimacro_ver -L secureip -L accel_infst_common -L axi_interconnect_v1_7_15 -work work work.sim_tb_top work.glbl -o sim_tb_top_opt 
 
 Top level modules:
@@ -127,7 +127,6 @@ Analyzing design...
 ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
 ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
 ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
 ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
 ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
 ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
@@ -186,7 +185,6 @@ Analyzing design...
 ** Warning: (vopt-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_cmpl is not bound to any channel.
 ** Warning: (vopt-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_data_vld is not bound to any channel.
 ** Warning: (vopt-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_data is not bound to any channel.
-** Warning: (vopt-6627) Port /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_req_ack is not bound to any channel.
 Optimizing 347 design-units (inlining 0/1164 module instances, 0/1693 cell instances, 151/151 UDP instances, 0/41 systemc instances):
 -- Optimizing module unisims_ver.LUT4(fast__10)
 -- Optimizing module unisims_ver.LUT4(fast__11)
@@ -260,9 +258,6 @@ Optimizing 347 design-units (inlining 0/1164 module instances, 0/1693 cell insta
 -- Optimizing module unisims_ver.LUT3(fast__13)
 -- Optimizing module unisims_ver.LUT3(fast__14)
 -- Optimizing module unisims_ver.LUT3(fast__15)
--- Optimizing module xil_defaultlib.ddr4_v2_2_6_ui_rd_data(fast)
--- Optimizing module xil_defaultlib.ddr4_v2_2_6_mc_ecc_dec_fix(fast)
--- Optimizing module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_si_transactor(fast)
 -- Optimizing module unisims_ver.LUT6(fast__8)
 -- Optimizing module unisims_ver.LUT6(fast__9)
 -- Optimizing module unisims_ver.LUT6(fast__10)
@@ -328,6 +323,9 @@ Optimizing 347 design-units (inlining 0/1164 module instances, 0/1693 cell insta
 -- Optimizing module unisims_ver.LUT4(fast__7)
 -- Optimizing module unisims_ver.LUT4(fast__8)
 -- Optimizing module unisims_ver.LUT4(fast__9)
+-- Optimizing module xil_defaultlib.ddr4_v2_2_6_ui_rd_data(fast)
+-- Optimizing module xil_defaultlib.ddr4_v2_2_6_mc_ecc_dec_fix(fast)
+-- Optimizing module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_si_transactor(fast)
 -- Optimizing module unisims_ver.LUT6_2(fast__3)
 -- Optimizing module unisims_ver.LUT6_2(fast__4)
 -- Optimizing module unisims_ver.LUT6_2(fast__5)
@@ -541,5 +539,5 @@ Optimizing 347 design-units (inlining 0/1164 module instances, 0/1693 cell insta
 -- Optimizing interface DDR4_if(fast)
 -- Optimizing interface xil_defaultlib.DDR4_if(fast)
 Optimized design name is sim_tb_top_opt
-End time: 18:30:42 on Oct 11,2021, Elapsed time: 0:00:11
-Errors: 0, Warnings: 23
+End time: 18:53:50 on Oct 11,2021, Elapsed time: 0:00:12
+Errors: 0, Warnings: 21
