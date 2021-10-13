@@ -13,7 +13,7 @@
 SC_MODULE(SYSC_FPGA)
 {
 	public:
-#ifdef DDR_AXI_MEMORY
+#ifdef DDR_AXI_MEM_SIM
     sc_core::sc_in<bool>						 clk				    ;
     sc_core::sc_in<bool>						 rst				    ;
     // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
@@ -46,13 +46,13 @@ SC_MODULE(SYSC_FPGA)
     CNN_Layer_Accel* cnn_layer_accel;
 
     SC_CTOR(SYSC_FPGA)
-#ifndef DDR_AXI_MEMORY
+#ifndef DDR_AXI_MEM_SIM
 		: 	clk("clk", CLK_PRD, sc_core::SC_NS)
 #endif
     {
         cnn_layer_accel = new CNN_Layer_Accel("CNN_Layer_Accel");
         cnn_layer_accel->clk(clk);
-#ifdef DDR_AXI_MEMORY
+#ifdef DDR_AXI_MEM_SIM
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
         cnn_layer_accel->init_rd_req(init_rd_req);
         cnn_layer_accel->init_rd_req_id(init_rd_req_id);

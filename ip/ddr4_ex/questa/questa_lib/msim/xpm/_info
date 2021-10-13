@@ -1,0 +1,33 @@
+m255
+K4
+z2
+!s11e vcom 2019.4_2 2019.12, Dec  7 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/questa
+Pvcomponents
+DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 -1
+w1544171246
+R0
+8/home/software/vivado-2018.3/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd
+F/home/software/vivado-2018.3/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd
+l0
+L11
+VlhV^ehJPi4OAP;>^9??DR0
+!s100 ;>SEeaBPYBj8[m7>ack7Q3
+OL;C;2019.4_2;69
+31
+!s110 1634162521
+!i10b 1
+!s108 1634162521.000000
+!s90 -reportprogress|300|-work|xpm|-64|-93|/home/software/vivado-2018.3/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd|
+!s107 /home/software/vivado-2018.3/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd|
+!i113 0
+o-work xpm -64 -93
+tExplicit 1 CvgOpt 0

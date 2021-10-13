@@ -370,6 +370,40 @@ ddr4 u_ddr4
 
 
 
+// `define AXI_ID_WTH          3
+// `define AXI_ADDR_WTH        32
+// `define AXI_LEN_WTH         8
+// `define AXI_DATA_WTH        512 
+// `define AXI_RESP_WTH        2
+// `define AXI_BR_WTH          4  
+// `define AXI_MX_BT_SZ        (`AXI_DATA_WTH << 3)
+// `define AXI_SZ_WTH          ($clog2(`AXI_DATA_WTH))
+// `define AXI_WSTRB_WTH       (`AXI_MX_BT_SZ)
+// 
+//         assign c0_ddr4_s_axi_arvalid	= 0;
+//         assign c0_ddr4_s_axi_araddr     = 0;
+//         assign c0_ddr4_s_axi_arid       = 0;
+//         assign c0_ddr4_s_axi_arburst    = 0;
+//         assign c0_ddr4_s_axi_arsize     = 0;
+//         assign c0_ddr4_s_axi_arlen      = 0;
+//         assign c0_ddr4_s_axi_rready     = 0;
+//         assign c0_ddr4_s_axi_awvalid    = 0;
+//         assign c0_ddr4_s_axi_awaddr     = 0;
+//         assign c0_ddr4_s_axi_awid       = 0;
+//         assign c0_ddr4_s_axi_awburst    = 0;
+//         assign c0_ddr4_s_axi_awsize     = 0;
+//         assign c0_ddr4_s_axi_awlen      = 0;
+//         assign c0_ddr4_s_axi_wvalid     = 0;
+//         assign c0_ddr4_s_axi_wstrb      = 0;
+//         assign c0_ddr4_s_axi_wdata      = 0;
+//         assign c0_ddr4_s_axi_bready     = 0;
+//         assign c0_ddr4_s_axi_wlast      = 0;
+//         assign  c0_ddr4_s_axi_arcache = 0;
+//         
+//     assign c0_ddr4_s_axi_awcache = 0;
+//     assign c0_ddr4_s_axi_awprot = 0;
+
+
 //***************************************************************************
 // The AXI testbench module instantiated below drives traffic (patterns)
 // on the application interface of the memory controller
