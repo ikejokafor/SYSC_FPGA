@@ -227,6 +227,7 @@ module example_top #
     logic                                init_wr_data_rdy    ;
     logic                                init_wr_cmpl  	     ;
 
+    logic                                ce                  ;
 
   wire [APP_ADDR_WIDTH-1:0]            c0_ddr4_app_addr;
   wire [2:0]            c0_ddr4_app_cmd;
@@ -673,6 +674,7 @@ ddr4 u_ddr4
     ) 
     i0_cnn_layer_accel_axi_bridge (
         .clk				 ( c0_ddr4_clk          ),
+        .ce                  ( ce                   ),
         .rst				 ( c0_ddr4_rst          ),
         // AXI Write Address Ports      
         .axi_awready		 ( axi_awready          ), // Indicates slave is ready to accept a 
@@ -733,34 +735,44 @@ ddr4 u_ddr4
     );
 
 
-    // SYSC_FPGA
-    // i0_SYSC_FPGA (
-	// 	.clk                  ( c0_ddr4_clk			),
-	// 	.rst				  ( c0_ddr4_rst			),
-    //     // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
-    //     .init_rd_req          ( init_rd_req        ),
-    //     .init_rd_req_id       ( init_rd_req_id     ),
-    //     .init_rd_addr         ( init_rd_addr       ),
-    //     .init_rd_len          ( init_rd_len        ),
-    //     .init_rd_req_ack      ( init_rd_req_ack    ),
-    //     // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
-    //     .init_rd_data         ( init_rd_data       ),
-    //     .init_rd_data_vld     ( init_rd_data_vld   ),
-    //     .init_rd_data_rdy     ( init_rd_data_rdy   ),
-    //     .init_rd_cmpl         ( init_rd_cmpl       ),
-    //     // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
-    //     .init_wr_req          ( init_wr_req       ),
-    //     .init_wr_req_id       ( init_wr_req_id    ),
-    //     .init_wr_addr         ( init_wr_addr      ),
-    //     .init_wr_len          ( init_wr_len       ),
-    //     .init_wr_req_ack      ( init_wr_req_ack   ),
-    //     // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------   
-    //     .init_wr_data         ( init_wr_data      ),
-    //     .init_wr_data_vld     ( init_wr_data_vld  ),
-    //     .init_wr_data_rdy     ( init_wr_data_rdy  ),
-    //     .init_wr_cmpl         ( init_wr_cmpl      )
-	// );
-
+    SYSC_FPGA
+    i0_SYSC_FPGA (
+		.clk                  ( c0_ddr4_clk			),
+        .ce                   ( ce                  ),
+		.rst				  ( c0_ddr4_rst			),
+        // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
+        .init_rd_req          ( init_rd_req        ),
+        .init_rd_req_id       ( init_rd_req_id     ),
+        .init_rd_addr         ( init_rd_addr       ),
+        .init_rd_len          ( init_rd_len        ),
+        .init_rd_req_ack      ( init_rd_req_ack    ),
+        // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
+        .init_rd_data         ( init_rd_data       ),
+        .init_rd_data_vld     ( init_rd_data_vld   ),
+        .init_rd_data_rdy     ( init_rd_data_rdy   ),
+        .init_rd_cmpl         ( init_rd_cmpl       ),
+        // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
+        .init_wr_req          ( init_wr_req       ),
+        .init_wr_req_id       ( init_wr_req_id    ),
+        .init_wr_addr         ( init_wr_addr      ),
+        .init_wr_len          ( init_wr_len       ),
+        .init_wr_req_ack      ( init_wr_req_ack   ),
+        // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------   
+        .init_wr_data         ( init_wr_data      ),
+        .init_wr_data_vld     ( init_wr_data_vld  ),
+        .init_wr_data_rdy     ( init_wr_data_rdy  ),
+        .init_wr_cmpl         ( init_wr_cmpl      )
+	);
+    
+    assign ce = sys_rdy;
+    
+    always@(posedge c0_sys_clk_p) begin
+        if(sys_rst) begin
+            sys_rdy <= 0;
+        end else if(c0_init_calib_complete && c0_ddr4_reset_n) begin
+            sys_rdy <= 1;
+        end
+    end
 
 endmodule
 

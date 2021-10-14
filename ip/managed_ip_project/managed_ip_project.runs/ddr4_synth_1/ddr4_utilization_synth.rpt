@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Fri Oct  1 12:49:02 2021
+| Date         : Thu Oct 14 18:07:23 2021
 | Host         : e5-cse-322-16 running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_utilization -file ddr4_utilization_synth.rpt -pb ddr4_utilization_synth.pb
 | Design       : ddr4
@@ -169,7 +169,7 @@ Table of Contents
 |     Ref Name     |  Used | Functional Category |
 +------------------+-------+---------------------+
 | FDRE             | 21227 |            Register |
-| LUT6             |  7563 |                 CLB |
+| LUT6             |  7562 |                 CLB |
 | LUT3             |  6093 |                 CLB |
 | LUT4             |  3860 |                 CLB |
 | LUT5             |  3525 |                 CLB |
@@ -179,7 +179,7 @@ Table of Contents
 | SRLC32E          |   519 |                 CLB |
 | FDSE             |   502 |            Register |
 | MUXF7            |   435 |                 CLB |
-| LUT1             |   433 |                 CLB |
+| LUT1             |   434 |                 CLB |
 | RXTX_BITSLICE    |   116 |                 I/O |
 | IBUFCTRL         |    91 |              Others |
 | SRL16E           |    89 |                 CLB |

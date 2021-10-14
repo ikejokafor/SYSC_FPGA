@@ -29,7 +29,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/managed_ip_project/managed_ip_project.cache/wt [current_project]
 set_property parent.project_path /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/managed_ip_project/managed_ip_project.xpr [current_project]
-set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/managed_ip_project/managed_ip_project.cache/ip [current_project]

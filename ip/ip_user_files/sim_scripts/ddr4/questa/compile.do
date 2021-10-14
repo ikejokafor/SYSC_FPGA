@@ -22,6 +22,7 @@ vmap blk_mem_gen_v8_4_2 questa_lib/msim/blk_mem_gen_v8_4_2
 vmap iomodule_v3_1_4 questa_lib/msim/iomodule_v3_1_4
 
 vlog -work xil_defaultlib -64 -sv "+incdir+../../../../ddr4/ip_1/rtl/map" "+incdir+../../../../ddr4/rtl/ip_top" "+incdir+../../../../ddr4/rtl/cal" \
+"/home/software/vivado-2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 "/home/software/vivado-2018.3/Vivado/2018.3/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm -64 -93 \

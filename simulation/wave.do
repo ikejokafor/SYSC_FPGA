@@ -1,87 +1,168 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/clk
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_adder_tree_rdv_count
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_AWP_complt_arr
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_co_high_watermark_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_complete
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_complete_ack
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_conv_out_fmt0_cfg
-add wave -noupdate -group FAS -radix unsigned /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_convMap_bram_sz
-add wave -noupdate -group FAS -radix unsigned /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_dpth_count
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_FAS_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_FAS_id
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_five_cycles_later
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_four_cycles_later
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_inMapAddrArr
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_inMapDepthFetchAmt
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_inMapFetchCount
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_inMapFetchFactor_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_inMapFetchTotal_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_krnl1x1_pad_bgn_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_krnl1x1_pad_end_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_krnl1x1_pding_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_krnl1x1Addr_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_krnl1x1BiasAddr_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_krnl1x1BiasFetchCount
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_krnl1x1BiasFetchTotal_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_krnl1x1Depth_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_krnl1x1FetchCount
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_krnl1x1FetchTotal_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_krnl3x3AddrArr
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_krnl3x3BiasAddrArr
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_krnl3x3BiasFetchCount
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_krnl3x3BiasFetchTotal_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_krnl3x3FetchCount
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_krnl3x3FetchTotal_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_krnl_1x1_bias_bram_sz
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_krnl_1x1_bram_sz
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_krnl_count
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_last_CO_recvd
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_last_wrt
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_mem_mng
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_num_1x1_kernels_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_num_QUAD_cfgd
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_ob_dwc_fifo_sz
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_opcode_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_outBuf_fifo_sz
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_outMapAddr_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_outMapStoreCount
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_outMapStoreFactor_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_outMapStoreTotal_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_partMap_bram_sz
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_partMapAddr_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_partMapFetchCount
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_partMapFetchTotal_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_pixelSeqAddr_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_pixSeqCfgFetchTotal_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_pm_fetch_amount_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_pm_low_watermark_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_prevMap_dwc_fifo_sz
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_prevMap_fifo_sz
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_prevMapFetchCount
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_prevMapFetchTotal_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_prog_factor
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_pv_fetch_amount_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_pv_low_watermark_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_QUAD_en_arr
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_resdMap_bram_sz
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_resdMap_dwc_fifo_sz
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_resdMapAddr_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_resdMapFetchCount
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_resdMapFetchTotal_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_rm_fetch_amount_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_rm_low_watermark_cfg
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_start
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_start_ack
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_state
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_three_cycles_later
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_trans_fifo
-add wave -noupdate -group FAS /testbench/i0_SYSC_FPGA/CNN_Layer_Accel/FAS_0/m_two_cycles_later
+add wave -noupdate /sim_tb_top/u_example_top/APP_ADDR_WIDTH
+add wave -noupdate /sim_tb_top/u_example_top/APP_DATA_WIDTH
+add wave -noupdate /sim_tb_top/u_example_top/APP_MASK_WIDTH
+add wave -noupdate /sim_tb_top/u_example_top/axi_araddr
+add wave -noupdate /sim_tb_top/u_example_top/axi_arburst
+add wave -noupdate /sim_tb_top/u_example_top/axi_arid
+add wave -noupdate /sim_tb_top/u_example_top/axi_arlen
+add wave -noupdate /sim_tb_top/u_example_top/axi_arready
+add wave -noupdate /sim_tb_top/u_example_top/axi_arsize
+add wave -noupdate /sim_tb_top/u_example_top/axi_arvalid
+add wave -noupdate /sim_tb_top/u_example_top/axi_awaddr
+add wave -noupdate /sim_tb_top/u_example_top/axi_awburst
+add wave -noupdate /sim_tb_top/u_example_top/axi_awid
+add wave -noupdate /sim_tb_top/u_example_top/axi_awlen
+add wave -noupdate /sim_tb_top/u_example_top/axi_awready
+add wave -noupdate /sim_tb_top/u_example_top/axi_awsize
+add wave -noupdate /sim_tb_top/u_example_top/axi_awvalid
+add wave -noupdate /sim_tb_top/u_example_top/axi_bid
+add wave -noupdate /sim_tb_top/u_example_top/axi_bready
+add wave -noupdate /sim_tb_top/u_example_top/axi_bresp
+add wave -noupdate /sim_tb_top/u_example_top/axi_bvalid
+add wave -noupdate /sim_tb_top/u_example_top/axi_rdata
+add wave -noupdate /sim_tb_top/u_example_top/axi_rid
+add wave -noupdate /sim_tb_top/u_example_top/axi_rlast
+add wave -noupdate /sim_tb_top/u_example_top/axi_rready
+add wave -noupdate /sim_tb_top/u_example_top/axi_rresp
+add wave -noupdate /sim_tb_top/u_example_top/axi_rvalid
+add wave -noupdate /sim_tb_top/u_example_top/axi_wdata
+add wave -noupdate /sim_tb_top/u_example_top/axi_wlast
+add wave -noupdate /sim_tb_top/u_example_top/axi_wready
+add wave -noupdate /sim_tb_top/u_example_top/axi_wstrb
+add wave -noupdate /sim_tb_top/u_example_top/axi_wvalid
+add wave -noupdate /sim_tb_top/u_example_top/c0_data_compare_error
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_act_n
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_adr
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_app_addr
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_app_cmd
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_app_en
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_app_rd_data
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_app_rd_data_end
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_app_rd_data_valid
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_app_rdy
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_app_wdf_data
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_app_wdf_end
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_app_wdf_mask
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_app_wdf_rdy
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_app_wdf_wren
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_aresetn
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_ba
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_bg
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_ck_c
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_ck_t
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_cke
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_clk
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_cmp_data
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_cmp_data_valid
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_cmptd_one_wr_rd
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_cs_n
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_data_msmatch_err
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_dbg_rd_sts
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_dbg_rd_sts_vld
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_dbg_wr_sts
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_dbg_wr_sts_vld
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_dm_dbi_n
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_dq
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_dqs_c
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_dqs_t
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_odt
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_rdata_cmp
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_read_cmptd
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_read_err
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_reset_n
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_reset_n_int
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_rst
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_araddr
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_arburst
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_arcache
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_arid
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_arlen
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_arready
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_arsize
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_arvalid
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_awaddr
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_awburst
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_awcache
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_awid
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_awlen
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_awprot
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_awready
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_awsize
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_awvalid
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_bid
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_bready
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_bresp
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_bvalid
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_rdata
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_rid
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_rlast
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_rready
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_rresp
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_rvalid
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_wdata
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_wlast
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_wready
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_wstrb
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_s_axi_wvalid
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_test_cmptd
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_write_cmptd
+add wave -noupdate /sim_tb_top/u_example_top/c0_ddr4_write_err
+add wave -noupdate /sim_tb_top/u_example_top/c0_init_calib_complete
+add wave -noupdate /sim_tb_top/u_example_top/c0_sys_clk_n
+add wave -noupdate /sim_tb_top/u_example_top/c0_sys_clk_p
+add wave -noupdate /sim_tb_top/u_example_top/c0_wr_rd_complete
+add wave -noupdate /sim_tb_top/u_example_top/C_AXI_ADDR_WIDTH
+add wave -noupdate /sim_tb_top/u_example_top/C_AXI_ADDR_WTH
+add wave -noupdate /sim_tb_top/u_example_top/C_AXI_BR_WTH
+add wave -noupdate /sim_tb_top/u_example_top/C_AXI_DATA_WIDTH
+add wave -noupdate /sim_tb_top/u_example_top/C_AXI_DATA_WTH
+add wave -noupdate /sim_tb_top/u_example_top/C_AXI_ID_WIDTH
+add wave -noupdate /sim_tb_top/u_example_top/C_AXI_ID_WTH
+add wave -noupdate /sim_tb_top/u_example_top/C_AXI_LEN_WTH
+add wave -noupdate /sim_tb_top/u_example_top/C_AXI_NBURST_SUPPORT
+add wave -noupdate /sim_tb_top/u_example_top/C_AXI_RESP_WTH
+add wave -noupdate /sim_tb_top/u_example_top/C_AXI_SZ_WTH
+add wave -noupdate /sim_tb_top/u_example_top/C_AXI_WSTRB_WTH
+add wave -noupdate /sim_tb_top/u_example_top/C_INIT_ADDR_WTH
+add wave -noupdate /sim_tb_top/u_example_top/C_INIT_DATA_WTH
+add wave -noupdate /sim_tb_top/u_example_top/C_INIT_ID_WTH
+add wave -noupdate /sim_tb_top/u_example_top/C_INIT_LEN_WTH
+add wave -noupdate /sim_tb_top/u_example_top/C_NUM_RD_CLIENTS
+add wave -noupdate /sim_tb_top/u_example_top/C_NUM_TOTAL_CLIENTS
+add wave -noupdate /sim_tb_top/u_example_top/C_NUM_WR_CLIENTS
+add wave -noupdate /sim_tb_top/u_example_top/dbg_bus
+add wave -noupdate /sim_tb_top/u_example_top/dbg_clk
+add wave -noupdate /sim_tb_top/u_example_top/DBG_RD_STS_WIDTH
+add wave -noupdate /sim_tb_top/u_example_top/DBG_WR_STS_WIDTH
+add wave -noupdate /sim_tb_top/u_example_top/ECC
+add wave -noupdate /sim_tb_top/u_example_top/init_rd_addr
+add wave -noupdate /sim_tb_top/u_example_top/init_rd_cmpl
+add wave -noupdate /sim_tb_top/u_example_top/init_rd_data
+add wave -noupdate /sim_tb_top/u_example_top/init_rd_data_rdy
+add wave -noupdate /sim_tb_top/u_example_top/init_rd_data_vld
+add wave -noupdate /sim_tb_top/u_example_top/init_rd_len
+add wave -noupdate /sim_tb_top/u_example_top/init_rd_req
+add wave -noupdate /sim_tb_top/u_example_top/init_rd_req_ack
+add wave -noupdate /sim_tb_top/u_example_top/init_rd_req_id
+add wave -noupdate /sim_tb_top/u_example_top/init_wr_addr
+add wave -noupdate /sim_tb_top/u_example_top/init_wr_cmpl
+add wave -noupdate /sim_tb_top/u_example_top/init_wr_data
+add wave -noupdate /sim_tb_top/u_example_top/init_wr_data_rdy
+add wave -noupdate /sim_tb_top/u_example_top/init_wr_data_vld
+add wave -noupdate /sim_tb_top/u_example_top/init_wr_len
+add wave -noupdate /sim_tb_top/u_example_top/init_wr_req
+add wave -noupdate /sim_tb_top/u_example_top/init_wr_req_ack
+add wave -noupdate /sim_tb_top/u_example_top/init_wr_req_id
+add wave -noupdate /sim_tb_top/u_example_top/MEM_ADDR_ORDER
+add wave -noupdate /sim_tb_top/u_example_top/nCK_PER_CLK
+add wave -noupdate /sim_tb_top/u_example_top/SIMULATION
+add wave -noupdate /sim_tb_top/u_example_top/sys_rst
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {3410 ns} 0}
-quietly wave cursor active 1
-configure wave -namecolwidth 190
+WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+quietly wave cursor active 0
+configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
 configure wave -signalnamewidth 1
@@ -95,4 +176,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {3324 ns} {3553 ns}
+WaveRestoreZoom {0 ps} {2335 ps}

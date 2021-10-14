@@ -15,6 +15,7 @@ SC_MODULE(SYSC_FPGA)
 	public:
 #ifdef DDR_AXI_MEM_SIM
     sc_core::sc_in<bool>						 clk				    ;
+    sc_core::sc_in<bool>                         ce                     ;
     sc_core::sc_in<bool>						 rst				    ;
     // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
     sc_core::sc_out<sc_bv<MAX_FAS_RD_REQ> >      init_rd_req            ;
@@ -54,6 +55,7 @@ SC_MODULE(SYSC_FPGA)
         cnn_layer_accel->clk(clk);
 #ifdef DDR_AXI_MEM_SIM
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
+        cnn_layer_accel->ce(ce);
         cnn_layer_accel->init_rd_req(init_rd_req);
         cnn_layer_accel->init_rd_req_id(init_rd_req_id);
         cnn_layer_accel->init_rd_addr(init_rd_addr);
