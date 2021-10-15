@@ -77,11 +77,14 @@ SC_MODULE(SYSC_FPGA)
         cnn_layer_accel->init_wr_data_vld(init_wr_data_vld);
         cnn_layer_accel->init_wr_data_rdy(init_wr_data_rdy);
         cnn_layer_accel->init_wr_cmpl(init_wr_cmpl);
+        SC_THREAD(b_wait_sys_boot)
+            sensitive << clk.posedge_event();
 #endif
 
 	    SC_THREAD(main)
             sensitive << clk.posedge_event();
 
+            
 		m_sysc_fpga_hndl    = reinterpret_cast<SYSC_FPGA_hndl*>(NULL);
 		m_pyld = new SYSC_FPGA_shim_pyld();
 		m_pyld->m_size = ACCL_META_OUTPUT_SIZE;
@@ -91,7 +94,9 @@ SC_MODULE(SYSC_FPGA)
 	~SYSC_FPGA();
     void start_of_simulation();
 	void main();
-
+#ifdef DDR_AXI_MEM_SIM    
+    void b_wait_sys_boot();
+#endif
     SYSC_FPGA_hndl* m_sysc_fpga_hndl;
     SYSC_FPGA_shim_pyld* m_pyld;
 };

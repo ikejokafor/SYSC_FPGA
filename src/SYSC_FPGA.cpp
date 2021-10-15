@@ -23,6 +23,21 @@ void SYSC_FPGA::start_of_simulation()
 }
 
 
+#ifdef DDR_AXI_MEM_SIM
+void SYSC_FPGA::b_wait_sys_boot()
+{
+    while(true)
+    {
+        wait();
+        if(ce->read() == 0x1)
+        {
+            break;
+        }
+    }
+}
+#endif
+
+
 void SYSC_FPGA::main()
 {
 	uint64_t addr;
@@ -33,9 +48,12 @@ void SYSC_FPGA::main()
 	double memPower;
 	double QUAD_time;
 	double FAS_time;
-
+#ifdef DDR_AXI_MEM_SIM
+    b_wait_sys_boot();
+#endif
 	while(true)
 	{
+
         wait();
 
         // SystemC config

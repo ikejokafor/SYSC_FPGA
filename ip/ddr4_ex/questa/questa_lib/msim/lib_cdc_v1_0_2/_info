@@ -1,0 +1,60 @@
+m255
+K4
+z2
+!s11e vcom 2019.4_2 2019.12, Dec  7 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/questa
+Ecdc_sync
+Z1 w1634249612
+Z2 DPx6 unisim 11 vcomponents 0 22 i3d]Ea8FD?VA7G@iPBVHF2
+Z3 DPx8 synopsys 10 attributes 0 22 liCm]LV3<lX4Zl>o6^8IV1
+Z4 DPx4 ieee 14 std_logic_misc 0 22 BLzBaQbXS>Q1z>5YO]m[52
+Z5 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 -1
+R0
+Z8 8/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.ip_user_files/ipstatic/hdl/lib_cdc_v1_0_rfs.vhd
+Z9 F/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.ip_user_files/ipstatic/hdl/lib_cdc_v1_0_rfs.vhd
+l0
+L64
+VNUZWCEQbB=ZNc9m`0[AoA1
+!s100 iFj<<?Q=`eGILa`gV?>l50
+Z10 OL;C;2019.4_2;69
+31
+Z11 !s110 1634307678
+!i10b 1
+Z12 !s108 1634307677.000000
+Z13 !s90 -reportprogress|300|-work|lib_cdc_v1_0_2|-64|-93|/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.ip_user_files/ipstatic/hdl/lib_cdc_v1_0_rfs.vhd|
+!s107 /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.ip_user_files/ipstatic/hdl/lib_cdc_v1_0_rfs.vhd|
+!i113 0
+Z14 o-work lib_cdc_v1_0_2 -64 -93
+Z15 tExplicit 1 CvgOpt 0
+Aimplementation
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 8 cdc_sync 0 22 NUZWCEQbB=ZNc9m`0[AoA1
+!i122 -1
+l136
+L106
+VVH]`Az8>CW8>NNiBGlV1:1
+!s100 bW^MR8e7Hk8nA`7D<8eFz2
+R10
+31
+R11
+!i10b 1
+R12
+R13
+Z16 !s107 /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4_ex/ddr4_ex.ip_user_files/ipstatic/hdl/lib_cdc_v1_0_rfs.vhd|
+!i113 0
+R14
+R15

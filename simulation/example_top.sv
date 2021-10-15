@@ -228,6 +228,7 @@ module example_top #
     logic                                init_wr_cmpl  	     ;
 
     logic                                ce                  ;
+    logic                                sys_rdy             ;
 
   wire [APP_ADDR_WIDTH-1:0]            c0_ddr4_app_addr;
   wire [2:0]            c0_ddr4_app_cmd;
@@ -766,7 +767,7 @@ ddr4 u_ddr4
     
     assign ce = sys_rdy;
     
-    always@(posedge c0_sys_clk_p) begin
+    always@(posedge c0_sys_clk_p or sys_rst) begin
         if(sys_rst) begin
             sys_rdy <= 0;
         end else if(c0_init_calib_complete && c0_ddr4_reset_n) begin

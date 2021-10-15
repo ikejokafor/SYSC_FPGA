@@ -11,5 +11,4 @@
     sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[6].ddr4_model.set_memory_warnings(0,0);
     sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[7].ddr4_model.set_memory_warnings(0,0);
     sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[8].ddr4_model.set_memory_warnings(0,0);
-
   end
