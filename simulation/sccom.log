@@ -1,6 +1,4 @@
-sccom -reportprogress -link -L/home/mdl/izo5011/IkennaWorkSpace/network/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/syscNetProto/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/espresso/build/debug/ -L/home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA_shim/build/debug/ -lsysc_fpga_shim -lsyscNetProto -lnetwork -lespresso 
-Start time: 13:22:27 on Oct 15,2021
+sccom -reportprogress -DMODEL_TECH -DDDR_AXI_MEM_SIM -DVERBOSE_DEBUG -std=c++1y -I /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/util/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/fixedPoint/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/espresso/inc/FPGA/ -I /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA_shim/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/network/inc/ -I /home/mdl/izo5011/IkennaWorkSpace/syscNetProto/inc/ /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWP.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/AWPBus.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/FAS.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/Interconnect.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/QUAD.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/CNN_Layer_accel.cpp /home/mdl/izo5011/IkennaWorkSpace/cnn_layer_accel/model/src/cnn_layer_accel_common.cpp /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/src/SYSC_FPGA.cpp 
+Start time: 16:52:33 on Oct 15,2021
 
 QuestaSim-64 sccom 2019.4_2 compiler 2019.12 Dec  7 2019
-End time: 13:22:29 on Oct 15,2021, Elapsed time: 0:00:02
-Errors: 0, Warnings: 0

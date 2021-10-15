@@ -196,7 +196,7 @@ vlog -64 -incr -sv -work work \
 
 
 # SYSC_FPGA
-sccom -DMODEL_TECH -DDDR_AXI_MEM_SIM -std=c++1y \
+sccom -DMODEL_TECH -DDDR_AXI_MEM_SIM -DVERBOSE_DEBUG -std=c++1y \
 	-I $env(WORKSPACE_PATH)/cnn_layer_accel/model/inc/ \
 	-I $env(WORKSPACE_PATH)/util/inc/ \
 	-I $env(WORKSPACE_PATH)/fixedPoint/inc/ \
