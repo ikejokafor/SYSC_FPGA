@@ -1,3 +1,5 @@
 build
 simulation/work
 simulation/questa_lib
+simulation/wlf*
+simulation/vsim.wlf
