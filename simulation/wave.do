@@ -59,7 +59,7 @@ add wave -noupdate -group TOP /sim_tb_top/u_example_top/init_rd_cmpl
 add wave -noupdate -group TOP /sim_tb_top/u_example_top/init_wr_req
 add wave -noupdate -group TOP /sim_tb_top/u_example_top/init_wr_req_id
 add wave -noupdate -group TOP /sim_tb_top/u_example_top/init_wr_addr
-add wave -noupdate -group TOP /sim_tb_top/u_example_top/init_wr_len
+add wave -noupdate -group TOP -radix decimal /sim_tb_top/u_example_top/init_wr_len
 add wave -noupdate -group TOP /sim_tb_top/u_example_top/init_wr_req_ack
 add wave -noupdate -group TOP /sim_tb_top/u_example_top/init_wr_data
 add wave -noupdate -group TOP /sim_tb_top/u_example_top/init_wr_data_vld
@@ -132,6 +132,78 @@ add wave -noupdate -group TOP /sim_tb_top/u_example_top/c0_ddr4_dbg_rd_sts_vld
 add wave -noupdate -group TOP /sim_tb_top/u_example_top/c0_ddr4_dbg_rd_sts
 add wave -noupdate -group TOP /sim_tb_top/u_example_top/dbg_bus
 add wave -noupdate -group TOP /sim_tb_top/u_example_top/c0_ddr4_reset_n_int
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_addr_rd_ack
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_addr_wr_ack
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_addr_wr_ackd
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_araddr
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_arburst
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_arid
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_arlen
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_arready
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_arsize
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_arvalid
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_awaddr
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_awburst
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_awid
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_awlen
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_awlen_r
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_awready
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_awsize
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_awvalid
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_bid
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_bready
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_bresp
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_bvalid
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_rdata
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_rid_m
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_rid_s
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_rlast
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_rlast_d
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_rready
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_rresp
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_rvalid
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_wdata
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_wlast
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_wr_ct
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_wready
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_wstrb
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/axi_wvalid
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/C_AXI_ADDR_WTH
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/C_AXI_BR_WTH
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/C_AXI_DATA_WTH
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/C_AXI_ID_WTH
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/C_AXI_LEN_WTH
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/C_AXI_RESP_WTH
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/C_AXI_SZ_WTH
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/C_AXI_WSTRB_WTH
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/C_INIT_ADDR_WTH
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/C_INIT_DATA_WTH
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/C_INIT_ID_WTH
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/C_INIT_LEN_WTH
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/C_NUM_RD_CLIENTS
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/C_NUM_TOTAL_CLIENTS
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/C_NUM_WR_CLIENTS
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/ce
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/clk
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/init_rd_addr
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/init_rd_cmpl
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/init_rd_data
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/init_rd_data_rdy
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/init_rd_data_vld
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/init_rd_len
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/init_rd_req
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/init_rd_req_ack
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/init_rd_req_id
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/init_wr_addr
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/init_wr_cmpl
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/init_wr_data
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/init_wr_data_rdy
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/init_wr_data_vld
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/init_wr_len
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/init_wr_req
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/init_wr_req_ack
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/init_wr_req_id
+add wave -noupdate -group BRG /sim_tb_top/u_example_top/i0_cnn_layer_accel_axi_bridge/rst
 add wave -noupdate -group CNN_Layer_AcceL_TOP /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/ce
 add wave -noupdate -group CNN_Layer_AcceL_TOP /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/clk
 add wave -noupdate -group CNN_Layer_AcceL_TOP /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/init_rd_addr
@@ -311,7 +383,7 @@ add wave -noupdate -group QUAD /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_
 add wave -noupdate -group QUAD /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/QUAD_0/m_stride_count
 add wave -noupdate -group QUAD /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/QUAD_0/m_upsmaple_cfg
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {2848750 ps} 0}
+WaveRestoreCursors {{Cursor 1} {11153782 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 216
 configure wave -valuecolwidth 100
@@ -327,4 +399,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {2519208 ps} {3097400 ps}
+WaveRestoreZoom {866525 ps} {14211566 ps}

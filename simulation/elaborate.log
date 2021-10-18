@@ -1,5 +1,5 @@
 QuestaSim-64 vopt 2019.4_2 Compiler 2019.12 Dec  7 2019
-Start time: 17:57:01 on Oct 16,2021
+Start time: 19:25:43 on Oct 18,2021
 vopt -reportprogress 300 "+acc" -l elaborate.log -L xil_defaultlib -L xpm -L microblaze_v11_0_0 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L lmb_v10_v3_0_9 -L lmb_bram_if_cntlr_v4_0_15 -L blk_mem_gen_v8_4_2 -L iomodule_v3_1_4 -L unisims_ver -L unimacro_ver -L secureip -L accel_infst_common -L axi_interconnect_v1_7_15 -work work work.sim_tb_top work.glbl -o sim_tb_top_opt 
 
 Top level modules:
@@ -129,7 +129,6 @@ Analyzing design...
 ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
 ** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
 ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
-** Warning: (vopt-3834) Instance 'm_prev_quad_ack' might be undebuggable.
 ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
 ** Warning: (vopt-6610) The variable m_QUAD_start referring to object /sim_tb_top/u_example_top/i0_SYSC_FPGA/CNN_Layer_Accel/AWP_0/event_queue_0 is not debuggable. Multiple module instances refer to this object, with at least one of the modules using pointer syntax. Only one reference will be visible for debug, all the other references will be undebuggable.
 -- Loading module glbl
@@ -255,6 +254,9 @@ Optimizing 342 design-units (inlining 0/1109 module instances, 0/1693 cell insta
 -- Optimizing module xil_defaultlib.ddr4_v2_2_6_cal_wr_bit(fast)
 -- Optimizing module accel_infst_common.SRL_bit(fast)
 ** Warning: ./verilog/SRL_bit.v(100): (vopt-2697) MSB -1 of part-select into 'shift_reg' is out of bounds.
+-- Optimizing module xil_defaultlib.ddr4_v2_2_6_ui_rd_data(fast)
+-- Optimizing module xil_defaultlib.ddr4_v2_2_6_mc_ecc_dec_fix(fast)
+-- Optimizing module xil_defaultlib.ddr4_v2_2_6_mc(fast)
 -- Optimizing module unisims_ver.LUT6(fast__11)
 -- Optimizing module unisims_ver.LUT6(fast__12)
 -- Optimizing module unisims_ver.LUT6(fast__13)
@@ -388,17 +390,27 @@ Optimizing 342 design-units (inlining 0/1109 module instances, 0/1693 cell insta
 -- Optimizing module xil_defaultlib.ddr4_v2_2_6_mc_ecc_gen(fast)
 -- Optimizing module unisims_ver.MMCME4_ADV(fast)
 -- Optimizing module xil_defaultlib.ddr4_v2_2_6_ui_wr_data(fast)
--- Optimizing module xil_defaultlib.ddr4_v2_2_6_ui_rd_data(fast)
--- Optimizing module xil_defaultlib.ddr4_v2_2_6_mc_ecc_dec_fix(fast)
--- Optimizing module xil_defaultlib.ddr4_v2_2_6_mc(fast)
+-- Optimizing module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axi_interconnect(fast)
+-- Optimizing module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_top(fast)
+-- Optimizing module xil_defaultlib.ddr4_v2_2_6_cal_addr_decode(fast)
+-- Optimizing module xil_defaultlib.ddr4_ddr4_mem_intfc(fast)
+-- Optimizing module xil_defaultlib.ddr4_phy_ddr4(fast)
+-- Optimizing module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_crossbar(fast)
+-- Optimizing module xil_defaultlib.ddr4_phy_v2_2_0_xiphy_behav(fast)
+-- Optimizing module xil_defaultlib.ddr4_v2_2_6_mc_ecc_merge_enc(fast)
+-- Optimizing module sim_tb_top(fast)
+-- Optimizing module xil_defaultlib.ddr4_v2_2_6_cal_top(fast)
+-- Optimizing module xil_defaultlib.ddr4_v2_2_6_cal(fast)
+-- Optimizing module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_converter_bank(fast)
+-- Optimizing module xil_defaultlib.ddr4_v2_2_6_mc_cmd_mux_ap(fast)
 -- Optimizing module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axi_crossbar(fast)
 -- Optimizing module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_register_slice_bank(fast__1)
--- Optimizing module xil_defaultlib.ddr4_ddr4(fast)
 -- Optimizing module cnn_layer_accel_axi_bridge(fast)
+-- Optimizing module xil_defaultlib.ddr4_ddr4(fast)
 -- Optimizing module xil_defaultlib.ddr4_v2_2_6_cal_cplx_data(fast)
 -- Optimizing module xil_defaultlib.ddr4_v2_2_6_cal_pi(fast)
--- Optimizing module xil_defaultlib.ddr4_v2_2_6_axi(fast)
 -- Optimizing module example_top(fast)
+-- Optimizing module xil_defaultlib.ddr4_v2_2_6_axi(fast)
 -- Optimizing module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_data_fifo_bank(fast__1)
 -- Optimizing module xil_defaultlib.ddr4_v2_2_6_cal_sync(fast__1)
 -- Optimizing module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axi_register_slice(fast)
@@ -476,19 +488,6 @@ Optimizing 342 design-units (inlining 0/1109 module instances, 0/1693 cell insta
 -- Optimizing module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_protocol_conv_bank(fast)
 -- Optimizing module unisims_ver.RAMB36E1(fast)
 -- Optimizing module xil_defaultlib.ddr4_v2_2_6_cal_sync(fast__8)
--- Optimizing module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_axi_interconnect(fast)
--- Optimizing module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_top(fast)
--- Optimizing module xil_defaultlib.ddr4_v2_2_6_cal_addr_decode(fast)
--- Optimizing module xil_defaultlib.ddr4_ddr4_mem_intfc(fast)
--- Optimizing module xil_defaultlib.ddr4_phy_ddr4(fast)
--- Optimizing module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_crossbar(fast)
--- Optimizing module xil_defaultlib.ddr4_phy_v2_2_0_xiphy_behav(fast)
--- Optimizing module xil_defaultlib.ddr4_v2_2_6_mc_ecc_merge_enc(fast)
--- Optimizing module sim_tb_top(fast)
--- Optimizing module xil_defaultlib.ddr4_v2_2_6_cal_top(fast)
--- Optimizing module xil_defaultlib.ddr4_v2_2_6_cal(fast)
--- Optimizing module axi_interconnect_v1_7_15.axi_interconnect_v1_7_15_converter_bank(fast)
--- Optimizing module xil_defaultlib.ddr4_v2_2_6_mc_cmd_mux_ap(fast)
 -- Optimizing package xil_defaultlib.arch_package(fast)
 -- Optimizing package arch_package(fast)
 -- Optimizing package xil_defaultlib.proj_package(fast)
@@ -528,5 +527,5 @@ Optimizing 342 design-units (inlining 0/1109 module instances, 0/1693 cell insta
 -- Optimizing interface DDR4_if(fast)
 -- Optimizing interface xil_defaultlib.DDR4_if(fast)
 Optimized design name is sim_tb_top_opt
-End time: 17:57:13 on Oct 16,2021, Elapsed time: 0:00:12
-Errors: 0, Warnings: 17
+End time: 19:25:55 on Oct 18,2021, Elapsed time: 0:00:12
+Errors: 0, Warnings: 16
