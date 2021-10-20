@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
--- Date        : Thu Oct 14 18:07:25 2021
+-- Date        : Tue Oct 19 16:56:41 2021
 -- Host        : e5-cse-322-16 running 64-bit Ubuntu 18.04.5 LTS
 -- Command     : write_vhdl -force -mode synth_stub /home/mdl/izo5011/IkennaWorkSpace/SYSC_FPGA/ip/ddr4/ddr4_stub.vhdl
 -- Design      : ddr4

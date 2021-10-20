@@ -1,4 +1,3 @@
-vlib questa_lib
 vlib questa_lib/work
 vlib questa_lib/msim
 

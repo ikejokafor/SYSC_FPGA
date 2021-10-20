@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Thu Oct 14 18:07:23 2021
+| Date         : Tue Oct 19 16:56:40 2021
 | Host         : e5-cse-322-16 running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_utilization -file ddr4_utilization_synth.rpt -pb ddr4_utilization_synth.pb
 | Design       : ddr4
@@ -40,8 +40,8 @@ Table of Contents
 |   LUT as Memory            |  1772 |     0 |    600960 |  0.29 |
 |     LUT as Distributed RAM |  1164 |     0 |           |       |
 |     LUT as Shift Register  |   608 |     0 |           |       |
-| CLB Registers              | 21732 |     0 |   2607360 |  0.83 |
-|   Register as Flip Flop    | 21731 |     0 |   2607360 |  0.83 |
+| CLB Registers              | 21684 |     0 |   2607360 |  0.83 |
+|   Register as Flip Flop    | 21683 |     0 |   2607360 |  0.83 |
 |   Register as Latch        |     0 |     0 |   2607360 |  0.00 |
 |   Register as AND/OR       |     1 |     0 |   2607360 | <0.01 |
 | CARRY8                     |    56 |     0 |    162960 |  0.03 |
@@ -66,8 +66,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 2     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 502   |          Yes |         Set |            - |
-| 21227 |          Yes |       Reset |            - |
+| 499   |          Yes |         Set |            - |
+| 21182 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -168,18 +168,18 @@ Table of Contents
 +------------------+-------+---------------------+
 |     Ref Name     |  Used | Functional Category |
 +------------------+-------+---------------------+
-| FDRE             | 21227 |            Register |
-| LUT6             |  7562 |                 CLB |
-| LUT3             |  6093 |                 CLB |
-| LUT4             |  3860 |                 CLB |
-| LUT5             |  3525 |                 CLB |
+| FDRE             | 21182 |            Register |
+| LUT6             |  7552 |                 CLB |
+| LUT3             |  6014 |                 CLB |
+| LUT4             |  3838 |                 CLB |
+| LUT5             |  3514 |                 CLB |
 | RAMD32           |  1746 |                 CLB |
-| LUT2             |  1372 |                 CLB |
+| LUT2             |  1360 |                 CLB |
 | RAMS32           |   582 |                 CLB |
 | SRLC32E          |   519 |                 CLB |
-| FDSE             |   502 |            Register |
+| FDSE             |   499 |            Register |
+| LUT1             |   493 |                 CLB |
 | MUXF7            |   435 |                 CLB |
-| LUT1             |   434 |                 CLB |
 | RXTX_BITSLICE    |   116 |                 I/O |
 | IBUFCTRL         |    91 |              Others |
 | SRL16E           |    89 |                 CLB |

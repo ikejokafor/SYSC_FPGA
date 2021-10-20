@@ -112,7 +112,7 @@ module sim_tb_top;
   // Input clock is assumed to be equal to the memory clock frequency
   // User should change the parameter as necessary if a different input
   // clock frequency is used
-  localparam real CLKIN_PERIOD_NS = 2500 / 1000.0;
+  localparam real CLKIN_PERIOD_NS = 10000 / 1000.0;
 
   //initial begin
   //   $shm_open("waves.shm");
@@ -157,7 +157,7 @@ module sim_tb_top;
   reg  [31:0] cmdName;
   bit  en_model;
   tri        model_enable = en_model;
-  
+
   initial begin
     #1ps;         //(any time here should work, as long as it is before the writes)
     sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[0].ddr4_model.set_memory_warnings(0,0);
@@ -170,8 +170,6 @@ module sim_tb_top;
     sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[7].ddr4_model.set_memory_warnings(0,0);
     sim_tb_top.mem_model_x8.memModels_Ri1[0].memModel1[8].ddr4_model.set_memory_warnings(0,0);
   end
-
-
 
   //**************************************************************************//
   // Reset Generation
@@ -194,7 +192,7 @@ module sim_tb_top;
   initial
     sys_clk_i = 1'b0;
   always
-    sys_clk_i = #(2500/2.0) ~sys_clk_i;
+    sys_clk_i = #(10000/2.0) ~sys_clk_i;
 
   assign c0_sys_clk_p = sys_clk_i;
   assign c0_sys_clk_n = ~sys_clk_i;

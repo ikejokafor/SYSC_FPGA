@@ -191,7 +191,7 @@ vlog -64 -incr -sv -work work \
     +incdir+$env(WORKSPACE_PATH)/accel_infst_common/hardware/verilog \
     $env(WORKSPACE_PATH)/SYSC_FPGA/ip/axi_interconnect/sim/axi_interconnect.v \
     $env(WORKSPACE_PATH)/cnn_layer_accel/hardware/verilog/rtl/cnn_layer_accel_axi_bridge.v \
-    ./example_top.sv
+    $env(WORKSPACE_PATH)/SYSC_FPGA/simulation/example_top.sv
 
 
 

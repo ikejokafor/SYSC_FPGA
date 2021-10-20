@@ -1,1 +1,1 @@
-Fixing bug with AXI signals not propagating correctly through interrconnect
+Fixing clocking issue. FAS now as correct clock and interconnect has correct ratios

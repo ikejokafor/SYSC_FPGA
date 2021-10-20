@@ -145,6 +145,7 @@ module example_top #
   localparam DBG_WR_STS_WIDTH      = 32;
   localparam DBG_RD_STS_WIDTH      = 32;
   localparam ECC                   = "ON";
+  localparam C_PERIOD_83MHz = 12; 
 
     localparam C_NUM_RD_CLIENTS         = 4;
     localparam C_NUM_WR_CLIENTS         = 1;
@@ -318,6 +319,16 @@ wire c0_ddr4_reset_n_int;
 // for connecting the memory controller to system.
 //***************************************************************************
 
+
+    clock_gen #(
+        .C_PERIOD(C_PERIOD_83MHz)
+    )
+    i0_clock_gen(
+        .clk_out(clk_FAS)
+    );
+    // clk_conv1x1
+    // clk_conv3x3
+
   // user design top is one instance for all controllers
 ddr4 u_ddr4
   (
@@ -427,8 +438,8 @@ ddr4 u_ddr4
         .INTERCONNECT_ACLK      ( c0_ddr4_clk                                        ),  
         .INTERCONNECT_ARESETN   ( c0_ddr4_aresetn                                    ),  
         .S00_AXI_ARESET_OUT_N   (                                                    ),  
-        .S00_AXI_ACLK           ( c0_ddr4_clk                                        ),  
-        .S00_AXI_AWID           ( 1'b1                                               ),
+        .S00_AXI_ACLK           ( clk_FAS                                            ),  
+        .S00_AXI_AWID           ( axi_awid[(0 * `AXI_ID_WTH) +: `AXI_ID_WTH]         ),
         .S00_AXI_AWADDR         ( axi_awaddr[(0 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),
         .S00_AXI_AWLEN          ( axi_awlen[(0 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),
         .S00_AXI_AWSIZE         ( 3'b011                                             ),  
@@ -467,8 +478,8 @@ ddr4 u_ddr4
         .S00_AXI_RREADY         ( axi_rready[0]                                      ), 
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
         .S01_AXI_ARESET_OUT_N   (                                                    ),  
-        .S01_AXI_ACLK           ( c0_ddr4_clk                                        ),  
-        .S01_AXI_AWID           ( 1'b1                                               ),
+        .S01_AXI_ACLK           ( clk_FAS                                            ),  
+        .S01_AXI_AWID           ( axi_awid[(1 * `AXI_ID_WTH) +: `AXI_ID_WTH]         ),
         .S01_AXI_AWADDR         ( axi_awaddr[(1 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),
         .S01_AXI_AWLEN          ( axi_awlen[(1 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),
         .S01_AXI_AWSIZE         ( 3'b011                                             ),  
@@ -507,8 +518,8 @@ ddr4 u_ddr4
         .S01_AXI_RREADY         ( axi_rready[1]                                      ),      
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
         .S02_AXI_ARESET_OUT_N   (                                                    ),  
-        .S02_AXI_ACLK           ( c0_ddr4_clk                                        ),  
-        .S02_AXI_AWID           ( 1'b1                                               ),
+        .S02_AXI_ACLK           ( clk_FAS                                            ),  
+        .S02_AXI_AWID           ( axi_awid[(2 * `AXI_ID_WTH) +: `AXI_ID_WTH]         ),
         .S02_AXI_AWADDR         ( axi_awaddr[(2 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),
         .S02_AXI_AWLEN          ( axi_awlen[(2 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),
         .S02_AXI_AWSIZE         ( 3'b011                                             ),  
@@ -547,8 +558,8 @@ ddr4 u_ddr4
         .S02_AXI_RREADY         ( axi_rready[2]                                      ),
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
         .S03_AXI_ARESET_OUT_N   (                                                    ),  
-        .S03_AXI_ACLK           ( c0_ddr4_clk                                        ),  
-        .S03_AXI_AWID           ( 1'b1                                               ),
+        .S03_AXI_ACLK           ( clk_FAS                                            ),  
+        .S03_AXI_AWID           ( axi_awid[(3 * `AXI_ID_WTH) +: `AXI_ID_WTH]         ),
         .S03_AXI_AWADDR         ( axi_awaddr[(3 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),
         .S03_AXI_AWLEN          ( axi_awlen[(3 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),
         .S03_AXI_AWSIZE         ( 3'b011                                             ),  
@@ -587,8 +598,8 @@ ddr4 u_ddr4
         .S03_AXI_RREADY         ( axi_rready[3]                                      ),    
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
         .S04_AXI_ARESET_OUT_N   (                                                    ),  
-        .S04_AXI_ACLK           ( c0_ddr4_clk                                        ),  
-        .S04_AXI_AWID           ( 1'b1                                               ),
+        .S04_AXI_ACLK           ( clk_FAS                                            ),  
+        .S04_AXI_AWID           ( axi_awid[(4 * `AXI_ID_WTH) +: `AXI_ID_WTH]         ),
         .S04_AXI_AWADDR         ( axi_awaddr[(4 * `AXI_ADDR_WTH) +: `AXI_ADDR_WTH]   ),
         .S04_AXI_AWLEN          ( axi_awlen[(4 * `AXI_LEN_WTH) +: `AXI_LEN_WTH]      ),
         .S04_AXI_AWSIZE         ( 3'b011                                             ),  
@@ -673,7 +684,7 @@ ddr4 u_ddr4
         .C_NUM_WR_CLIENTS( 1 )
     ) 
     i0_cnn_layer_accel_axi_bridge (
-        .clk				 ( c0_ddr4_clk          ),
+        .clk				 ( clk_FAS            ),
         .ce                  ( ce                   ),
         .rst				 ( c0_ddr4_rst          ),
         // AXI Write Address Ports      
@@ -738,31 +749,31 @@ ddr4 u_ddr4
 
     SYSC_FPGA
     i0_SYSC_FPGA (
-		.clk                  ( c0_ddr4_clk			),
+		.clk                  ( clk_FAS			    ),
         .ce                   ( ce                  ),
 		.rst				  ( c0_ddr4_rst			),
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------
-        .init_rd_req          ( init_rd_req        ),
-        .init_rd_req_id       ( init_rd_req_id     ),
-        .init_rd_addr         ( init_rd_addr       ),
-        .init_rd_len          ( init_rd_len        ),
-        .init_rd_req_ack      ( init_rd_req_ack    ),
+        .init_rd_req          ( init_rd_req         ),
+        .init_rd_req_id       ( init_rd_req_id      ),
+        .init_rd_addr         ( init_rd_addr        ),
+        .init_rd_len          ( init_rd_len         ),
+        .init_rd_req_ack      ( init_rd_req_ack     ),
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
-        .init_rd_data         ( init_rd_data       ),
-        .init_rd_data_vld     ( init_rd_data_vld   ),
-        .init_rd_data_rdy     ( init_rd_data_rdy   ),
-        .init_rd_cmpl         ( init_rd_cmpl       ),
+        .init_rd_data         ( init_rd_data        ),
+        .init_rd_data_vld     ( init_rd_data_vld    ),
+        .init_rd_data_rdy     ( init_rd_data_rdy    ),
+        .init_rd_cmpl         ( init_rd_cmpl        ),
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------    
-        .init_wr_req          ( init_wr_req       ),
-        .init_wr_req_id       ( init_wr_req_id    ),
-        .init_wr_addr         ( init_wr_addr      ),
-        .init_wr_len          ( init_wr_len       ),
-        .init_wr_req_ack      ( init_wr_req_ack   ),
+        .init_wr_req          ( init_wr_req         ),
+        .init_wr_req_id       ( init_wr_req_id      ),
+        .init_wr_addr         ( init_wr_addr        ),
+        .init_wr_len          ( init_wr_len         ),
+        .init_wr_req_ack      ( init_wr_req_ack     ),
         // BEGIN ----------------------------------------------------------------------------------------------------------------------------------------   
-        .init_wr_data         ( init_wr_data      ),
-        .init_wr_data_vld     ( init_wr_data_vld  ),
-        .init_wr_data_rdy     ( init_wr_data_rdy  ),
-        .init_wr_cmpl         ( init_wr_cmpl      )
+        .init_wr_data         ( init_wr_data        ),
+        .init_wr_data_vld     ( init_wr_data_vld    ),
+        .init_wr_data_rdy     ( init_wr_data_rdy    ),
+        .init_wr_cmpl         ( init_wr_cmpl        )
 	);
     
     assign ce = sys_rdy;

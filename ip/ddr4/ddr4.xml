@@ -2403,7 +2403,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a7aa1f76</spirit:value>
+            <spirit:value>9:b169f65d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2417,11 +2417,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Oct 01 16:30:16 UTC 2021</spirit:value>
+            <spirit:value>Thu Oct 14 21:48:26 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:d1b8b68b</spirit:value>
+            <spirit:value>9:9b2d8e57</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2436,11 +2436,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Oct 14 21:47:55 UTC 2021</spirit:value>
+            <spirit:value>Tue Oct 19 20:37:31 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ce8838fa</spirit:value>
+            <spirit:value>9:7e4ea5f7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2455,11 +2455,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Oct 14 21:48:07 UTC 2021</spirit:value>
+            <spirit:value>Tue Oct 19 20:37:42 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ce8838fa</spirit:value>
+            <spirit:value>9:7e4ea5f7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2474,11 +2474,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Oct 14 21:48:07 UTC 2021</spirit:value>
+            <spirit:value>Tue Oct 19 20:37:42 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ce8838fa</spirit:value>
+            <spirit:value>9:7e4ea5f7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2494,11 +2494,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Oct 14 21:48:10 UTC 2021</spirit:value>
+            <spirit:value>Tue Oct 19 20:37:45 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5132154f</spirit:value>
+            <spirit:value>9:035184bd</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2512,11 +2512,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Oct 14 21:48:10 UTC 2021</spirit:value>
+            <spirit:value>Tue Oct 19 20:37:45 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ce8838fa</spirit:value>
+            <spirit:value>9:7e4ea5f7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2530,11 +2530,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Oct 14 21:48:10 UTC 2021</spirit:value>
+            <spirit:value>Tue Oct 19 20:37:45 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ce8838fa</spirit:value>
+            <spirit:value>9:7e4ea5f7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2548,11 +2548,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Oct 14 22:07:37 UTC 2021</spirit:value>
+            <spirit:value>Tue Oct 19 20:56:52 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ce8838fa</spirit:value>
+            <spirit:value>9:7e4ea5f7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -6749,7 +6749,7 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_CLKOUT0_DIVIDE</spirit:name>
         <spirit:displayName>CLKOUT0_DIVIDE</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_CLKOUT0_DIVIDE">4</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_CLKOUT0_DIVIDE">3</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_CLKOUT1_DIVIDE</spirit:name>
@@ -6764,17 +6764,17 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_DIVCLK_DIVIDE</spirit:name>
         <spirit:displayName>DIVCLK DIVIDE</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_DIVCLK_DIVIDE">3</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_DIVCLK_DIVIDE">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>CAL_INPUT_CLK_PERIOD</spirit:name>
         <spirit:displayName>Calculated Input Clock Period</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CAL_INPUT_CLK_PERIOD">2500</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CAL_INPUT_CLK_PERIOD">10000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_CLKIN_PERIOD</spirit:name>
         <spirit:displayName>CLKIN_PERIOD</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_CLKIN_PERIOD">2500</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_CLKIN_PERIOD">10000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_HR_MIN_FREQ</spirit:name>
@@ -6943,70 +6943,6 @@
   </spirit:model>
   <spirit:choices>
     <spirit:choice>
-      <spirit:name>choice_list_10e2d7d2</spirit:name>
-      <spirit:enumeration>None</spirit:enumeration>
-      <spirit:enumeration>444</spirit:enumeration>
-      <spirit:enumeration>333</spirit:enumeration>
-      <spirit:enumeration>267</spirit:enumeration>
-      <spirit:enumeration>222</spirit:enumeration>
-      <spirit:enumeration>190</spirit:enumeration>
-      <spirit:enumeration>167</spirit:enumeration>
-      <spirit:enumeration>148</spirit:enumeration>
-      <spirit:enumeration>133</spirit:enumeration>
-      <spirit:enumeration>121</spirit:enumeration>
-      <spirit:enumeration>111</spirit:enumeration>
-      <spirit:enumeration>103</spirit:enumeration>
-      <spirit:enumeration>95</spirit:enumeration>
-      <spirit:enumeration>89</spirit:enumeration>
-      <spirit:enumeration>83</spirit:enumeration>
-      <spirit:enumeration>78</spirit:enumeration>
-      <spirit:enumeration>74</spirit:enumeration>
-      <spirit:enumeration>70</spirit:enumeration>
-      <spirit:enumeration>67</spirit:enumeration>
-      <spirit:enumeration>63</spirit:enumeration>
-      <spirit:enumeration>61</spirit:enumeration>
-      <spirit:enumeration>58</spirit:enumeration>
-      <spirit:enumeration>56</spirit:enumeration>
-      <spirit:enumeration>53</spirit:enumeration>
-      <spirit:enumeration>51</spirit:enumeration>
-      <spirit:enumeration>49</spirit:enumeration>
-      <spirit:enumeration>48</spirit:enumeration>
-      <spirit:enumeration>46</spirit:enumeration>
-      <spirit:enumeration>44</spirit:enumeration>
-      <spirit:enumeration>43</spirit:enumeration>
-      <spirit:enumeration>42</spirit:enumeration>
-      <spirit:enumeration>40</spirit:enumeration>
-      <spirit:enumeration>39</spirit:enumeration>
-      <spirit:enumeration>38</spirit:enumeration>
-      <spirit:enumeration>37</spirit:enumeration>
-      <spirit:enumeration>36</spirit:enumeration>
-      <spirit:enumeration>35</spirit:enumeration>
-      <spirit:enumeration>34</spirit:enumeration>
-      <spirit:enumeration>33</spirit:enumeration>
-      <spirit:enumeration>32</spirit:enumeration>
-      <spirit:enumeration>31</spirit:enumeration>
-      <spirit:enumeration>30</spirit:enumeration>
-      <spirit:enumeration>29</spirit:enumeration>
-      <spirit:enumeration>28</spirit:enumeration>
-      <spirit:enumeration>27</spirit:enumeration>
-      <spirit:enumeration>26</spirit:enumeration>
-      <spirit:enumeration>25</spirit:enumeration>
-      <spirit:enumeration>24</spirit:enumeration>
-      <spirit:enumeration>23</spirit:enumeration>
-      <spirit:enumeration>22</spirit:enumeration>
-      <spirit:enumeration>21</spirit:enumeration>
-      <spirit:enumeration>20</spirit:enumeration>
-      <spirit:enumeration>19</spirit:enumeration>
-      <spirit:enumeration>18</spirit:enumeration>
-      <spirit:enumeration>17</spirit:enumeration>
-      <spirit:enumeration>16</spirit:enumeration>
-      <spirit:enumeration>15</spirit:enumeration>
-      <spirit:enumeration>14</spirit:enumeration>
-      <spirit:enumeration>13</spirit:enumeration>
-      <spirit:enumeration>12</spirit:enumeration>
-      <spirit:enumeration>11</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_157065e4</spirit:name>
       <spirit:enumeration>1</spirit:enumeration>
       <spirit:enumeration>2</spirit:enumeration>
@@ -7084,6 +7020,62 @@
       <spirit:enumeration>SODIMMs</spirit:enumeration>
       <spirit:enumeration>RDIMMs</spirit:enumeration>
       <spirit:enumeration>LRDIMMs</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_35e27b3c</spirit:name>
+      <spirit:enumeration>None</spirit:enumeration>
+      <spirit:enumeration>500</spirit:enumeration>
+      <spirit:enumeration>333</spirit:enumeration>
+      <spirit:enumeration>250</spirit:enumeration>
+      <spirit:enumeration>200</spirit:enumeration>
+      <spirit:enumeration>167</spirit:enumeration>
+      <spirit:enumeration>143</spirit:enumeration>
+      <spirit:enumeration>125</spirit:enumeration>
+      <spirit:enumeration>111</spirit:enumeration>
+      <spirit:enumeration>100</spirit:enumeration>
+      <spirit:enumeration>91</spirit:enumeration>
+      <spirit:enumeration>83</spirit:enumeration>
+      <spirit:enumeration>77</spirit:enumeration>
+      <spirit:enumeration>71</spirit:enumeration>
+      <spirit:enumeration>67</spirit:enumeration>
+      <spirit:enumeration>63</spirit:enumeration>
+      <spirit:enumeration>59</spirit:enumeration>
+      <spirit:enumeration>56</spirit:enumeration>
+      <spirit:enumeration>53</spirit:enumeration>
+      <spirit:enumeration>50</spirit:enumeration>
+      <spirit:enumeration>48</spirit:enumeration>
+      <spirit:enumeration>45</spirit:enumeration>
+      <spirit:enumeration>43</spirit:enumeration>
+      <spirit:enumeration>42</spirit:enumeration>
+      <spirit:enumeration>40</spirit:enumeration>
+      <spirit:enumeration>38</spirit:enumeration>
+      <spirit:enumeration>37</spirit:enumeration>
+      <spirit:enumeration>36</spirit:enumeration>
+      <spirit:enumeration>34</spirit:enumeration>
+      <spirit:enumeration>33</spirit:enumeration>
+      <spirit:enumeration>32</spirit:enumeration>
+      <spirit:enumeration>31</spirit:enumeration>
+      <spirit:enumeration>30</spirit:enumeration>
+      <spirit:enumeration>29</spirit:enumeration>
+      <spirit:enumeration>28</spirit:enumeration>
+      <spirit:enumeration>27</spirit:enumeration>
+      <spirit:enumeration>26</spirit:enumeration>
+      <spirit:enumeration>25</spirit:enumeration>
+      <spirit:enumeration>24</spirit:enumeration>
+      <spirit:enumeration>23</spirit:enumeration>
+      <spirit:enumeration>22</spirit:enumeration>
+      <spirit:enumeration>21</spirit:enumeration>
+      <spirit:enumeration>20</spirit:enumeration>
+      <spirit:enumeration>19</spirit:enumeration>
+      <spirit:enumeration>18</spirit:enumeration>
+      <spirit:enumeration>17</spirit:enumeration>
+      <spirit:enumeration>16</spirit:enumeration>
+      <spirit:enumeration>15</spirit:enumeration>
+      <spirit:enumeration>14</spirit:enumeration>
+      <spirit:enumeration>13</spirit:enumeration>
+      <spirit:enumeration>12</spirit:enumeration>
+      <spirit:enumeration>11</spirit:enumeration>
+      <spirit:enumeration>10</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_4665eb01</spirit:name>
@@ -8794,7 +8786,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_InputClockPeriod</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_InputClockPeriod" spirit:choiceRef="choice_pairs_ee32a5e2" spirit:order="21">2500</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_InputClockPeriod" spirit:choiceRef="choice_pairs_ee32a5e2" spirit:order="21">10000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_Specify_MandD</spirit:name>
@@ -8813,7 +8805,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_DIVCLK_DIVIDE</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_DIVCLK_DIVIDE" spirit:order="24" spirit:minimum="0" spirit:maximum="5000" spirit:rangeType="long">3</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_DIVCLK_DIVIDE" spirit:order="24" spirit:minimum="0" spirit:maximum="5000" spirit:rangeType="long">1</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -8824,7 +8816,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_CLKOUT0_DIVIDE</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CLKOUT0_DIVIDE" spirit:order="25" spirit:minimum="0" spirit:maximum="5000" spirit:rangeType="long">4</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CLKOUT0_DIVIDE" spirit:order="25" spirit:minimum="0" spirit:maximum="5000" spirit:rangeType="long">3</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -8933,7 +8925,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_AxiArbitrationScheme</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_AxiArbitrationScheme" spirit:choiceRef="choice_list_ed30197c" spirit:order="47">RD_PRI_REG</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_AxiArbitrationScheme" spirit:choiceRef="choice_list_ed30197c" spirit:order="47">ROUND_ROBIN</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_AxiNarrowBurst</spirit:name>
@@ -9000,19 +8992,19 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>ADDN_UI_CLKOUT1_FREQ_HZ</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADDN_UI_CLKOUT1_FREQ_HZ" spirit:choiceRef="choice_list_10e2d7d2" spirit:order="60">None</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADDN_UI_CLKOUT1_FREQ_HZ" spirit:choiceRef="choice_list_35e27b3c" spirit:order="60">None</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>ADDN_UI_CLKOUT2_FREQ_HZ</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADDN_UI_CLKOUT2_FREQ_HZ" spirit:choiceRef="choice_list_10e2d7d2" spirit:order="61">None</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADDN_UI_CLKOUT2_FREQ_HZ" spirit:choiceRef="choice_list_35e27b3c" spirit:order="61">None</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>ADDN_UI_CLKOUT3_FREQ_HZ</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADDN_UI_CLKOUT3_FREQ_HZ" spirit:choiceRef="choice_list_10e2d7d2" spirit:order="62">None</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADDN_UI_CLKOUT3_FREQ_HZ" spirit:choiceRef="choice_list_35e27b3c" spirit:order="62">None</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>ADDN_UI_CLKOUT4_FREQ_HZ</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADDN_UI_CLKOUT4_FREQ_HZ" spirit:choiceRef="choice_list_10e2d7d2" spirit:order="63">None</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADDN_UI_CLKOUT4_FREQ_HZ" spirit:choiceRef="choice_list_35e27b3c" spirit:order="63">None</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CLKOUT6</spirit:name>
@@ -9345,7 +9337,9 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.C0_DDR4_S_AXI_CTRL.RUSER_WIDTH" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.C0_DDR4_S_AXI_CTRL.WUSER_WIDTH" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_AxiAddressWidth" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_AxiArbitrationScheme" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_AxiDataWidth" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_AxiIDWidth" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_AxiNarrowBurst" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_AxiSelection" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_CLKOUT0_DIVIDE" xilinx:valueSource="user"/>
@@ -9355,7 +9349,11 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_DataWidth" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_Ecc" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_InputClockPeriod" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_Specify_MandD" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_TimePeriod" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PING_PONG_PHY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Phy_Only" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.System_Clock" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

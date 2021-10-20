@@ -100,7 +100,7 @@
   PhyIP_CUSTOM_PART_ATTRIBUTES = "NONE",
   ControllerType = "ddr4_sdram",
   PhyIP_TimePeriod = 750,
-  PhyIP_InputClockPeriod = 2500,
+  PhyIP_InputClockPeriod = 10000,
   PhyIP_MemoryType = "Components",
   PhyIP_MemoryPart = "MT40A512M8RH-075E",
   PhyIP_PhyClockRatio = "4:1",
@@ -119,8 +119,8 @@
   PhyIP_SAVE_RESTORE = "false",
   
   PhyIP_CLKFBOUT_MULT = "10",
-  PhyIP_DIVCLK_DIVIDE = "3",
-  PhyIP_CLKOUT0_DIVIDE = "4",
+  PhyIP_DIVCLK_DIVIDE = "1",
+  PhyIP_CLKOUT0_DIVIDE = "3",
   PhyIP_CLKOUT1_DIVIDE = "0",
   PhyIP_CLKOUT2_DIVIDE = "0",
   PhyIP_CLKOUT3_DIVIDE = "0",
@@ -236,15 +236,15 @@ module ddr4_ddr4 #
     parameter         APP_DATA_WIDTH          = 512,
     parameter         APP_MASK_WIDTH          = 64,
 
-    parameter         CLKIN_PERIOD_MMCM        = 2500,
+    parameter         CLKIN_PERIOD_MMCM        = 10000,
     parameter         CLKFBOUT_MULT_MMCM       = 10,
-    parameter         DIVCLK_DIVIDE_MMCM       = 3,
-    parameter         CLKOUT0_DIVIDE_MMCM      = 4,
-    parameter         CLKOUT1_DIVIDE_MMCM      = 4,
-    parameter         CLKOUT2_DIVIDE_MMCM      = 4,
-    parameter         CLKOUT3_DIVIDE_MMCM      = 4,
-    parameter         CLKOUT4_DIVIDE_MMCM      = 4,
-    parameter         CLKOUT6_DIVIDE_MMCM      = 8,
+    parameter         DIVCLK_DIVIDE_MMCM       = 1,
+    parameter         CLKOUT0_DIVIDE_MMCM      = 3,
+    parameter         CLKOUT1_DIVIDE_MMCM      = 3,
+    parameter         CLKOUT2_DIVIDE_MMCM      = 3,
+    parameter         CLKOUT3_DIVIDE_MMCM      = 3,
+    parameter         CLKOUT4_DIVIDE_MMCM      = 3,
+    parameter         CLKOUT6_DIVIDE_MMCM      = 6,
     parameter         CLKOUTPHY_MODE           = "VCO_2X",
     parameter         C_FAMILY                 = "virtexuplusHBM",
 
@@ -263,7 +263,7 @@ module ddr4_ddr4 #
     parameter C_S_AXI_SUPPORTS_NARROW_BURST   = 0,
                                               // Indicates whether to instatiate upsizer
                                               // Range: 0, 1
-    parameter C_RD_WR_ARB_ALGORITHM           = "RD_PRI_REG",
+    parameter C_RD_WR_ARB_ALGORITHM           = "ROUND_ROBIN",
                                              // Indicates the Arbitration
                                              // Allowed values - "TDM", "ROUND_ROBIN",
                                              // "RD_PRI_REG", "RD_PRI_REG_STARVE_LIMIT"
