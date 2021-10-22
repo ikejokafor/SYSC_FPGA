@@ -152,6 +152,10 @@ void SYSC_FPGA::main()
         ptr[3] = FAS_time;
 		m_pyld->m_size = ACCL_META_OUTPUT_SIZE;        
         m_sysc_fpga_hndl->sendOutput(m_pyld);
+        
+        cout << endl << endl;
+        cout << "[SYSC_FPGA]: Layer Processing Complete" << endl;
+        cout << endl << endl;
 	}
     
 }
