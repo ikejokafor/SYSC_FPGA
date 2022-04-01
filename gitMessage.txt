@@ -1,1 +1,1 @@
-Fixing clocking issue. FAS now as correct clock and interconnect has correct ratios
+updated documentation, and removed unncessary files

@@ -1,8 +1,9 @@
-build
-simulation/work
-simulation/questa_lib
+build/*
+simulation/work/*
+simulation/questa_lib/*
 simulation/wlf*
 simulation/vsim.wlf
+AXI_MASTER/*
 
 ip/ddr4/*
 !ip/ddr4/ddr4.xci
