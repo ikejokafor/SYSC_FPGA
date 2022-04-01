@@ -10,6 +10,7 @@ network
 fixedPoint
 util
 FPGA_shim
+systemC
     
 
 ## Environment Dependencies

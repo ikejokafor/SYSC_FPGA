@@ -4,8 +4,8 @@ simulation/questa_lib
 simulation/wlf*
 simulation/vsim.wlf
 
-hardware/axi_interconnect/*
-!hardware/axi_interconnect/axi_interconnect.xci
-hardware/ddr4/*
-!hardware/ddr4/ddr4.xci
+ip/ddr4/*
+!ip/ddr4/ddr4.xci
+ip/axi_interconnect/*
+!ip/axi_interconnect/axi_interconnect.xci
 
