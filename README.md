@@ -3,14 +3,14 @@ Top Level simulation which emulates remote FPGA hosting multiple accelerators an
 
 
 ## Dependencies
-cnn_layer_accel
-SYSC_FPGA_shim
-syscNetProto
-network
-fixedPoint
-util
-FPGA_shim
-systemC
+cnn_layer_accel  
+SYSC_FPGA_shim  
+syscNetProto  
+network  
+fixedPoint  
+util  
+FPGA_shim  
+systemC   
     
 
 ## Environment Dependencies
