@@ -14,5 +14,5 @@ systemC
     
 
 ## Environment Dependencies
-questasim version: 10.7c
-vivado version: 2018.3
+questasim version: 10.7c  
+vivado version: 2018.3  
